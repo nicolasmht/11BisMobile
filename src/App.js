@@ -8,8 +8,14 @@ import { createStackNavigator } from '@react-navigation/stack';
 const Stack = createStackNavigator();
 
 // Screens
-import CodeScreen from './screens/code.screen';
+// import CodeScreen from './screens/code.screen';
 import HomeScreen from './screens/home.screen';
+import HorlogeScreen from './screens/Horloge/horloge.screen';
+import SanteScreen from './screens/Sante/sante.screen';
+import ContactsScreen from './screens/Contacts/contacts.screen';
+import FicheContactScreen from './screens/Contacts/ficheContact.screen';
+import CallScreen from './screens/Call/call.screen';
+import AcceptCallScreen from './screens/Call/acceptCall.screen'
 
 const App = () => {
 
@@ -34,14 +40,21 @@ const App = () => {
 		<NavigationContainer>
 			<Stack.Navigator headerMode='none'>
 
-				{
+				{/* {
 					!user
 				? 
 					<Stack.Screen name="Code" component={ CodeScreen } />
 				:
 					<Stack.Screen name="Home" component={ HomeScreen } />
-				}
-				
+				} */}
+				<Stack.Screen name="Home" component={HomeScreen} />
+				<Stack.Screen name="Horloge" component={HorlogeScreen} />
+				<Stack.Screen name="Sante" component={SanteScreen} />
+				<Stack.Screen name="Contacts" component={ContactsScreen} />
+				<Stack.Screen name="FicheContact" component={FicheContactScreen} />
+				<Stack.Screen name="Call" component={CallScreen} />
+				<Stack.Screen name="AcceptCall" component={AcceptCallScreen} />
+
 			</Stack.Navigator>
 		</NavigationContainer>
 	);

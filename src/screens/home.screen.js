@@ -1,41 +1,149 @@
-import React, { useState, useEffect } from 'react';
-import { SafeAreaView, StyleSheet, ScrollView, View, Text, StatusBar, TouchableWithoutFeedback, Button } from 'react-native';
+import React from 'react';
+import { StyleSheet, View, Text, TouchableOpacity, ImageBackground, Image } from 'react-native';
 
-import Auth from '@react-native-firebase/auth';
+export default class Home extends React.Component {
+    render() {
+        return (
+            <View style={styles.container}>
+                <ImageBackground source={require('../main/assets/fond/Points.png')} style={styles.backgroundImage}>
+                    <View style={styles.container__buttonApp}>
+                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => onPress()}>
+                            <Image source={require('../main/assets/icons/caseApp.png')} onPress={() => onPress()} />
+                            <Text style={styles.container__buttonApp__icon__text}>Réglage</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => onPress()}>
+                            <Image source={require('../main/assets/icons/caseApp.png')} />
+                            <Text style={styles.container__buttonApp__icon__text}>Photo</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => this.props.navigation.navigate('Contacts')}>
+                            <Image source={require('../main/assets/icons/caseApp.png')} />
+                            <Text style={styles.container__buttonApp__icon__text}>Contacts</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => this.props.navigation.navigate('Horloge')}>
+                            <Image source={require('../main/assets/icons/horloge.png')} />
+                            <Text style={styles.container__buttonApp__icon__text} >Horloge</Text>
+                        </TouchableOpacity>
 
-const HomeScreen = () => {
+                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => onPress()}>
+                            <Image source={require('../main/assets/icons/caseApp.png')} />
+                            <Text style={styles.container__buttonApp__icon__text}>Calendrier</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => onPress()}>
+                            <Image source={require('../main/assets/icons/caseApp.png')} />
+                            <Text style={styles.container__buttonApp__icon__text}>Notes</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => onPress()}>
+                            <Image source={require('../main/assets/icons/caseApp.png')} />
+                            <Text style={styles.container__buttonApp__icon__text}>Google Maps</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => onPress()}>
+                            <Image source={require('../main/assets/icons/caseApp.png')} />
+                            <Text style={styles.container__buttonApp__icon__text} >Gmail</Text>
+                        </TouchableOpacity>
 
-    const signOut = async () => {
-        try {
-            await Auth().signOut();
-        } catch(e) {
-            console.warn(e.message)
-        }
+                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => onPress()}>
+                            <Image source={require('../main/assets/icons/caseApp.png')} />
+                            <Text style={styles.container__buttonApp__icon__text}>Netflix</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => onPress()}>
+                            <Image source={require('../main/assets/icons/caseApp.png')} />
+                            <Text style={styles.container__buttonApp__icon__text}>Instagram</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => this.props.navigation.navigate('Sante')}>
+                            <Image source={require('../main/assets/icons/sante.png')} />
+                            <Text style={styles.container__buttonApp__icon__text}>Santé</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => onPress()}>
+                            <Image source={require('../main/assets/icons/spotify.png')} />
+                            <Text style={styles.container__buttonApp__icon__text} >Spotify</Text>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => onPress()}>
+                            <Image source={require('../main/assets/icons/caseApp.png')} />
+                            <Text style={styles.container__buttonApp__icon__text}>Horloge</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => onPress()}>
+                            <Image source={require('../main/assets/icons/caseApp.png')} />
+                            <Text style={styles.container__buttonApp__icon__text}>Horloge</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => onPress()}>
+                            <Image source={require('../main/assets/icons/caseApp.png')} />
+                            <Text style={styles.container__buttonApp__icon__text}>Horloge</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => onPress()}>
+                            <Image source={require('../main/assets/icons/caseApp.png')} />
+                            <Text style={styles.container__buttonApp__icon__text} >Horloge</Text>
+                        </TouchableOpacity>
+                    </View>
+                    {/* icon fav */}
+                    <View style={styles.container__buttonAppFav}>
+                        <View style={styles.container__buttonAppFav__background}></View>
+                        <TouchableOpacity style={styles.container__buttonApp__iconFav} onPress={() => onPress()}>
+                            <Image source={require('../main/assets/icons/call.png')} />
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.container__buttonApp__iconFav} onPress={() => onPress()}>
+                            <Image source={require('../main/assets/icons/caseApp.png')} />
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.container__buttonApp__iconFav} onPress={() => onPress()}>
+                            <Image source={require('../main/assets/icons/caseApp.png')} />
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.container__buttonApp__iconFav} onPress={() => onPress()}>
+                            <Image source={require('../main/assets/icons/caseApp.png')} />
+                        </TouchableOpacity>
+                    </View>
+                </ImageBackground>
+            </View>
+        );
     }
-
-    return(
-        <View style={styles.container}>
-            <Text style={styles.text}>WELCOME</Text>
-            <Button 
-                title="Sign out"
-                onPress={() => signOut()}
-            />
-        </View>
-    );
 }
-
 const styles = StyleSheet.create({
     container: {
         ...StyleSheet.absoluteFillObject,
-        flex: 1,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
+        backgroundColor: '#2A3669',
+
     },
 
-    text: {
-        fontSize: 50
-    }
-})
+    container__buttonApp: {
+        width: '100%',
+        height: '50%',
+        padding: 24,
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+    },
 
-export default HomeScreen;
+    container__buttonApp__icon: {
+        marginTop: '10%',
+        display: 'flex',
+        alignItems: 'center',
+    },
+
+    container__buttonAppFav: {
+        width: '100%',
+        height: '50%',
+        padding: 24,
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'flex-end',
+    },
+    container__buttonAppFav__background: {
+        width: '114%',
+        height: '35%',
+        marginLeft: -8,
+        position: 'absolute',
+        backgroundColor: '#FFB99D',
+        opacity: 0.7,
+    },
+    container__buttonApp__icon__text: {
+        fontSize: 12,
+        color: '#FFB99D'
+    },
+
+    backgroundImage: {
+        width: '100%',
+        height: '100%'
+    },
+})
