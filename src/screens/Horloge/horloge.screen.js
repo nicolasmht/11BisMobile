@@ -1,5 +1,5 @@
-import React  from 'react';
-import { StyleSheet, View, Text, Switch } from 'react-native';
+import React  from 'react'
+import { StyleSheet, View, Text, Switch } from 'react-native'
 
 export default class HorlogeScreen extends React.Component {
     state = { switchValueAlarme1: false, switchValueAlarme2: true, switchValueAlarme3: false }
@@ -58,7 +58,7 @@ export default class HorlogeScreen extends React.Component {
                         <View style={styles.container__alarme__border} />
                     </View>
                 </View>
-            );
+            )
         }
     }
 const styles = StyleSheet.create({
@@ -69,7 +69,9 @@ const styles = StyleSheet.create({
     container__alarme: {
         width: '100%',
         height: '22%',
-        padding: 24,
+        paddingTop: '13%',
+        paddingLeft: 24,
+        paddingRight: 24,
         display: 'flex',
         flexDirection: 'column',
         flexWrap: 'wrap',

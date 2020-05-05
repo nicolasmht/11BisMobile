@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { SafeAreaView, StyleSheet, ScrollView, View, Text, StatusBar, TouchableWithoutFeedback } from 'react-native';
+import React, { useState, useEffect } from 'react'
+import { SafeAreaView, StyleSheet, ScrollView, View, Text, StatusBar, TouchableWithoutFeedback } from 'react-native'
 
-import Auth from '@react-native-firebase/auth';
-import Firestore from '@react-native-firebase/firestore';
+import Auth from '@react-native-firebase/auth'
+import Firestore from '@react-native-firebase/firestore'
 
 const CodeScreen = ({ navigation }) => {
 
-    const [code, setCode] = useState('');
+    const [code, setCode] = useState('')
 
 	const connectToDesktop = async () => {
 
@@ -15,25 +15,25 @@ const CodeScreen = ({ navigation }) => {
 			.doc(code)
 			.update({
 				connected: true
-            });
+            })
 
-        await Auth().signInAnonymously();
+        await Auth().signInAnonymously()
         
-        // navigation.navigate('Home');
+        // navigation.navigate('Home')
 	}
 
 	const addNumber = (number) => {
 		
 		if (code.length < 4) {
-			setCode(code + number);
+			setCode(code + number)
 		}
 	}
 
 	useEffect(() => {
 
-		if (code.length < 4) { return; }
+		if (code.length < 4) { return }
 
-		connectToDesktop();
+		connectToDesktop()
 		
 	}, [code])
 
@@ -90,8 +90,8 @@ const CodeScreen = ({ navigation }) => {
 					
 			</View>
 		</>
-	);
-};
+	)
+}
 
 const styles = StyleSheet.create({
 
@@ -138,6 +138,6 @@ const styles = StyleSheet.create({
 		fontSize: 20
 	}
 
-});
+})
 
-export default CodeScreen;
+export default CodeScreen

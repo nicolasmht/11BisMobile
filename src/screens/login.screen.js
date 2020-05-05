@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { SafeAreaView, StyleSheet, ScrollView, View, Text, StatusBar, TouchableWithoutFeedback, Button } from 'react-native';
+import React, { useState, useEffect } from 'react'
+import { SafeAreaView, StyleSheet, ScrollView, View, Text, StatusBar, TouchableWithoutFeedback, Button } from 'react-native'
 
-import Auth from '@react-native-firebase/auth';
+import Auth from '@react-native-firebase/auth'
 
 const LoginScreen = () => {
 
     const signOut = async () => {
         try {
-            await Auth().signOut();
+            await Auth().signOut()
         } catch (e) {
             console.warn(e.message)
         }
@@ -21,7 +21,7 @@ const LoginScreen = () => {
                 onPress={() => signOut()}
             />
         </View>
-    );
+    )
 }
 
 const styles = StyleSheet.create({
@@ -38,4 +38,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default LoginScreen;
+export default LoginScreen

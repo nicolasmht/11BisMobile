@@ -1,6 +1,6 @@
 
-import React from 'react';
-import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
+import React from 'react'
+import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native'
 
 export default class ComponentFicheContactScreen extends React.Component {
     render() {
@@ -11,27 +11,27 @@ export default class ComponentFicheContactScreen extends React.Component {
                     <Text style={styles.container__contact__name}>{this.props.route.params.names}</Text>
                     <View style={styles.container__contact__icons}>
                         <TouchableOpacity style={styles.container__contact__icons__join} >
-                            <Image source={require('../../main/assets/icons/icon_message.png')} />
+                            <Image source={require('../../main/assets/icons/contact/icon_message.png')} />
                         </TouchableOpacity>
                         <TouchableOpacity
                         style={styles.container__contact__icons__join} 
                         onPress={() => this.props.navigation.navigate(
-                            'AcceptCall', 
+                            'Calling', 
                             { names: 'Agathe Fradet', 
                               category:'portable'
                             })}
                         >
-                            <Image source={require('../../main/assets/icons/icon_call.png')} />
+                            <Image source={require('../../main/assets/icons/contact/icon_call.png')} />
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.container__contact__icons__join}>
-                            <Image source={require('../../main/assets/icons/icon_mail.png')} />
+                            <Image source={require('../../main/assets/icons/contact/icon_mail.png')} />
                         </TouchableOpacity>
                     </View>
                     <View style={styles.container__contact__border} />
                     <TouchableOpacity 
                     style={styles.container__contact__infos} 
                     onPress={() => this.props.navigation.navigate(
-                        'AcceptCall',
+                        'Calling',
                         {
                             names: 'Agathe Fradet',
                             category: 'portable'
@@ -44,7 +44,7 @@ export default class ComponentFicheContactScreen extends React.Component {
                     <TouchableOpacity 
                     style={styles.container__contact__infos} 
                     onPress={() => this.props.navigation.navigate(
-                        'AcceptCall',
+                        'Calling',
                         {
                             names: 'Agathe Fradet',
                             category: 'domicile'
@@ -65,11 +65,11 @@ export default class ComponentFicheContactScreen extends React.Component {
                         <Text style={styles.container__contacts__infos_address}>Rue Jaques Coeur</Text>
                         <Text style={styles.container__contacts__infos_address}>75011 Paris</Text>
                         <Text style={styles.container__contacts__infos_address}>France</Text>
-                        <Image style={styles.container__contact__infos__map} source={require('../../main/assets/icons/map.png')} />
+                        <Image style={styles.container__contact__infos__map} source={require('../../main/assets/icons/contact/map.png')} />
                     </TouchableOpacity>
                 </View>
             </View>
-        );
+        )
     }
 }
 
@@ -82,6 +82,7 @@ const styles = StyleSheet.create({
     container__contact: {
         width: '100%',
         height: '100%',
+        marginTop: '12%',
         padding: 24,
         display: 'flex',
         flexDirection: 'column',

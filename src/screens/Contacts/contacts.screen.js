@@ -1,5 +1,5 @@
-import React from 'react';
-import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import React from 'react'
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
 
 export default class ContactsScreen extends React.Component {
     render() {
@@ -91,7 +91,7 @@ export default class ContactsScreen extends React.Component {
 
                 </View>
             </View>
-        );
+        )
     }
 }
 const styles = StyleSheet.create({
@@ -103,6 +103,7 @@ const styles = StyleSheet.create({
     container__contacts: {
         width: '100%',
         height: '100%',
+        marginTop: '4%',
         padding: 24,
         display: 'flex',
         flexDirection: 'column',

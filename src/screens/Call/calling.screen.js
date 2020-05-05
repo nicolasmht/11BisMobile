@@ -1,11 +1,11 @@
 
-import React from 'react';
-import { StyleSheet, View, ImageBackground, Text, TouchableOpacity, Image } from 'react-native';
+import React from 'react'
+import { StyleSheet, View, ImageBackground, Text, TouchableOpacity, Image } from 'react-native'
 
 // TODO: SOUND
-export default class acceptCallScreen extends React.Component {
+export default class CallingScreen extends React.Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
             minutes: 0,  
             seconds: 0,
@@ -70,22 +70,22 @@ export default class acceptCallScreen extends React.Component {
                     </View>
                     <View style={styles.container__call__events}>
                         <TouchableOpacity style={styles.container__call__icon__mute}>
-                            <Image source={require('../../main/assets/icons/mute.png')} />
+                            <Image source={require('../../main/assets/icons/contact/mute.png')} />
                             <Text style={styles.container__call__text}>mute</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.container__call__icon__speaker}>
-                            <Image source={require('../../main/assets/icons/speaker.png')} />
+                            <Image source={require('../../main/assets/icons/contact/speaker.png')} />
                             <Text style={styles.container__call__text}>speaker</Text>
                         </TouchableOpacity>
                     </View>
                     <View style={styles.container__call__cancelCall}>
-                        <TouchableOpacity style={styles.container__call__icon__cancel} onPress={() => { return (clearInterval(this.myTimer), this.props.navigation.navigate('FicheContact', { names: 'Agathe Fradet' }))}}>
-                            <Image source={require('../../main/assets/icons/cancel_call.png')} />
+                        <TouchableOpacity style={styles.container__call__icon__cancel} onPress={() => { return (clearInterval(this.myTimer), this.props.navigation.goBack())}}>
+                            <Image source={require('../../main/assets/icons/contact/cancel_call.png')} />
                         </TouchableOpacity>
                     </View>
                 </ImageBackground>
             </View>
-        );
+        )
     }
 }
 

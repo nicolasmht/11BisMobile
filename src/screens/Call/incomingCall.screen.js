@@ -1,8 +1,8 @@
 
-import React from 'react';
-import { StyleSheet, View, ImageBackground, Text, TouchableOpacity, Image } from 'react-native';
+import React from 'react'
+import { StyleSheet, View, ImageBackground, Text, TouchableOpacity, Image } from 'react-native'
 
-export default class CallScreen extends React.Component {
+export default class IncomingCallScreen extends React.Component {
     render() {
         return (
             <View style={styles.container}>
@@ -13,17 +13,17 @@ export default class CallScreen extends React.Component {
                 </View>
                     <View style={styles.container__call__events}>
                     <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
-                        <Image source={require('../../main/assets/icons/cancel_call.png')} />
+                        <Image source={require('../../main/assets/icons/contact/cancel_call.png')} />
                         <Text style={styles.container__call__text}>Refuser</Text>
                     </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('AcceptCall',{names: 'Agathe Fradet'})}>
-                        <Image source={require('../../main/assets/icons/accept_call.png')} />
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate('Calling', {names: 'Agathe Fradet'})}>
+                        <Image source={require('../../main/assets/icons/contact/accept_call.png')} />
                         <Text style={styles.container__call__text}>Accepter</Text>
                     </TouchableOpacity>
                 </View>
                 </ImageBackground>
             </View>
-        );
+        )
     }
 }
 

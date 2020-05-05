@@ -1,5 +1,5 @@
-import React  from 'react';
-import { StyleSheet, View, Text, Image } from 'react-native';
+import React  from 'react'
+import { StyleSheet, View, Text, Image } from 'react-native'
 
 export default class SanteScreen extends React.Component {
     render() {
@@ -9,7 +9,7 @@ export default class SanteScreen extends React.Component {
                         <Text style={styles.container__sante__text}>Aujourd'hui</Text>
                         <View style={styles.container__sante__block}>
                             <View style={styles.container__sante__block__title}>
-                                <Image source={require('../../main/assets/icons/flame.png')} />
+                                <Image source={require('../../main/assets/icons/sante/flame.png')} />
                                 <Text style={styles.container__sante__block__text}>Distance (marche et course)</Text>
                             </View>
                             <View style={styles.container__sante__block__infos}>
@@ -20,7 +20,7 @@ export default class SanteScreen extends React.Component {
 
                         <View style={styles.container__sante__block}>
                             <View style={styles.container__sante__block__title}>
-                                <Image source={require('../../main/assets/icons/flame.png')} />
+                                <Image source={require('../../main/assets/icons/sante/flame.png')} />
                                 <Text style={styles.container__sante__block__text}>Nombre de pas</Text>
                             </View>
                             <View style={styles.container__sante__block__infos}>
@@ -31,7 +31,7 @@ export default class SanteScreen extends React.Component {
 
                         <View style={styles.container__sante__block}>
                             <View style={styles.container__sante__block__title}>
-                                <Image source={require('../../main/assets/icons/flame.png')} />
+                                <Image source={require('../../main/assets/icons/sante/flame.png')} />
                                 <Text style={styles.container__sante__block__text}>Etage montés</Text>
                             </View>
                             <View style={styles.container__sante__block__infos}>
@@ -43,7 +43,7 @@ export default class SanteScreen extends React.Component {
                         <Text style={styles.container__sante__text}>Plus ancien</Text>
                         <View style={styles.container__sante__block}>
                             <View style={styles.container__sante__block__title}>
-                                <Image source={require('../../main/assets/icons/walking.png')} />
+                                <Image source={require('../../main/assets/icons/sante/walking.png')} />
                                 <Text style={styles.container__sante__block__text}>Poids</Text>
                             </View>
                             <View style={styles.container__sante__block__infos}>
@@ -54,7 +54,7 @@ export default class SanteScreen extends React.Component {
 
                         <View style={styles.container__sante__block}>
                             <View style={styles.container__sante__block__title}>
-                                <Image source={require('../../main/assets/icons/walking.png')} />
+                                <Image source={require('../../main/assets/icons/sante/walking.png')} />
                                 <Text style={styles.container__sante__block__text}>Taille</Text>
                             </View>
                             <View style={styles.container__sante__block__infos}>
@@ -64,7 +64,7 @@ export default class SanteScreen extends React.Component {
                         </View>
                     </View>
                 </View>
-            );
+            )
         }
     }
 const styles = StyleSheet.create({
@@ -76,6 +76,7 @@ const styles = StyleSheet.create({
     container__sante: {
         width: '100%',
         height: '100%',
+        marginTop: '4%',
         padding: 24,
         display: 'flex',
         flexDirection: 'column',
