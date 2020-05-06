@@ -1,8 +1,7 @@
-
-import React from 'react'
+import React, { Component } from 'react'
 import { StyleSheet, View, ImageBackground, Text, TouchableOpacity, Image } from 'react-native'
 
-export default class IncomingCallScreen extends React.Component {
+export default class IncomingCallScreen extends Component {
     render() {
         return (
             <View style={styles.container}>

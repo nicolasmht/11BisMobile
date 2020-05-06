@@ -1,7 +1,7 @@
-import React  from 'react'
+import React, { Component } from 'react'
 import { StyleSheet, View, Text, Image } from 'react-native'
 
-export default class SanteScreen extends React.Component {
+export default class SanteScreen extends Component {
     render() {
             return (
                 <View style={styles.container}>

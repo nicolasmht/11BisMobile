@@ -1,8 +1,8 @@
 
-import React from 'react'
+import React, { Component } from 'react'
 import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native'
 
-export default class CallsFavorisScreen extends React.Component {
+export default class CallsFavorisScreen extends Component {
     render() {
         return (
             <View style={styles.container}>

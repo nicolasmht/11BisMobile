@@ -15,6 +15,8 @@ import SanteScreen from './screens/Sante/sante.screen'
 import ContactsScreen from './screens/Contacts/contacts.screen'
 import FicheContactScreen from './screens/Contacts/ficheContact.screen'
 import MeteoScreen from './screens/Meteo/meteo.screen'
+import GoogleHomeScreen from './screens/Google/google.home.screen'
+
 import CallsFavorisScreen from './screens/Call/calls.favoris.screen'
 import CallsRecentsScreen from './screens/Call/calls.recents.screen'
 import CallsContactsScreen from './screens/Call/calls.contacts.screen'
@@ -82,6 +84,25 @@ const App = () => {
 						headerTitle: '', 
 						headerTransparent: true 
 					}}
+				/>
+				<Stack.Screen
+					name="GoogleHome"
+					component={GoogleHomeScreen}
+					options={{
+						headerRight: () => (
+							<Button
+								onPress={() => navigate('Home')}
+								title="✕"
+								color="#151C38"
+							/>
+						),
+						headerLeft: '',
+						gestureEnabled: false,
+						headerBackTitleVisible: false,
+						headerTitle: '',
+						headerTransparent: true
+					}
+					}
 				/>
 				<Stack.Screen
 					name="Meteo"

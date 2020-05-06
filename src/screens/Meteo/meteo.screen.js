@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { StyleSheet, View, Text, ImageBackground, Image } from 'react-native'
 import moment from 'moment'
 import nextDays from './utils/nextDays.js'
 import isDay from './utils/isDay.js'
 
-export default class Home extends React.Component {
+export default class Home extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -186,8 +186,6 @@ const styles = StyleSheet.create({
         width: '100%',
         display: 'flex',
         flexDirection: 'column',
-        flexWrap: 'wrap',
-        justifyContent: 'center',
         alignItems: 'center',
         alignContent: 'center'
     },

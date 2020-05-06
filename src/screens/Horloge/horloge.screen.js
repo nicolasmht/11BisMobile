@@ -1,7 +1,7 @@
-import React  from 'react'
+import React, { Component } from 'react'
 import { StyleSheet, View, Text, Switch } from 'react-native'
 
-export default class HorlogeScreen extends React.Component {
+export default class HorlogeScreen extends Component {
     state = { switchValueAlarme1: false, switchValueAlarme2: true, switchValueAlarme3: false }
     toggleSwitchAlarme1 = (valueAlarme1 ) => {
         this.setState({ switchValueAlarme1: valueAlarme1 })

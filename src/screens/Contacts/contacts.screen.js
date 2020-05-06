@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
 
-export default class ContactsScreen extends React.Component {
+export default class ContactsScreen extends Component {
     render() {
         return (
             <View style={styles.container}>

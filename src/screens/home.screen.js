@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { StyleSheet, View, Text, TouchableOpacity, ImageBackground, Image } from 'react-native'
 
-export default class Home extends React.Component {
+export default class Home extends Component {
     render() {
         return (
             <View style={styles.container}>
@@ -53,7 +53,7 @@ export default class Home extends React.Component {
                             <Image source={require('../main/assets/icons/app/netflix.png')} />
                             <Text style={styles.container__buttonApp__icon__text}>Netflix</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => onPress()}>
+                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => this.props.navigation.navigate('GoogleHome')}>
                             <Image source={require('../main/assets/icons/app/home.png')} />
                             <Text style={styles.container__buttonApp__icon__text}>Google Home</Text>
                         </TouchableOpacity>

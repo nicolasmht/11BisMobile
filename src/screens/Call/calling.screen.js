@@ -1,9 +1,9 @@
 
-import React from 'react'
+import React, { Component } from 'react'
 import { StyleSheet, View, ImageBackground, Text, TouchableOpacity, Image } from 'react-native'
 
 // TODO: SOUND
-export default class CallingScreen extends React.Component {
+export default class CallingScreen extends Component {
     constructor(props) {
         super(props)
         this.state = {
