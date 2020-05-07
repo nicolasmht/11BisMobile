@@ -78,7 +78,7 @@ export default class Home extends Component {
                         <TouchableOpacity style={styles.container__buttonApp__iconFav} onPress={() => onPress()}>
                             <Image source={require('../main/assets/icons/app/messagerie.png')} />
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.container__buttonApp__iconFav} onPress={() => onPress()}>
+                        <TouchableOpacity style={styles.container__buttonApp__iconFav} onPress={() => this.props.navigation.navigate('NotesList')}>
                             <Image source={require('../main/assets/icons/app/notes.png')} />
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.container__buttonApp__iconFav} onPress={() => onPress()}>

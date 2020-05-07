@@ -5,8 +5,8 @@ import nextDays from './utils/nextDays.js'
 import isDay from './utils/isDay.js'
 
 export default class Home extends Component {
-    constructor(props) {
-        super(props)
+    constructor() {
+        super()
         this.state = {
             temp: '',
             temp_min: '',

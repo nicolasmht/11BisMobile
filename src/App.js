@@ -16,6 +16,8 @@ import ContactsScreen from './screens/Contacts/contacts.screen'
 import FicheContactScreen from './screens/Contacts/ficheContact.screen'
 import MeteoScreen from './screens/Meteo/meteo.screen'
 import GoogleHomeScreen from './screens/Google/google.home.screen'
+import NotesListScreen from './screens/Notes/notes.list.screen'
+import NoteScreen from './screens/Notes/note.screen'
 
 import CallsFavorisScreen from './screens/Call/calls.favoris.screen'
 import CallsRecentsScreen from './screens/Call/calls.recents.screen'
@@ -86,6 +88,44 @@ const App = () => {
 					}}
 				/>
 				<Stack.Screen
+					name="Note"
+					component={NoteScreen}
+					options={{
+						headerRight: () => (
+							<Button
+								onPress={() => navigate('Home')}
+								title="✕"
+								color="#151C38"
+							/>
+						),
+						gestureEnabled: true,
+						headerBackTitleVisible: true,
+						headerTintColor: '#151C38',
+						headerTitle: '',
+						headerTransparent: false,
+						headerStyle: { backgroundColor: '#FFB99D'},
+						headerBackTitleStyle: { fontSize: 12 }
+					}}
+				/>
+				<Stack.Screen
+					name="NotesList"
+					component={NotesListScreen}
+					options={{
+						headerRight: () => (
+							<Button
+								onPress={() => navigate('Home')}
+								title="✕"
+								color="#151C38"
+							/>
+						),
+						headerLeft: '',
+						gestureEnabled: false,
+						headerBackTitleVisible: false,
+						headerTitle: '',
+						headerTransparent: true
+					}}
+				/>
+				<Stack.Screen
 					name="GoogleHome"
 					component={GoogleHomeScreen}
 					options={{
@@ -101,8 +141,7 @@ const App = () => {
 						headerBackTitleVisible: false,
 						headerTitle: '',
 						headerTransparent: true
-					}
-					}
+					}}
 				/>
 				<Stack.Screen
 					name="Meteo"
@@ -120,8 +159,7 @@ const App = () => {
 						headerBackTitleVisible: false,
 						headerTitle: '',
 						headerTransparent: true
-					}
-					}
+					}}
 				/>
 				<Stack.Screen 
 					name="Horloge" 
@@ -138,8 +176,8 @@ const App = () => {
 						gestureEnabled: false, 
 						headerBackTitleVisible: false, 
 						headerTitle: '', 
-						headerTransparent: true }
-					} 
+						headerTransparent: true 
+					}} 
 				/>
 				<Stack.Screen 
 					name="Sante" 
@@ -193,9 +231,7 @@ const App = () => {
 						headerTintColor: '#151C38', 
 						headerTitle: '', 
 						headerTransparent: true ,
-						headerBackTitleStyle: {
-							fontSize: 12
-						}
+						headerBackTitleStyle: { fontSize: 12 }
 					}}
 				/>
 				<Stack.Screen 

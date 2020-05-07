@@ -1,0 +1,51 @@
+{
+    "list": [
+        {
+            "id": 0,
+            "title": "Pain pita",
+            "date": "11/04/2020 19:32",
+            "content": {
+                "subtitle1": "Liste des ingrédients",
+                "ingredients": [
+                   {"ingredient": "310g d’eau"},
+                   {"ingredient": "10g d’huile d’olive"},
+                   {"ingredient": "2g de levure fraiche"},
+                   {"ingredient": "400g la farine blanche de blé"},
+                   {"ingredient": "100g farine de blé entier"},
+                   {"ingredient": "10g de miel"},
+                   {"ingredient": "10g de sel"}
+                ],
+                "subtitle2": "Etapes de la recette",
+                "preparation": {
+                    "day1": "Jour 1",
+                    "etape1": [
+                        {"etape": "1. Verser d'abord les ingrédients liquides dans le bol à pétrir et incorporer la levure fraiche"},
+                        {"etape": "2. Ajoutez ensuite tous les autres ingrédients et mélangez pendant 5 minutes au réglage le plus bas."},
+                        {"etape": "3. Pétrissez ensuite encore 8 à 10 minutes au deuxième niveau pour obtenir une pâte bien formée. La pâte est lisse et douce à la fin et se détache complètement du bol"},
+                        {"etape": "4. Couvrir la pâte d'un film alimentaire et laisser fermenter à température ambiante (19° - 22°) pendant une nuit."}
+                    ],
+                    "day2": "Jour 2",
+                    "etape2": [
+                        {"etape": "5. Placer soigneusement la pâte avec la carte de pâte flexible sur la surface de travail farinée et peser 10 morceaux de pâte de 85g chacun."},
+                        {"etape": "6. Façonnez les morceaux de pâte en continu - pas trop serrés - en boules en les martelant tout autour."},
+                        {"etape": "7. Couvrir d'un torchon et laisser reposer 5 minutes."},
+                        {"etape": "8. Bien fariner le plan de travail. Aplatissez d'abord les boules de pâte un peu à la main, puis étalez-les au rouleau pâtissier fariné."},
+                        {"etape": "9. Former des rondelles à environ 0.5 cm d’épaisseur et d'un diamètre de 10 à 12 cm (avec un emporte pièce c’est parfait)."},
+                        {"etape": "10. Répartissez-les sur deux papiers de cuisson. Laisser reposer recouvert d'un torchon pendant 10 à 20 minutes supplémentaires."},
+                        {"etape": "11. Cuire les pains pita à 200 ° pour un total de 5-8 minutes SANS VAPEUR."},
+                        {"etape": "12. Après la cuisson, enveloppez-les dans des torchons propres"},
+                        {"etape": "13. Couper et remplir ou servir de plat d'accompagnement."}
+                    ]
+                }
+            }
+        },
+        {
+            "id": 1,
+            "title": "Lettre de motivation",
+            "date": "10/04/2020",
+            "content": {
+                "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet nisl a metus accumsan tincidunt. Vivamus pharetra, diam sit amet venenatis viverra, ipsum risus dapibus velit, vitae mollis erat enim at nunc. Morbi et porta tellus, fermentum volutpat justo. Pellentesque ut rutrum ipsum, id pulvinar nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc euismod iaculis enim, quis tincidunt ipsum rhoncus sed. Fusce nec vehicula metus. Proin aliquet sapien ut felis hendrerit condimentum tempor vel metus. Integer ornare augue vestibulum metus semper, sit amet tristique metus accumsan. In hac habitasse platea dictumst. Proin volutpat nibh id lectus efficitur mollis."
+            }
+        }
+    ]
+}
