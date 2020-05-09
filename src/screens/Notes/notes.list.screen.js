@@ -5,14 +5,20 @@ import moment from 'moment'
 
 export default class NotesListScreen extends Component {
     render() {
-        const dataList = notesData.list
+        const dataList = notesData
         return (
             <View style={styles.container}>
                 <View style={styles.container__noteslist}>
                     <Text style={styles.container__noteslist__title}>Notes</Text>
                     <View style={styles.container__noteslist__border} />
                     <View>
-                        {dataList.map(item => <TouchableOpacity style={styles.container__noteslist__main} onPress={() => this.props.navigation.navigate('Note', { id: item.id })}><Text style={styles.container__noteslist__main__title}>{item.title}</Text><Text style={styles.container__noteslist__main__date}>{moment(item.date).format('L')}</Text></TouchableOpacity>)}
+                        {dataList.map(item => {
+                            return (
+                                <TouchableOpacity style={styles.container__noteslist__main} onPress={() => this.props.navigation.navigate('Note', { id: item.id })}>
+                                    <Text style={styles.container__noteslist__main__title}>{item.title}</Text><Text style={styles.container__noteslist__main__date}>{moment(item.date).format('L')}</Text>
+                                </TouchableOpacity>
+                            )})
+                        }
                     </View>
                 </View>
             </View>

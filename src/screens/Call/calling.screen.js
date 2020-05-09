@@ -58,11 +58,16 @@ export default class CallingScreen extends Component {
 
     render() {
         const { minutes, seconds, text, category } = this.state
+        const { firstname, lastname } = this.props.route.params
+
         return (
             <View style={styles.container}>
                 <ImageBackground source={require('../../main/assets/fond/Points.png')} style={styles.backgroundImage}>
                     <View style={styles.container__call__infos}>
-                        <Text style={styles.container__call__infos__name}>{this.props.route.params.names}</Text>
+                        <View style={styles.container__call__infos__names}>
+                            <Text style={styles.container__call__infos__name}>{!firstname ? '' : firstname}</Text>
+                            <Text style={styles.container__call__infos__name}>{!lastname ? '' : lastname}</Text>
+                        </View>
                         <Text style={styles.container__call__infos__time}>
                             {text} {category}
                             {this.timer()}
@@ -106,11 +111,18 @@ const styles = StyleSheet.create({
         marginTop: '40%'
     },
 
+    container__call__infos__names: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+    },
+
     container__call__infos__name: {
         fontSize: 30,
         fontWeight: 'bold',
         paddingBottom: 10,
         color: '#FFB99D',
+        paddingRight: 10
     },
 
     container__call__infos__category: {

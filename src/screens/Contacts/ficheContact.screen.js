@@ -4,11 +4,15 @@ import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native'
 
 export default class ComponentFicheContactScreen extends Component {
     render() {
+        const { firstname, lastname, portable, fixe, mail, address } = this.props.route.params
         return (
             <View style={styles.container}>
                 <View style={styles.container__contact}>
                     <View style={styles.container__contact__photo}></View>
-                    <Text style={styles.container__contact__name}>{this.props.route.params.names}</Text>
+                    <View style={styles.container__contact__names}>
+                        <Text style={styles.container__contact__name}>{!firstname ? '' : firstname}</Text>
+                        <Text style={styles.container__contact__name}>{!lastname ? '' : lastname}</Text>
+                    </View>
                     <View style={styles.container__contact__icons}>
                         <TouchableOpacity style={styles.container__contact__icons__join} >
                             <Image source={require('../../main/assets/icons/contact/icon_message.png')} />
@@ -17,8 +21,10 @@ export default class ComponentFicheContactScreen extends Component {
                         style={styles.container__contact__icons__join} 
                         onPress={() => this.props.navigation.navigate(
                             'Calling', 
-                            { names: 'Agathe Fradet', 
-                              category:'portable'
+                            {
+                                firstname: firstname, 
+                                lastname: lastname || '', 
+                                category: 'Portable', 
                             })}
                         >
                             <Image source={require('../../main/assets/icons/contact/icon_call.png')} />
@@ -28,45 +34,62 @@ export default class ComponentFicheContactScreen extends Component {
                         </TouchableOpacity>
                     </View>
                     <View style={styles.container__contact__border} />
-                    <TouchableOpacity 
-                    style={styles.container__contact__infos} 
-                    onPress={() => this.props.navigation.navigate(
-                        'Calling',
-                        {
-                            names: 'Agathe Fradet',
-                            category: 'portable'
-                        })}
-                    >
-                        <Text style={styles.container__contacts__infos__category}>Portable</Text>
-                        <Text style={styles.container__contacts__infos_number}>06 56 78 97 03</Text>
-                    </TouchableOpacity>
-                    <View style={styles.container__contact__infos__border} />
-                    <TouchableOpacity 
-                    style={styles.container__contact__infos} 
-                    onPress={() => this.props.navigation.navigate(
-                        'Calling',
-                        {
-                            names: 'Agathe Fradet',
-                            category: 'domicile'
-                        })}
-                    >
-                        <Text style={styles.container__contacts__infos__category}>Bureau</Text>
-                        <Text style={styles.container__contacts__infos_number}>02 41 78 97 03</Text>
-                    </TouchableOpacity>
-                    <View style={styles.container__contact__infos__border} />
-                    <TouchableOpacity style={styles.container__contact__infos}>
-                        <Text style={styles.container__contacts__infos__category}>E-mail</Text>
-                        <Text style={styles.container__contacts__infos_number}>agathe.fradet@gmail.com</Text>
-                    </TouchableOpacity>
-                    <View style={styles.container__contact__infos__border} />
-                    <TouchableOpacity style={styles.container__contact__infos}>
-                        <Text style={styles.container__contacts__infos__category}>Domicile</Text>
-                        <Text style={styles.container__contacts__infos_address}>11</Text>
-                        <Text style={styles.container__contacts__infos_address}>Rue Jaques Coeur</Text>
-                        <Text style={styles.container__contacts__infos_address}>75011 Paris</Text>
-                        <Text style={styles.container__contacts__infos_address}>France</Text>
-                        <Image style={styles.container__contact__infos__map} source={require('../../main/assets/icons/contact/map.png')} />
-                    </TouchableOpacity>
+                    {
+                        !portable
+                        ? <View />
+                        : <TouchableOpacity
+                            style={styles.container__contact__infos}
+                            onPress={() => this.props.navigation.navigate(
+                                'Calling',
+                                {
+                                    firstname: firstname,
+                                    lastname: lastname,
+                                    category: 'Portable', 
+                                })}
+                        >
+                            <Text style={styles.container__contacts__infos__category}>Portable</Text>
+                            <Text style={styles.container__contacts__infos_number}>{portable}</Text>
+                            <View style={styles.container__contact__infos__border} />
+                        </TouchableOpacity>
+                    }
+                    {
+                        !fixe 
+                        ? <View/>
+                        : <TouchableOpacity
+                            style={styles.container__contact__infos}
+                            onPress={() => this.props.navigation.navigate(
+                                'Calling',
+                                {
+                                    firstname: firstname,
+                                    lastname: lastname,
+                                    category: 'Domicile', 
+                                })}
+                        >
+                            <Text style={styles.container__contacts__infos__category}>Domicile</Text>
+                            <Text style={styles.container__contacts__infos_number}>{fixe}</Text>
+                            <View style={styles.container__contact__infos__border} />
+                        </TouchableOpacity>
+                    }
+                    {
+                        !mail
+                        ? <View />
+                        : <TouchableOpacity style={styles.container__contact__infos}>
+                            <Text style={styles.container__contacts__infos__category}>E-mail</Text>
+                            <Text style={styles.container__contacts__infos_number}>{mail}</Text>
+                            <View style={styles.container__contact__infos__border} />
+                        </TouchableOpacity>
+                    } 
+                    {
+                        !address
+                        ? <View />
+                        :  <TouchableOpacity style={styles.container__contact__infos}>
+                            <Text style={styles.container__contacts__infos__category}>Domicile</Text>
+                            <Text style={styles.container__contacts__infos_address}>{address.numero}</Text>
+                            <Text style={styles.container__contacts__infos_address}>{address.rue}</Text>
+                            <Text style={styles.container__contacts__infos_address}>{address.departement}</Text>
+                            <Image style={styles.container__contact__infos__map} source={require('../../main/assets/icons/contact/map.png')} />
+                        </TouchableOpacity>
+                    }
                 </View>
             </View>
         )
@@ -98,12 +121,19 @@ const styles = StyleSheet.create({
         marginTop: 15,
     },
 
+    container__contact__names: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center'
+    },
+
     container__contact__name: {
         fontSize: 30,
         fontWeight: 'bold',
         paddingTop: 20,
         paddingBottom: 20,
         textAlign: 'center',
+        paddingRight: 10
     },
 
     container__contact__icons: {
@@ -129,7 +159,7 @@ const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'flex-start',
-        marginTop: 10
+        marginTop: 15,
     },
 
     container__contacts__infos__category: {
@@ -138,7 +168,7 @@ const styles = StyleSheet.create({
 
     container__contacts__infos_number: {
         fontSize: 15,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
     },
 
     container__contacts__infos_address: {
@@ -154,7 +184,8 @@ const styles = StyleSheet.create({
     container__contact__infos__border: {
         width: '100%',
         height: 1,
-        marginTop: 20,
+        marginTop: 15,
         backgroundColor: '#ad7761',
+
     }
 })

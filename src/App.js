@@ -19,6 +19,10 @@ import GoogleHomeScreen from './screens/Google/google.home.screen'
 import NotesListScreen from './screens/Notes/notes.list.screen'
 import NoteScreen from './screens/Notes/note.screen'
 
+import PhotosScreen from './screens/Photos/photos.screen'
+import PhotosRecentsScreen from './screens/Photos/photos.recents.screen'
+import PhotoVisuelScreen from './screens/Photos/photo.visuel.screen'
+
 import CallsFavorisScreen from './screens/Call/calls.favoris.screen'
 import CallsRecentsScreen from './screens/Call/calls.recents.screen'
 import CallsContactsScreen from './screens/Call/calls.contacts.screen'
@@ -85,6 +89,67 @@ const App = () => {
 						headerTintColor: '#151C38', 
 						headerTitle: '', 
 						headerTransparent: true 
+					}}
+				/>
+
+				<Stack.Screen
+					name="PhotoVisuel"
+					component={PhotoVisuelScreen}
+					options={{
+						headerRight: () => (
+							<Button
+								onPress={() => navigate('Home')}
+								title="✕"
+								color="#151C38"
+							/>
+						),
+						gestureEnabled: true,
+						headerBackTitleVisible: true,
+						headerTintColor: '#151C38',
+						headerTitle: '',
+						headerTransparent: false,
+						headerStyle: { backgroundColor: '#FFB99D' },
+						headerBackTitleStyle: { fontSize: 12 },
+						transitionSpec: { open: config, close: config }
+					}}
+				/>
+				<Stack.Screen
+					name="PhotosRecents"
+					component={PhotosRecentsScreen}
+					options={{
+						headerRight: () => (
+							<Button
+								onPress={() => navigate('Home')}
+								title="✕"
+								color="#151C38"
+							/>
+						),
+						gestureEnabled: true,
+						headerBackTitleVisible: true,
+						headerTintColor: '#151C38',
+						headerTitle: 'Récents',
+						headerTransparent: false,
+						headerStyle: { backgroundColor: '#FFB99D' },
+						headerBackTitleStyle: { fontSize: 12 },
+						transitionSpec: { open: config, close: config }
+					}}
+				/>
+				<Stack.Screen
+					name="Photos"
+					component={PhotosScreen}
+					options={{
+						headerRight: () => (
+							<Button
+								onPress={() => navigate('Home')}
+								title="✕"
+								color="#151C38"
+							/>
+						),
+						headerLeft: '',
+						gestureEnabled: false,
+						headerBackTitleVisible: false,
+						headerTitle: '',
+						headerTransparent: true
 					}}
 				/>
 				<Stack.Screen

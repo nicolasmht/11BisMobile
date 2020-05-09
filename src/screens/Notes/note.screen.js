@@ -7,7 +7,7 @@ import 'moment/locale/fr';
 export default class NoteScreen extends Component {
     render() {
         const id = this.props.route.params.id
-        const dataList = notesData.list
+        const dataList = notesData
         const note = dataList[id]
         return (
             <View style={styles.container}>

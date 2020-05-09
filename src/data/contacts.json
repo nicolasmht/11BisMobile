@@ -1,0 +1,422 @@
+{
+    "a": [
+        {
+            "photo": "",
+            "firstname": "Anouk",
+            "lastname": "Bellefeuille",
+            "portable": "06 21 78 55 76",
+            "fixe": "01 10 55 92 76",
+            "mail": "Anouk.bellefeuille@gmail.com",
+            "address": {
+                "numero": "96",
+                "rue": "Boulevard de Prague",
+                "departement": "94130 Nogent-Sur-Marne"
+            },
+            "relation": "coworkeuse",
+            "border": true
+        },
+        {
+            "photo": "",
+            "firstname": "Anne",
+            "lastname": "Flores",
+            "portable": "06 88 67 15 53",
+            "fixe": "",
+            "mail": "Anne_flores64@gmail.com",
+            "address": {
+                "numero": "29",
+                "rue": "Rue Taitbou",
+                "departement": "75009 Paris"
+            },
+            "relation": "soeur",
+            "border": false
+        }
+    ],
+    "b": [
+        {
+            "photo": "X",
+            "firstname": "Ben <3",
+            "lastname": "",
+            "portable": "07 85 20 08 19",
+            "fixe": "",
+            "mail": "Benrichard@gmail.com",
+            "address": {
+                "numero": "11Bis",
+                "rue": "Rue Jacques Coeur",
+                "departement": "75009 Paris"
+            },
+            "relation": "copain",
+            "border": true
+        },
+        {
+            "photo": "",
+            "firstname": "Basile",
+            "lastname": "Thibault",
+            "portable": "06 76 57 57 24",
+            "fixe": "01 41 50 38 25",
+            "mail": "Basiletblt@edu.sorbonne.fr",
+            "address": {
+                "numero": "28",
+                "rue": "Boulevard des Capucines",
+                "departement": "75009 Paris"
+            },
+            "relation": "coworkeur",
+            "border": false
+        }
+    ],
+    "c": [
+        {
+            "photo": "X",
+            "firstname": "Caro",
+            "lastname": "Dupuis",
+            "portable": "07 89 67 38 63",
+            "fixe": "01 28 39 19 95",
+            "mail": "Caro-dupuis@gmail.com",
+            "address": {
+                "numero": "59",
+                "rue": "Rue Nationale",
+                "departement": "75007 Paris"
+            },
+            "relation": "amie d'enfance",
+            "border": false
+        }
+    ],
+    "d": [
+        {
+            "photo": "",
+            "firstname": "Dr. Hubert",
+            "lastname": "",
+            "portable": "01 23 48 01 34",
+            "fixe": "",
+            "mail": "docteur.huber@gmail.com",
+            "address": "",
+            "relation": "",
+            "border": false
+        }
+    ],
+    "e": [
+        {
+            "photo": "",
+            "firstname": "Emma",
+            "lastname": "Parizeau",
+            "portable": "06 28 56 88 78",
+            "fixe": "",
+            "mail": "Eparizeau@gmail.com",
+            "address": {
+                "numero": "32",
+                "rue": "Rue du Faubourg National",
+                "departement": "94320 Thiais"
+            },
+            "relation": "amie d'enfance",
+            "border": false
+        }
+    ],
+    "f": [
+        {
+            "photo": "",
+            "firstname": "Florian",
+            "lastname": "Labossière",
+            "portable": "06 92 77 66 34",
+            "fixe": "110167837",
+            "mail": "Florianlabossiere@gmail.com",
+            "address": {
+                "numero": "59",
+                "rue": "Rue Nationale",
+                "departement": "75007 Paris"
+            },
+            "relation": "ami d'enfance",
+            "border": false
+        }
+    ],
+    "g": [
+        {
+            "photo": "X",
+            "firstname": "Gab",
+            "lastname": "Etcheparre",
+            "portable": "06 87 60 18 01",
+            "fixe": "",
+            "mail": "Etcheparregabriel@hotmail.fr",
+            "address": {
+                "numero": "2",
+                "rue": "Rue du 49ème Régiment d'Infanterie",
+                "departement": " 64100 Bayonne"
+            },
+            "relation": "cousin",
+            "border": false
+        }
+    ],
+    "h": [],
+    "i": [
+        {
+            "photo": "",
+            "firstname": "Inés",
+            "lastname": "Saurel",
+            "portable": "06 86 63 21 19",
+            "fixe": "",
+            "mail": "InesSaurelllll@edu.assas.fr",
+            "address": {
+                "numero": "21",
+                "rue": "Rue Rue las Cases",
+                "departement": " 75007 Paris"
+            },
+            "relation": "amie d'école",
+            "border": false
+        }
+
+    ],
+    "j": [
+        {
+            "photo": "",
+            "firstname": "Julien",
+            "lastname": "Etcheparre",
+            "portable": "06 10 15 68 52",
+            "fixe": "",
+            "mail": "JulienEtcheparre@gmail.com",
+            "address": {
+                "numero": "2",
+                "rue": "Rue du 49ème Régiment d'Infanterie",
+                "departement": " 64100 Bayonne"
+            },
+            "relation": "cousin",
+            "border": false
+        }
+    ],
+    "k": [],
+    "l": [
+        {
+            "photo": "X",
+            "firstname": "La Mama",
+            "lastname": "",
+            "portable": "07 26 84 74 63",
+            "fixe": "01 08 18 68 65",
+            "mail": "Judithflores-64@yahoo.fr",
+            "address": {
+                "numero": "4",
+                "rue": "Rue Nungesser et Coli",
+                "departement": " 92310 Sèvres"
+            },
+            "relation": "mère",
+            "border": true
+        },
+        {
+            "photo": "",
+            "firstname": "Lucas",
+            "lastname": "Favreau",
+            "portable": "06 18 11 66 18",
+            "fixe": "",
+            "mail": "",
+            "address": {
+                "numero": "8",
+                "rue": "Rue Beaurepaire",
+                "departement": "75010 Paris"
+            } ,
+            "relation": "cousin",
+            "border": false
+        }
+    ],
+    "m": [
+        {
+            "photo": "",
+            "firstname": "Maxime",
+            "lastname": "Riel",
+            "portable": "06 86 05 20 08",
+            "fixe": "01 53 81 83 90",
+            "mail": "Maxriel@gmail.com",
+            "address": {
+                "numero": "55",
+                "rue": "Avenue Jean Portalis",
+                "departement": "78190 Trappes"
+            },
+            "relation": "coworkeur",
+            "border": true
+        },
+        {
+            "photo": "",
+            "firstname": "Mathis",
+            "lastname": "Margand",
+            "portable": "06 72 92 01 26",
+            "fixe": "",
+            "mail": "Mathis-margand@yahoo.fr",
+            "address": {
+                "numero": "18",
+                "rue": "Boulevard de la Villette",
+                "departement": "75019 Paris"
+            },
+            "relation": "ami d'école",
+            "border": false
+        }
+    ],
+    "n": [
+        {
+            "photo": "",
+            "firstname": "Ninon",
+            "lastname": "Benjamin",
+            "portable": "06 88 54 39 71",
+            "fixe": "",
+            "mail": "Benjaminninon@outlook.fr",
+            "address": {
+                "numero": "85",
+                "rue": "Rue Beauvau",
+                "departement": "13003 Marseille"
+            },
+            "relation": "amie d'école",
+            "border": false
+        }
+    ],
+    "o": [],
+    "p": [
+        {
+            "photo": "X",
+            "firstname": "Pop's",
+            "lastname": "",
+            "portable": "07 53 56 71 87",
+            "fixe": "01 08 18 68 65",
+            "mail": "Patrick.flores@gmail.com",
+            "address": {
+                "numero": "4",
+                "rue": "Rue Nungesser et Coli",
+                "departement": "92310 Sèvre"
+            },
+            "relation": "père",
+            "border": true
+        },
+        {
+            "photo": "",
+            "firstname": "Proprio",
+            "lastname": "",
+            "portable": "06 99 68 28 64",
+            "fixe": "05 41 50 38 25",
+            "mail": "Christian.fressin75@hotmail.fr",
+            "address": {
+                "numero": "93",
+                "rue": "Chemin Des Bateliers",
+                "departement": "49100 Angers"
+            },
+            "relation": "propio",
+            "border": true
+        },
+        {
+            "photo": "",
+            "firstname": "Police",
+            "lastname": "",
+            "portable": "",
+            "fixe": "17",
+            "mail": "",
+            "address": "",
+            "relation": ""
+        }
+    ],
+    "q": [],
+    "r": [
+        {
+            "photo": "X",
+            "firstname": "Romain",
+            "lastname": "Barrientos",
+            "portable": "06 98 62 98 21",
+            "fixe": "",
+            "mail": "Barrientosromain@outlook.fr",
+            "address": {
+                "numero": "1",
+                "rue": "Rue des Trois Frères",
+                "departement": "75018 Paris"
+            },
+            "relation": "ami d'école",
+            "border": false
+        }
+    ],
+    "s": [
+        {
+            "photo": "",
+            "firstname": "Sam",
+            "lastname": "Sung",
+            "portable": "06 70 43 62 98",
+            "fixe": "",
+            "mail": "Samveronneau@gmail.com",
+            "address": {
+                "numero": "164",
+                "rue": "Rue de Turennes",
+                "departement": "75003 Paris"
+            },
+            "relation": "ami d'enfance",
+            "border": true
+        },
+        {
+            "photo": "",
+            "firstname": "Steph",
+            "lastname": "Sicard",
+            "portable": "06 91 78 71 65",
+            "fixe": "",
+            "mail": "Stephanie-sicard@yahoo.fr",
+            "address": {
+                "numero": "5",
+                "rue": "Rue de Dunkerque",
+                "departement": "75010 Paris"
+            },
+            "relation": "coworkeuse",
+            "border": true
+        },
+        {
+            "photo": "",
+            "firstname": "Simon",
+            "lastname": "Bienvenue",
+            "portable": "06 17 17 89 63",
+            "fixe": "01 39 69 56 20",
+            "mail": "",
+            "address": {
+                "numero": "38",
+                "rue": "Rue Saint-Maur",
+                "departement": "75011 Pari"
+            },
+            "relation": "cousin",
+            "border": true
+        },
+        {
+            "photo": "",
+            "firstname": "Samu",
+            "lastname": "",
+            "portable": "",
+            "fixe": "15",
+            "mail": "",
+            "address": "",
+            "relation": "",
+            "border": false
+        }
+    ],
+    "t": [
+        {
+            "photo": "X",
+            "firstname": "Tim",
+            "lastname": "Brasseur",
+            "portable": "06 97 67 85 37",
+            "fixe": "01 07 24 23 46",
+            "mail": "Tim.Brasseur92@hotmail.fr",
+            "address": {
+                "numero": "50",
+                "rue": "Route de Lyon",
+                "departement": "92130 Issy-Les-Moulineaux"
+            },
+            "relation": "ami d'enfance",
+            "border": true
+        },
+        {
+            "photo": "",
+            "firstname": "Thomas",
+            "lastname": "Langlois",
+            "portable": "06 88 82 75 79",
+            "fixe": "",
+            "mail": "Thomaslanglois@gmail.com",
+            "address": {
+                "numero": "60",
+                "rue": "Rue de Turbigo",
+                "departement": "75003 Paris"
+            },
+            "relation": "ami d'école",
+            "border": false
+        }
+    ],
+    "u": [],
+    "v": [],
+    "w": [],
+    "x": [],
+    "y": [],
+    "z": []
+}
