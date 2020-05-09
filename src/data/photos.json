@@ -144,14 +144,14 @@
         },
         {
             "id": 1,
-            "photo": ".https://res.cloudinary.com/dn32la6ny/image/upload/v1589029115/11bis/photo_18.jpg"
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589029115/11bis/photo_18.jpg"
         },
         {
             "id": 2,
             "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589029115/11bis/photo_19.jpg"
-        },
+        }
     ],
-    "personne": [
+    "personnes": [
         {
             "id": 0,
             "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589030423/11bis/photo_22.jpg"

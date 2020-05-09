@@ -22,6 +22,12 @@ import NoteScreen from './screens/Notes/note.screen'
 import PhotosScreen from './screens/Photos/photos.screen'
 import PhotosRecentsScreen from './screens/Photos/photos.recents.screen'
 import PhotoVisuelScreen from './screens/Photos/photo.visuel.screen'
+import PhotosFavorisScreen from './screens/Photos/photos.favoris.screen'
+import PhotosProScreen from './screens/Photos/photos.pro.screen'
+import PhotosScreenshotScreen from './screens/Photos/photos.screenshot.screen'
+import PhotosPersonnesScreen from './screens/Photos/photos.personnes.screen'
+import PhotosMaskedScreen from './screens/Photos/photos.masked.screen'
+import PhotosDeletedScreen from './screens/Photos/photos.deleted.screen'
 
 import CallsFavorisScreen from './screens/Call/calls.favoris.screen'
 import CallsRecentsScreen from './screens/Call/calls.recents.screen'
@@ -114,6 +120,132 @@ const App = () => {
 					}}
 				/>
 				<Stack.Screen
+					name="PhotosDeleted"
+					component={PhotosDeletedScreen}
+					options={{
+						headerRight: () => (
+							<Button
+								onPress={() => navigate('Home')}
+								title="✕"
+								color="#151C38"
+							/>
+						),
+						gestureEnabled: true,
+						headerBackTitleVisible: true,
+						headerTintColor: '#151C38',
+						headerTitle: 'Suppr. récemment',
+						headerTransparent: false,
+						headerStyle: { backgroundColor: '#FFB99D' },
+						headerBackTitleStyle: { fontSize: 12 },
+						transitionSpec: { open: config, close: config }
+					}}
+				/>
+				<Stack.Screen
+					name="PhotosMasked"
+					component={PhotosMaskedScreen}
+					options={{
+						headerRight: () => (
+							<Button
+								onPress={() => navigate('Home')}
+								title="✕"
+								color="#151C38"
+							/>
+						),
+						gestureEnabled: true,
+						headerBackTitleVisible: true,
+						headerTintColor: '#151C38',
+						headerTitle: 'Masqués',
+						headerTransparent: false,
+						headerStyle: { backgroundColor: '#FFB99D' },
+						headerBackTitleStyle: { fontSize: 12 },
+						transitionSpec: { open: config, close: config }
+					}}
+				/>
+				<Stack.Screen
+					name="PhotosPro"
+					component={PhotosProScreen}
+					options={{
+						headerRight: () => (
+							<Button
+								onPress={() => navigate('Home')}
+								title="✕"
+								color="#151C38"
+							/>
+						),
+						gestureEnabled: true,
+						headerBackTitleVisible: true,
+						headerTintColor: '#151C38',
+						headerTitle: 'Professionnel',
+						headerTransparent: false,
+						headerStyle: { backgroundColor: '#FFB99D' },
+						headerBackTitleStyle: { fontSize: 12 },
+						transitionSpec: { open: config, close: config }
+					}}
+				/>
+				<Stack.Screen
+					name="PhotosPersonnes"
+					component={PhotosPersonnesScreen}
+					options={{
+						headerRight: () => (
+							<Button
+								onPress={() => navigate('Home')}
+								title="✕"
+								color="#151C38"
+							/>
+						),
+						gestureEnabled: true,
+						headerBackTitleVisible: true,
+						headerTintColor: '#151C38',
+						headerTitle: 'Personnes',
+						headerTransparent: false,
+						headerStyle: { backgroundColor: '#FFB99D' },
+						headerBackTitleStyle: { fontSize: 12 },
+						transitionSpec: { open: config, close: config }
+					}}
+				/>
+				<Stack.Screen
+					name="PhotosScreenshot"
+					component={PhotosScreenshotScreen}
+					options={{
+						headerRight: () => (
+							<Button
+								onPress={() => navigate('Home')}
+								title="✕"
+								color="#151C38"
+							/>
+						),
+						gestureEnabled: true,
+						headerBackTitleVisible: true,
+						headerTintColor: '#151C38',
+						headerTitle: 'Screenshot',
+						headerTransparent: false,
+						headerStyle: { backgroundColor: '#FFB99D' },
+						headerBackTitleStyle: { fontSize: 12 },
+						transitionSpec: { open: config, close: config }
+					}}
+				/>
+				<Stack.Screen
+					name="PhotosFavoris"
+					component={PhotosFavorisScreen}
+					options={{
+						headerRight: () => (
+							<Button
+								onPress={() => navigate('Home')}
+								title="✕"
+								color="#151C38"
+							/>
+						),
+						gestureEnabled: true,
+						headerBackTitleVisible: true,
+						headerTintColor: '#151C38',
+						headerTitle: 'Favoris',
+						headerTransparent: false,
+						headerStyle: { backgroundColor: '#FFB99D' },
+						headerBackTitleStyle: { fontSize: 12 },
+						transitionSpec: { open: config, close: config }
+					}}
+				/>
+				<Stack.Screen
 					name="PhotosRecents"
 					component={PhotosRecentsScreen}
 					options={{
@@ -146,10 +278,12 @@ const App = () => {
 							/>
 						),
 						headerLeft: '',
-						gestureEnabled: false,
-						headerBackTitleVisible: false,
+						gestureEnabled: true,
+						headerBackTitleVisible: true,
 						headerTitle: '',
-						headerTransparent: true
+						headerTransparent: false,
+						headerTintColor: '#151C38',
+						headerStyle: { backgroundColor: '#FFB99D' },
 					}}
 				/>
 				<Stack.Screen

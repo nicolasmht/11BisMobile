@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import { StyleSheet, View, Text, TouchableOpacity, Image, ScrollView, FlatList } from 'react-native'
 import photosData from '../../data/photos.json'
 
-export default class PhotosRecentsScreen extends Component {
+export default class PhotosScreenshotScreen extends Component {
     render() {
         const photos = photosData
-        const recents = photos.recents
+        const screenshot = photos.screenshot
         return (
             <View style={styles.container}>
                 <ScrollView>
@@ -13,9 +13,9 @@ export default class PhotosRecentsScreen extends Component {
                         <View style={styles.container__photos__album}>
                             <View style={styles.container__photos__album__pers}>
                                 <FlatList
-                                    data={recents}
+                                    data={screenshot}
                                     renderItem={({ item }) => (
-                                        <TouchableOpacity style={{ display: 'flex', flexDirection: 'column', margin: 2 }} onPress={() => this.props.navigation.navigate('PhotoVisuel', { id: item.id, name: 'recents' })}>
+                                        <TouchableOpacity style={{ display: 'flex', flexDirection: 'column', margin: 2 }} onPress={() => this.props.navigation.navigate('PhotoVisuel', { id: item.id, name: 'screenshot' })}>
                                             <Image style={styles.container__photos__album__img} source={{ uri: item.photo }} />
                                         </TouchableOpacity>
                                     )}

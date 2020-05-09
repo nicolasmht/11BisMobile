@@ -9,7 +9,7 @@ export default class PhotosScreen extends Component {
         const pro = photos.pro
         const favoris = photos.favoris
         const screenshot = photos.screenshot
-        const personne = photos.personne
+        const personnes = photos.personnes
         const masked = photos.masked
         const deleted = photos.deleted
 
@@ -29,22 +29,22 @@ export default class PhotosScreen extends Component {
                         <View style={styles.container__photos__border}/>
                         <Text style={styles.container__photos__subtitle}>Mes albums</Text>
                         <View style={styles.container__photos__album}>
-                            <TouchableOpacity style={styles.container__photos__album__recents} onPress={() => this.props.navigation.navigate('PhotosRecents')}>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('PhotosRecents')}>
                                 <Image style={styles.container__photos__album__img} source={{ uri: photo_recents }} />
                                 <Text style={styles.container__photos__album__title}>Récents</Text>
                                 <Text style={styles.container__photos__album__number}>{recents.length}</Text>
                             </TouchableOpacity>
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('PhotosPro')}>
                                 <Image style={styles.container__photos__album__img} source={{ uri: photo_pro }} />
                                 <Text style={styles.container__photos__album__title}>Professionnel</Text>
                                 <Text style={styles.container__photos__album__number}>{pro.length}</Text>
                             </TouchableOpacity>
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('PhotosFavoris')}>
                                 <Image style={styles.container__photos__album__img} source={{ uri: photo_favoris }} />
                                 <Text style={styles.container__photos__album__title}>Favoris</Text>
                                 <Text style={styles.container__photos__album__number}>{favoris.length}</Text>
                             </TouchableOpacity>
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('PhotosScreenshot')}>
                                 <Image style={styles.container__photos__album__img} source={{ uri: photo_screenshot }} />
                                 <Text style={styles.container__photos__album__title}>Screenshot</Text>
                                 <Text style={styles.container__photos__album__number}>{screenshot.length}</Text>
@@ -53,9 +53,9 @@ export default class PhotosScreen extends Component {
                         <View style={styles.container__photos__border} />
                         <Text style={styles.container__photos__subtitle}>Personnes et lieux</Text>
                         <View style={styles.container__photos__album}>
-                            <TouchableOpacity style={styles.container__photos__album__pers}>
+                            <TouchableOpacity style={styles.container__photos__album__pers} onPress={() => this.props.navigation.navigate('PhotosPersonnes')}>
                                 <FlatList
-                                    data={personne}
+                                    data={personnes}
                                     renderItem={({ item }) => (
                                         <View style={{ display: 'flex', flexDirection: 'column', margin: 1}}>
                                             <Image style={styles.container__photos__album__pers__miniature} source={{ uri: item.photo }} />
@@ -65,8 +65,8 @@ export default class PhotosScreen extends Component {
                                     numColumns={2}
                                     horizontal={false}
                                 />
-                                <Text style={styles.container__photos__album__title}>Personne</Text>
-                                <Text style={styles.container__photos__album__number}>{personne.length}</Text>
+                                <Text style={styles.container__photos__album__title}>Personnes</Text>
+                                <Text style={styles.container__photos__album__number}>{personnes.length}</Text>
                             </TouchableOpacity>
                             <TouchableOpacity>
                                 <Image style={styles.container__photos__album__img} source={require('../../main/assets/images/photos/photo_lieux.png')} />
@@ -77,7 +77,7 @@ export default class PhotosScreen extends Component {
                         <View style={styles.container__photos__border} />
                         <Text style={styles.container__photos__subtitle}>Autres Albums</Text>
                         <View style={styles.container__photos__other_albums}>
-                            <View style={styles.container__photos__other_albums__line}>
+                            <TouchableOpacity style={styles.container__photos__other_albums__line} onPress={() => this.props.navigation.navigate('PhotosMasked')}>
                                 <View style={styles.container__photos__other__albums__infos}>
                                     <Image source={require('../../main/assets/icons/icon_eyeslash.png')} />
                                     <Text style={styles.container__photos__other__albums__infos__title}>Masqués</Text>
@@ -86,9 +86,9 @@ export default class PhotosScreen extends Component {
                                     <Text style={styles.container__photos__other__albums__infos__number}>{masked.length}</Text>
                                     <Text style={styles.container__photos__other__albums__infos__chevron}>> </Text>
                                 </View>
-                            </View>
+                            </TouchableOpacity>
                             <View style={styles.container__photos__border} />
-                            <View style={styles.container__photos__other_albums__line}>
+                            <TouchableOpacity style={styles.container__photos__other_albums__line} onPress={() => this.props.navigation.navigate('PhotosDeleted')}>
                                 <View style={styles.container__photos__other__albums__infos}>
                                     <Image source={require('../../main/assets/icons/icon_eyeslash.png')} />
                                     <Text style={styles.container__photos__other__albums__infos__title}>Supprimés récemment</Text>
@@ -97,7 +97,7 @@ export default class PhotosScreen extends Component {
                                     <Text style={styles.container__photos__other__albums__infos__number}>{deleted.length}</Text>
                                     <Text style={styles.container__photos__other__albums__infos__chevron}>> </Text>
                                 </View>
-                            </View>
+                            </TouchableOpacity>
                         </View>
                     </View>
                 </ScrollView>
@@ -114,12 +114,11 @@ const styles = StyleSheet.create({
     container__photos: {
         width: '100%',
         height: '100%',
-        marginTop: '5%',
+        marginTop: '-2%',
         padding: 24,
     },
 
     container__photos__title: {
-        marginTop: 24,
         marginBottom: 5,
         fontSize: 20,
         textAlign: 'left',
@@ -138,11 +137,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         flexWrap: 'wrap',
-    },
-
-    container__photos__album__recents: {
-        display: 'flex',
-        flexDirection: 'column',
     },
 
     container__photos__album__img: {
