@@ -91,7 +91,6 @@ export default class GoogleHomeScreen extends Component {
             <View style={styles.container}>
                 <View style={styles.container__googlehome}>
                     {this.googleHome()}
-                    
                 </View>
 
             </View>
@@ -127,11 +126,11 @@ const styles = StyleSheet.create({
         fontSize: 30,
         fontWeight: '900'
     },
+
     container__googlehome__main: {
         width: '100%',
         height: '100%',
         display: 'flex',
-
     },
     
     container__googlehome__title: {

@@ -18,6 +18,7 @@ import MeteoScreen from './screens/Meteo/meteo.screen'
 import GoogleHomeScreen from './screens/Google/google.home.screen'
 import NotesListScreen from './screens/Notes/notes.list.screen'
 import NoteScreen from './screens/Notes/note.screen'
+import SpotifyPlaylistScreen from './screens/Spotify/spotify.playlist.screen'
 
 import PhotosScreen from './screens/Photos/photos.screen'
 import PhotosRecentsScreen from './screens/Photos/photos.recents.screen'
@@ -98,6 +99,24 @@ const App = () => {
 					}}
 				/>
 
+				<Stack.Screen
+					name="SpotifyPlaylist"
+					component={SpotifyPlaylistScreen}
+					options={{
+						headerRight: () => (
+							<Button
+								onPress={() => navigate('Home')}
+								title="✕"
+								color="#151C38"
+							/>
+						),
+						headerLeft: '',
+						gestureEnabled: false,
+						headerBackTitleVisible: false,
+						headerTitle: '',
+						headerTransparent: true
+					}}
+				/>
 				<Stack.Screen
 					name="PhotoVisuel"
 					component={PhotoVisuelScreen}
