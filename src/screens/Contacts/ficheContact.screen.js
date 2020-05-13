@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react'
 import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native'
+import R from '../../res/R'
 
 export default class ComponentFicheContactScreen extends Component {
     render() {
@@ -16,6 +17,7 @@ export default class ComponentFicheContactScreen extends Component {
                     <View style={styles.container__contact__icons}>
                         <TouchableOpacity style={styles.container__contact__icons__join} >
                             <Image source={require('../../main/assets/icons/contact/icon_message.png')} />
+                            <Text style={styles.container__contact__icons__text}>message</Text>
                         </TouchableOpacity>
                         <TouchableOpacity
                         style={styles.container__contact__icons__join} 
@@ -28,9 +30,11 @@ export default class ComponentFicheContactScreen extends Component {
                             })}
                         >
                             <Image source={require('../../main/assets/icons/contact/icon_call.png')} />
+                            <Text style={styles.container__contact__icons__text}>appel</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.container__contact__icons__join}>
                             <Image source={require('../../main/assets/icons/contact/icon_mail.png')} />
+                            <Text style={styles.container__contact__icons__text}>e-mail</Text>
                         </TouchableOpacity>
                     </View>
                     <View style={styles.container__contact__border} />
@@ -99,7 +103,7 @@ export default class ComponentFicheContactScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         ...StyleSheet.absoluteFillObject,
-        backgroundColor: '#FFB99D',
+        backgroundColor: R.colors.saumon,
     },
 
     container__contact: {
@@ -116,7 +120,7 @@ const styles = StyleSheet.create({
     container__contact__photo: {
         width: '21%',
         height: '11%',
-        backgroundColor: '#2A3669',
+        backgroundColor: R.colors.blue,
         borderRadius: 50,
         marginTop: 15,
     },
@@ -129,7 +133,8 @@ const styles = StyleSheet.create({
 
     container__contact__name: {
         fontSize: 30,
-        fontWeight: 'bold',
+        fontFamily: R.fonts.Agrandir_GrandHeavy,
+        color: R.colors.dark_blue,
         paddingTop: 20,
         paddingBottom: 20,
         textAlign: 'center',
@@ -144,7 +149,17 @@ const styles = StyleSheet.create({
     },
 
     container__contact__icons__join: {
-        marginRight: 20
+        marginRight: 20,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+    },
+
+    container__contact__icons__text: {
+        fontSize: 12,
+        fontFamily: R.fonts.Agrandir_Regular,
+        color: R.colors.dark_blue,
+        marginTop: 5,
     },
 
     container__contact__border: {
@@ -163,12 +178,15 @@ const styles = StyleSheet.create({
     },
 
     container__contacts__infos__category: {
-        fontSize: 13
+        fontSize: 13,
+        fontFamily: R.fonts.Agrandir_Regular,
+        color: R.colors.dark_blue,
     },
 
     container__contacts__infos_number: {
         fontSize: 15,
-        fontWeight: 'bold',
+        fontFamily: R.fonts.Agrandir_TextBold,
+        color: R.colors.dark_blue,
     },
 
     container__contacts__infos_address: {

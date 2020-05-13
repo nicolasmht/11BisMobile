@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, ScrollView, Text, TouchableOpacity } from 'react-native'
 import contactsData from '../../data/contacts.json';
-import { abs } from 'react-native-reanimated';
+import R from '../../res/R'
 
 export default class ContactsScreen extends Component {
     render() {
@@ -436,7 +436,7 @@ export default class ContactsScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         ...StyleSheet.absoluteFillObject,
-        backgroundColor: '#FFB99D',
+        backgroundColor: R.colors.saumon
     },
 
     container__contacts: {
@@ -452,7 +452,8 @@ const styles = StyleSheet.create({
 
     container__contacts__text: {
         fontSize: 30,
-        fontWeight: 'bold',
+        fontFamily: R.fonts.Agrandir_GrandHeavy,
+        color: R.colors.dark_blue,
         paddingTop: 20
     },
 
@@ -468,34 +469,36 @@ const styles = StyleSheet.create({
         marginLeft: -24,
         paddingLeft: 24,
         paddingTop: 2,
-        backgroundColor: '#2A3669',
+        backgroundColor: R.colors.blue,
         marginBottom: 5
     },
 
     container__contacts__block__letter: {
         fontSize: 15,
-        color: '#FFB99D',
-        fontWeight: 'bold',
+        color: R.colors.saumon,
+        fontFamily: R.fonts.Agrandir_TextBold,
+        paddingTop: 5, 
     },
 
     container__contacts__block__person: {
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'baseline',
-        paddingTop: 15, 
+        paddingTop: 12, 
     },
 
     container__contacts__block__person__firstname: {
-        color: '#151C38',
+        color: R.colors.dark_blue,
         fontSize: 15,
-        fontWeight: 'bold',
+        fontFamily: R.fonts.Agrandir_TextBold,
         paddingRight: 5,
+        marginTop: 2,
     },
 
     container__contacts__block__person__Lastname: {
-        color: '#151C38',
+        color: R.colors.dark_blue,
         fontSize: 15,
-        fontWeight: 'bold',
+        fontFamily: R.fonts.Agrandir_Regular,
     },
 
     container__contacts__block__person__column: {

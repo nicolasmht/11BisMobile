@@ -3,6 +3,7 @@ import { StyleSheet, View, Text, ImageBackground, Image } from 'react-native'
 import moment from 'moment'
 import nextDays from './utils/nextDays.js'
 import isDay from './utils/isDay.js'
+import R from '../../res/R'
 
 export default class Home extends Component {
     constructor() {
@@ -169,14 +170,14 @@ export default class Home extends Component {
 const styles = StyleSheet.create({
     container: {
         ...StyleSheet.absoluteFillObject,
-        backgroundColor: '#2A3669',
+        backgroundColor: R.colors.blue
 
     },
 
     container__meteo: {
         width: '100%',
         height: '30%',
-        marginTop: '8%',
+        marginTop: '15%',
         padding: 24,
         display: 'flex',
         flexDirection: 'column',
@@ -191,20 +192,23 @@ const styles = StyleSheet.create({
     },
 
     container__meteo__city: {
-        color: '#FFB99D',
-        fontSize: 50,
-        fontWeight: 'bold',
+        color: R.colors.saumon,
+        fontSize: 30,
+        fontFamily: R.fonts.Agrandir_GrandHeavy,
     },
 
     container__meteo__weather: {
-        color: '#FFB99D',
+        marginTop: 12,
+        color: R.colors.saumon,
         fontSize: 20,
+        fontFamily: R.fonts.Agrandir_Regular,
     },
 
     container__meteo__temp: {
-        color: '#FFB99D',
+        marginTop: 12,
+        color: R.colors.saumon,
         fontSize: 70,
-        fontWeight: 'bold',
+        fontFamily: R.fonts.Agrandir_GrandHeavy,
     },
 
     container__meteo__now: {
@@ -213,7 +217,7 @@ const styles = StyleSheet.create({
         flexWrap: 'nowrap',
         justifyContent: 'space-between',
         alignItems: 'baseline',
-        marginTop: '15%',
+        marginTop: '5%',
     },
 
     container__meteo__now__day: {
@@ -222,18 +226,20 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         flexWrap: 'nowrap',
         justifyContent: 'flex-start',
+        alignSelf: 'baseline',
         alignItems: 'baseline',
     },
 
     container__meteo__now__day__bold: {
-        color: '#FFB99D',
+        color: R.colors.saumon,
         fontSize: 20,
-        fontWeight: 'bold',
+        fontFamily: R.fonts.Agrandir_GrandHeavy,
     },
 
     container__meteo__now__day__text: {
-        color: '#FFB99D',
+        color: R.colors.saumon,
         fontSize: 15,
+        fontFamily: R.fonts.Agrandir_Regular,
         paddingLeft: '5%',
     },
 
@@ -247,14 +253,16 @@ const styles = StyleSheet.create({
     },
 
     container__meteo__now__temp__max: {
-        color: '#FFB99D',
+        color: R.colors.saumon,
         fontSize: 13,
+        fontFamily: R.fonts.Agrandir_Regular,
         paddingLeft: '5%',
     },
 
     container__meteo__now__temp__min: {
-        color: '#FFB99D',
+        color: R.colors.saumon,
         fontSize: 13,
+        fontFamily: R.fonts.Agrandir_Regular,
         paddingLeft: '5%',
         opacity: 0.5,
     },
@@ -276,23 +284,27 @@ const styles = StyleSheet.create({
     },
 
     container__meteo__hours__text: {
-        color: '#FFB99D',
+        color: R.colors.saumon,
         fontSize: 13,
+        fontFamily: R.fonts.Agrandir_Regular,
         paddingBottom: '2%',
     },
 
     container__meteo__hours__temp: {
-        color: '#FFB99D',
+        color: R.colors.saumon,
+        fontFamily: R.fonts.Agrandir_Regular,
         fontSize: 13,
-        paddingTop: '2%',
+        paddingTop: '3%',
+        paddingLeft: '2%',
     },
 
     container__meteo__border: {
         width: '120%',
         height: 1,
-        marginTop: 15,
+        marginTop: 5,
+        marginBottom: 5,
         marginLeft: -20,
-        backgroundColor: '#151C38',
+        backgroundColor: R.colors.dark_blue,
         opacity: 0.7
     },
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, Text, Image } from 'react-native'
+import R from '../../res/R'
 
 export default class SanteScreen extends Component {
     render() {
@@ -70,7 +71,7 @@ export default class SanteScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         ...StyleSheet.absoluteFillObject,
-        backgroundColor: '#FFB99D',
+        backgroundColor: R.colors.saumon,
     },
 
     container__sante: {
@@ -86,14 +87,15 @@ const styles = StyleSheet.create({
 
     container__sante__text: {
         fontSize: 30,
-        fontWeight: 'bold',
-        paddingTop: 20
+        fontFamily: R.fonts.Agrandir_GrandHeavy,
+        color: R.colors.dark_blue,
+        paddingTop: 30,
     },
 
     container__sante__block: {
         width: '100%',
         height: 'auto',
-        borderColor: '#151C38',
+        borderColor: R.colors.dark_blue,
         borderWidth: 1,
         borderRadius: 8,
         marginBottom: 10,
@@ -106,8 +108,9 @@ const styles = StyleSheet.create({
     },
 
     container__sante__block__text: {
-        color: '#2A3669',
+        color: R.colors.blue,
         fontSize: 15,
+        fontFamily: R.fonts.Agrandir_Regular,
         marginLeft: 10
     },
 
@@ -115,25 +118,21 @@ const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         paddingLeft: 10,
+        justifyContent: 'flex-start',
         alignItems: 'baseline',
         paddingBottom: 5
     },
 
     container__sante__block__infos__number: {
-        color: '#151C38',
+        color: R.colors.dark_blue,
         fontSize: 30,
-        fontWeight: 'bold'
-    },
-
-    container__sante__block__infos__text: {
-        color: '#151C38',
-        fontSize: 15,
-        fontWeight: 'bold',
-        paddingLeft: 10,
+        fontFamily: R.fonts.Agrandir_GrandHeavy,
     },
 
     container__sante__block__infos__unity: {
-        color: '#ad7761',
+        color: R.colors.dark_saumon,
         fontSize: 15,
+        fontFamily: R.fonts.Agrandir_Regular,
+        paddingLeft: 8,
     }
 })

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, Text, Image } from 'react-native'
+import R from '../../res/R'
 
 export default class GoogleHomeScreen extends Component {
     constructor() {
@@ -100,7 +101,7 @@ export default class GoogleHomeScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         ...StyleSheet.absoluteFillObject,
-        backgroundColor: '#FFB99D',
+        backgroundColor: R.colors.saumon
     },
     container__googlehome: {
         width: '100%',
@@ -122,9 +123,10 @@ const styles = StyleSheet.create({
         display: 'flex',
         alignSelf: 'center',
         paddingTop: '70%',
-        color: '#2A3669',
+        color: R.colors.blue,
         fontSize: 30,
-        fontWeight: '900'
+        fontFamily: R.fonts.Agrandir_GrandHeavy,
+        opacity: 0.5,
     },
 
     container__googlehome__main: {
@@ -135,23 +137,25 @@ const styles = StyleSheet.create({
     
     container__googlehome__title: {
         fontSize: 30,
-        fontWeight: 'bold',
+        fontFamily: R.fonts.Agrandir_GrandHeavy,
         textAlign: 'center',
-        color: '#151C38',
+        color: R.colors.dark_blue,
         padding: 10,
     },
 
     container__googlehome__room_title: {
         fontSize: 20,
+        fontFamily: R.fonts.Agrandir_Regular,
         textAlign: 'center',
-        color: '#151C38',
+        color: R.colors.dark_blue,
         paddingTop: 15,
     },
 
     container__googlehome__room_text: {
-        fontSize: 15,
+        fontSize: 12,
+        fontFamily: R.fonts.Agrandir_Regular,
         textAlign: 'center',
-        color: '#151C38',
+        color: R.colors.dark_blue,
         opacity: 0.5,
     },
 
@@ -169,9 +173,10 @@ const styles = StyleSheet.create({
     },
 
     container__googlehome__app__text: {
-        fontSize: 20,
+        fontSize: 15,
+        fontFamily: R.fonts.Agrandir_Regular,
         textAlign: 'center',
-        color: '#151C38',
+        color: R.colors.dark_blue,
         opacity: 0.5,
         paddingTop: 12,
     },
@@ -179,7 +184,7 @@ const styles = StyleSheet.create({
     container__googlehome__border: {
         width: '100%',
         height: 1,
-        backgroundColor: '#151C38',
+        backgroundColor: R.colors.dark_blue,
         opacity: 0.3
     }
 })

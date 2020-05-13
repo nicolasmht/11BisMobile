@@ -40,7 +40,8 @@
   },
   "rnpm": {
     "assets": [
-      "./assets/fonts/"
+      "./assets/fonts/",
+      "./src/res/colors/"
     ]
   }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, Text, Switch } from 'react-native'
+import R from '../../res/R'
 
 export default class HorlogeScreen extends Component {
     state = { switchValueAlarme1: false, switchValueAlarme2: true, switchValueAlarme3: false }
@@ -20,8 +21,8 @@ export default class HorlogeScreen extends Component {
                         <View style={styles.container__alarme__active}>
                             <Text style={this.state.switchValueAlarme1 ? styles.container__alarme__heure : styles.container__alarme__heure__disable}>08:00</Text>
                             <Switch
-                                trackColor={{ true: '#2A3669', false: '#151C38' }}
-                                thumbColor={this.state.switchValueAlarme1 ? '#FFB99D' : '#2A3669'}
+                                trackColor={{ true: R.colors.blue, false: R.colors.dark_blue }}
+                                thumbColor={this.state.switchValueAlarme1 ? R.colors.saumon : R.colors.blue}
                                 style={{ marginTop: 30}}
                                 onValueChange={this.toggleSwitchAlarme1}
                                 value={this.state.switchValueAlarme1} />
@@ -34,8 +35,8 @@ export default class HorlogeScreen extends Component {
                         <View style={styles.container__alarme__active}>
                             <Text style={this.state.switchValueAlarme2 ? styles.container__alarme__heure : styles.container__alarme__heure__disable}>08:30</Text>
                             <Switch
-                                trackColor={{ true: '#2A3669', false: '#151C38' }}
-                                thumbColor={this.state.switchValueAlarme2 ? '#FFB99D' : '#2A3669'}
+                                trackColor={{ true: R.colors.blue, false: R.colors.dark_blue }}
+                                thumbColor={this.state.switchValueAlarme2 ? R.colors.saumon : R.colors.blue}
                                 style={{ marginTop: 30}}
                                 onValueChange={this.toggleSwitchAlarme2}
                                 value={this.state.switchValueAlarme2} />
@@ -48,8 +49,8 @@ export default class HorlogeScreen extends Component {
                         <View style={styles.container__alarme__active}>
                             <Text style={this.state.switchValueAlarme3 ? styles.container__alarme__heure : styles.container__alarme__heure__disable}>09:00</Text>
                             <Switch
-                                trackColor={{ true: '#2A3669', false: '#151C38' }}
-                                thumbColor={this.state.switchValueAlarme3 ? '#FFB99D' : '#2A3669'}
+                                trackColor={{ true: R.colors.blue, false: R.colors.dark_blue }}
+                                thumbColor={this.state.switchValueAlarme3 ? R.colors.saumon : R.colors.blue}
                                 style={{ marginTop: 30}}
                                 onValueChange={this.toggleSwitchAlarme3}
                                 value={this.state.switchValueAlarme3} />
@@ -64,17 +65,17 @@ export default class HorlogeScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         ...StyleSheet.absoluteFillObject,
-        backgroundColor: '#FFB99D',
+        backgroundColor: R.colors.saumon,
     },
     container__alarme: {
         width: '100%',
         height: '22%',
-        paddingTop: '13%',
+        paddingTop: '20%',
         paddingLeft: 24,
         paddingRight: 24,
         display: 'flex',
         flexDirection: 'column',
-        flexWrap: 'wrap',
+        flexWrap: 'nowrap',
         justifyContent: 'flex-start',
     },
 
@@ -87,19 +88,29 @@ const styles = StyleSheet.create({
 
     container__alarme__heure: {
         fontSize: 60,
+        fontFamily: R.fonts.Agrandir_GrandLight,
+        color: R.colors.dark_blue,
     },
 
     container__alarme__heure__disable: {
         fontSize: 60,
-        opacity: 0.3
+        opacity: 0.3,
+        fontFamily: R.fonts.Agrandir_GrandLight,
+        color: R.colors.dark_blue,
     },
 
     container__alarme__text: {
-        fontSize: 15
+        fontSize: 15,
+        fontFamily: R.fonts.Agrandir_Regular,
+        color: R.colors.dark_blue,
+        marginTop: -8,
     },
 
     container__alarme__text__disable: {
         fontSize: 15,
+        fontFamily: R.fonts.Agrandir_Regular,
+        color: R.colors.dark_blue,
+        marginTop: -8,
         opacity: 0.3
     },
 
@@ -107,7 +118,7 @@ const styles = StyleSheet.create({
         width: '100%',
         height: 1,
         marginTop: 15,
-        backgroundColor: '#151C38',
+        backgroundColor: R.colors.dark_blue,
         opacity: 0.3
     }
 })

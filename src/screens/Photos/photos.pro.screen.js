@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, Text, TouchableOpacity, Image, ScrollView, FlatList } from 'react-native'
 import photosData from '../../data/photos.json'
+import R from '../../res/R'
 
 export default class PhotosProScreen extends Component {
     render() {
@@ -38,7 +39,7 @@ export default class PhotosProScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         ...StyleSheet.absoluteFillObject,
-        backgroundColor: '#FFB99D',
+        backgroundColor: R.colors.saumon
     },
 
     container__photos: {
@@ -56,21 +57,22 @@ const styles = StyleSheet.create({
         zIndex: 1,
         paddingLeft: 24,
         paddingTop: 15,
-        backgroundColor: '#FFB99D'
+        backgroundColor: R.colors.saumon
     },
 
     container__photos__title: {
-        marginBottom: 5,
         fontSize: 15,
         textAlign: 'left',
-        fontWeight: 'bold'
+        fontFamily: R.fonts.Agrandir_TextBold,
+        color: R.colors.dark_blue,
     },
 
     container__photos__date: {
-        marginBottom: 15,
         fontSize: 15,
         textAlign: 'left',
-        opacity: 0.5
+        fontFamily: R.fonts.Agrandir_Regular,
+        color: R.colors.dark_blue,
+        opacity: 0.5,
     },
 
 
@@ -78,6 +80,6 @@ const styles = StyleSheet.create({
         width: 118,
         height: 118,
         borderWidth: 1,
-        borderColor: '#151C38'
+        borderColor: R.colors.dark_blue
     }
 })

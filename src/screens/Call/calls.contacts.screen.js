@@ -1,93 +1,436 @@
 import React, { Component } from 'react'
-import { StyleSheet, View, Text, TouchableOpacity, Image } from 'react-native'
+import { StyleSheet, View, Text, TouchableOpacity, Image, ScrollView } from 'react-native'
+import R from '../../res/R'
+import contactsData from '../../data/contacts.json';
 
 export default class CallsContactsScreen extends Component {
     render() {
+        const contactsList = contactsData
+        const lettre_a = contactsList.a
+        const lettre_b = contactsList.b
+        const lettre_c = contactsList.c
+        const lettre_d = contactsList.d
+        const lettre_e = contactsList.e
+        const lettre_f = contactsList.f
+        const lettre_g = contactsList.g
+        const lettre_i = contactsList.i
+        const lettre_j = contactsList.j
+        const lettre_l = contactsList.l
+        const lettre_m = contactsList.m
+        const lettre_n = contactsList.n
+        const lettre_p = contactsList.p
+        const lettre_r = contactsList.r
+        const lettre_s = contactsList.s
+        const lettre_t = contactsList.t
         return (
             <View style={styles.container}>
-                <View style={styles.container__callscontacts}>
-                    <Text style={styles.container__callscontacts__text}>Contacts</Text>
-                    <View style={styles.container__callscontacts__block}>
-                        <View style={styles.container__callscontacts__block__background}>
-                            <Text style={styles.container__callscontacts__block__letter}>A</Text>
+                <ScrollView>
+                    <View style={styles.container__contacts}>
+                        <Text style={styles.container__contacts__text}>Contacts</Text>
+                        <View style={styles.container__contacts__block}>
+                            <View style={styles.container__contacts__block__background}>
+                                <Text style={styles.container__contacts__block__letter}>A</Text>
+                            </View>
+                            {lettre_a.map(item => {
+                                return (
+                                    <TouchableOpacity style={styles.container__contacts__block__person}
+                                        onPress={() => this.props.navigation.navigate(
+                                            'FicheContact',
+                                            { firstname: item.firstname, lastname: item.lastname, portable: item.portable, fixe: item.fixe, mail: item.mail, address: item.address }
+                                        )}>
+                                        <View style={styles.container__contacts__block__person__column}>
+                                            <View style={styles.container__contacts__block__person__row}>
+                                                <Text style={styles.container__contacts__block__person__firstname}>{item.firstname}</Text>
+                                                <Text style={styles.container__contacts__block__person__lastname}>{item.lastname}</Text>
+                                            </View>
+                                            {item.border === true
+                                                ? <View style={styles.container__contacts__border}></View>
+                                                : <View />
+                                            }
+                                        </View>
+                                    </TouchableOpacity>
+                                )
+                            })}
                         </View>
-                        <TouchableOpacity style={styles.container__callscontacts__block__person} onPress={() => this.props.navigation.navigate('FicheContact', { names: 'Agathe Fradet' })}>
-                            <Text style={styles.container__callscontacts__block__person__firstname}>Agathe</Text>
-                            <Text style={styles.container__callscontacts__block__person__lastname}>Fradet</Text>
-                        </TouchableOpacity>
-                        <View style={styles.container__callscontacts__border} />
-
-                        <TouchableOpacity style={styles.container__callscontacts__block__person}>
-                            <Text style={styles.container__callscontacts__block__person__firstname}>Agathe</Text>
-                            <Text style={styles.container__callscontacts__block__person__lastname}>Fradet</Text>
-                        </TouchableOpacity>
-                        <View style={styles.container__callscontacts__border} />
-
-                        <TouchableOpacity style={styles.container__callscontacts__block__person}>
-                            <Text style={styles.container__callscontacts__block__person__firstname}>Agathe</Text>
-                            <Text style={styles.container__callscontacts__block__person__lastname}>Fradet</Text>
-                        </TouchableOpacity>
-                        <View style={styles.container__callscontacts__border} />
-
-                        <TouchableOpacity style={styles.container__callscontacts__block__person}>
-                            <Text style={styles.container__callscontacts__block__person__firstname}>Agathe</Text>
-                            <Text style={styles.container__callscontacts__block__person__lastname}>Fradet</Text>
-                        </TouchableOpacity>
-                        <View style={styles.container__callscontacts__border} />
-
-                        <TouchableOpacity style={styles.container__callscontacts__block__person}>
-                            <Text style={styles.container__callscontacts__block__person__firstname}>Agathe</Text>
-                            <Text style={styles.container__callscontacts__block__person__lastname}>Fradet</Text>
-                        </TouchableOpacity>
-                        <View style={styles.container__callscontacts__border} />
-
-                        <TouchableOpacity style={styles.container__callscontacts__block__person}>
-                            <Text style={styles.container__callscontacts__block__person__firstname}>Agathe</Text>
-                            <Text style={styles.container__callscontacts__block__person__lastname}>Fradet</Text>
-                        </TouchableOpacity>
-                    </View>
-
-                    <View style={styles.container__callscontacts__block}>
-                        <View style={styles.container__callscontacts__block__background}>
-                            <Text style={styles.container__callscontacts__block__letter}>B</Text>
+                        <View style={styles.container__contacts__block}>
+                            <View style={styles.container__contacts__block__background}>
+                                <Text style={styles.container__contacts__block__letter}>B</Text>
+                            </View>
+                            {lettre_b.map(item => {
+                                return (
+                                    <TouchableOpacity style={styles.container__contacts__block__person}
+                                        onPress={() => this.props.navigation.navigate(
+                                            'FicheContact',
+                                            { firstname: item.firstname, lastname: item.lastname, portable: item.portable, fixe: item.fixe, mail: item.mail, address: item.address }
+                                        )}>
+                                        <View style={styles.container__contacts__block__person__column}>
+                                            <View style={styles.container__contacts__block__person__row}>
+                                                <Text style={styles.container__contacts__block__person__firstname}>{item.firstname}</Text>
+                                                <Text style={styles.container__contacts__block__person__lastname}>{item.lastname}</Text>
+                                            </View>
+                                            {item.border === true
+                                                ? <View style={styles.container__contacts__border}></View>
+                                                : <View />
+                                            }
+                                        </View>
+                                    </TouchableOpacity>
+                                )
+                            })}
                         </View>
-                        <TouchableOpacity style={styles.container__callscontacts__block__person}>
-                            <Text style={styles.container__callscontacts__block__person__firstname}>Bastien</Text>
-                            <Text style={styles.container__callscontacts__block__person__lastname}>Robert</Text>
-                        </TouchableOpacity>
-                        <View style={styles.container__callscontacts__border} />
-
-                        <TouchableOpacity style={styles.container__callscontacts__block__person}>
-                            <Text style={styles.container__callscontacts__block__person__firstname}>Baptiste</Text>
-                            <Text style={styles.container__callscontacts__block__person__lastname}>Lefebvre</Text>
-                        </TouchableOpacity>
-                    </View>
-
-                    <View style={styles.container__callscontacts__block}>
-                        <View style={styles.container__callscontacts__block__background}>
-                            <Text style={styles.container__callscontacts__block__letter}>C</Text>
+                        <View style={styles.container__contacts__block}>
+                            <View style={styles.container__contacts__block__background}>
+                                <Text style={styles.container__contacts__block__letter}>C</Text>
+                            </View>
+                            {lettre_c.map(item => {
+                                return (
+                                    <TouchableOpacity style={styles.container__contacts__block__person}
+                                        onPress={() => this.props.navigation.navigate(
+                                            'FicheContact',
+                                            { firstname: item.firstname, lastname: item.lastname, portable: item.portable, fixe: item.fixe, mail: item.mail, address: item.address }
+                                        )}>
+                                        <View style={styles.container__contacts__block__person__column}>
+                                            <View style={styles.container__contacts__block__person__row}>
+                                                <Text style={styles.container__contacts__block__person__firstname}>{item.firstname}</Text>
+                                                <Text style={styles.container__contacts__block__person__lastname}>{item.lastname}</Text>
+                                            </View>
+                                            {item.border === true
+                                                ? <View style={styles.container__contacts__border}></View>
+                                                : <View />
+                                            }
+                                        </View>
+                                    </TouchableOpacity>
+                                )
+                            })}
                         </View>
-                        <TouchableOpacity style={styles.container__callscontacts__block__person}>
-                            <Text style={styles.container__callscontacts__block__person__firstname}>Charlotte</Text>
-                            <Text style={styles.container__callscontacts__block__person__lastname}>Mandinaud</Text>
-                        </TouchableOpacity>
-                        <View style={styles.container__callscontacts__border} />
-
-                        <TouchableOpacity style={styles.container__callscontacts__block__person}>
-                            <Text style={styles.container__callscontacts__block__person__firstname}>Clément</Text>
-                            <Text style={styles.container__callscontacts__block__person__lastname}>Roche</Text>
-                        </TouchableOpacity>
-                    </View>
-
-                    <View style={styles.container__callscontacts__block}>
-                        <View style={styles.container__callscontacts__block__background}>
-                            <Text style={styles.container__callscontacts__block__letter}>D</Text>
+                        <View style={styles.container__contacts__block}>
+                            <View style={styles.container__contacts__block__background}>
+                                <Text style={styles.container__contacts__block__letter}>D</Text>
+                            </View>
+                            {lettre_d.map(item => {
+                                return (
+                                    <TouchableOpacity style={styles.container__contacts__block__person}
+                                        onPress={() => this.props.navigation.navigate(
+                                            'FicheContact',
+                                            { firstname: item.firstname, lastname: item.lastname, portable: item.portable, fixe: item.fixe, mail: item.mail, address: item.address }
+                                        )}>
+                                        <View style={styles.container__contacts__block__person__column}>
+                                            <View style={styles.container__contacts__block__person__row}>
+                                                <Text style={styles.container__contacts__block__person__firstname}>{item.firstname}</Text>
+                                                <Text style={styles.container__contacts__block__person__lastname}>{item.lastname}</Text>
+                                            </View>
+                                            {item.border === true
+                                                ? <View style={styles.container__contacts__border}></View>
+                                                : <View />
+                                            }
+                                        </View>
+                                    </TouchableOpacity>
+                                )
+                            })}
                         </View>
-                        <TouchableOpacity style={styles.container__callscontacts__block__person}>
-                            <Text style={styles.container__callscontacts__block__person__firstname}>Damien</Text>
-                            <Text style={styles.container__callscontacts__block__person__lastname}>Montastier</Text>
-                        </TouchableOpacity>
+                        <View style={styles.container__contacts__block}>
+                            <View style={styles.container__contacts__block__background}>
+                                <Text style={styles.container__contacts__block__letter}>E</Text>
+                            </View>
+                            {lettre_e.map(item => {
+                                return (
+                                    <TouchableOpacity style={styles.container__contacts__block__person}
+                                        onPress={() => this.props.navigation.navigate(
+                                            'FicheContact',
+                                            { firstname: item.firstname, lastname: item.lastname, portable: item.portable, fixe: item.fixe, mail: item.mail, address: item.address }
+                                        )}>
+                                        <View style={styles.container__contacts__block__person__column}>
+                                            <View style={styles.container__contacts__block__person__row}>
+                                                <Text style={styles.container__contacts__block__person__firstname}>{item.firstname}</Text>
+                                                <Text style={styles.container__contacts__block__person__lastname}>{item.lastname}</Text>
+                                            </View>
+                                            {item.border === true
+                                                ? <View style={styles.container__contacts__border}></View>
+                                                : <View />
+                                            }
+                                        </View>
+                                    </TouchableOpacity>
+                                )
+                            })}
+                        </View>
+                        <View style={styles.container__contacts__block}>
+                            <View style={styles.container__contacts__block__background}>
+                                <Text style={styles.container__contacts__block__letter}>F</Text>
+                            </View>
+                            {lettre_f.map(item => {
+                                return (
+                                    <TouchableOpacity style={styles.container__contacts__block__person}
+                                        onPress={() => this.props.navigation.navigate(
+                                            'FicheContact',
+                                            { firstname: item.firstname, lastname: item.lastname, portable: item.portable, fixe: item.fixe, mail: item.mail, address: item.address }
+                                        )}>
+                                        <View style={styles.container__contacts__block__person__column}>
+                                            <View style={styles.container__contacts__block__person__row}>
+                                                <Text style={styles.container__contacts__block__person__firstname}>{item.firstname}</Text>
+                                                <Text style={styles.container__contacts__block__person__lastname}>{item.lastname}</Text>
+                                            </View>
+                                            {item.border === true
+                                                ? <View style={styles.container__contacts__border}></View>
+                                                : <View />
+                                            }
+                                        </View>
+                                    </TouchableOpacity>
+                                )
+                            })}
+                        </View>
+                        <View style={styles.container__contacts__block}>
+                            <View style={styles.container__contacts__block__background}>
+                                <Text style={styles.container__contacts__block__letter}>G</Text>
+                            </View>
+                            {lettre_g.map(item => {
+                                return (
+                                    <TouchableOpacity style={styles.container__contacts__block__person}
+                                        onPress={() => this.props.navigation.navigate(
+                                            'FicheContact',
+                                            { firstname: item.firstname, lastname: item.lastname, portable: item.portable, fixe: item.fixe, mail: item.mail, address: item.address }
+                                        )}>
+                                        <View style={styles.container__contacts__block__person__column}>
+                                            <View style={styles.container__contacts__block__person__row}>
+                                                <Text style={styles.container__contacts__block__person__firstname}>{item.firstname}</Text>
+                                                <Text style={styles.container__contacts__block__person__lastname}>{item.lastname}</Text>
+                                            </View>
+                                            {item.border === true
+                                                ? <View style={styles.container__contacts__border}></View>
+                                                : <View />
+                                            }
+                                        </View>
+                                    </TouchableOpacity>
+                                )
+                            })}
+                        </View>
+                        <View style={styles.container__contacts__block}>
+                            <View style={styles.container__contacts__block__background}>
+                                <Text style={styles.container__contacts__block__letter}>I</Text>
+                            </View>
+                            {lettre_i.map(item => {
+                                return (
+                                    <TouchableOpacity style={styles.container__contacts__block__person}
+                                        onPress={() => this.props.navigation.navigate(
+                                            'FicheContact',
+                                            { firstname: item.firstname, lastname: item.lastname, portable: item.portable, fixe: item.fixe, mail: item.mail, address: item.address }
+                                        )}>
+                                        <View style={styles.container__contacts__block__person__column}>
+                                            <View style={styles.container__contacts__block__person__row}>
+                                                <Text style={styles.container__contacts__block__person__firstname}>{item.firstname}</Text>
+                                                <Text style={styles.container__contacts__block__person__lastname}>{item.lastname}</Text>
+                                            </View>
+                                            {item.border === true
+                                                ? <View style={styles.container__contacts__border}></View>
+                                                : <View />
+                                            }
+                                        </View>
+                                    </TouchableOpacity>
+                                )
+                            })}
+                        </View>
+                        <View style={styles.container__contacts__block}>
+                            <View style={styles.container__contacts__block__background}>
+                                <Text style={styles.container__contacts__block__letter}>J</Text>
+                            </View>
+                            {lettre_j.map(item => {
+                                return (
+                                    <TouchableOpacity style={styles.container__contacts__block__person}
+                                        onPress={() => this.props.navigation.navigate(
+                                            'FicheContact',
+                                            { firstname: item.firstname, lastname: item.lastname, portable: item.portable, fixe: item.fixe, mail: item.mail, address: item.address }
+                                        )}>
+                                        <View style={styles.container__contacts__block__person__column}>
+                                            <View style={styles.container__contacts__block__person__row}>
+                                                <Text style={styles.container__contacts__block__person__firstname}>{item.firstname}</Text>
+                                                <Text style={styles.container__contacts__block__person__lastname}>{item.lastname}</Text>
+                                            </View>
+                                            {item.border === true
+                                                ? <View style={styles.container__contacts__border}></View>
+                                                : <View />
+                                            }
+                                        </View>
+                                    </TouchableOpacity>
+                                )
+                            })}
+                        </View>
+                        <View style={styles.container__contacts__block}>
+                            <View style={styles.container__contacts__block__background}>
+                                <Text style={styles.container__contacts__block__letter}>L</Text>
+                            </View>
+                            {lettre_l.map(item => {
+                                return (
+                                    <TouchableOpacity style={styles.container__contacts__block__person}
+                                        onPress={() => this.props.navigation.navigate(
+                                            'FicheContact',
+                                            { firstname: item.firstname, lastname: item.lastname, portable: item.portable, fixe: item.fixe, mail: item.mail, address: item.address }
+                                        )}>
+                                        <View style={styles.container__contacts__block__person__column}>
+                                            <View style={styles.container__contacts__block__person__row}>
+                                                <Text style={styles.container__contacts__block__person__firstname}>{item.firstname}</Text>
+                                                <Text style={styles.container__contacts__block__person__lastname}>{item.lastname}</Text>
+                                            </View>
+                                            {item.border === true
+                                                ? <View style={styles.container__contacts__border}></View>
+                                                : <View />
+                                            }
+                                        </View>
+                                    </TouchableOpacity>
+                                )
+                            })}
+                        </View>
+                        <View style={styles.container__contacts__block}>
+                            <View style={styles.container__contacts__block__background}>
+                                <Text style={styles.container__contacts__block__letter}>M</Text>
+                            </View>
+                            {lettre_m.map(item => {
+                                return (
+                                    <TouchableOpacity style={styles.container__contacts__block__person}
+                                        onPress={() => this.props.navigation.navigate(
+                                            'FicheContact',
+                                            { firstname: item.firstname, lastname: item.lastname, portable: item.portable, fixe: item.fixe, mail: item.mail, address: item.address }
+                                        )}>
+                                        <View style={styles.container__contacts__block__person__column}>
+                                            <View style={styles.container__contacts__block__person__row}>
+                                                <Text style={styles.container__contacts__block__person__firstname}>{item.firstname}</Text>
+                                                <Text style={styles.container__contacts__block__person__lastname}>{item.lastname}</Text>
+                                            </View>
+                                            {item.border === true
+                                                ? <View style={styles.container__contacts__border}></View>
+                                                : <View />
+                                            }
+                                        </View>
+                                    </TouchableOpacity>
+                                )
+                            })}
+                        </View>
+                        <View style={styles.container__contacts__block}>
+                            <View style={styles.container__contacts__block__background}>
+                                <Text style={styles.container__contacts__block__letter}>N</Text>
+                            </View>
+                            {lettre_n.map(item => {
+                                return (
+                                    <TouchableOpacity style={styles.container__contacts__block__person}
+                                        onPress={() => this.props.navigation.navigate(
+                                            'FicheContact',
+                                            { firstname: item.firstname, lastname: item.lastname, portable: item.portable, fixe: item.fixe, mail: item.mail, address: item.address }
+                                        )}>
+                                        <View style={styles.container__contacts__block__person__column}>
+                                            <View style={styles.container__contacts__block__person__row}>
+                                                <Text style={styles.container__contacts__block__person__firstname}>{item.firstname}</Text>
+                                                <Text style={styles.container__contacts__block__person__lastname}>{item.lastname}</Text>
+                                            </View>
+                                            {item.border === true
+                                                ? <View style={styles.container__contacts__border}></View>
+                                                : <View />
+                                            }
+                                        </View>
+                                    </TouchableOpacity>
+                                )
+                            })}
+                        </View>
+                        <View style={styles.container__contacts__block}>
+                            <View style={styles.container__contacts__block__background}>
+                                <Text style={styles.container__contacts__block__letter}>P</Text>
+                            </View>
+                            {lettre_p.map(item => {
+                                return (
+                                    <TouchableOpacity style={styles.container__contacts__block__person}
+                                        onPress={() => this.props.navigation.navigate(
+                                            'FicheContact',
+                                            { firstname: item.firstname, lastname: item.lastname, portable: item.portable, fixe: item.fixe, mail: item.mail, address: item.address }
+                                        )}>
+                                        <View style={styles.container__contacts__block__person__column}>
+                                            <View style={styles.container__contacts__block__person__row}>
+                                                <Text style={styles.container__contacts__block__person__firstname}>{item.firstname}</Text>
+                                                <Text style={styles.container__contacts__block__person__lastname}>{item.lastname}</Text>
+                                            </View>
+                                            {item.border === true
+                                                ? <View style={styles.container__contacts__border}></View>
+                                                : <View />
+                                            }
+                                        </View>
+                                    </TouchableOpacity>
+                                )
+                            })}
+                        </View>
+                        <View style={styles.container__contacts__block}>
+                            <View style={styles.container__contacts__block__background}>
+                                <Text style={styles.container__contacts__block__letter}>R</Text>
+                            </View>
+                            {lettre_r.map(item => {
+                                return (
+                                    <TouchableOpacity style={styles.container__contacts__block__person}
+                                        onPress={() => this.props.navigation.navigate(
+                                            'FicheContact',
+                                            { firstname: item.firstname, lastname: item.lastname, portable: item.portable, fixe: item.fixe, mail: item.mail, address: item.address }
+                                        )}>
+                                        <View style={styles.container__contacts__block__person__column}>
+                                            <View style={styles.container__contacts__block__person__row}>
+                                                <Text style={styles.container__contacts__block__person__firstname}>{item.firstname}</Text>
+                                                <Text style={styles.container__contacts__block__person__lastname}>{item.lastname}</Text>
+                                            </View>
+                                            {item.border === true
+                                                ? <View style={styles.container__contacts__border}></View>
+                                                : <View />
+                                            }
+                                        </View>
+                                    </TouchableOpacity>
+                                )
+                            })}
+                        </View>
+                        <View style={styles.container__contacts__block}>
+                            <View style={styles.container__contacts__block__background}>
+                                <Text style={styles.container__contacts__block__letter}>S</Text>
+                            </View>
+                            {lettre_s.map(item => {
+                                return (
+                                    <TouchableOpacity style={styles.container__contacts__block__person}
+                                        onPress={() => this.props.navigation.navigate(
+                                            'FicheContact',
+                                            { firstname: item.firstname, lastname: item.lastname, portable: item.portable, fixe: item.fixe, mail: item.mail, address: item.address }
+                                        )}>
+                                        <View style={styles.container__contacts__block__person__column}>
+                                            <View style={styles.container__contacts__block__person__row}>
+                                                <Text style={styles.container__contacts__block__person__firstname}>{item.firstname}</Text>
+                                                <Text style={styles.container__contacts__block__person__lastname}>{item.lastname}</Text>
+                                            </View>
+                                            {item.border === true
+                                                ? <View style={styles.container__contacts__border}></View>
+                                                : <View />
+                                            }
+                                        </View>
+                                    </TouchableOpacity>
+                                )
+                            })}
+                        </View>
+                        <View style={styles.container__contacts__block}>
+                            <View style={styles.container__contacts__block__background}>
+                                <Text style={styles.container__contacts__block__letter}>T</Text>
+                            </View>
+                            {lettre_t.map(item => {
+                                return (
+                                    <TouchableOpacity style={styles.container__contacts__block__person}
+                                        onPress={() => this.props.navigation.navigate(
+                                            'FicheContact',
+                                            { firstname: item.firstname, lastname: item.lastname, portable: item.portable, fixe: item.fixe, mail: item.mail, address: item.address }
+                                        )}>
+                                        <View style={styles.container__contacts__block__person__column}>
+                                            <View style={styles.container__contacts__block__person__row}>
+                                                <Text style={styles.container__contacts__block__person__firstname}>{item.firstname}</Text>
+                                                <Text style={styles.container__contacts__block__person__lastname}>{item.lastname}</Text>
+                                            </View>
+                                            {item.border === true
+                                                ? <View style={styles.container__contacts__border}></View>
+                                                : <View />
+                                            }
+                                        </View>
+                                    </TouchableOpacity>
+                                )
+                            })}
+                        </View>
                     </View>
+                </ScrollView>
+
+
 
                     <View style={styles.container__bottom__bar}>
                         <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsFavoris')}>
@@ -107,17 +450,16 @@ export default class CallsContactsScreen extends Component {
                         </TouchableOpacity>
                     </View>
                 </View>
-            </View>
         )
     }
 }
 const styles = StyleSheet.create({
     container: {
         ...StyleSheet.absoluteFillObject,
-        backgroundColor: '#FFB99D',
+        backgroundColor: R.colors.saumon,
     },
 
-    container__callscontacts: {
+    container__contacts: {
         width: '100%',
         height: '100%',
         marginTop: '4%',
@@ -128,68 +470,84 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
     },
 
-    container__callscontacts__text: {
+    container__contacts__text: {
         fontSize: 30,
-        fontWeight: 'bold',
+        fontFamily: R.fonts.Agrandir_GrandHeavy,
+        color: R.colors.dark_blue,
         paddingTop: 20
     },
 
-    container__callscontacts__block: {
+    container__contacts__block: {
         width: '100%',
         height: 'auto',
         marginBottom: 10,
     },
 
-    container__callscontacts__block__background: {
+    container__contacts__block__background: {
         width: '120%',
         marginBottom: 10,
         marginLeft: -24,
         paddingLeft: 24,
         paddingTop: 2,
-        backgroundColor: '#2A3669',
+        backgroundColor: R.colors.blue,
         marginBottom: 5
     },
 
-    container__callscontacts__block__letter: {
+    container__contacts__block__letter: {
         fontSize: 15,
-        color: '#FFB99D',
-        fontWeight: 'bold',
+        color: R.colors.saumon,
+        fontFamily: R.fonts.Agrandir_TextBold,
+        paddingTop: 5,
     },
 
-    container__callscontacts__block__person: {
+    container__contacts__block__person: {
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'baseline',
-        paddingTop: 10,
+        paddingTop: 12,
     },
 
-    container__callscontacts__block__person__firstname: {
-        color: '#151C38',
+    container__contacts__block__person__firstname: {
+        color: R.colors.dark_blue,
         fontSize: 15,
-        fontWeight: 'bold',
+        fontFamily: R.fonts.Agrandir_TextBold,
         paddingRight: 5,
+        marginTop: 2,
     },
 
-    container__callscontacts__block__person__Lastname: {
-        color: '#151C38',
+    container__contacts__block__person__Lastname: {
+        color: R.colors.dark_blue,
         fontSize: 15,
-        fontWeight: 'bold',
+        fontFamily: R.fonts.Agrandir_Regular,
     },
 
-    container__callscontacts__border: {
+    container__contacts__block__person__column: {
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'column'
+    },
+
+    container__contacts__block__person__row: {
+        display: 'flex',
+        flexDirection: 'row'
+    },
+
+    container__contacts__border: {
         width: '100%',
         height: 1,
-        marginTop: 10,
-        backgroundColor: '#ad7761',
+        marginTop: 8,
+        backgroundColor: R.colors.dark_saumon,
     },
 
     container__bottom__bar: {
         width: '100%',
-        height: 1,
+        height: '8%',
+        position: 'absolute',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-around',
-        alignItems: 'baseline',
-        marginTop: 65
+        alignItems: 'center',
+        bottom: 0,
+        backgroundColor: R.colors.saumon,
     }
 })

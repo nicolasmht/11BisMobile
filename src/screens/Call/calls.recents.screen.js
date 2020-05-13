@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react'
 import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native'
+import R from '../../res/R'
 
 export default class CallsRecentsScreen extends Component {
     render() {
@@ -56,23 +57,23 @@ export default class CallsRecentsScreen extends Component {
                         </View>
                     </TouchableOpacity>
 
-                    <View style={styles.container__bottom__bar}>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsFavoris')}>
-                            <Image source={require('../../main/assets/icons/contact/calls/favoris.png')} />
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Image source={require('../../main/assets/icons/contact/calls/recents_clicked.png')} />
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsContacts')}>
-                            <Image source={require('../../main/assets/icons/contact/calls/contacts.png')} />
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsClavier')}>
-                            <Image source={require('../../main/assets/icons/contact/calls/clavier.png')} />
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsMessagerie')}>
-                            <Image source={require('../../main/assets/icons/contact/calls/messagerie.png')} />
-                        </TouchableOpacity>
-                    </View>
+                </View>
+                <View style={styles.container__bottom__bar}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsFavoris')}>
+                        <Image source={require('../../main/assets/icons/contact/calls/favoris.png')} />
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <Image source={require('../../main/assets/icons/contact/calls/recents_clicked.png')} />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsContacts')}>
+                        <Image source={require('../../main/assets/icons/contact/calls/contacts.png')} />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsClavier')}>
+                        <Image source={require('../../main/assets/icons/contact/calls/clavier.png')} />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsMessagerie')}>
+                        <Image source={require('../../main/assets/icons/contact/calls/messagerie.png')} />
+                    </TouchableOpacity>
                 </View>
             </View>
         )
@@ -82,7 +83,7 @@ export default class CallsRecentsScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         ...StyleSheet.absoluteFillObject,
-        backgroundColor: '#FFB99D',
+        backgroundColor: R.colors.saumon,
     },
 
     container__callsrecents: {
@@ -101,7 +102,8 @@ const styles = StyleSheet.create({
         marginTop: 24,
         fontSize: 30,
         textAlign: 'left',
-        fontWeight: 'bold'
+        fontFamily: R.fonts.Agrandir_GrandHeavy,
+        color: R.colors.dark_blue,
     },
 
     container__callsrecents__button: {
@@ -135,17 +137,23 @@ const styles = StyleSheet.create({
     container__callsrecents__names: {
         fontSize: 20,
         paddingLeft: 10,
-        fontWeight: 'bold',
+        fontFamily: R.fonts.Agrandir_GrandHeavy,
+        color: R.colors.dark_blue,
     },
 
     container__callsrecents__category: {
         fontSize: 12,
+        fontFamily: R.fonts.Agrandir_Regular,
+        color: R.colors.dark_blue,
         paddingLeft: 20,
     },
 
     container__callsrecents__time: {
         fontSize: 12,
+        fontFamily: R.fonts.Agrandir_Regular,
+        color: R.colors.dark_blue,
         paddingRight: 8,
+        marginTop: 2,
     },
 
     container__callsrecents__infotime: {
@@ -164,10 +172,13 @@ const styles = StyleSheet.create({
 
     container__bottom__bar: {
         width: '100%',
+        height: '8%',
+        position: 'absolute',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-around',
-        alignItems: 'baseline',
-        marginTop: '116%'
+        alignItems: 'center',
+        bottom: 0,
+        backgroundColor: R.colors.saumon,
     }
 })

@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react'
 import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native'
+import R from '../../res/R'
 
 export default class CallsMessagerieScreen extends Component {
     render() {
@@ -12,23 +13,23 @@ export default class CallsMessagerieScreen extends Component {
                     <TouchableOpacity style={styles.container__callsmessagerie__button}>
                         <Text style={styles.container__callsmessagerie__text}>Appeler la messagerie</Text>
                     </TouchableOpacity>
-                    <View style={styles.container__bottom__bar}>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsFavoris')}>
-                            <Image source={require('../../main/assets/icons/contact/calls/favoris.png')} />
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsRecents')}>
-                            <Image source={require('../../main/assets/icons/contact/calls/recents.png')} />
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsContacts')}>
-                            <Image source={require('../../main/assets/icons/contact/calls/contacts.png')} />
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsClavier')}>
-                            <Image source={require('../../main/assets/icons/contact/calls/clavier.png')} />
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Image source={require('../../main/assets/icons/contact/calls/messagerie_clicked.png')} />
-                        </TouchableOpacity>
-                    </View>
+                </View>
+                <View style={styles.container__bottom__bar}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsFavoris')}>
+                        <Image source={require('../../main/assets/icons/contact/calls/favoris.png')} />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsRecents')}>
+                        <Image source={require('../../main/assets/icons/contact/calls/recents.png')} />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsContacts')}>
+                        <Image source={require('../../main/assets/icons/contact/calls/contacts.png')} />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsClavier')}>
+                        <Image source={require('../../main/assets/icons/contact/calls/clavier.png')} />
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <Image source={require('../../main/assets/icons/contact/calls/messagerie_clicked.png')} />
+                    </TouchableOpacity>
                 </View>
             </View>
         )
@@ -38,7 +39,7 @@ export default class CallsMessagerieScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         ...StyleSheet.absoluteFillObject,
-        backgroundColor: '#FFB99D',
+        backgroundColor: R.colors.saumon,
     },
 
     container__callsmessagerie: {
@@ -57,7 +58,8 @@ const styles = StyleSheet.create({
         marginTop: 24,
         fontSize: 30,
         textAlign: 'left',
-        fontWeight: 'bold'
+        fontFamily: R.fonts.Agrandir_GrandHeavy,
+        color: R.colors.dark_blue,
     },
 
     container__callsmessagerie__button: {
@@ -66,14 +68,15 @@ const styles = StyleSheet.create({
         marginTop: '70%',
         textAlign: 'center',
         fontSize: 30,
-        color: '#151C38',
+        color: R.colors.dark_blue,
         borderWidth: 1,
         borderRadius: 5,
     },
 
     container__callsmessagerie__text: {
         textAlign: 'center',
-        color: '#151C38',
+        fontFamily: R.fonts.Agrandir_Regular,
+        color: R.colors.dark_blue,
         padding: 8,
     },
 
@@ -81,16 +84,19 @@ const styles = StyleSheet.create({
         width: '100%',
         height: 1,
         marginTop: 6,
-        backgroundColor: '#151C38',
+        backgroundColor: R.colors.dark_blue,
         opacity: 0.2
     },
 
     container__bottom__bar: {
         width: '100%',
+        height: '8%',
+        position: 'absolute',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-around',
-        alignItems: 'baseline',
-        marginTop: '80%'
+        alignItems: 'center',
+        bottom: 0,
+        backgroundColor: R.colors.saumon,
     }
 })

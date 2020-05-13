@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, ImageBackground, Text, TouchableOpacity, Image } from 'react-native'
+import R from '../../res/R'
 
 export default class IncomingCallScreen extends Component {
     render() {
@@ -29,7 +30,7 @@ export default class IncomingCallScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         ...StyleSheet.absoluteFillObject,
-        backgroundColor: '#2A3669'
+        backgroundColor: R.colors.blue
     },
     backgroundImage: {
         width: '100%',
@@ -45,14 +46,15 @@ const styles = StyleSheet.create({
 
     container__call__infos__name: {
         fontSize: 30,
-        fontWeight: 'bold',
+        fontFamily: R.fonts.Agrandir_GrandHeavy,
         paddingBottom: 10,
-        color: '#FFB99D',
+        color: R.colors.saumon,
     },
 
     container__call__infos__category: {
         fontSize: 20,
-        color: '#FFB99D',
+        color: R.colors.saumon,
+        fontFamily: R.fonts.Agrandir_GrandLight,
     },
 
     container__call__events: {
@@ -70,6 +72,7 @@ const styles = StyleSheet.create({
         display: 'flex',
         alignSelf: 'center',
         fontSize: 15,
-        color: '#FFB99D',
+        color: R.colors.saumon,
+        fontFamily: R.fonts.Agrandir_Regular,
     }
 })

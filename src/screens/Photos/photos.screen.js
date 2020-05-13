@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, Text, TouchableOpacity, Image, ScrollView, FlatList }from 'react-native'
 import photosData from '../../data/photos.json'
+import R from '../../res/R'
 
 export default class PhotosScreen extends Component {
     render() {
@@ -108,7 +109,7 @@ export default class PhotosScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         ...StyleSheet.absoluteFillObject,
-        backgroundColor: '#FFB99D',
+        backgroundColor: R.colors.saumon
     },
 
     container__photos: {
@@ -119,16 +120,18 @@ const styles = StyleSheet.create({
     },
 
     container__photos__title: {
-        marginBottom: 5,
         fontSize: 20,
         textAlign: 'left',
-        fontWeight: 'bold'
+        fontFamily: R.fonts.Agrandir_GrandHeavy,
+        color: R.colors.dark_blue,
     },
     
     container__photos__subtitle: {
         marginTop: 12,
         marginBottom: 12,
         fontSize: 15,
+        fontFamily: R.fonts.Agrandir_Regular,
+        color: R.colors.dark_blue,
         textAlign: 'left',
     },
 
@@ -143,26 +146,29 @@ const styles = StyleSheet.create({
         width: 175,
         height: 175,
         borderWidth: 1,
-        borderColor: '#151C38' 
+        borderColor: R.colors.dark_blue,
     },
 
     container__photos__album__pers__miniature: {
         width: 88,
         height: 88,
         borderWidth: 1, 
-        borderColor: '#151C38' 
+        borderColor: R.colors.dark_blue,
     },
 
     container__photos__album__title: {
-        paddingTop: 4,
-        paddingBottom: 2,
+        paddingTop: 8,
         fontSize: 12,
+        fontFamily: R.fonts.Agrandir_Regular,
+        color: R.colors.dark_blue,
     },
     
     container__photos__album__number: {
         paddingBottom: 10,
         fontSize: 12,
         opacity: 0.5,
+        fontFamily: R.fonts.Agrandir_Regular,
+        color: R.colors.dark_blue,
     },
 
     container__photos__other__albums: {
@@ -181,31 +187,35 @@ const styles = StyleSheet.create({
     container__photos__other__albums__infos: {
         display: 'flex',
         flexDirection: 'row',
-        alignItems: 'baseline'
+        alignSelf: 'baseline'
     },
 
     container__photos__other__albums__infos__title: {
         paddingLeft: 10,
         fontSize: 15,
-        color: '#2A3669',
+        fontFamily: R.fonts.Agrandir_Regular,
+        color: R.colors.blue,
     },
 
     container__photos__other__albums__infos__number: {
         fontSize: 12,
         opacity: 0.5,
+        fontFamily: R.fonts.Agrandir_Regular,
+        color: R.colors.dark_blue,
     },
 
     container__photos__other__albums__infos__chevron: {
         paddingLeft: 10,
         fontSize: 12,
-        color: '#8E8D93',
+        fontFamily: R.fonts.Agrandir_Regular,
+        color: R.colors.grey,
     },
 
     container__photos__border: {
         width: '100%',
         height: 1,
         marginTop: 6,
-        backgroundColor: '#151C38',
+        backgroundColor: R.colors.dark_blue,
         opacity: 0.2
     },
 

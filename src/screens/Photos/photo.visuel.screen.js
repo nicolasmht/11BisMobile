@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, Image } from 'react-native'
 import photosData from '../../data/photos.json'
+import R from '../../res/R'
 
 export default class PhotVisuelScreen extends Component {
 
@@ -57,7 +58,7 @@ export default class PhotVisuelScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         ...StyleSheet.absoluteFillObject,
-        backgroundColor: '#FFB99D',
+        backgroundColor: R.colors.saumon
     },
 
     container__photos: {
@@ -70,6 +71,6 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
         borderWidth: 1,
-        borderColor: '#151C38'
+        borderColor: R.colors.dark_blue,
     }
 })

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, ImageBackground, Text, TouchableOpacity, Image } from 'react-native'
 // import spotifyData from '../../data/spotify.json'
+import R from '../../res/R'
 
 export default class SpotifyPlaylistScreen extends Component {
     constructor() {
@@ -90,7 +91,7 @@ export default class SpotifyPlaylistScreen extends Component {
                     </View>
                     <View style={styles.container__spotify__sound}>
                         <View style={{ zIndex: 1, width: '114%', height: '10%', marginLeft: '-7%', borderWidth: 2, borderColor: '#151C38'}} />
-                        <View style={{ width: `${this.state.count}%`, height: '10%', marginLeft: '-7%', marginTop: -12, backgroundColor:'#FFB99D'}} />
+                        <View style={{ width: `${this.state.count}%`, height: '10%', marginLeft: '-7%', marginTop: -12, backgroundColor:R.colors.saumon}} />
                         <TouchableOpacity onPress={() => this.incrementCount()}><Text>play</Text></TouchableOpacity>
                     </View>
                 </View>
@@ -115,7 +116,7 @@ export default class SpotifyPlaylistScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         ...StyleSheet.absoluteFillObject,
-        backgroundColor: '#2A3669'
+        backgroundColor: R.colors.blue
     },
     backgroundImage: {
         width: '100%',
@@ -126,7 +127,7 @@ const styles = StyleSheet.create({
     container__spotify: {
         width: '100%',
         height: '100%',
-        paddingTop: '13%',
+        paddingTop: '12%',
         paddingLeft: 24,
         paddingRight: 24,
         display: 'flex',
@@ -146,7 +147,8 @@ const styles = StyleSheet.create({
     },
 
     container__spotify__title: {
-        color: '#FFB99D',
+        fontFamily: R.fonts.Agrandir_GrandHeavy,
+        color: R.colors.saumon,
         fontSize: 30,
         fontWeight: '900'
     },
@@ -155,27 +157,26 @@ const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-around',
-        marginLeft: '-7%',
-        paddingTop: 10,
+        paddingTop: 30,
     },
 
     container__spotify__subtitle: {
-        color: '#FFB99D',
+        color: R.colors.saumon,
         fontSize: 20,
-        fontWeight: 'bold',
+        fontFamily: R.fonts.Agrandir_GrandHeavy,
         opacity: 0.5
     },
 
     container__spotify__subtitle__selected: {
-        color: '#FFB99D',
+        color: R.colors.saumon,
         fontSize: 20,
-        fontWeight: 'bold',
-        paddingBottom: 5,
+        fontFamily: R.fonts.Agrandir_GrandHeavy,
+
     },
     
     container__spotify__border: {
         borderBottomWidth: 3,
-        borderBottomColor: '#FFB99D',
+        borderBottomColor: R.colors.saumon,
     },
 
     container__spotify__list: {
@@ -206,9 +207,9 @@ const styles = StyleSheet.create({
     },
 
     container__spotify__list__album__title: {
-        color: '#FFB99D',
+        color: R.colors.saumon,
         fontSize: 20,
-        fontWeight: 'bold',
+        fontFamily: R.fonts.Agrandir_GrandHeavy,
         alignSelf: 'flex-start',
     },
 
@@ -217,8 +218,10 @@ const styles = StyleSheet.create({
     },
 
     container__spotify__list__album__infos__text: {
-        color: '#FFB99D',
+        color: R.colors.saumon,
         fontSize: 15,
+        fontFamily: R.fonts.Agrandir_Regular,
         opacity: 0.5,
+        marginTop: 8
     },
 })

@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react'
 import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native'
+import R from '../../res/R'
 
 export default class CallsFavorisScreen extends Component {
     render() {
@@ -10,23 +11,23 @@ export default class CallsFavorisScreen extends Component {
                     <Text style={styles.container__callsfavoris__title}>Favoris</Text>
                     <View style={styles.container__callsfavoris__border} />
                     <Text style={styles.container__callsfavoris__desc}>Aucun favori</Text>
-                    <View style={styles.container__bottom__bar}>
-                        <TouchableOpacity>
-                            <Image source={require('../../main/assets/icons/contact/calls/favoris_clicked.png')} />
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsRecents')}>
-                            <Image source={require('../../main/assets/icons/contact/calls/recents.png')} />
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsContacts')}>
-                            <Image source={require('../../main/assets/icons/contact/calls/contacts.png')} />
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsClavier')}>
-                            <Image source={require('../../main/assets/icons/contact/calls/clavier.png')} />
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsMessagerie')}>
-                            <Image source={require('../../main/assets/icons/contact/calls/messagerie.png')} />
-                        </TouchableOpacity>
-                    </View>
+                </View>
+                <View style={styles.container__bottom__bar}>
+                    <TouchableOpacity>
+                        <Image source={require('../../main/assets/icons/contact/calls/favoris_clicked.png')} />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsRecents')}>
+                        <Image source={require('../../main/assets/icons/contact/calls/recents.png')} />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsContacts')}>
+                        <Image source={require('../../main/assets/icons/contact/calls/contacts.png')} />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsClavier')}>
+                        <Image source={require('../../main/assets/icons/contact/calls/clavier.png')} />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsMessagerie')}>
+                        <Image source={require('../../main/assets/icons/contact/calls/messagerie.png')} />
+                    </TouchableOpacity>
                 </View>
             </View>
         )
@@ -36,7 +37,7 @@ export default class CallsFavorisScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         ...StyleSheet.absoluteFillObject,
-        backgroundColor: '#FFB99D',
+        backgroundColor: R.colors.saumon
     },
 
     container__callsfavoris: {
@@ -55,7 +56,8 @@ const styles = StyleSheet.create({
         marginTop: 24,
         fontSize: 30,
         textAlign: 'left',
-        fontWeight: 'bold'
+        fontFamily: R.fonts.Agrandir_GrandHeavy,
+        color: R.colors.dark_blue,
     },
 
     container__callsfavoris__desc: {
@@ -63,7 +65,9 @@ const styles = StyleSheet.create({
         height: '46.5%',
         marginTop: '70%',
         textAlign: 'center',
-        fontSize: 30,
+        fontFamily: R.fonts.Agrandir_GrandHeavy,
+        color: R.colors.dark_blue,
+        fontSize: 20,
         opacity: 0.3
     },
 
@@ -77,10 +81,13 @@ const styles = StyleSheet.create({
 
     container__bottom__bar: {
         width: '100%',
+        height: '8%',
+        position: 'absolute',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-around',
-        alignItems: 'baseline',
-        marginTop: '2%'
+        alignItems: 'center',
+        bottom: 0,
+        backgroundColor: R.colors.saumon,
     }
 })

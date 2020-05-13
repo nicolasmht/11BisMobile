@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
 import notesData from '../../data/notes.json';
 import moment from 'moment'
+import R from '../../res/R'
 
 export default class NotesListScreen extends Component {
     render() {
@@ -28,7 +29,7 @@ export default class NotesListScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         ...StyleSheet.absoluteFillObject,
-        backgroundColor: '#FFB99D',
+        backgroundColor: R.colors.saumon
     },
 
     container__noteslist: {
@@ -47,7 +48,8 @@ const styles = StyleSheet.create({
         marginTop: 24,
         fontSize: 30,
         textAlign: 'left',
-        fontWeight: 'bold'
+        fontFamily: R.fonts.Agrandir_GrandHeavy,
+        color: R.colors.dark_blue,
     },
 
     container__noteslist__main: {
@@ -62,13 +64,14 @@ const styles = StyleSheet.create({
     },
 
     container__noteslist__main__title: {
-        color: '#151C38',
         fontSize: 15,
-        fontWeight: 'bold',
+        fontFamily: R.fonts.Agrandir_TextBold,
+        color: R.colors.dark_blue,
     },
 
     container__noteslist__main__date: {
-        color: '#151C38',
+        fontFamily: R.fonts.Agrandir_Regular,
+        color: R.colors.dark_blue,
         fontSize: 12,
         opacity: 0.5,
     },
@@ -77,8 +80,8 @@ const styles = StyleSheet.create({
         width: '100%',
         height: 1,
         marginTop: 6,
-        backgroundColor: '#151C38',
-        opacity: 0.2
+        backgroundColor: R.colors.dark_blue,
+        opacity: 0.2,
     },
 
 })

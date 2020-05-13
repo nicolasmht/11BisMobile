@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react'
 import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native'
+import R from '../../res/R'
 
 export default class CallsClavierScreen extends Component {
     constructor() {
@@ -94,23 +95,23 @@ export default class CallsClavierScreen extends Component {
                         }
                     </View>
 
-                    <View style={styles.container__bottom__bar}>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsFavoris')}>
-                            <Image source={require('../../main/assets/icons/contact/calls/favoris.png')}/>
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsRecents')}>
-                            <Image source={require('../../main/assets/icons/contact/calls/recents.png')} />
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsContacts')}>
-                            <Image source={require('../../main/assets/icons/contact/calls/contacts.png')} />
-                        </TouchableOpacity>
-                        <TouchableOpacity >
-                            <Image source={require('../../main/assets/icons/contact/calls/clavier_clicked.png')} />
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsMessagerie')}>
-                            <Image source={require('../../main/assets/icons/contact/calls/messagerie.png')} />
-                        </TouchableOpacity>
-                    </View>
+                </View>
+                <View style={styles.container__bottom__bar}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsFavoris')}>
+                        <Image source={require('../../main/assets/icons/contact/calls/favoris.png')}/>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsRecents')}>
+                        <Image source={require('../../main/assets/icons/contact/calls/recents.png')} />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsContacts')}>
+                        <Image source={require('../../main/assets/icons/contact/calls/contacts.png')} />
+                    </TouchableOpacity>
+                    <TouchableOpacity >
+                        <Image source={require('../../main/assets/icons/contact/calls/clavier_clicked.png')} />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsMessagerie')}>
+                        <Image source={require('../../main/assets/icons/contact/calls/messagerie.png')} />
+                    </TouchableOpacity>
                 </View>
             </View>
         )
@@ -120,7 +121,7 @@ export default class CallsClavierScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         ...StyleSheet.absoluteFillObject,
-        backgroundColor: '#FFB99D',
+        backgroundColor: R.colors.saumon,
     },
 
     container__calls: {
@@ -136,9 +137,12 @@ const styles = StyleSheet.create({
 
     container__numbers__digit: {
         height: '30%',
-        fontSize: 55,
+        fontSize: 40,
         marginTop: 24,
+        paddingTop: 24,
         padding: 2,
+        fontFamily: R.fonts.Agrandir_GrandHeavy,
+        color: R.colors.dark_blue,
     },
 
     container__touch: {
@@ -174,10 +178,13 @@ const styles = StyleSheet.create({
 
     container__bottom__bar: {
         width: '100%',
+        height: '8%',
+        position: 'absolute',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-around',
-        alignItems: 'baseline',
-        marginTop: 25
+        alignItems: 'center',
+        bottom: 0,
+        backgroundColor: R.colors.saumon,
     }
 })

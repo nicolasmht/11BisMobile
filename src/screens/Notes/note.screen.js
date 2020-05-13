@@ -3,6 +3,7 @@ import { StyleSheet, View, Text, FlatList, ScrollView } from 'react-native'
 import notesData from '../../data/notes.json';
 import moment from 'moment'
 import 'moment/locale/fr';
+import R from '../../res/R'
 
 export default class NoteScreen extends Component {
     render() {
@@ -22,7 +23,7 @@ export default class NoteScreen extends Component {
                                     <Text style={styles.container__note__content__title}>{note.content.subtitle1}</Text>
                                     <FlatList
                                         data={note.content.ingredients}
-                                        renderItem={({ item }) => <Text style={styles.container__note__content__text}>- {item.ingredient}</Text>}
+                                        renderItem={({ item }) => <Text style={styles.container__note__content__text__list}>- {item.ingredient}</Text>}
                                     />
                                     </View>
                                     <View style={styles.container__note__content}>
@@ -30,17 +31,17 @@ export default class NoteScreen extends Component {
                                         <Text style={styles.container__note__content__day}>{note.content.preparation.day1}</Text>
                                         <FlatList
                                             data={note.content.preparation.etape1}
-                                            renderItem={({ item }) => <Text style={styles.container__note__content__text}>{item.etape}</Text>}
+                                            renderItem={({ item }) => <Text style={styles.container__note__content__text__list}>{item.etape}</Text>}
                                         />
                                         <Text style={styles.container__note__content__day}>{note.content.preparation.day2}</Text>
                                         <FlatList
                                             data={note.content.preparation.etape2}
-                                            renderItem={({ item }) => <Text style={styles.container__note__content__text}>{item.etape}</Text>}
+                                            renderItem={({ item }) => <Text style={styles.container__note__content__text__list}>{item.etape}</Text>}
                                         />
                                     </View>
                                     </View>
                                 : <View style={styles.container__note__content}>
-                                    <Text>{note.content.desc}</Text>
+                                    <Text style={styles.container__note__content__text}>{note.content.desc}</Text>
                                     </View>
                             }
                     </View>
@@ -52,7 +53,7 @@ export default class NoteScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         ...StyleSheet.absoluteFillObject,
-        backgroundColor: '#FFB99D',
+        backgroundColor: R.colors.saumon
     },
 
     container__note: {
@@ -67,38 +68,47 @@ const styles = StyleSheet.create({
 
     container__note__date: {
         width: '100%',
-        color: '#151C38',
+        color: R.colors.dark_blue,
         fontSize: 12,
         opacity: 0.5,
         textAlign: 'center',
+        fontFamily: R.fonts.Agrandir_Regular,
     },
 
     container__note__title: {
-        color: '#151C38',
+        color: R.colors.dark_blue,
         fontSize: 20,
-        fontWeight: '900',
+        fontFamily: R.fonts.Agrandir_GrandHeavy,
         paddingTop: '3%',
         paddingBottom: '5%',
     },
 
     container__note__content__title: {
-        color: '#151C38',
+        color: R.colors.dark_blue,
         fontSize: 15,
-        fontWeight: 'bold',
+        fontFamily: R.fonts.Agrandir_TextBold,
         paddingTop: '5%',
-        paddingBottom: '3%',
     },
 
-    container__note__content__text: {
-        color: '#151C38',
+    container__note__content__text__list: {
+        color: R.colors.dark_blue,
         fontSize: 15,
+        fontFamily: R.fonts.Agrandir_Regular,
         paddingTop: '2%',
         paddingLeft: '5%',
     },
 
-    container__note__content__day: {
-        color: '#151C38',
+    container__note__content__text: {
+        color: R.colors.dark_blue,
         fontSize: 15,
+        fontFamily: R.fonts.Agrandir_Regular,
+        paddingTop: '2%',
+    },
+
+    container__note__content__day: {
+        color: R.colors.dark_blue,
+        fontSize: 15,
+        fontFamily: R.fonts.Agrandir_ThinItalic,
         paddingTop: '5%',
         paddingBottom: '2%',
         paddingLeft: '5%',

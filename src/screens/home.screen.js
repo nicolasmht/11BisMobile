@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, Text, TouchableOpacity, ImageBackground, Image } from 'react-native'
+import R from '../res/R'
 
 export default class Home extends Component {
     render() {
@@ -93,7 +94,7 @@ export default class Home extends Component {
 const styles = StyleSheet.create({
     container: {
         ...StyleSheet.absoluteFillObject,
-        backgroundColor: '#2A3669',
+        backgroundColor: R.colors.blue,
 
     },
 
@@ -133,12 +134,14 @@ const styles = StyleSheet.create({
         height: '35%',
         marginLeft: -8,
         position: 'absolute',
-        backgroundColor: '#FFB99D',
+        backgroundColor: R.colors.saumon,
         opacity: 0.7,
     },
     container__buttonApp__icon__text: {
         fontSize: 12,
-        color: '#FFB99D'
+        fontFamily: R.fonts.Agrandir_Regular,
+        color: R.colors.saumon,
+        paddingTop: 8,
     },
 
     backgroundImage: {

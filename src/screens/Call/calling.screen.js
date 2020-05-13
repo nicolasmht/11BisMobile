@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react'
 import { StyleSheet, View, ImageBackground, Text, TouchableOpacity, Image } from 'react-native'
+import R from '../../res/R'
 
 // TODO: SOUND
 export default class CallingScreen extends Component {
@@ -97,7 +98,7 @@ export default class CallingScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         ...StyleSheet.absoluteFillObject,
-        backgroundColor: '#2A3669'
+        backgroundColor: R.colors.blue
     },
     backgroundImage: {
         width: '100%',
@@ -119,15 +120,16 @@ const styles = StyleSheet.create({
 
     container__call__infos__name: {
         fontSize: 30,
-        fontWeight: 'bold',
+        fontFamily: R.fonts.Agrandir_GrandHeavy,
         paddingBottom: 10,
-        color: '#FFB99D',
+        color: R.colors.saumon,
         paddingRight: 10
     },
 
     container__call__infos__category: {
         fontSize: 20,
-        color: '#FFB99D',
+        fontFamily: R.fonts.Agrandir_GrandLight,
+        color: R.colors.saumon,
     },
 
     container__call__text: {
@@ -135,12 +137,15 @@ const styles = StyleSheet.create({
         display: 'flex',
         alignSelf: 'center',
         fontSize: 15,
-        color: '#FFB99D',
+        color: R.colors.saumon,
+        fontFamily: R.fonts.Agrandir_Regular,
+
     },
 
     container__call__infos__time: {
         fontSize: 20,
-        color: '#FFB99D',
+        color: R.colors.saumon,
+        fontFamily: R.fonts.Agrandir_GrandLight,
     },
 
     container__call__events: {

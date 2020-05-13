@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, Text, TouchableOpacity, Image, ScrollView, FlatList } from 'react-native'
 import photosData from '../../data/photos.json'
+import R from '../../res/R'
 
 export default class PhotosFavorisScreen extends Component {
     render() {
@@ -34,7 +35,7 @@ export default class PhotosFavorisScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         ...StyleSheet.absoluteFillObject,
-        backgroundColor: '#FFB99D',
+        backgroundColor: R.colors.saumon
     },
 
     container__photos: {
@@ -47,6 +48,6 @@ const styles = StyleSheet.create({
         width: 118,
         height: 118,
         borderWidth: 1,
-        borderColor: '#151C38'
+        borderColor: R.colors.dark_blue,
     }
 })
