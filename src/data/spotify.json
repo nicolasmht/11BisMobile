@@ -1,8 +1,16 @@
 [
     {
+        "id": 0,
+        "name": "Josman",
+        "title": "J'allume",
+        "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589532134/11bis/Josman_-_J_allume.mp3",
+        "duration": 3.23
+    },
+    {
+        "id": 1,
         "name": "Nekfeu",
         "title": "On verra",
-        "son": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589132909/11bis/Nekfeu_-_On_Verra_Clip_Officiel.mp3",
+        "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589132909/11bis/Nekfeu_-_On_Verra_Clip_Officiel.mp3",
         "duration": 3.26
     }
 ]
