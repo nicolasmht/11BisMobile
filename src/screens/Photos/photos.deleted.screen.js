@@ -16,7 +16,7 @@ export default class PhotosDeletedScreen extends Component {
                                 <FlatList
                                     data={deleted}
                                     renderItem={({ item }) => (
-                                        <TouchableOpacity style={{ display: 'flex', flexDirection: 'column', margin: 2 }} onPress={() => this.props.navigation.navigate('PhotoVisuel', { id: item.id, name: 'deleted' })}>
+                                        <TouchableOpacity style={{ display: 'flex', flexDirection: 'column', margin: 2 }} onPress={() => this.props.navigation.navigate('PhotoVisuel', { id: item.id, name: 'deleted', format: item.format })}>
                                             <Image style={styles.container__photos__album__img} source={{ uri: item.photo }} />
                                         </TouchableOpacity>
                                     )}

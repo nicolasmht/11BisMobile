@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     container__callsrecents: {
         width: '100%',
         height: '100%',
-        marginTop: '3%',
+        marginTop: '9%',
         padding: 24,
         display: 'flex',
         flexDirection: 'column',

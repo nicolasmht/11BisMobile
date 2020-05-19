@@ -7,7 +7,7 @@ export default class PhotosScreen extends Component {
     render() {
         const photos = photosData
         const recents = photos.recents
-        const pro = photos.pro
+        const plantes = photos.plantes
         const favoris = photos.favoris
         const screenshot = photos.screenshot
         const personnes = photos.personnes
@@ -15,7 +15,7 @@ export default class PhotosScreen extends Component {
         const deleted = photos.deleted
 
         const photo_recents = recents[0].photo
-        const photo_pro = pro[0].photo
+        const photo_plantes = plantes[0].photo
         const photo_favoris = favoris[0].photo
         const photo_screenshot = screenshot[0].photo
 
@@ -35,10 +35,10 @@ export default class PhotosScreen extends Component {
                                 <Text style={styles.container__photos__album__title}>Récents</Text>
                                 <Text style={styles.container__photos__album__number}>{recents.length}</Text>
                             </TouchableOpacity>
-                            <TouchableOpacity onPress={() => this.props.navigation.navigate('PhotosPro')}>
-                                <Image style={styles.container__photos__album__img} source={{ uri: photo_pro }} />
-                                <Text style={styles.container__photos__album__title}>Professionnel</Text>
-                                <Text style={styles.container__photos__album__number}>{pro.length}</Text>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('PhotosAlbum1')}>
+                                <Image style={styles.container__photos__album__img} source={{ uri: photo_plantes }} />
+                                <Text style={styles.container__photos__album__title}>Plantes</Text>
+                                <Text style={styles.container__photos__album__number}>{plantes.length}</Text>
                             </TouchableOpacity>
                             <TouchableOpacity onPress={() => this.props.navigation.navigate('PhotosFavoris')}>
                                 <Image style={styles.container__photos__album__img} source={{ uri: photo_favoris }} />
@@ -55,17 +55,14 @@ export default class PhotosScreen extends Component {
                         <Text style={styles.container__photos__subtitle}>Personnes et lieux</Text>
                         <View style={styles.container__photos__album}>
                             <TouchableOpacity style={styles.container__photos__album__pers} onPress={() => this.props.navigation.navigate('PhotosPersonnes')}>
-                                <FlatList
-                                    data={personnes}
-                                    renderItem={({ item }) => (
-                                        <View style={{ display: 'flex', flexDirection: 'column', margin: 1}}>
-                                            <Image style={styles.container__photos__album__pers__miniature} source={{ uri: item.photo }} />
-                                        </View>
-                                    )} 
-                                    keyExtractor={item => item.id}
-                                    numColumns={2}
-                                    horizontal={false}
-                                />
+                                <View style={{ width: '90%', marginRight: '-20%', display: 'flex', flexDirection: 'row', flexWrap: 'nowrap', margin: 1 }}>
+                                    <Image style={styles.container__photos__album__pers__miniature} source={{ uri: personnes[0].photo }} />
+                                    <Image style={styles.container__photos__album__pers__miniature} source={{ uri: personnes[1].photo }} />
+                                </View>
+                                <View style={{ width: '90%', marginRight: '-20%', display: 'flex', flexDirection: 'row', flexWrap: 'nowrap', margin: 1 }}>
+                                    <Image style={styles.container__photos__album__pers__miniature} source={{ uri: personnes[2].photo }} />
+                                    <Image style={styles.container__photos__album__pers__miniature} source={{ uri: personnes[3].photo }} />
+                                </View>
                                 <Text style={styles.container__photos__album__title}>Personnes</Text>
                                 <Text style={styles.container__photos__album__number}>{personnes.length}</Text>
                             </TouchableOpacity>
@@ -150,8 +147,8 @@ const styles = StyleSheet.create({
     },
 
     container__photos__album__pers__miniature: {
-        width: 88,
-        height: 88,
+        width: 86,
+        height: 86,
         borderWidth: 1, 
         borderColor: R.colors.dark_blue,
     },

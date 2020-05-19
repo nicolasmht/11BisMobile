@@ -82,7 +82,7 @@ export default class Home extends Component {
                         <TouchableOpacity style={styles.container__buttonApp__iconFav} onPress={() => this.props.navigation.navigate('NotesList')}>
                             <Image source={require('../main/assets/icons/app/notes.png')} />
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.container__buttonApp__iconFav} onPress={() => this.props.navigation.navigate('SpotifyPlaylist')}>
+                        <TouchableOpacity style={styles.container__buttonApp__iconFav} onPress={() => this.props.navigation.navigate('Spotify')}>
                             <Image source={require('../main/assets/icons/app/spotify.png')} />
                         </TouchableOpacity>
                     </View>

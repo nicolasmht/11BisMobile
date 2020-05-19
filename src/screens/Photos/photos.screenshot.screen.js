@@ -16,7 +16,7 @@ export default class PhotosScreenshotScreen extends Component {
                                 <FlatList
                                     data={screenshot}
                                     renderItem={({ item }) => (
-                                        <TouchableOpacity style={{ display: 'flex', flexDirection: 'column', margin: 2 }} onPress={() => this.props.navigation.navigate('PhotoVisuel', { id: item.id, name: 'screenshot' })}>
+                                        <TouchableOpacity style={{ display: 'flex', flexDirection: 'column', margin: 2 }} onPress={() => this.props.navigation.navigate('PhotoVisuel', { id: item.id, name: 'screenshot', format: item.format })}>
                                             <Image style={styles.container__photos__album__img} source={{ uri: item.photo }} />
                                         </TouchableOpacity>
                                     )}

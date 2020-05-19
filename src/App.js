@@ -18,13 +18,15 @@ import MeteoScreen from './screens/Meteo/meteo.screen'
 import GoogleHomeScreen from './screens/Google/google.home.screen'
 import NotesListScreen from './screens/Notes/notes.list.screen'
 import NoteScreen from './screens/Notes/note.screen'
-import SpotifyPlaylistScreen from './screens/Spotify/spotify.playlist.screen'
+
+import SpotifyScreen from './screens/Spotify/spotify.screen'
+import SpotifyArtistesScreen from './screens/Spotify/spotify.artistes.screen'
 
 import PhotosScreen from './screens/Photos/photos.screen'
 import PhotosRecentsScreen from './screens/Photos/photos.recents.screen'
 import PhotoVisuelScreen from './screens/Photos/photo.visuel.screen'
 import PhotosFavorisScreen from './screens/Photos/photos.favoris.screen'
-import PhotosProScreen from './screens/Photos/photos.pro.screen'
+import PhotosAlbum1Screen from './screens/Photos/photos.album1.screen'
 import PhotosScreenshotScreen from './screens/Photos/photos.screenshot.screen'
 import PhotosPersonnesScreen from './screens/Photos/photos.personnes.screen'
 import PhotosMaskedScreen from './screens/Photos/photos.masked.screen'
@@ -100,8 +102,26 @@ const App = () => {
 				/>
 
 				<Stack.Screen
-					name="SpotifyPlaylist"
-					component={SpotifyPlaylistScreen}
+					name="SpotifyArtistes"
+					component={SpotifyArtistesScreen}
+					options={{
+						headerRight: () => (
+							<Button
+								onPress={() => navigate('Home')}
+								title="✕"
+								color="#151C38"
+							/>
+						),
+						headerLeft: '',
+						gestureEnabled: false,
+						headerTransparent: true,
+						headerTitle: '',
+						transitionSpec: { open: config, close: config } 
+					}}
+				/>
+				<Stack.Screen
+					name="Spotify"
+					component={SpotifyScreen}
 					options={{
 						headerRight: () => (
 							<Button
@@ -181,8 +201,8 @@ const App = () => {
 					}}
 				/>
 				<Stack.Screen
-					name="PhotosPro"
-					component={PhotosProScreen}
+					name="PhotosAlbum1"
+					component={PhotosAlbum1Screen}
 					options={{
 						headerRight: () => (
 							<Button
@@ -194,7 +214,7 @@ const App = () => {
 						gestureEnabled: true,
 						headerBackTitleVisible: true,
 						headerTintColor: '#151C38',
-						headerTitle: 'Professionnel',
+						headerTitle: 'Plantes',
 						headerTransparent: false,
 						headerStyle: { backgroundColor: '#FFB99D' },
 						headerBackTitleStyle: { fontSize: 12 },
@@ -427,10 +447,14 @@ const App = () => {
 							/>
 						),
 						headerLeft: '',
-						gestureEnabled: false, 
-						headerBackTitleVisible: false, 
-						headerTitle: '', 
-						headerTransparent: true 
+						gestureEnabled: false,
+						headerTransparent: true,
+						headerTitle: '',
+						headerBackTitleVisible: true,
+						headerTintColor: '#151C38',
+						headerTitle: '',
+						headerTransparent: false,
+						headerStyle: { backgroundColor: '#FFB99D' },
 					}}
 				/>
 				<Stack.Screen 
@@ -503,7 +527,12 @@ const App = () => {
 						gestureEnabled: false, 
 						headerTransparent: true, 
 						headerTitle: '', 
-						transitionSpec: {open: config,close: config}
+						headerBackTitleVisible: true,
+						headerTintColor: '#151C38',
+						headerTitle: '',
+						headerTransparent: false,
+						headerStyle: { backgroundColor: '#FFB99D' },
+						transitionSpec: { open: config, close: config }
 					}} 
 				/>
 				<Stack.Screen 

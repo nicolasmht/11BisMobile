@@ -442,7 +442,7 @@ const styles = StyleSheet.create({
     container__contacts: {
         width: '100%',
         height: '100%',
-        marginTop: '4%',
+        paddingTop: -10,
         padding: 24,
         display: 'flex',
         flexDirection: 'column',

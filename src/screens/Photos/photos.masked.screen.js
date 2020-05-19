@@ -16,7 +16,7 @@ export default class PhotosMaskedScreen extends Component {
                                 <FlatList
                                     data={masked}
                                     renderItem={({ item }) => (
-                                        <TouchableOpacity style={{ display: 'flex', flexDirection: 'column', margin: 2 }} onPress={() => this.props.navigation.navigate('PhotoVisuel', { id: item.id, name: 'masked' })}>
+                                        <TouchableOpacity style={{ display: 'flex', flexDirection: 'column', margin: 2 }} onPress={() => this.props.navigation.navigate('PhotoVisuel', { id: item.id, name: 'masked', format: item.format })}>
                                             <Image style={styles.container__photos__album__img} source={{ uri: item.photo }} />
                                         </TouchableOpacity>
                                     )}

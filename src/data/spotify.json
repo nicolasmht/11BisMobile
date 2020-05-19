@@ -1,16 +1,649 @@
-[
-    {
-        "id": 0,
-        "name": "Josman",
-        "title": "J'allume",
-        "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589532134/11bis/Josman_-_J_allume.mp3",
-        "duration": 3.23
-    },
-    {
-        "id": 1,
-        "name": "Nekfeu",
-        "title": "On verra",
-        "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589132909/11bis/Nekfeu_-_On_Verra_Clip_Officiel.mp3",
-        "duration": 3.26
-    }
-]
+{
+    "all": [
+        {
+            "id": 0,
+            "name": "Orelsan",
+            "title": "Notes pour trop tard",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589812886/11bis/spotify/orelsan/Notes_pour_trop_tard_feat._Ibeyi.mp3",
+            "duration": 440.4,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794730/11bis/spotify/orelsan/Orelsan_artist.jpg"
+        },
+        {
+            "id": 1,
+            "name": "Dinos",
+            "title": "Les pleurs du mal",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794729/11bis/spotify/dinos/Dinos_song.mp3",
+            "duration": 303,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794708/11bis/spotify/dinos/Dinos_album.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Oxmo Puccino",
+            "title": "Toucher l'horizon",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794740/11bis/spotify/oxmo/Oxmo_song.mp3",
+            "duration": 154.8,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794731/11bis/spotify/oxmo/Oxmo_album.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Damso",
+            "title": "Julien",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794736/11bis/spotify/damso/Damso_song.mp3",
+            "duration": 193.8,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794710/11bis/spotify/damso/Damso_album.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Kacem Wapalek",
+            "title": "Comme d'hab'",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794738/11bis/spotify/kacen/Kacem_song.mp3",
+            "duration": 205.2,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794711/11bis/spotify/kacen/Kacem_album.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Lomepal",
+            "title": "R2D2",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794744/11bis/spotify/lomepal/Lomepal_song.mp3",
+            "duration": 199.8,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794712/11bis/spotify/lomepal/Lomepal_album.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Iam",
+            "title": "M'empire du côté obscur",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794730/11bis/spotify/Iam/Iam_song.mp3",
+            "duration": 252.6,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794710/11bis/spotify/Iam/Iam_album.jpg"
+        },
+        {
+            "id": 7,
+            "name": "Ash Kidd",
+            "title": "Motel",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794728/11bis/spotify/ash/Ash-song.mp3",
+            "duration": 258.6,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794707/11bis/spotify/ash/Ash_album.jpg"
+        },
+        {
+            "id": 8,
+            "name": "Les sages poètes de la rue",
+            "title": "Le train de Minuit",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794755/11bis/spotify/sages/Sages_song.mp3",
+            "duration": 264,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794732/11bis/spotify/sages/Sages_album.jpg"
+        },
+        {
+            "id": 9,
+            "name": "Sniper",
+            "title": "Sans repères",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794758/11bis/spotify/sniper/Sniper_song.mp3",
+            "duration": 301.8,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794738/11bis/spotify/sniper/Sniper_album.jpg"
+        },
+        {
+            "id": 10,
+            "name": "Bon Iver",
+            "title": "re:Stacks",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794383/11bis/spotify/bolver/BonIver_-_reStacks.mp3",
+            "duration": 384,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794364/11bis/spotify/bolver/BonIver_album.jpg"
+        },
+        {
+            "id": 11,
+            "name": "Bon Iver",
+            "title": "Holocene",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794386/11bis/spotify/bolver/BonIver_-_Holocene.mp3",
+            "duration": 318.6,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794364/11bis/spotify/bolver/BonIver_album.jpg"
+        },
+        {
+            "id": 12,
+            "name": "Bon Iver",
+            "title": "When it rains down here",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794387/11bis/spotify/bolver/BonIver_-_When_It_Rains_Down_Here.mp3",
+            "duration": 552,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794364/11bis/spotify/bolver/BonIver_album.jpg"
+        },
+        {
+            "id": 13,
+            "name": "Eels",
+            "title": "That look you give that guy",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794397/11bis/spotify/Eels/Eels_song.mp3",
+            "duration": 246.6,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794389/11bis/spotify/Eels/Eels_album.jpg"
+        },
+        {
+            "id": 14,
+            "name": "Isaac Delusion",
+            "title": "The Sinner",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794464/11bis/spotify/isaac/Isaac_song.mp3",
+            "duration": 265.8,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794457/11bis/spotify/isaac/Isaac_album.jpg"
+        },
+        {
+            "id": 15,
+            "name": "Kokoroko",
+            "title": "Abusey junction",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794527/11bis/spotify/kokoroko/Kokoroko_song.mp3",
+            "duration": 425.4,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794510/11bis/spotify/kokoroko/Kokoroko_album.jpg"
+        },
+        {
+            "id": 16,
+            "name": "Norah Jones",
+            "title": "Sunrise",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794528/11bis/spotify/norah/Norah_song.mp3",
+            "duration": 199.2,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794510/11bis/spotify/norah/Norah_album.jpg"
+        },
+        {
+            "id": 17,
+            "name": "Paul Kalkbrenner",
+            "title": "Sky & sand",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794524/11bis/spotify/paul/Paul_song.mp3",
+            "duration": 240,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794511/11bis/spotify/paul/Paul_album.jpg"
+        },
+        {
+            "id": 18,
+            "name": "Alt-J",
+            "title": "3WW",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794043/11bis/spotify/alt-j/alt-j_-_3WW.mp3",
+            "duration": 381,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794038/11bis/spotify/alt-j/alt-j_album.jpg"
+        },
+        {
+            "id": 19,
+            "name": "Alt-J",
+            "title": "Mathilda",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794033/11bis/spotify/alt-j/alt-j_-_Matilda.mp3",
+            "duration": 208.8,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794038/11bis/spotify/alt-j/alt-j_album.jpg"
+        },
+        {
+            "id": 20,
+            "name": "Alt-J",
+            "title": "Bloodflood",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794042/11bis/spotify/alt-j/alt-j_-_Bloodflood.mp3",
+            "duration": 555.6,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794038/11bis/spotify/alt-j/alt-j_album.jpg"
+        },
+        {
+            "id": 21,
+            "name": "Alt-J",
+            "title": "In cold Blood",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794018/11bis/spotify/alt-j/alt-j_-_In_Cold_Blood.mp3",
+            "duration": 253.8,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794038/11bis/spotify/alt-j/alt-j_album.jpg"
+        },
+        {
+            "id": 22,
+            "name": "Alt-J",
+            "title": "Tesselate",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794039/11bis/spotify/alt-j/alt-j_-_Tessellate.mp3",
+            "duration": 184.8,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794038/11bis/spotify/alt-j/alt-j_album.jpg"
+        },
+        {
+            "id": 23,
+            "name": "Alt-J",
+            "title": "Adeline",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794031/11bis/spotify/alt-j/alt-j_-_Adeline.mp3",
+            "duration": 330,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794038/11bis/spotify/alt-j/alt-j_album.jpg"
+        },
+        {
+            "id": 24,
+            "name": "Alt-J",
+            "title": "Left hand free",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794021/11bis/spotify/alt-j/alt-j_-_Left_Hand_Free.mp3",
+            "duration": 150,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794038/11bis/spotify/alt-j/alt-j_album.jpg"
+        },
+        {
+            "id": 25,
+            "name": "Alt-J",
+            "title": "Taro",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794045/11bis/spotify/alt-j/alt-j_-_Taro.mp3",
+            "duration": 303.6,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794038/11bis/spotify/alt-j/alt-j_album.jpg"
+        },
+        {
+            "id": 26,
+            "name": "Alt-J",
+            "title": "Hunger of the pine",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794011/11bis/spotify/alt-j/alt-j_-_Hunger_Of_The_Pine.mp3",
+            "duration": 207.6,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794038/11bis/spotify/alt-j/alt-j_album.jpg"
+        },
+        {
+            "id": 27,
+            "name": "Alt-J",
+            "title": "Breezeblocks",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794002/11bis/spotify/alt-j/alt-j_-_Breezeblocks.mp3",
+            "duration": 207.6,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794038/11bis/spotify/alt-j/alt-j_album.jpg"
+        }
+    ],
+    "lyricistes": [
+        {
+            "id": 0,
+            "name": "Orelsan",
+            "title": "Notes pour trop tard",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589812886/11bis/spotify/orelsan/Notes_pour_trop_tard_feat._Ibeyi.mp3",
+            "duration": 440.4,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794730/11bis/spotify/orelsan/Orelsan_artist.jpg"
+        },
+        {
+            "id": 1,
+            "name": "Dinos",
+            "title": "Les pleurs du mal",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794729/11bis/spotify/dinos/Dinos_song.mp3",
+            "duration": 303,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794708/11bis/spotify/dinos/Dinos_album.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Oxmo Puccino",
+            "title": "Toucher l'horizon",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794740/11bis/spotify/oxmo/Oxmo_song.mp3",
+            "duration": 154.8,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794731/11bis/spotify/oxmo/Oxmo_album.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Damso",
+            "title": "Julien",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794736/11bis/spotify/damso/Damso_song.mp3",
+            "duration": 193.8,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794710/11bis/spotify/damso/Damso_album.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Kacem Wapalek",
+            "title": "Comme d'hab'",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794738/11bis/spotify/kacen/Kacem_song.mp3",
+            "duration": 205.2,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794711/11bis/spotify/kacen/Kacem_album.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Lomepal",
+            "title": "R2D2",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794744/11bis/spotify/lomepal/Lomepal_song.mp3",
+            "duration": 199.8,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794712/11bis/spotify/lomepal/Lomepal_album.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Iam",
+            "title": "M'empire du côté obscur",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794730/11bis/spotify/Iam/Iam_song.mp3",
+            "duration": 252.6,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794710/11bis/spotify/Iam/Iam_album.jpg"
+        },
+        {
+            "id": 7,
+            "name": "Ash Kidd",
+            "title": "Motel",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794728/11bis/spotify/ash/Ash-song.mp3",
+            "duration": 258.6,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794707/11bis/spotify/ash/Ash_album.jpg"
+        },
+        {
+            "id": 8,
+            "name": "Les sages poètes de la rue",
+            "title": "Le train de Minuit",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794755/11bis/spotify/sages/Sages_song.mp3",
+            "duration": 264,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794732/11bis/spotify/sages/Sages_album.jpg"
+        },
+        {
+            "id": 9,
+            "name": "Sniper",
+            "title": "Sans repères",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794758/11bis/spotify/sniper/Sniper_song.mp3",
+            "duration": 301.8,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794738/11bis/spotify/sniper/Sniper_album.jpg"
+        }
+    ],
+    "concentration": [
+        {
+            "id": 10,
+            "name": "Bon Iver",
+            "title": "re:Stacks",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794383/11bis/spotify/bolver/BonIver_-_reStacks.mp3",
+            "duration": 384,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794364/11bis/spotify/bolver/BonIver_album.jpg"
+        },
+        {
+            "id": 11,
+            "name": "Bon Iver",
+            "title": "Holocene",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794386/11bis/spotify/bolver/BonIver_-_Holocene.mp3",
+            "duration": 318.6,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794364/11bis/spotify/bolver/BonIver_album.jpg"
+        },
+        {
+            "id": 12,
+            "name": "Bon Iver",
+            "title": "When it rains down here",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794387/11bis/spotify/bolver/BonIver_-_When_It_Rains_Down_Here.mp3",
+            "duration": 552,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794364/11bis/spotify/bolver/BonIver_album.jpg"
+        },
+        {
+            "id": 13,
+            "name": "Eels",
+            "title": "That look you give that guy",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794397/11bis/spotify/Eels/Eels_song.mp3",
+            "duration": 246.6,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794389/11bis/spotify/Eels/Eels_album.jpg"
+        },
+        {
+            "id": 14,
+            "name": "Isaac Delusion",
+            "title": "The Sinner",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794464/11bis/spotify/isaac/Isaac_song.mp3",
+            "duration": 265.8,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794457/11bis/spotify/isaac/Isaac_album.jpg"
+        },
+        {
+            "id": 15,
+            "name": "Kokoroko",
+            "title": "Abusey junction",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794527/11bis/spotify/kokoroko/Kokoroko_song.mp3",
+            "duration": 425.4,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794510/11bis/spotify/kokoroko/Kokoroko_album.jpg"
+        },
+        {
+            "id": 16,
+            "name": "Norah Jones",
+            "title": "Sunrise",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794528/11bis/spotify/norah/Norah_song.mp3",
+            "duration": 199.2,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794510/11bis/spotify/norah/Norah_album.jpg"
+        },
+        {
+            "id": 17,
+            "name": "Paul Kalkbrenner",
+            "title": "Sky & sand",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794524/11bis/spotify/paul/Paul_song.mp3",
+            "duration": 240,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794511/11bis/spotify/paul/Paul_album.jpg"
+        }
+    ],
+    "altj": [
+        {
+            "id": 18,
+            "name": "Alt-J",
+            "title": "3WW",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794043/11bis/spotify/alt-j/alt-j_-_3WW.mp3",
+            "duration": 381,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794038/11bis/spotify/alt-j/alt-j_album.jpg"
+        },
+        {
+            "id": 19,
+            "name": "Alt-J",
+            "title": "Mathilda",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794033/11bis/spotify/alt-j/alt-j_-_Matilda.mp3",
+            "duration": 208.8,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794038/11bis/spotify/alt-j/alt-j_album.jpg"
+        },
+        {
+            "id": 20,
+            "name": "Alt-J",
+            "title": "Bloodflood",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794042/11bis/spotify/alt-j/alt-j_-_Bloodflood.mp3",
+            "duration": 555.6,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794038/11bis/spotify/alt-j/alt-j_album.jpg"
+        },
+        {
+            "id": 21,
+            "name": "Alt-J",
+            "title": "In cold Blood",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794018/11bis/spotify/alt-j/alt-j_-_In_Cold_Blood.mp3",
+            "duration": 253.8,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794038/11bis/spotify/alt-j/alt-j_album.jpg"
+        },
+        {
+            "id": 22,
+            "name": "Alt-J",
+            "title": "Tesselate",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794039/11bis/spotify/alt-j/alt-j_-_Tessellate.mp3",
+            "duration": 184.8,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794038/11bis/spotify/alt-j/alt-j_album.jpg"
+        },
+        {
+            "id": 23,
+            "name": "Alt-J",
+            "title": "Adeline",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794031/11bis/spotify/alt-j/alt-j_-_Adeline.mp3",
+            "duration": 330,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794038/11bis/spotify/alt-j/alt-j_album.jpg"
+        },
+        {
+            "id": 24,
+            "name": "Alt-J",
+            "title": "Left hand free",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794021/11bis/spotify/alt-j/alt-j_-_Left_Hand_Free.mp3",
+            "duration": 150,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794038/11bis/spotify/alt-j/alt-j_album.jpg"
+        },
+        {
+            "id": 25,
+            "name": "Alt-J",
+            "title": "Taro",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794045/11bis/spotify/alt-j/alt-j_-_Taro.mp3",
+            "duration": 303.6,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794038/11bis/spotify/alt-j/alt-j_album.jpg"
+        },
+        {
+            "id": 26,
+            "name": "Alt-J",
+            "title": "Hunger of the pine",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794011/11bis/spotify/alt-j/alt-j_-_Hunger_Of_The_Pine.mp3",
+            "duration": 207.6,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794038/11bis/spotify/alt-j/alt-j_album.jpg"
+        },
+        {
+            "id": 27,
+            "name": "Alt-J",
+            "title": "Breezeblocks",
+            "sound": "https://res.cloudinary.com/dn32la6ny/video/upload/v1589794002/11bis/spotify/alt-j/alt-j_-_Breezeblocks.mp3",
+            "duration": 207.6,
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794038/11bis/spotify/alt-j/alt-j_album.jpg"
+        }
+    ],
+    "artistes": [
+        {
+            "id": 0,
+            "artiste": "Ash Kidd",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794707/11bis/spotify/ash/Ash_artist.jpg"
+        },
+        {
+            "id": 1,
+            "artiste": "Damso",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794709/11bis/spotify/damso/Damso_artist.jpg"
+        },
+        {
+            "id": 2,
+            "artiste": "Dinos",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794709/11bis/spotify/dinos/Dinos_artist.jpg"
+        },
+        {
+            "id": 3,
+            "artiste": "Iam",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794711/11bis/spotify/Iam/Iam_artist.jpg"
+        },
+        {
+            "id": 4,
+            "artiste": "Kacem Wapalek",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589797077/11bis/spotify/kacen/Artiste-Kacem-Wapalek.jpg"
+        },
+        {
+            "id": 5,
+            "artiste": "Lomepal",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794714/11bis/spotify/lomepal/Lomepal_artist.jpg"
+        },
+        {
+            "id": 6,
+            "artiste": "Orelsan",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794730/11bis/spotify/orelsan/Orelsan_artist.jpg"
+        },
+        {
+            "id": 7,
+            "artiste": "Oxmo Puccino",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794731/11bis/spotify/oxmo/Oxmo_artist.jpg"
+        },
+        {
+            "id": 8,
+            "artiste": "Les Sages Poètes de la Rue",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794733/11bis/spotify/sages/Sages_artist.jpg"
+        },
+        {
+            "id": 9,
+            "artiste": "Sniper",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794738/11bis/spotify/sniper/Sniper_artist.jpg"
+        },
+        {
+            "id": 10,
+            "artiste": "Alt-J",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794020/11bis/spotify/alt-j/alt-j_artist.jpg"
+        },
+        {
+            "id": 11,
+            "artiste": "Bon Iver",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794364/11bis/spotify/bolver/BonIver_artist.jpg"
+        },
+        {
+            "id": 12,
+            "artiste": "Eels",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794389/11bis/spotify/Eels/Eels_artist.jpg"
+        },
+        {
+            "id": 13,
+            "artiste": "Isaac Delusion",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794460/11bis/spotify/isaac/Isaac_artist.jpg"
+        },
+        {
+            "id": 14,
+            "artiste": "Kokoroko",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794510/11bis/spotify/kokoroko/Kokoroko_artist.jpg"
+        },
+        {
+            "id": 15,
+            "artiste": "Norah Jones",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794511/11bis/spotify/norah/Norah_artist.jpg"
+        },
+        {
+            "id": 16,
+            "artiste": "Paul Kalkbrenner",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794514/11bis/spotify/paul/Paul_artist.jpg"
+        }
+    ],
+    "albums": [
+        {
+            "id": 0,
+            "album": "CRUISE",
+            "artiste": "Ash Kidd",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794707/11bis/spotify/ash/Ash_album.jpg"
+        },
+        {
+            "id": 1,
+            "album": "Lithopédion",
+            "artiste": "Damso",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794710/11bis/spotify/damso/Damso_album.jpg"
+        },
+        {
+            "id": 2,
+            "album": "Imany",
+            "artiste": "Dinos",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794708/11bis/spotify/dinos/Dinos_album.jpg"
+        },
+        {
+            "id": 3,
+            "album": "Lécole du micro d'argent",
+            "artiste": "Iam",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794710/11bis/spotify/Iam/Iam_album.jpg"
+        },
+        {
+            "id": 4,
+            "album": "Je vous salis ma rue",
+            "artiste": "Kacem Wapalek",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794711/11bis/spotify/kacen/Kacem_album.jpg"
+        },
+        {
+            "id": 5,
+            "album": "ODSL",
+            "artiste": "Lomepal",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794712/11bis/spotify/lomepal/Lomepal_album.jpg"
+        },
+        {
+            "id": 6,
+            "album": "La fête est finie",
+            "artiste": "Orelsan",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794730/11bis/spotify/orelsan/Orelsan_artist.jpg"
+        },
+        {
+            "id": 7,
+            "album": "Le cactus de Sibérie",
+            "artiste": "Oxmo Puccino",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794731/11bis/spotify/oxmo/Oxmo_album.jpg"
+        },
+        {
+            "id": 8,
+            "album": "Jusqu'à l'amour",
+            "artiste": "Les Sages Poètes de la Rue",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794732/11bis/spotify/sages/Sages_album.jpg"
+        },
+        {
+            "id": 9,
+            "album": "Gravé dans la roche",
+            "artiste": "Sniper",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794738/11bis/spotify/sniper/Sniper_album.jpg"
+        },
+        {
+            "id": 10,
+            "album": "This is all yours",
+            "artiste": "Alt-J",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794038/11bis/spotify/alt-j/alt-j_album.jpg"
+        },
+        {
+            "id": 11,
+            "album": "For Emma, forever ago",
+            "artiste": "Bon Iver",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794364/11bis/spotify/bolver/BonIver_album.jpg"
+        },
+        {
+            "id": 12,
+            "album": "Hombre Lobo",
+            "artiste": "Eels",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794389/11bis/spotify/Eels/Eels_album.jpg"
+        },
+        {
+            "id": 13,
+            "album": "Midnight sun",
+            "artiste": "Isaac Delusin",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794457/11bis/spotify/isaac/Isaac_album.jpg"
+        },
+        {
+            "id": 14,
+            "album": "We out here",
+            "artiste": "Kokoroko",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794510/11bis/spotify/kokoroko/Kokoroko_album.jpg"
+        },
+        {
+            "id": 15,
+            "album": "Feels like home",
+            "artiste": "Norah jones",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794510/11bis/spotify/norah/Norah_album.jpg"
+        },
+        {
+            "id": 16,
+            "album": "Berlin Calling",
+            "artiste": "Paul Kalkbrenner",
+            "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1589794511/11bis/spotify/paul/Paul_album.jpg"
+        }
+    ]
+}

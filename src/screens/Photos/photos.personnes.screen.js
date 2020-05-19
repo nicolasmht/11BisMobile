@@ -16,7 +16,7 @@ export default class PhotosPersonnesScreen extends Component {
                                 <FlatList
                                     data={personnes}
                                     renderItem={({ item }) => (
-                                        <TouchableOpacity style={{ display: 'flex', flexDirection: 'column', margin: 2 }} onPress={() => this.props.navigation.navigate('PhotoVisuel', { id: item.id, name: 'personnes' })}>
+                                        <TouchableOpacity style={{ display: 'flex', flexDirection: 'column', margin: 2 }} onPress={() => this.props.navigation.navigate('PhotoVisuel', { id: item.id, name: 'personnes', format: item.format })}>
                                             <Image style={styles.container__photos__album__img} source={{ uri: item.photo }} />
                                         </TouchableOpacity>
                                     )}
