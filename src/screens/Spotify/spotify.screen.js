@@ -61,10 +61,26 @@ export default class SpotifyScreen extends Component {
     }
 
     changePlayState(id) {
+        if (!this.enable) return
+        if (this.state.isPlaying) {
+            this.setState({ isPlaying: false })
+            this.pause()
+        } else {
+            this.setState({ isPlaying: true })
+            this.play(id)
+        }
+        this.enable = false
+        setTimeout(() => {
+            this.enable = true
+        }, 500)
+    }
+
+    changePlaying(id) {
         this.stop()
         if (!this.enable) return
         if (this.state.isPlaying) {
             this.setState({ isPlaying: false })
+            this.stop()
         }
         this.enable = false
         setTimeout(() => {
@@ -72,21 +88,6 @@ export default class SpotifyScreen extends Component {
             this.setState({ isPlaying: true, soundId: id })
             this.play(id)
         }, 0)
-    }
-
-    changePlaying() {
-        if (!this.enable) return
-        if (this.state.isPlaying) {
-            this.setState({ isPlaying: false })
-            this.pause()
-        } else {
-            this.setState({ isPlaying: true })
-            this.play()
-        }
-        this.enable = false
-        setTimeout(() => {
-            this.enable = true
-        }, 500)
     }
 
     next() {
@@ -251,7 +252,7 @@ export default class SpotifyScreen extends Component {
                             data={this.data_lyricistes}
                             keyExtractor={item => item.id}
                             renderItem={({ item }) => (
-                                <TouchableOpacity style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', margin: 8 }} onPress={() => this.changePlayState(item.id)}>
+                                <TouchableOpacity style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', margin: 8 }} onPress={() => this.changePlaying(item.id)}>
                                     <Image style={styles.container__spotify__playlist__cover} source={{ uri: item.photo }} />
                                     <View style={{ width: '100%', display: 'flex', flexDirection: 'column', alignSelf: 'center' }}>
                                         <Text style={styles.container__spotify__playlist__name}>{item.title}</Text>
@@ -280,7 +281,7 @@ export default class SpotifyScreen extends Component {
                             data={this.data_concentration}
                             keyExtractor={item => item.id}
                             renderItem={({ item }) => (
-                                <TouchableOpacity style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', margin: 8 }} onPress={() => this.changePlayState(item.id)}>
+                                <TouchableOpacity style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', margin: 8 }} onPress={() => this.changePlaying(item.id)}>
                                     <Image style={styles.container__spotify__playlist__cover} source={{ uri: item.photo }} />
                                     <View style={{ width: '100%', display: 'flex', flexDirection: 'column', alignSelf: 'center' }}>
                                         <Text style={styles.container__spotify__playlist__name}>{item.title}</Text>
@@ -309,7 +310,7 @@ export default class SpotifyScreen extends Component {
                             data={this.data_altj}
                             keyExtractor={item => item.id}
                             renderItem={({ item }) => (
-                                <TouchableOpacity style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', margin: 8 }} onPress={() => this.changePlayState(item.id)}>
+                                <TouchableOpacity style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', margin: 8 }} onPress={() => this.changePlaying(item.id)}>
                                     <Image style={styles.container__spotify__playlist__cover} source={{ uri: item.photo }} />
                                     <View style={{ width: '100%', display: 'flex', flexDirection: 'column', alignSelf: 'center' }}>
                                         <Text style={styles.container__spotify__playlist__name}>{item.title}</Text>
