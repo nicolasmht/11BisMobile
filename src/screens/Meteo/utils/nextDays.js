@@ -17,38 +17,38 @@ function nextDays(current) {
 
                 <View style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', paddingLeft: '25%', paddingRight: '35%' }}>
                     <Image source={require('../../../main/assets/icons/meteo/icon_sun.png')} />
-                    <Image source={require('../../../main/assets/icons/meteo/icon_sun.png')} />
-                    <Image source={require('../../../main/assets/icons/meteo/icon_sun.png')} />
-                    <Image source={require('../../../main/assets/icons/meteo/icon_sun.png')} />
-                    <Image source={require('../../../main/assets/icons/meteo/icon_cloud.png')} />
                     <Image source={require('../../../main/assets/icons/meteo/icon_clear.png')} />
+                    <Image source={require('../../../main/assets/icons/meteo/icon_cloud.png')} />
+                    <Image source={require('../../../main/assets/icons/meteo/icon_cloud.png')} />
+                    <Image source={require('../../../main/assets/icons/meteo/icon_sun.png')} />
+                    <Image source={require('../../../main/assets/icons/meteo/icon_sun.png')} />
 
                 </View>
 
                 <View style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                     <View style={{ width: '35%', display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'baseline' }}>
-                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13 }}>25</Text>
-                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13, opacity: 0.5 }}>12</Text>
-                    </View>
-                    <View style={{ width: '35%', display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'baseline' }}>
-                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13 }}>28</Text>
+                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13 }}>27</Text>
                         <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13, opacity: 0.5 }}>15</Text>
                     </View>
                     <View style={{ width: '35%', display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'baseline' }}>
                         <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13 }}>29</Text>
-                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13, opacity: 0.5 }}>16</Text>
+                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13, opacity: 0.5 }}>17</Text>
                     </View>
                     <View style={{ width: '35%', display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'baseline' }}>
-                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13 }}>27</Text>
+                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13 }}>28</Text>
                         <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13, opacity: 0.5 }}>13</Text>
                     </View>
                     <View style={{ width: '35%', display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'baseline' }}>
-                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13 }}>19</Text>
-                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13, opacity: 0.5 }}>11</Text>
+                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13 }}>22</Text>
+                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13, opacity: 0.5 }}>10</Text>
                     </View>
                     <View style={{ width: '35%', display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'baseline' }}>
                         <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13 }}>23</Text>
                         <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13, opacity: 0.5 }}>11</Text>
+                    </View>
+                    <View style={{ width: '35%', display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'baseline' }}>
+                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13 }}>27</Text>
+                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13, opacity: 0.5 }}>14</Text>
                     </View>
                 </View>
             </View>
@@ -67,39 +67,39 @@ function nextDays(current) {
                 </View>
 
                 <View style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between', paddingLeft: '25%', paddingRight: '35%'}}>
+                    <Image source={require('../../../main/assets/icons/meteo/icon_sun.png')} />
+                    <Image source={require('../../../main/assets/icons/meteo/icon_clear.png')} />
                     <Image source={require('../../../main/assets/icons/meteo/icon_cloud.png')} />
                     <Image source={require('../../../main/assets/icons/meteo/icon_cloud.png')} />
-                    <Image source={require('../../../main/assets/icons/meteo/icon_cloud.png')} />
-                    <Image source={require('../../../main/assets/icons/meteo/icon_cloud.png')} />
-                    <Image source={require('../../../main/assets/icons/meteo/icon_cloud.png')} />
-                    <Image source={require('../../../main/assets/icons/meteo/icon_cloud.png')} />
+                    <Image source={require('../../../main/assets/icons/meteo/icon_sun.png')} />
+                    <Image source={require('../../../main/assets/icons/meteo/icon_sun.png')} />
 
                 </View>
 
                 <View style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                     <View style={{ width: '35%', display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'baseline' }}>
-                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13 }}>12</Text>
-                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13, opacity: 0.5 }}>4</Text>
+                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13 }}>27</Text>
+                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13, opacity: 0.5 }}>15</Text>
                     </View>
                     <View style={{ width: '35%', display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'baseline' }}>
-                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13 }}>12</Text>
-                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13, opacity: 0.5 }}>4</Text>
+                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13 }}>29</Text>
+                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13, opacity: 0.5 }}>17</Text>
                     </View>
                     <View style={{ width: '35%', display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'baseline' }}>
-                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13 }}>12</Text>
-                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13, opacity: 0.5 }}>4</Text>
+                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13 }}>28</Text>
+                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13, opacity: 0.5 }}>13</Text>
                     </View>
                     <View style={{ width: '35%', display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'baseline' }}>
-                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13 }}>12</Text>
-                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13, opacity: 0.5 }}>4</Text>
+                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13 }}>22</Text>
+                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13, opacity: 0.5 }}>10</Text>
                     </View>
                     <View style={{ width: '35%', display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'baseline' }}>
-                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13 }}>12</Text>
-                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13, opacity: 0.5 }}>4</Text>
+                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13 }}>23</Text>
+                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13, opacity: 0.5 }}>11</Text>
                     </View>
                     <View style={{ width: '35%', display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'baseline' }}>
-                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13 }}>12</Text>
-                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13, opacity: 0.5 }}>4</Text>
+                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13 }}>27</Text>
+                        <Text style={{ color: R.colors.saumon, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13, opacity: 0.5 }}>14</Text>
                     </View>
                 </View>
             </View>

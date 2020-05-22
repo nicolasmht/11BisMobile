@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { StyleSheet, View, ImageBackground, Text, TouchableOpacity, Image, ScrollView, FlatList } from 'react-native'
+import { StyleSheet, View, ImageBackground, Text, TouchableOpacity, Image, ScrollView, FlatList, Modal } from 'react-native'
 import spotifyData from '../../data/spotify.json'
 import R from '../../res/R'
 import Sound from 'react-native-sound'
@@ -20,7 +20,8 @@ export default class SpotifyScreen extends Component {
             isAlbums: false,
             isLyricistes: false,
             isConcentration: false,
-            isAltj: false
+            isAltj: false,
+            isSong: false
         }
         this.audioStatePlay = "play"
         this.audioStatePause = "pause"
@@ -30,6 +31,8 @@ export default class SpotifyScreen extends Component {
         this.enable = true
         this.audioPlayIcon = require('../../main/assets/icons/spotify/icon_play.png')
         this.audioStopIcon = require('../../main/assets/icons/spotify/icon_stop.png')
+        this.audioPlayButton = require('../../main/assets/icons/spotify/icon_circle_play.png')
+        this.audioStopButton = require('../../main/assets/icons/spotify/icon_circle_stop.png')
         this.data_all
         this.data_lyricistes
         this.data_artistes
@@ -57,7 +60,21 @@ export default class SpotifyScreen extends Component {
         this.data_albums = spotifyData.albums
     }
 
-    changePlayState() {
+    changePlayState(id) {
+        this.stop()
+        if (!this.enable) return
+        if (this.state.isPlaying) {
+            this.setState({ isPlaying: false })
+        }
+        this.enable = false
+        setTimeout(() => {
+            this.enable = true
+            this.setState({ isPlaying: true, soundId: id })
+            this.play(id)
+        }, 0)
+    }
+
+    changePlaying() {
         if (!this.enable) return
         if (this.state.isPlaying) {
             this.setState({ isPlaying: false })
@@ -70,7 +87,6 @@ export default class SpotifyScreen extends Component {
         setTimeout(() => {
             this.enable = true
         }, 500)
-
     }
 
     next() {
@@ -78,19 +94,19 @@ export default class SpotifyScreen extends Component {
             soundId: ++this.state.soundId,
             isNext: true
         })
-        this.play()
+        this.play(this.state.soundId)
     }
 
-    play() {
+    play(id) {
         if (this.whoosh && !this.state.isPlaying) {
             this.whoosh.getCurrentTime((seconds) => {
                 this.whoosh.setCurrentTime(seconds)
                 this.whoosh.play((success) => {
                     if (success) {
-                        if (this.data_all[this.state.soundId].id === this.data_all.length - 1) {
+                        if (this.data_all[id].id === this.data_all.length - 1) {
                             this.stop()
                         } else {
-                            this.next()
+                            this.next(id)
                         }
                     }
                 })
@@ -99,15 +115,15 @@ export default class SpotifyScreen extends Component {
             })
             return
         }
-        this.whoosh = new Sound(this.data_all[this.state.soundId].sound || 0, null, (error) => {
+        this.whoosh = new Sound(this.data_all[id].sound || 0, null, (error) => {
             if (!error) {
                 this.duration = this.whoosh.getDuration()
                 this.whoosh.play((success) => {
                     if (success) {
-                        if (this.data_all[this.state.soundId].id === this.data_all.length - 1) {
+                        if (this.data_all[id].id === this.data_all.length - 1) {
                             this.stop()
                         } else {
-                            this.next()
+                            this.next(id)
                         }
                     }
                 })
@@ -235,13 +251,13 @@ export default class SpotifyScreen extends Component {
                             data={this.data_lyricistes}
                             keyExtractor={item => item.id}
                             renderItem={({ item }) => (
-                                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', margin: 8 }}>
+                                <TouchableOpacity style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', margin: 8 }} onPress={() => this.changePlayState(item.id)}>
                                     <Image style={styles.container__spotify__playlist__cover} source={{ uri: item.photo }} />
                                     <View style={{ width: '100%', display: 'flex', flexDirection: 'column', alignSelf: 'center' }}>
                                         <Text style={styles.container__spotify__playlist__name}>{item.title}</Text>
                                         <Text style={styles.container__spotify__playlist__artist}>{item.name}</Text>
                                     </View>
-                                </View>
+                                </TouchableOpacity>
                             )}
                         />
                     </View>
@@ -264,13 +280,13 @@ export default class SpotifyScreen extends Component {
                             data={this.data_concentration}
                             keyExtractor={item => item.id}
                             renderItem={({ item }) => (
-                                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', margin: 8 }}>
+                                <TouchableOpacity style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', margin: 8 }} onPress={() => this.changePlayState(item.id)}>
                                     <Image style={styles.container__spotify__playlist__cover} source={{ uri: item.photo }} />
                                     <View style={{ width: '100%', display: 'flex', flexDirection: 'column', alignSelf: 'center' }}>
                                         <Text style={styles.container__spotify__playlist__name}>{item.title}</Text>
                                         <Text style={styles.container__spotify__playlist__artist}>{item.name}</Text>
                                     </View>
-                                </View>
+                                </TouchableOpacity>
                             )}
                         />
                     </View>
@@ -293,13 +309,13 @@ export default class SpotifyScreen extends Component {
                             data={this.data_altj}
                             keyExtractor={item => item.id}
                             renderItem={({ item }) => (
-                                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', margin: 8 }}>
+                                <TouchableOpacity style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', margin: 8 }} onPress={() => this.changePlayState(item.id)}>
                                     <Image style={styles.container__spotify__playlist__cover} source={{ uri: item.photo }} />
                                     <View style={{ width: '100%', display: 'flex', flexDirection: 'column', alignSelf: 'center' }}>
                                         <Text style={styles.container__spotify__playlist__name}>{item.title}</Text>
                                         <Text style={styles.container__spotify__playlist__artist}>{item.name}</Text>
                                     </View>
-                                </View>
+                                </TouchableOpacity>
                             )}
                         />
                     </View>
@@ -355,6 +371,32 @@ export default class SpotifyScreen extends Component {
         )
     }
 
+    isSong() {
+        return(
+            <View style={styles.container__spotif}>
+                <View style={styles.container__spotify__song}>
+                    <Image style={styles.container__spotify__song__cover} source={{ uri: this.data_all[this.state.soundId].photo }} />
+                    <View style={styles.container__spotify__song__data}>
+                        <View style={styles.container__spotify__song__artist}>
+                            <Text style={styles.container__spotify__song__title}>{this.data_all[this.state.soundId].title}</Text>
+                            <Text style={styles.container__spotify__song__name}>{this.data_all[this.state.soundId].name}</Text>
+                        </View>
+                        <View style={{ zIndex: 1, width: '100%', height: '2.5%', borderWidth: 2, borderColor: '#151C38' }} />
+                        <View style={{ width: `${((100 * this.state.progress) / this.data_all[this.state.soundId].duration)}%`, height: '2.5%', marginTop: '-2%', backgroundColor: R.colors.saumon }} />
+                        <View style={styles.container__spotify__song__button}>
+                            <Image source={require('../../main/assets/icons/spotify/icon_prev.png')} />
+                                <TouchableOpacity onPress={() => this.changePlayState(this.data_all[this.state.soundId].id)}>
+                                    <Image source={this.state.isPlaying ? this.audioStopButton : this.audioPlayButton} />
+                                </TouchableOpacity>
+                            <Image source={require('../../main/assets/icons/spotify/icon_next.png')} />
+                        </View>
+                        <Image source={require('../../main/assets/icons/spotify/icon_app_large.png')} />
+                    </View>
+                </View>
+            </View>
+        )
+    }
+
     spotify() {
         if (this.state.image != null) {
             return (
@@ -366,7 +408,14 @@ export default class SpotifyScreen extends Component {
             return (
                 <View style={styles.container__spotify}>
                     <View style={styles.container__spotify__main}>
-                        <Text style={styles.container__spotify__title}>Musique</Text>
+                        {
+                            !this.state.isSong 
+                            ? <Text style={styles.container__spotify__title}>Musique</Text> 
+                            :  <TouchableOpacity onPress={() => this.setState({ isSong: false, isPlaylist: true, isLyricistes: false, isArtistes: true })}>
+                                <Image source={require('../../main/assets/icons/spotify/icon_chevron_down.png')} />
+                            </TouchableOpacity>
+                        }
+                        
                         {
                             this.state.isPlaylist || this.state.isLyricistes
                             ? <View style={styles.container__spotify__category}>
@@ -413,31 +462,36 @@ export default class SpotifyScreen extends Component {
                             this.state.isPlaylist ? this.isPlaylist()
                             : this.state.isArtistes ? this.isArtistes()
                             : this.state.isAlbums ? this.isAlbums()
+                            : this.state.isSong ? this.isSong()
                             : <View/>
                         }
 
                     </View>
-                    <View style={styles.container__spotify__sound}>
-                        <View style={{ zIndex: 1, width: '114%', height: '12%', marginLeft: '-7%', borderWidth: 2, borderColor: '#151C38'}} />
-                        <View style={{ width: `${((114 * this.state.progress) / this.data_all[this.state.soundId].duration)}%`, height: '8%', marginLeft: '-7%', marginTop: '-2%', backgroundColor:R.colors.saumon}} />
-                        <View style={styles.container__spotify__sound__player}>
-                            <View style={styles.container__spotify__sound__infos}>
-                                <Image style={styles.container__spotify__sound__cover} source={{ uri: this.data_all[this.state.soundId].photo }} />
-                                <View style={styles.container__spotify__sound__data}>
-                                    <View style={styles.container__spotify__sound__artist}>
-                                        <Text style={styles.container__spotify__sound__title}>{this.data_all[this.state.soundId].title} • </Text><Text style={styles.container__spotify__sound__name}>{this.data_all[this.state.soundId].name}</Text>
-                                    </View>
-                                    <View style={styles.container__spotify__sound__appareil}>
-                                        <Image style={styles.container__spotify__sound__appareil__icon} source={require('../../main/assets/icons/spotify/icon_appareils_dispo.png')} />
-                                        <Text style={styles.container__spotify__sound__appareil__text}>Appareils disponibles</Text>
+                    {
+                        !this.state.isSong
+                        ?  <TouchableOpacity style={styles.container__spotify__sound} onPress={() => this.setState({ isPlaylist: false, isArtistes: false, isAlbums: false, isSong: true, isLyricistes: false })}>
+                            <View style={{ zIndex: 1, width: '114%', height: '12%', marginLeft: '-7%', borderWidth: 2, borderColor: '#151C38'}} />
+                            <View style={{ width: `${((114 * this.state.progress) / this.data_all[this.state.soundId].duration)}%`, height: '8%', marginLeft: '-7%', marginTop: '-2%', backgroundColor:R.colors.saumon}} />
+                            <View style={styles.container__spotify__sound__player}>
+                                <View style={styles.container__spotify__sound__infos}>
+                                    <Image style={styles.container__spotify__sound__cover} source={{ uri: this.data_all[this.state.soundId].photo }} />
+                                    <View style={styles.container__spotify__sound__data}>
+                                        <View style={styles.container__spotify__sound__artist}>
+                                            <Text style={styles.container__spotify__sound__title}>{this.data_all[this.state.soundId].title} • </Text><Text style={styles.container__spotify__sound__name}>{this.data_all[this.state.soundId].name}</Text>
+                                        </View>
+                                        <View style={styles.container__spotify__sound__appareil}>
+                                            <Image style={styles.container__spotify__sound__appareil__icon} source={require('../../main/assets/icons/spotify/icon_appareils_dispo.png')} />
+                                            <Text style={styles.container__spotify__sound__appareil__text}>Appareils disponibles</Text>
+                                        </View>
                                     </View>
                                 </View>
+                                <TouchableOpacity onPress={() => this.changePlayState(this.data_all[this.state.soundId].id)}>
+                                    <Image source={this.state.isPlaying ? this.audioStopIcon : this.audioPlayIcon} />
+                                </TouchableOpacity>
                             </View>
-                            <TouchableOpacity onPress={() => this.changePlayState()}>
-                                <Image source={this.state.isPlaying ? this.audioStopIcon : this.audioPlayIcon} />
-                            </TouchableOpacity>
-                        </View>
-                    </View>
+                        </TouchableOpacity>
+                        : <View/>
+                    }
                 </View>
             )
         }
@@ -669,6 +723,50 @@ const styles = StyleSheet.create({
         fontFamily: R.fonts.Agrandir_Regular,
         paddingLeft: 20,
         opacity: 0.8,
+    },
+
+    // SONG 
+    container__spotify__song: {
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+    },
+
+    container__spotify__song__cover: {
+        width: 330,
+        height: 330,
+        marginTop: '10%',
+        alignSelf: 'center',
+    },
+
+    container__spotify__song__artist: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignSelf: 'flex-start',
+        marginTop: '8%',
+    },
+
+    container__spotify__song__title: {
+        color: R.colors.saumon,
+        fontSize: 25,
+        fontFamily: R.fonts.Agrandir_GrandHeavy,
+    },
+
+    container__spotify__song__name: {
+        color: R.colors.saumon,
+        fontSize: 18,
+        fontFamily: R.fonts.Agrandir_Regular,
+        marginBottom: '5%'
+    },
+
+    container__spotify__song__button: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        marginTop: '8%',
+        marginBottom: '8%',
     },
 
     // MODAL SOUND
