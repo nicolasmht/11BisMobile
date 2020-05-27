@@ -2,12 +2,56 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native'
 import R from '../../res/R'
+import dataSound from '../../data/sound_call'
+import Sound from 'react-native-sound'
+
 
 export default class CallsClavierScreen extends Component {
     constructor() {
         super()
         this.state = {
-            numbers: []
+            numbers: [],
+            isPlaying: false
+        }
+        this.enable = true
+        this.data
+    }
+
+    componentWillUnmount() {
+        this.clearTimer()
+        this.stop()
+    }
+
+    componentDidMount() {
+        this.data = dataSound
+    }
+
+    play(id) {
+        this.whoosh = new Sound(this.data.numbers[id].sound, null, (error) => {
+            if (!error) {
+                this.whoosh.play((success) => {
+                    if (success) {
+                        this.stop()
+                    }
+                })
+            }
+        })
+    }
+
+    stop() {
+        if (!this.whoosh) return
+        this.whoosh.stop()
+        this.whoosh.release()
+        this.whoosh = null
+        this.clearTimer()
+        this.setState({ isPlaying: false })
+    }
+
+
+    clearTimer() {
+        if (this.timer) {
+            clearInterval(this.timer)
+            this.timer = null
         }
     }
 
@@ -38,43 +82,43 @@ export default class CallsClavierScreen extends Component {
                         </Text>
                     </View>
                     <View style={styles.container__touch}>
-                        <TouchableOpacity style={styles.container__touch__icon} onPress={() => this.addNumber('1')}>
+                        <TouchableOpacity style={styles.container__touch__icon} onPress={() => { this.addNumber('1'), this.play(1)}}>
                             <Image source={require('../../main/assets/icons/contact/calls/touch/touch_1.png')} />
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.container__touch__icon} onPress={() => this.addNumber('2')}>
+                        <TouchableOpacity style={styles.container__touch__icon} onPress={() => { this.addNumber('2'), this.play(2) }}>
                             <Image source={require('../../main/assets/icons/contact/calls/touch/touch_2.png')} />
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.container__touch__icon} onPress={() => this.addNumber('3')}>
+                        <TouchableOpacity style={styles.container__touch__icon} onPress={() => { this.addNumber('3'), this.play(3) }}>
                             <Image source={require('../../main/assets/icons/contact/calls/touch/touch_3.png')} />
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.container__touch__icon} onPress={() => this.addNumber('4')}>
+                        <TouchableOpacity style={styles.container__touch__icon} onPress={() => { this.addNumber('4'), this.play(4) }}>
                             <Image source={require('../../main/assets/icons/contact/calls/touch/touch_4.png')} />
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.container__touch__icon} onPress={() => this.addNumber('5')}>
+                        <TouchableOpacity style={styles.container__touch__icon} onPress={() => { this.addNumber('5'), this.play(5) }}>
                             <Image source={require('../../main/assets/icons/contact/calls/touch/touch_5.png')} />
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.container__touch__icon} onPress={() => this.addNumber('6')}>
+                        <TouchableOpacity style={styles.container__touch__icon} onPress={() => { this.addNumber('6'), this.play(6) }}>
                             <Image source={require('../../main/assets/icons/contact/calls/touch/touch_6.png')} />
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.container__touch__icon} onPress={() => this.addNumber('7')}>
+                        <TouchableOpacity style={styles.container__touch__icon} onPress={() => { this.addNumber('7'), this.play(7) }}>
                             <Image source={require('../../main/assets/icons/contact/calls/touch/touch_7.png')} />
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.container__touch__icon} onPress={() => this.addNumber('8')}>
+                        <TouchableOpacity style={styles.container__touch__icon} onPress={() => { this.addNumber('8'), this.play(8) }}>
                             <Image source={require('../../main/assets/icons/contact/calls/touch/touch_8.png')} />
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.container__touch__icon} onPress={() => this.addNumber('9')}>
+                        <TouchableOpacity style={styles.container__touch__icon} onPress={() => { this.addNumber('9'), this.play(9) }}>
                             <Image source={require('../../main/assets/icons/contact/calls/touch/touch_9.png')} />
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.container__touch__icon} onPress={() => this.addNumber('*')}>
+                        <TouchableOpacity style={styles.container__touch__icon} onPress={() => { this.addNumber('*'), this.play(10) }}>
                             <Image source={require('../../main/assets/icons/contact/calls/touch/touch_*.png')} />
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.container__touch__icon} onPress={() => this.addNumber('0')}>
+                        <TouchableOpacity style={styles.container__touch__icon} onPress={() => { this.addNumber('0'), this.play(0) }}>
                             <Image source={require('../../main/assets/icons/contact/calls/touch/touch_0.png')} />
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.container__touch__icon} onPress={() => this.addNumber('#')}>
+                        <TouchableOpacity style={styles.container__touch__icon} onPress={() => { this.addNumber('#'), this.play(11) }}>
                             <Image source={require('../../main/assets/icons/contact/calls/touch/touch_hash.png')} />
                         </TouchableOpacity>
                         {

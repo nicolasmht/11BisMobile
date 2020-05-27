@@ -57,6 +57,9 @@ target 'Mobile' do
 
   pod 'RNSound', :path => '../node_modules/react-native-sound'
 
+
+  pod 'react-native-maps', :path => '../node_modules/react-native-maps'
+
   target 'MobileTests' do
     inherit! :complete
     # Pods for testing

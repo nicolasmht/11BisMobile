@@ -8,11 +8,11 @@ export default class Home extends Component {
             <View style={styles.container}>
                 <ImageBackground source={require('../main/assets/fond/Points.png')} style={styles.backgroundImage}>
                     <View style={styles.container__buttonApp}>
-                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => onPress()}>
+                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => this.props.navigation.navigate('Alarme')}>
                             <Image source={require('../main/assets/icons/app/rappels.png')} onPress={() => onPress()} />
                             <Text style={styles.container__buttonApp__icon__text}>Rappels</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => onPress()}>
+                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => this.props.navigation.navigate('GoogleMaps')}>
                             <Image source={require('../main/assets/icons/app/maps.png')} />
                             <Text style={styles.container__buttonApp__icon__text}>Google Maps</Text>
                         </TouchableOpacity>
@@ -76,7 +76,7 @@ export default class Home extends Component {
                         <TouchableOpacity style={styles.container__buttonApp__iconFav} onPress={() => this.props.navigation.navigate('CallsClavier')}>
                             <Image source={require('../main/assets/icons/app/call.png')} />
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.container__buttonApp__iconFav} onPress={() => onPress()}>
+                        <TouchableOpacity style={styles.container__buttonApp__iconFav} onPress={() => this.props.navigation.navigate('MessagesList')}>
                             <Image source={require('../main/assets/icons/app/messagerie.png')} />
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.container__buttonApp__iconFav} onPress={() => this.props.navigation.navigate('NotesList')}>

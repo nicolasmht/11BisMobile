@@ -1,0 +1,75 @@
+[
+    {
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#ffbca6"
+            }
+        ]
+    },
+    {
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "weight": 0.5
+            }
+        ]
+    },
+    {
+        "elementType": "labels",
+        "stylers": [
+            {
+                "color": "#2a3669"
+            }
+        ]
+    },
+    {
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "color": "#ffbca5"
+            }
+        ]
+    },
+    {
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "color": "#ffbca6"
+            },
+            {
+                "weight": 1.5
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "weight": 0.5
+            }
+        ]
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#0c1539"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#2a3669"
+            }
+        ]
+    }
+]

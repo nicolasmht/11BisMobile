@@ -3,7 +3,7 @@ import { StyleSheet, View, Image } from 'react-native'
 import photosData from '../../data/photos.json'
 import R from '../../res/R'
 
-export default class PhotVisuelScreen extends Component {
+export default class PhotoVisuelScreen extends Component {
 
 
     render() {

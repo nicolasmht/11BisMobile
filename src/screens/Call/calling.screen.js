@@ -2,6 +2,8 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, ImageBackground, Text, TouchableOpacity, Image } from 'react-native'
 import R from '../../res/R'
+import dataSound from '../../data/sound_call'
+import Sound from 'react-native-sound'
 
 // TODO: SOUND
 export default class CallingScreen extends Component {
@@ -11,10 +13,23 @@ export default class CallingScreen extends Component {
             minutes: 0,  
             seconds: 0,
             text: 'appel:',
-            category: this.props.route.params.category
+            category: this.props.route.params.category,
+            isPlaying: false
         }
+        this.enable = true
+        this.data
     }
+
+    componentWillUnmount() {
+        this.clearTimer()
+        this.stop()
+    }
+
+
     componentDidMount() {
+        this.data = dataSound
+        this.play()
+
         this.myCall = setTimeout(() => {
             this.setState(({ text, category }) => ({
                 text: '',
@@ -46,7 +61,9 @@ export default class CallingScreen extends Component {
             }, 1000)
         }, 5000)
     }
-    timer = () => {
+    
+    timerCall = () => {
+        this.stop()
         const { minutes, seconds, text, category } = this.state
         if(text === '' && category === '') {
             return (
@@ -55,6 +72,35 @@ export default class CallingScreen extends Component {
                 </Text>
             )
         }  
+    }
+
+    play() {
+        this.whoosh = new Sound(this.data.calls[0].sound, null, (error) => {
+            if (!error) {
+                this.whoosh.play((success) => {
+                    if (success) {
+                        this.play()
+                    }
+                })
+            }
+        })
+    }
+
+    stop() {
+        if (!this.whoosh) return
+        this.whoosh.stop()
+        this.whoosh.release()
+        this.whoosh = null
+        this.clearTimer()
+        this.setState({ isPlaying: false })
+    }
+
+
+    clearTimer() {
+        if (this.timer) {
+            clearInterval(this.timer)
+            this.timer = null
+        }
     }
 
     render() {
@@ -71,7 +117,7 @@ export default class CallingScreen extends Component {
                         </View>
                         <Text style={styles.container__call__infos__time}>
                             {text} {category}
-                            {this.timer()}
+                            {this.timerCall()}
                         </Text>
                     </View>
                     <View style={styles.container__call__events}>

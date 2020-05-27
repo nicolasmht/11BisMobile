@@ -26,7 +26,7 @@ export default class CallsContactsScreen extends Component {
             <View style={styles.container}>
                 <ScrollView>
                     <View style={styles.container__contacts}>
-                        <Text style={styles.container__contacts__text}>Contacts</Text>
+                        <Text style={styles.container__contacts__title}>Contacts</Text>
                         <View style={styles.container__contacts__block}>
                             <View style={styles.container__contacts__block__background}>
                                 <Text style={styles.container__contacts__block__letter}>A</Text>
@@ -461,7 +461,7 @@ const styles = StyleSheet.create({
 
     container__contacts: {
         width: '100%',
-        height: '100%',
+        paddingBottom: '20%',
         paddingTop: 0,
         padding: 24,
         display: 'flex',
@@ -470,11 +470,12 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
     },
 
-    container__contacts__text: {
-        fontSize: 30,
+    container__contacts__title: {
+        fontSize: 25,
         fontFamily: R.fonts.Agrandir_GrandHeavy,
         color: R.colors.dark_blue,
-        paddingTop: 20
+        paddingTop: 20,
+        paddingBottom: 10,
     },
 
     container__contacts__block: {

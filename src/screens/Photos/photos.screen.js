@@ -66,7 +66,7 @@ export default class PhotosScreen extends Component {
                                 <Text style={styles.container__photos__album__title}>Personnes</Text>
                                 <Text style={styles.container__photos__album__number}>{personnes.length}</Text>
                             </TouchableOpacity>
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('PhotoMap')}>
                                 <Image style={styles.container__photos__album__img} source={require('../../main/assets/images/photos/photo_lieux.png')} />
                                 <Text style={styles.container__photos__album__title}>Lieux</Text>
                                 <Text style={styles.container__photos__album__number}>{recents.length}</Text>
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
     },
 
     container__photos__title: {
-        fontSize: 20,
+        fontSize: 25,
         textAlign: 'left',
         fontFamily: R.fonts.Agrandir_GrandHeavy,
         color: R.colors.dark_blue,

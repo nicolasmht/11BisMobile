@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     container__noteslist__title: {
         width: '100%',
         marginTop: 24,
-        fontSize: 30,
+        fontSize: 25,
         textAlign: 'left',
         fontFamily: R.fonts.Agrandir_GrandHeavy,
         color: R.colors.dark_blue,
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     },
 
     container__noteslist__main__title: {
-        fontSize: 15,
+        fontSize: 18,
         fontFamily: R.fonts.Agrandir_TextBold,
         color: R.colors.dark_blue,
     },

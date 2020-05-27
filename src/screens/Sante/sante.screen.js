@@ -86,10 +86,11 @@ const styles = StyleSheet.create({
     },
 
     container__sante__text: {
-        fontSize: 30,
+        fontSize: 25,
         fontFamily: R.fonts.Agrandir_GrandHeavy,
         color: R.colors.dark_blue,
         paddingTop: 30,
+        paddingBottom: 10,
     },
 
     container__sante__block: {

@@ -179,7 +179,19 @@ export default class SpotifyScreen extends Component {
             this.timer = null
         }
         this.setState({
-            soundId: 0
+            count: 0,
+            play: false,
+            isPlaying: false,
+            progress: 0,
+            soundId: 0,
+            isNext: false,
+            isPlaylist: true,
+            isArtistes: false,
+            isAlbums: false,
+            isLyricistes: false,
+            isConcentration: false,
+            isAltj: false,
+            isSong: false
         })
     }
 
@@ -374,25 +386,23 @@ export default class SpotifyScreen extends Component {
 
     isSong() {
         return(
-            <View style={styles.container__spotif}>
-                <View style={styles.container__spotify__song}>
-                    <Image style={styles.container__spotify__song__cover} source={{ uri: this.data_all[this.state.soundId].photo }} />
-                    <View style={styles.container__spotify__song__data}>
-                        <View style={styles.container__spotify__song__artist}>
-                            <Text style={styles.container__spotify__song__title}>{this.data_all[this.state.soundId].title}</Text>
-                            <Text style={styles.container__spotify__song__name}>{this.data_all[this.state.soundId].name}</Text>
-                        </View>
-                        <View style={{ zIndex: 1, width: '100%', height: '2.5%', borderWidth: 2, borderColor: '#151C38' }} />
-                        <View style={{ width: `${((100 * this.state.progress) / this.data_all[this.state.soundId].duration)}%`, height: '2.5%', marginTop: '-2%', backgroundColor: R.colors.saumon }} />
-                        <View style={styles.container__spotify__song__button}>
-                            <Image source={require('../../main/assets/icons/spotify/icon_prev.png')} />
-                                <TouchableOpacity onPress={() => this.changePlayState(this.data_all[this.state.soundId].id)}>
-                                    <Image source={this.state.isPlaying ? this.audioStopButton : this.audioPlayButton} />
-                                </TouchableOpacity>
-                            <Image source={require('../../main/assets/icons/spotify/icon_next.png')} />
-                        </View>
-                        <Image source={require('../../main/assets/icons/spotify/icon_app_large.png')} />
+            <View style={styles.container__spotify__song}>
+                <Image style={styles.container__spotify__song__cover} source={{ uri: this.data_all[this.state.soundId].photo }} />
+                <View style={styles.container__spotify__song__data}>
+                    <View style={styles.container__spotify__song__artist}>
+                        <Text style={styles.container__spotify__song__title}>{this.data_all[this.state.soundId].title}</Text>
+                        <Text style={styles.container__spotify__song__name}>{this.data_all[this.state.soundId].name}</Text>
                     </View>
+                    <View style={{ zIndex: 1, width: '100%', height: '2.5%', borderWidth: 2, borderColor: '#151C38' }} />
+                    <View style={{ width: `${((100 * this.state.progress) / this.data_all[this.state.soundId].duration)}%`, height: '2.5%', marginTop: '-2%', backgroundColor: R.colors.saumon }} />
+                    <View style={styles.container__spotify__song__button}>
+                        <Image source={require('../../main/assets/icons/spotify/icon_prev.png')} />
+                            <TouchableOpacity onPress={() => this.changePlayState(this.data_all[this.state.soundId].id)}>
+                                <Image source={this.state.isPlaying ? this.audioStopButton : this.audioPlayButton} />
+                            </TouchableOpacity>
+                        <Image source={require('../../main/assets/icons/spotify/icon_next.png')} />
+                    </View>
+                    <Image source={require('../../main/assets/icons/spotify/icon_app_large.png')} />
                 </View>
             </View>
         )
@@ -466,7 +476,6 @@ export default class SpotifyScreen extends Component {
                             : this.state.isSong ? this.isSong()
                             : <View/>
                         }
-
                     </View>
                     {
                         !this.state.isSong
@@ -519,7 +528,6 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%'
     },
-
     
     container__spotify: {
         width: '100%',
@@ -528,8 +536,8 @@ const styles = StyleSheet.create({
         paddingLeft: 24,
         paddingRight: 24,
         display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'flex-start',
+        flexDirection: 'row',
+        alignItems: 'flex-end',
     },
 
     container__spotify__logo: {
@@ -542,12 +550,13 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
         display: 'flex',
+        flexDirection: 'column',
     },
 
     container__spotify__title: {
         fontFamily: R.fonts.Agrandir_GrandHeavy,
         color: R.colors.saumon,
-        fontSize: 30,
+        fontSize: 25,
     },
 
     container__spotify__category: {
@@ -779,7 +788,6 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         position: 'absolute',
         left: '6%',
-        bottom: -10,
     },
 
     container__spotify__sound__player: {

@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     container__callsrecents__title: {
         width: '100%',
         marginTop: 24,
-        fontSize: 30,
+        fontSize: 25,
         textAlign: 'left',
         fontFamily: R.fonts.Agrandir_GrandHeavy,
         color: R.colors.dark_blue,
@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
     },
 
     container__callsrecents__names: {
-        fontSize: 20,
+        fontSize: 15,
         paddingLeft: 10,
         fontFamily: R.fonts.Agrandir_GrandHeavy,
         color: R.colors.dark_blue,
@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
         width: '100%',
         height: 1,
         marginTop: 6,
-        backgroundColor: '#151C38',
+        backgroundColor: R.colors.dark_blue,
         opacity: 0.2
     },
 

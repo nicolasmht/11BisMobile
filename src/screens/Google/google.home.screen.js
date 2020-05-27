@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
     },
     
     container__googlehome__title: {
-        fontSize: 30,
+        fontSize: 25,
         fontFamily: R.fonts.Agrandir_GrandHeavy,
         textAlign: 'center',
         color: R.colors.dark_blue,
@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
     },
 
     container__googlehome__room_title: {
-        fontSize: 20,
+        fontSize: 18,
         fontFamily: R.fonts.Agrandir_Regular,
         textAlign: 'center',
         color: R.colors.dark_blue,

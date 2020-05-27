@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
     },
 
     container__contact__name: {
-        fontSize: 30,
+        fontSize: 25,
         fontFamily: R.fonts.Agrandir_GrandHeavy,
         color: R.colors.dark_blue,
         paddingTop: 20,
@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
         width: '115%',
         height: 1,
         marginTop: 20,
-        backgroundColor: '#ad7761',
+        backgroundColor: R.colors.dark_saumon,
     },
 
     container__contact__infos: {
@@ -203,7 +203,7 @@ const styles = StyleSheet.create({
         width: '100%',
         height: 1,
         marginTop: 15,
-        backgroundColor: '#ad7761',
+        backgroundColor: R.colors.dark_saumon,
 
     }
 })

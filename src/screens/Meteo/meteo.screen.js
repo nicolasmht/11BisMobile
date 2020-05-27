@@ -207,7 +207,7 @@ const styles = StyleSheet.create({
     container__meteo__temp: {
         marginTop: 12,
         color: R.colors.saumon,
-        fontSize: 70,
+        fontSize: 40,
         fontFamily: R.fonts.Agrandir_GrandHeavy,
     },
 
