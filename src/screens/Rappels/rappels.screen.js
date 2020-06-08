@@ -28,29 +28,30 @@ export default class RappelsScreen extends Component {
                 <ScrollView>
                     <View style={styles.container__rappels}>
                         <Text style={styles.container__rappels__title}>{this.rappels.dossier}</Text>
+                        <Text style={styles.container__rappels__share}>{this.rappels.share ? `Partagé avec ${this.rappels.share }` : ''}</Text>
                         <View>
                             <View style={styles.container__rappels__content}>
-                            {
-                                this.rappels.lists.map((item, index) => {
-                                    return (
-                                        <TouchableOpacity style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', paddingTop: 10 }} onPress={() => { this.setState(state => {const a = state.isChecked; a[index] = !a[index]; return a;})}}>
-                                            <View style={!this.state.isChecked[index] ? { width: '8%', height: 30, borderWidth: 2, borderRadius: 50, borderColor: R.colors.blue } : { width: '8%', height: 30, borderWidth: 2, borderRadius: 50, borderColor: R.colors.blue, backgroundColor: R.colors.blue }} />
-                                            <Text style={styles.container__rappels__content__text__list}>{item.list}</Text>
-                                        </TouchableOpacity>
-                                    )
-                                })
-                            }
-                                {/* <FlatList
-                                    data={rappels.lists}
-                                    renderItem={({ item }) => {
+                                {
+                                    this.rappels.lists.map((item, index) => {
                                         return (
-                                            <TouchableOpacity style={{display:'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', paddingTop: 10}} onPress={() => this.setState({ isChecked: !this.state.isChecked }) }>
-                                                <View style={!this.state.isChecked ? { width: '8%', height: 30, borderWidth: 2, borderRadius: 50, borderColor: R.colors.blue } : { width: '8%', height: '100%', borderWidth: 2, borderRadius: 50, borderColor: R.colors.blue, backgroundColor: R.colors.blue }}/>
-                                                <Text style={styles.container__rappels__content__text__list}>{item.list}</Text>
+                                            <TouchableOpacity
+                                            style={styles.container__rappels__content__item}
+                                            onPress={() => {
+                                                this.setState(state => {const a = state.isChecked; a[index] = !a[index]; return a;})
+                                            }}>
+                                                <View style={
+                                                    !this.state.isChecked[index] 
+                                                    ? { width: '8%', height: 29, borderWidth: 2, borderRadius: 100, borderColor: R.colors.blue } 
+                                                    : { width: '8%', height: 29, borderWidth: 2, borderRadius: 100, borderColor: R.colors.blue, backgroundColor: R.colors.blue }} 
+                                                />
+                                                <View style={{width: '90%', display: 'flex', flexDirection: 'column'}}>
+                                                <Text style={styles.container__rappels__content__list}>{item.list}</Text>
+                                                <View style={styles.container__rappelslist__border} />
+                                                </View>
                                             </TouchableOpacity>
                                         )
-                                    }}
-                                /> */}
+                                    })
+                                }
                             </View>
                         </View>
                     </View>
@@ -85,66 +86,52 @@ const styles = StyleSheet.create({
     },
 
     container__rappels__title: {
-        color: R.colors.dark_blue,
+        color: R.colors.blue,
         fontSize: 20,
         fontFamily: R.fonts.Agrandir_GrandHeavy,
         paddingTop: '3%',
         paddingBottom: '5%',
-    },
+    },    
 
-    container__rappels__content__title: {
+    container__rappels__share: {
         color: R.colors.dark_blue,
         fontSize: 15,
+        opacity: 0.5,
         fontFamily: R.fonts.Agrandir_TextBold,
-        paddingTop: '5%',
+        marginTop: -5,
+        paddingBottom: '2%',
     },
 
-    container__rappels__content__text__list: {
-        color: R.colors.dark_blue,
-        fontSize: 16,
-        fontFamily: R.fonts.Agrandir_Regular,
-        paddingTop: '2%',
-        paddingLeft: '5%',
+    container__rappels__content: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        alignItems: 'center'
+    },
+
+    container__rappels__content__item: {
+        // height: 100,
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        // paddingTop: 10 
     },
 
     container__rappels__content__list: {
+        width: '90%',
         color: R.colors.dark_blue,
-        fontSize: 15,
+        fontSize: 16,
         fontFamily: R.fonts.Agrandir_Regular,
-        paddingTop: 0,
-        paddingLeft: 0,
-    },
-
-    container__rappels__content__text: {
-        color: R.colors.dark_blue,
-        fontSize: 15,
-        fontFamily: R.fonts.Agrandir_Regular,
-        paddingTop: '2%',
-    },
-
-    container__rappels__content__day: {
-        color: R.colors.dark_blue,
-        fontSize: 15,
-        fontFamily: R.fonts.Agrandir_ThinItalic,
-        paddingTop: '5%',
-        paddingBottom: '2%',
+        paddingTop: '6%',
         paddingLeft: '5%',
     },
 
-    container__rappels__content__checkbox: {
-        width: '8%',
-        height: '100%',
-        borderWidth: 2, 
-        borderRadius: 50,
-        borderColor: R.colors.blue,
+    container__rappelslist__border: {
+        width: '100%',
+        height: 1,
+        marginTop: 15,
+        backgroundColor: R.colors.dark_blue,
+        opacity: 0.2,
     },
-    container__rappels__content__checkbox__isChecked: {
-        width: '8%',
-        height: '100%',
-        borderWidth: 2, 
-        borderRadius: 50,
-        borderColor: R.colors.blue,
-        backgroundColor: R.colors.blue,
-    },
-
 })

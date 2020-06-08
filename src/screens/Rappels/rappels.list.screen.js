@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, Text, TouchableOpacity, ScrollView, Image } from 'react-native'
 import rappelsData from '../../data/rappels.json';
-import moment from 'moment'
 import R from '../../res/R'
 
 export default class RappelsListScreen extends Component {
