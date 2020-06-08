@@ -17,7 +17,7 @@ export default class NoteScreen extends Component {
                         <Text style={styles.container__note__date}>{moment(note.date).format('LLLL')}</Text>
                         <Text style={styles.container__note__title}>{note.title}</Text>
                             {
-                                !note.content.desc
+                            !note.content.servir && !note.subtitle3 && !note.content.list
                                 ? <View>
                                     <View style={styles.container__note__content}>
                                     <Text style={styles.container__note__content__title}>{note.content.subtitle1}</Text>
@@ -26,23 +26,93 @@ export default class NoteScreen extends Component {
                                         renderItem={({ item }) => <Text style={styles.container__note__content__text__list}>- {item.ingredient}</Text>}
                                     />
                                     </View>
+                                    {
+                                        note.title === "Pain pita"
+                                        ? <View style={styles.container__note__content}>
+                                            <Text style={styles.container__note__content__title}>{note.content.subtitle2}</Text>
+                                            <Text style={styles.container__note__content__day}>{note.content.preparation.day1}</Text>
+                                            <FlatList
+                                                data={note.content.preparation.etape1}
+                                                renderItem={({ item }) => <Text style={styles.container__note__content__text__list}>{item.etape}</Text>}
+                                            />
+                                            <Text style={styles.container__note__content__day}>{note.content.preparation.day2}</Text>
+                                            <FlatList
+                                                data={note.content.preparation.etape2}
+                                                renderItem={({ item }) => <Text style={styles.container__note__content__text__list}>{item.etape}</Text>}
+                                            />
+                                        </View>
+                                        : <View style={styles.container__note__content}>
+                                            <Text style={styles.container__note__content__title}>{note.content.subtitle2}</Text>
+                                            <FlatList
+                                                data={note.content.preparation.etapes}
+                                                renderItem={({ item }) => <Text style={styles.container__note__content__text__list}>{item.etape}</Text>}
+                                            />
+                                        </View>
+                                    }
+                                    
+                                </View>
+                                :  !note.content.list
+                                ? <View>
+                                    <View style={styles.container__note__content}>
+                                        <Text style={styles.container__note__content__title}>{note.content.subtitle1}</Text>
+                                        <FlatList
+                                            data={note.content.ingredients}
+                                            renderItem={({ item }) => <Text style={styles.container__note__content__text__list}>- {item.ingredient}</Text>}
+                                        />
+                                    </View>
                                     <View style={styles.container__note__content}>
                                         <Text style={styles.container__note__content__title}>{note.content.subtitle2}</Text>
-                                        <Text style={styles.container__note__content__day}>{note.content.preparation.day1}</Text>
                                         <FlatList
-                                            data={note.content.preparation.etape1}
+                                            data={note.content.servir.etapes}
                                             renderItem={({ item }) => <Text style={styles.container__note__content__text__list}>{item.etape}</Text>}
                                         />
-                                        <Text style={styles.container__note__content__day}>{note.content.preparation.day2}</Text>
+                                        <Text style={styles.container__note__content__title}>{note.content.subtitle3}</Text>
                                         <FlatList
-                                            data={note.content.preparation.etape2}
+                                            data={note.content.preparation.etapes}
                                             renderItem={({ item }) => <Text style={styles.container__note__content__text__list}>{item.etape}</Text>}
                                         />
                                     </View>
-                                    </View>
+                                </View>
                                 : <View style={styles.container__note__content}>
-                                    <Text style={styles.container__note__content__text}>{note.content.desc}</Text>
+                                    {
+                                        note.content.list.length <= 4
+                                        ? <FlatList
+                                            data={note.content.list}
+                                            renderItem={({ item }) => <Text style={styles.container__note__content__list}>{item.list1}</Text>}
+                                        />
+                                        : <View>
+                                            <FlatList
+                                                data={note.content.list}
+                                                renderItem={({ item }) => <Text style={styles.container__note__content__list}>{item.list1}</Text>}
+                                            />
+                                        <FlatList
+                                            data={note.content.list}
+                                            renderItem={({ item }) => <Text style={styles.container__note__content__list}>{item.list2}</Text>}
+                                            style={{marginTop: '-80%'}}
+                                        />
+                                        <FlatList
+                                            data={note.content.list}
+                                            renderItem={({ item }) => <Text style={styles.container__note__content__list}>{item.list3}</Text>}
+                                            style={{marginTop: '-80%'}}
+                                        />
+                                        <FlatList
+                                            data={note.content.list}
+                                            renderItem={({ item }) => <Text style={styles.container__note__content__list}>{item.list4}</Text>}
+                                            style={{marginTop: '-80%'}}
+                                        />
+                                        <FlatList
+                                            data={note.content.list}
+                                            renderItem={({ item }) => <Text style={styles.container__note__content__list}>{item.list5}</Text>}
+                                            style={{marginTop: '-80%'}}
+                                        />
+                                        <FlatList
+                                            data={note.content.list}
+                                            renderItem={({ item }) => <Text style={styles.container__note__content__list}>{item.list6}</Text>}
+                                            style={{marginTop: '-80%'}}
+                                        />
                                     </View>
+                                    }
+                                </View>
                             }
                     </View>
                 </ScrollView>
@@ -96,6 +166,14 @@ const styles = StyleSheet.create({
         fontFamily: R.fonts.Agrandir_Regular,
         paddingTop: '2%',
         paddingLeft: '5%',
+    },
+
+    container__note__content__list: {
+        color: R.colors.dark_blue,
+        fontSize: 15,
+        fontFamily: R.fonts.Agrandir_Regular,
+        paddingTop: 0,
+        paddingLeft: 0,
     },
 
     container__note__content__text: {

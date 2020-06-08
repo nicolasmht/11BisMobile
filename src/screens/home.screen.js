@@ -8,8 +8,8 @@ export default class Home extends Component {
             <View style={styles.container}>
                 <ImageBackground source={require('../main/assets/fond/Points.png')} style={styles.backgroundImage}>
                     <View style={styles.container__buttonApp}>
-                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => this.props.navigation.navigate('Alarme')}>
-                            <Image source={require('../main/assets/icons/app/rappels.png')} onPress={() => onPress()} />
+                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => this.props.navigation.navigate('RappelsList')}>
+                            <Image source={require('../main/assets/icons/app/rappels.png')}/>
                             <Text style={styles.container__buttonApp__icon__text}>Rappels</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => this.props.navigation.navigate('GoogleMaps')}>
@@ -37,7 +37,7 @@ export default class Home extends Component {
                             <Image source={require('../main/assets/icons/app/sante.png')} />
                             <Text style={styles.container__buttonApp__icon__text}>Santé</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => onPress()}>
+                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => this.props.navigation.navigate('Lydia')}>
                             <Image source={require('../main/assets/icons/app/lydia.png')} />
                             <Text style={styles.container__buttonApp__icon__text}>Lydia</Text>
                         </TouchableOpacity>
@@ -50,7 +50,7 @@ export default class Home extends Component {
                             <Image source={require('../main/assets/icons/app/instagram.png')} />
                             <Text style={styles.container__buttonApp__icon__text}>Instagram</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.container__buttonApp__icon}>
+                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => this.props.navigation.navigate('Netflix')}>
                             <Image source={require('../main/assets/icons/app/netflix.png')} />
                             <Text style={styles.container__buttonApp__icon__text}>Netflix</Text>
                         </TouchableOpacity>
@@ -62,10 +62,7 @@ export default class Home extends Component {
                             <Image source={require('../main/assets/icons/app/justeat.png')} />
                             <Text style={styles.container__buttonApp__icon__text}>Just Eat</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => onPress()}>
-                            <Image source={require('../main/assets/icons/app/uber.png')} />
-                            <Text style={styles.container__buttonApp__icon__text} >Uber</Text>
-                        </TouchableOpacity>
+                        <View style={styles.container__buttonApp__noIcon} />
                         <View style={styles.container__buttonApp__noIcon} />
                         <View style={styles.container__buttonApp__noIcon} />
                     </View>

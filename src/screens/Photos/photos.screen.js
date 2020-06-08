@@ -77,7 +77,7 @@ export default class PhotosScreen extends Component {
                         <View style={styles.container__photos__other_albums}>
                             <TouchableOpacity style={styles.container__photos__other_albums__line} onPress={() => this.props.navigation.navigate('PhotosMasked')}>
                                 <View style={styles.container__photos__other__albums__infos}>
-                                    <Image source={require('../../main/assets/icons/icon_eyeslash.png')} />
+                                    <Image source={require('../../main/assets/icons/photos/icon_eyeslash.png')} />
                                     <Text style={styles.container__photos__other__albums__infos__title}>Masqués</Text>
                                 </View>
                                 <View style={styles.container__photos__other__albums__infos}>
@@ -88,7 +88,7 @@ export default class PhotosScreen extends Component {
                             <View style={styles.container__photos__border} />
                             <TouchableOpacity style={styles.container__photos__other_albums__line} onPress={() => this.props.navigation.navigate('PhotosDeleted')}>
                                 <View style={styles.container__photos__other__albums__infos}>
-                                    <Image source={require('../../main/assets/icons/icon_eyeslash.png')} />
+                                    <Image source={require('../../main/assets/icons/photos/icon_trash.png')} />
                                     <Text style={styles.container__photos__other__albums__infos__title}>Supprimés récemment</Text>
                                 </View>
                                 <View style={styles.container__photos__other__albums__infos}>

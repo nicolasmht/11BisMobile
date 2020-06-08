@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native'
 import R from '../../res/R'
-import MapView from 'react-native-maps'
-import { mapStyle } from '../../constants/mapStyle.json'
+import MapView, { PROVIDER_GOOGLE } from 'react-native-maps'
+import mapStyle from '../../data/mapStyle'
 
 export default class GoogleMapsScreen extends Component {
     constructor() {
@@ -14,6 +14,7 @@ export default class GoogleMapsScreen extends Component {
             latitudeDelta: 0.004,
             longitudeDelta: 0.004,
         }
+        this.mapStyle
     }
 
     loaderText() {
@@ -26,7 +27,8 @@ export default class GoogleMapsScreen extends Component {
             this.setState({
                 text: null
             })
-        }, 0)
+        }, 2000)
+        this.mapStyle = mapStyle
     }
    
     onRegionHomeChange() {
@@ -55,8 +57,8 @@ export default class GoogleMapsScreen extends Component {
             return (
                 <View style={styles.container__googlemaps__main}>
                     <MapView
-                        // provider={MapView.PROVIDER_GOOGLE}
-                        customMapStyle={mapStyle}
+                        provider={PROVIDER_GOOGLE}
+                        customMapStyle={this.mapStyle}
                         style={styles.container__googlemaps__main__view}
                         region={{
                             latitude: this.state.latitude,

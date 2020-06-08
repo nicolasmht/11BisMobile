@@ -73,6 +73,7 @@ export default class CallsClavierScreen extends Component {
 
     render() {
         const numbers = this.state.numbers
+        console.log(numbers.find(element => element === '*'))
         return (
             <View style={styles.container}>
                 <View style={styles.container__calls}>
@@ -82,7 +83,7 @@ export default class CallsClavierScreen extends Component {
                         </Text>
                     </View>
                     <View style={styles.container__touch}>
-                        <TouchableOpacity style={styles.container__touch__icon} onPress={() => { this.addNumber('1'), this.play(1)}}>
+                        <TouchableOpacity style={styles.container__touch__icon} onPress={() => { this.addNumber('1'), this.play(1) }}>
                             <Image source={require('../../main/assets/icons/contact/calls/touch/touch_1.png')} />
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.container__touch__icon} onPress={() => { this.addNumber('2'), this.play(2) }}>
@@ -122,27 +123,27 @@ export default class CallsClavierScreen extends Component {
                             <Image source={require('../../main/assets/icons/contact/calls/touch/touch_hash.png')} />
                         </TouchableOpacity>
                         {
-                            numbers.length > 0
-                            ? <TouchableOpacity style={styles.container__touch__call} onPress={() => this.props.navigation.navigate('Calling', { names: numbers, category: '...' })}>
-                                <Image source={require('../../main/assets/icons/contact/calls/touch/touch_call.png')} />
-                            </TouchableOpacity>
-                            : <TouchableOpacity style={styles.container__touch__call}>
-                                <Image source={require('../../main/assets/icons/contact/calls/touch/touch_call.png')} />
-                            </TouchableOpacity>
+                            numbers.length > 0 && numbers.find(element => element === '*' || element === '#' ) === undefined
+                                ? <TouchableOpacity style={styles.container__touch__call} onPress={() => this.props.navigation.navigate('Calling', { names: numbers, category: '...' })}>
+                                    <Image source={require('../../main/assets/icons/contact/calls/touch/touch_call.png')} />
+                                </TouchableOpacity>
+                                : <TouchableOpacity style={styles.container__touch__call}>
+                                    <Image source={require('../../main/assets/icons/contact/calls/touch/touch_call.png')} />
+                                </TouchableOpacity>
                         }
                         {
                             numbers.length > 0
-                            ? <TouchableOpacity style={styles.container__touch__icons__remove} onPress={() => this.removeNumber()}>
+                                ? <TouchableOpacity style={styles.container__touch__icons__remove} onPress={() => this.removeNumber()}>
                                     <Image source={require('../../main/assets/icons/contact/calls/touch/touch_remove.png')} />
                                 </TouchableOpacity>
-                            : <View/>
+                                : <View />
                         }
                     </View>
 
                 </View>
                 <View style={styles.container__bottom__bar}>
                     <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsFavoris')}>
-                        <Image source={require('../../main/assets/icons/contact/calls/favoris.png')}/>
+                        <Image source={require('../../main/assets/icons/contact/calls/favoris.png')} />
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsRecents')}>
                         <Image source={require('../../main/assets/icons/contact/calls/recents.png')} />
@@ -205,7 +206,7 @@ const styles = StyleSheet.create({
         width: '60%',
         display: 'flex',
         flexDirection: 'row',
-        justifyContent:'center',
+        justifyContent: 'center',
         alignItems: 'center',
         marginTop: '5%',
         marginLeft: '20%'
@@ -232,3 +233,4 @@ const styles = StyleSheet.create({
         backgroundColor: R.colors.saumon,
     }
 })
+

@@ -1,0 +1,122 @@
+{
+    "transferts1": [
+        {
+            "person": "Ben ❤️",
+            "name": "charges loc juin",
+            "transaction": "+",
+            "somme": "57.38",
+            "border": true
+        },
+        {
+            "person": "Ninon",
+            "name": "chardonayyyy 🍷",
+            "transaction": "+",
+            "somme": "4.2",
+            "border": true
+        },
+        {
+            "person": "Ninon",
+            "name": "pour combien?🏴‍☠️",
+            "transaction": "-",
+            "somme": "40",
+            "border": true
+        },
+        {
+            "person": "Romain",
+            "name": "cocktail de pombos",
+            "transaction": "-",
+            "somme": "11",
+            "border": false
+        }
+    ],
+
+    "transferts2": [
+        {
+            "person": "Mathis",
+            "name": "sushi",
+            "transaction": "-",
+            "somme": "13.4",
+            "border": true
+        },
+        {
+            "person": "Ninon",
+            "name": "grog anti-covid 💊",
+            "transaction": "-",
+            "somme": "7.5",
+            "border": true
+        },
+        {
+            "person": "Ninon",
+            "name": "chardonayyyy 🍷",
+            "transaction": "-",
+            "somme": "4.2",
+            "border": true
+        },
+        {
+            "person": "Ben ❤️",
+            "name": "✈️✈️week end à Rome tous les 2 sans person✈️✈️",
+            "transaction": "+",
+            "somme": "107",
+            "border": true
+        },
+        {
+            "person": "Ben ❤️",
+            "name": "Ikéa",
+            "transaction": "+",
+            "somme": "11.67",
+            "border": true
+        },
+        {
+            "person": "Ben ❤️",
+            "name": "billets week end deconfinade",
+            "transaction": "+",
+            "somme": "64.5",
+            "border": true
+        },
+        {
+            "person": "Anne",
+            "name": "billets week end deconfinade",
+            "transaction": "+",
+            "somme": "64.5",
+            "border": false
+        }
+    ],
+
+    "transferts3": [
+        {
+            "person": "Ninon",
+            "name": "1er pastis de 2020",
+            "transaction": "-",
+            "somme": "2.5",
+            "border": true
+        },
+        {
+            "person": "Gab",
+            "name": "billets week end deconfinade",
+            "transaction": "+",
+            "somme": "64.5",
+            "border": true
+        },
+        {
+            "person": "Ben ❤️",
+            "name": "pour combien? 🏴‍☠️",
+            "transaction": "-",
+            "somme": "40",
+            "border": true
+        },
+        {
+            "person": "Ben ❤️",
+            "name": "charges loc mai",
+            "transaction": "+",
+            "somme": "57.38",
+            "border": true
+        },
+        {
+            "person": "Ninon",
+            "name": "chardonayyyy 🍷",
+            "transaction": "-",
+            "somme": "4.2",
+            "border": false
+        }
+    ]
+}

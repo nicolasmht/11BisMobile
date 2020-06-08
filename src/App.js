@@ -18,9 +18,14 @@ import ContactsScreen from './screens/Contacts/contacts.screen'
 import FicheContactScreen from './screens/Contacts/ficheContact.screen'
 import MeteoScreen from './screens/Meteo/meteo.screen'
 import SpotifyScreen from './screens/Spotify/spotify.screen'
+import NetflixScreen from './screens/Netflix/netflix.screen'
+import LydiaScreen from './screens/Lydia/lydia.screen'
 
 import GoogleHomeScreen from './screens/Google/google.home.screen'
 import GoogleMapsScreen from './screens/Google/google.maps.screen'
+
+import RappelsListScreen from './screens/Rappels/rappels.list.screen'
+import RappelsScreen from './screens/Rappels/rappels.screen'
 
 import NotesListScreen from './screens/Notes/notes.list.screen'
 import NoteScreen from './screens/Notes/note.screen'
@@ -119,6 +124,81 @@ App = () => {
 							headerTintColor: R.colors.dark_blue, 
 							headerTitle: '', 
 							headerTransparent: true 
+						}}
+					/>
+
+					<Stack.Screen
+						name="Rappels"
+						component={RappelsScreen}
+						options={{
+							headerRight: () => (
+								<Button
+									onPress={() => navigate('Home')}
+									title="✕"
+									color={R.colors.dark_blue}
+								/>
+							),
+							gestureEnabled: true,
+							headerBackTitleVisible: true,
+							headerTintColor: R.colors.dark_blue,
+							headerTitle: '',
+							headerTransparent: false,
+							headerStyle: { backgroundColor: R.colors.saumon },
+							headerBackTitleStyle: { fontSize: 12 }
+						}}
+					/>
+					<Stack.Screen
+						name="RappelsList"
+						component={RappelsListScreen}
+						options={{
+							headerRight: () => (
+								<Button
+									onPress={() => navigate('Home')}
+									title="✕"
+									color={R.colors.dark_blue}
+								/>
+							),
+							headerLeft: '',
+							gestureEnabled: false,
+							headerBackTitleVisible: false,
+							headerTitle: '',
+							headerTransparent: true
+						}}
+					/>
+					<Stack.Screen
+						name="Lydia"
+						component={LydiaScreen}
+						options={{
+							headerRight: () => (
+								<Button
+									onPress={() => navigate('Home')}
+									title="✕"
+									color={R.colors.dark_blue}
+								/>
+							),
+							headerLeft: '',
+							gestureEnabled: false,
+							headerBackTitleVisible: false,
+							headerTitle: '',
+							headerTransparent: true
+						}}
+					/>
+					<Stack.Screen
+						name="Netflix"
+						component={NetflixScreen}
+						options={{
+							headerRight: () => (
+								<Button
+									onPress={() => navigate('Home')}
+									title="✕"
+									color={R.colors.dark_blue}
+								/>
+							),
+							headerLeft: '',
+							gestureEnabled: false,
+							headerBackTitleVisible: false,
+							headerTitle: '',
+							headerTransparent: true
 						}}
 					/>
 					<Stack.Screen 
@@ -601,11 +681,15 @@ App = () => {
 									color={R.colors.dark_blue}
 								/>
 							),
-							headerLeft: '', 
-							gestureEnabled: false, 
-							headerTransparent: true, 
-							headerTitle: '', 
-							transitionSpec: {open: config,close: config} 
+							headerLeft: '',
+							gestureEnabled: false,
+							headerTransparent: true,
+							headerTitle: '',
+							headerBackTitleVisible: true,
+							headerTintColor: R.colors.dark_blue,
+							headerTitle: '',
+							headerTransparent: false,
+							headerStyle: { backgroundColor: R.colors.saumon },
 						}} 
 					/>
 					<Stack.Screen 

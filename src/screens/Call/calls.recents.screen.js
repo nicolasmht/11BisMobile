@@ -1,23 +1,30 @@
 
 import React, { Component } from 'react'
-import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native'
+import { StyleSheet, View, Text, Image, TouchableOpacity, ScrollView } from 'react-native'
 import R from '../../res/R'
 
 export default class CallsRecentsScreen extends Component {
     render() {
         return (
             <View style={styles.container}>
+            <ScrollView>
                 <View style={styles.container__callsrecents}>
                     <Text style={styles.container__callsrecents__title}>Recents</Text>
                     <View style={styles.container__callsrecents__border} />
 
-                    <TouchableOpacity style={styles.container__callsrecents__button}>
+                    <TouchableOpacity style={styles.container__callsrecents__button}
+                        onPress={() => this.props.navigation.navigate(
+                            'Calling',
+                            {
+                                firstname: 'Ben ❤️',
+                                category: 'Portable',
+                            })}
+                        >
                         <View style={styles.container__callsrecents__infos}>
-                            <View style={styles.container__callsrecents__call}>
-                                <Image source={require('../../main/assets/icons/contact/calls/icon_last_call.png')} />
-                                <Text style={styles.container__callsrecents__names}>Daniel</Text>
+                            <View style={styles.container__callsrecents__call__noIcon}>
+                                <Text style={styles.container__callsrecents__names}>Ben ❤️</Text>
                             </View>
-                            <Text style={styles.container__callsrecents__category}>téléphone</Text>
+                            <Text style={styles.container__callsrecents__category}>portable</Text>
                         </View>
 
                         <View style={styles.container__callsrecents__infotime}>
@@ -27,12 +34,20 @@ export default class CallsRecentsScreen extends Component {
                     </TouchableOpacity>
                     <View style={styles.container__callsrecents__border} />
 
-                    <TouchableOpacity style={styles.container__callsrecents__button}>
+                    <TouchableOpacity style={styles.container__callsrecents__button}
+                        onPress={() => this.props.navigation.navigate(
+                            'Calling',
+                            {
+                                firstname: 'La Mama',
+                                category: 'Portable',
+                            })}
+                    >
                         <View style={styles.container__callsrecents__infos}>
-                            <View style={styles.container__callsrecents__call__noIcon}>
-                                <Text style={styles.container__callsrecents__names}>Pauline Albert</Text>
+                            <View style={styles.container__callsrecents__call}>
+                                <Image source={require('../../main/assets/icons/contact/calls/icon_last_call.png')} />
+                                <Text style={styles.container__callsrecents__names}>La Mama</Text>
                             </View>
-                            <Text style={styles.container__callsrecents__category}>domicile</Text>
+                            <Text style={styles.container__callsrecents__category}>portable</Text>
                         </View>
 
                         <View style={styles.container__callsrecents__infotime}>
@@ -42,13 +57,21 @@ export default class CallsRecentsScreen extends Component {
                     </TouchableOpacity>
                     <View style={styles.container__callsrecents__border} />
 
-                    <TouchableOpacity style={styles.container__callsrecents__button}>
+                    <TouchableOpacity style={styles.container__callsrecents__button}
+                        onPress={() => this.props.navigation.navigate(
+                            'Calling',
+                            {
+                                firstname: 'Caro',
+                                lastname: 'Dupuis',
+                                category: 'Portable',
+                            })}
+                    >
                         <View style={styles.container__callsrecents__infos}>
                             <View style={styles.container__callsrecents__call}>
                                 <Image source={require('../../main/assets/icons/contact/calls/icon_last_call.png')} />
-                                <Text style={styles.container__callsrecents__names}>Daniel</Text>
+                                <Text style={styles.container__callsrecents__names}>Caro</Text>
                             </View>
-                            <Text style={styles.container__callsrecents__category}>téléphone</Text>
+                            <Text style={styles.container__callsrecents__category}>portable</Text>
                         </View>
 
                         <View style={styles.container__callsrecents__infotime}>
@@ -56,8 +79,306 @@ export default class CallsRecentsScreen extends Component {
                             <Image source={require('../../main/assets/icons/icon_info.png')} />
                         </View>
                     </TouchableOpacity>
+                    <View style={styles.container__callsrecents__border} />
 
+                    <TouchableOpacity style={styles.container__callsrecents__button}
+                        onPress={() => this.props.navigation.navigate(
+                            'Calling',
+                            {
+                                firstname: 'Inès',
+                                lastname: 'Saurel',
+                                category: 'Portable',
+                            })}
+                    >
+                        <View style={styles.container__callsrecents__infos}>
+                            <View style={styles.container__callsrecents__call}>
+                                <Image source={require('../../main/assets/icons/contact/calls/icon_last_call.png')} />
+                                <Text style={styles.container__callsrecents__names}>Inès</Text>
+                            </View>
+                            <Text style={styles.container__callsrecents__category}>portable</Text>
+                        </View>
+
+                        <View style={styles.container__callsrecents__infotime}>
+                            <Text style={styles.container__callsrecents__time}>mercredi</Text>
+                            <Image source={require('../../main/assets/icons/icon_info.png')} />
+                        </View>
+                    </TouchableOpacity>
+                    <View style={styles.container__callsrecents__border} />
+
+                    <TouchableOpacity style={styles.container__callsrecents__button}
+                        onPress={() => this.props.navigation.navigate(
+                            'Calling',
+                            {
+                                firstname: 'Ben ❤️',
+                                category: 'Portable',
+                            })}
+                    >
+                        <View style={styles.container__callsrecents__infos}>
+                            <View style={styles.container__callsrecents__call__noIcon}>
+                                <Text style={styles.container__callsrecents__names}>Ben ❤️</Text>
+                            </View>
+                            <Text style={styles.container__callsrecents__category}>portable</Text>
+                        </View>
+
+                        <View style={styles.container__callsrecents__infotime}>
+                            <Text style={styles.container__callsrecents__time}>mercredi</Text>
+                            <Image source={require('../../main/assets/icons/icon_info.png')} />
+                        </View>
+                    </TouchableOpacity>
+                    <View style={styles.container__callsrecents__border} />
+
+                    <TouchableOpacity style={styles.container__callsrecents__button}
+                        onPress={() => this.props.navigation.navigate(
+                            'Calling',
+                            {
+                                firstname: 'Ben ❤️',
+                                category: 'Portable',
+                            })}
+                    >
+                        <View style={styles.container__callsrecents__infos}>
+                            <View style={styles.container__callsrecents__call__noIcon}>
+                                <Text style={styles.container__callsrecents__names}>Ben ❤️</Text>
+                            </View>
+                            <Text style={styles.container__callsrecents__category}>portable</Text>
+                        </View>
+
+                        <View style={styles.container__callsrecents__infotime}>
+                            <Text style={styles.container__callsrecents__time}>mardi</Text>
+                            <Image source={require('../../main/assets/icons/icon_info.png')} />
+                        </View>
+                    </TouchableOpacity>
+                    <View style={styles.container__callsrecents__border} />
+
+                    <TouchableOpacity style={styles.container__callsrecents__button}
+                        onPress={() => this.props.navigation.navigate(
+                            'Calling',
+                            {
+                                firstname: 'Ben ❤️',
+                                category: 'Portable',
+                            })}
+                    >
+                        <View style={styles.container__callsrecents__infos}>
+                            <View style={styles.container__callsrecents__call}>
+                                <Image source={require('../../main/assets/icons/contact/calls/icon_last_call.png')} />
+                                <Text style={styles.container__callsrecents__names}>Ben ❤️</Text>
+                            </View>
+                            <Text style={styles.container__callsrecents__category}>portable</Text>
+                        </View>
+
+                        <View style={styles.container__callsrecents__infotime}>
+                            <Text style={styles.container__callsrecents__time}>lundi</Text>
+                            <Image source={require('../../main/assets/icons/icon_info.png')} />
+                        </View>
+                    </TouchableOpacity>
+                    <View style={styles.container__callsrecents__border} />
+
+                    <TouchableOpacity style={styles.container__callsrecents__button}
+                        onPress={() => this.props.navigation.navigate(
+                            'Calling',
+                            {
+                                firstname: 'Tim',
+                                lastname: 'Brasseur',
+                                category: 'Portable',
+                            })}
+                    >
+                        <View style={styles.container__callsrecents__infos}>
+                            <View style={styles.container__callsrecents__call__noIcon}>
+                                <Text style={styles.container__callsrecents__names}>Tim</Text>
+                            </View>
+                            <Text style={styles.container__callsrecents__category}>portable</Text>
+                        </View>
+
+                        <View style={styles.container__callsrecents__infotime}>
+                            <Text style={styles.container__callsrecents__time}>samedi</Text>
+                            <Image source={require('../../main/assets/icons/icon_info.png')} />
+                        </View>
+                    </TouchableOpacity>
+                    <View style={styles.container__callsrecents__border} />
+
+                    <TouchableOpacity style={styles.container__callsrecents__button}
+                        onPress={() => this.props.navigation.navigate(
+                            'Calling',
+                            {
+                                firstname: 'Caro',
+                                lastname: 'Dupuis',
+                                category: 'Portable',
+                            })}
+                    >
+                        <View style={styles.container__callsrecents__infos}>
+                            <View style={styles.container__callsrecents__call}>
+                                <Image source={require('../../main/assets/icons/contact/calls/icon_last_call.png')} />
+                                <Text style={styles.container__callsrecents__names}>Caro</Text>
+                            </View>
+                            <Text style={styles.container__callsrecents__category}>portable</Text>
+                        </View>
+
+                        <View style={styles.container__callsrecents__infotime}>
+                            <Text style={styles.container__callsrecents__time}>28/05/2020</Text>
+                            <Image source={require('../../main/assets/icons/icon_info.png')} />
+                        </View>
+                    </TouchableOpacity>
+                    <View style={styles.container__callsrecents__border} />
+
+                    <TouchableOpacity style={styles.container__callsrecents__button}
+                        onPress={() => this.props.navigation.navigate(
+                            'Calling',
+                            {
+                                firstname: 'Prorio',
+                                category: 'Téléphone',
+                            })}
+                    >
+                        <View style={styles.container__callsrecents__infos}>
+                            <View style={styles.container__callsrecents__call__noIcon}>
+                                <Text style={styles.container__callsrecents__names}>Proprio</Text>
+                            </View>
+                            <Text style={styles.container__callsrecents__category}>téléphone</Text>
+                        </View>
+
+                        <View style={styles.container__callsrecents__infotime}>
+                            <Text style={styles.container__callsrecents__time}>25/05/2020</Text>
+                            <Image source={require('../../main/assets/icons/icon_info.png')} />
+                        </View>
+                    </TouchableOpacity>
+                    <View style={styles.container__callsrecents__border} />
+
+                    <TouchableOpacity style={styles.container__callsrecents__button}
+                        onPress={() => this.props.navigation.navigate(
+                            'Calling',
+                            {
+                                firstname: "Pop's",
+                                category: 'Portable',
+                            })}
+                    >
+                        <View style={styles.container__callsrecents__infos}>
+                            <View style={styles.container__callsrecents__call}>
+                                <Image source={require('../../main/assets/icons/contact/calls/icon_last_call.png')} />
+                                <Text style={styles.container__callsrecents__names}>Pop's</Text>
+                            </View>
+                            <Text style={styles.container__callsrecents__category}>portable</Text>
+                        </View>
+
+                        <View style={styles.container__callsrecents__infotime}>
+                            <Text style={styles.container__callsrecents__time}>21/05/2020</Text>
+                            <Image source={require('../../main/assets/icons/icon_info.png')} />
+                        </View>
+                    </TouchableOpacity>
+                    <View style={styles.container__callsrecents__border} />
+
+                    <TouchableOpacity style={styles.container__callsrecents__button}
+                        onPress={() => this.props.navigation.navigate(
+                            'Calling',
+                            {
+                                firstname: 'Ben ❤️',
+                                category: 'Portable',
+                            })}
+                    >
+                        <View style={styles.container__callsrecents__infos}>
+                            <View style={styles.container__callsrecents__call__noIcon}>
+                                <Text style={styles.container__callsrecents__names}>Ben ❤️</Text>
+                            </View>
+                            <Text style={styles.container__callsrecents__category}>portable</Text>
+                        </View>
+
+                        <View style={styles.container__callsrecents__infotime}>
+                            <Text style={styles.container__callsrecents__time}>21/05/2020</Text>
+                            <Image source={require('../../main/assets/icons/icon_info.png')} />
+                        </View>
+                    </TouchableOpacity>
+                    <View style={styles.container__callsrecents__border} />
+
+                    <TouchableOpacity style={styles.container__callsrecents__button}
+                        onPress={() => this.props.navigation.navigate(
+                            'Calling',
+                            {
+                                firstname: 'Ben ❤️',
+                                category: 'Portable',
+                            })}
+                    >
+                        <View style={styles.container__callsrecents__infos}>
+                            <View style={styles.container__callsrecents__call__noIcon}>
+                                <Text style={styles.container__callsrecents__names}>Ben ❤️</Text>
+                            </View>
+                            <Text style={styles.container__callsrecents__category}>portable</Text>
+                        </View>
+
+                        <View style={styles.container__callsrecents__infotime}>
+                            <Text style={styles.container__callsrecents__time}>20/05/2020</Text>
+                            <Image source={require('../../main/assets/icons/icon_info.png')} />
+                        </View>
+                    </TouchableOpacity>
+                    <View style={styles.container__callsrecents__border} />
+                    
+                    <TouchableOpacity style={styles.container__callsrecents__button}
+                        onPress={() => this.props.navigation.navigate(
+                            'Calling',
+                            {
+                                firstname: 'Anouk',
+                                lastname: 'Bellefeuille',
+                                category: 'Portable',
+                            })}
+                    >
+                        <View style={styles.container__callsrecents__infos}>
+                            <View style={styles.container__callsrecents__call__noIcon}>
+                                <Text style={styles.container__callsrecents__names}>Anouk</Text>
+                            </View>
+                            <Text style={styles.container__callsrecents__category}>portable</Text>
+                        </View>
+
+                        <View style={styles.container__callsrecents__infotime}>
+                            <Text style={styles.container__callsrecents__time}>18/05/2020</Text>
+                            <Image source={require('../../main/assets/icons/icon_info.png')} />
+                        </View>
+                    </TouchableOpacity>
+                    <View style={styles.container__callsrecents__border} />
+                    
+                    <TouchableOpacity style={styles.container__callsrecents__button}
+                        onPress={() => this.props.navigation.navigate(
+                            'Calling',
+                            {
+                                firstname: 'Anouk',
+                                lastname: 'Bellefeuille',
+                                category: 'Portable',
+                            })}
+                    >
+                        <View style={styles.container__callsrecents__infos}>
+                            <View style={styles.container__callsrecents__call}>
+                                <Image source={require('../../main/assets/icons/contact/calls/icon_last_call.png')} />
+                                <Text style={styles.container__callsrecents__names}>Anouk</Text>
+                            </View>
+                            <Text style={styles.container__callsrecents__category}>portable</Text>
+                        </View>
+
+                        <View style={styles.container__callsrecents__infotime}>
+                            <Text style={styles.container__callsrecents__time}>13/05/2020</Text>
+                            <Image source={require('../../main/assets/icons/icon_info.png')} />
+                        </View>
+                    </TouchableOpacity>
+                    <View style={styles.container__callsrecents__border} />
+
+                    <TouchableOpacity style={styles.container__callsrecents__button}
+                        onPress={() => this.props.navigation.navigate(
+                            'Calling',
+                            {
+                                firstname: 'Ben ❤️',
+                                category: 'Portable',
+                            })}
+                    >
+                        <View style={styles.container__callsrecents__infos}>
+                            <View style={styles.container__callsrecents__call}>
+                                <Image source={require('../../main/assets/icons/contact/calls/icon_last_call.png')} />
+                                <Text style={styles.container__callsrecents__names}>Ben ❤️</Text>
+                            </View>
+                            <Text style={styles.container__callsrecents__category}>portable</Text>
+                        </View>
+
+                        <View style={styles.container__callsrecents__infotime}>
+                            <Text style={styles.container__callsrecents__time}>12/05/2020</Text>
+                            <Image source={require('../../main/assets/icons/icon_info.png')} />
+                        </View>
+                    </TouchableOpacity>
+                    <View style={{marginBottom: '15%'}}/>
                 </View>
+                </ScrollView>
                 <View style={styles.container__bottom__bar}>
                     <TouchableOpacity onPress={() => this.props.navigation.navigate('CallsFavoris')}>
                         <Image source={require('../../main/assets/icons/contact/calls/favoris.png')} />
@@ -89,7 +410,7 @@ const styles = StyleSheet.create({
     container__callsrecents: {
         width: '100%',
         height: '100%',
-        marginTop: '9%',
+        marginTop: '-9%',
         padding: 24,
         display: 'flex',
         flexDirection: 'column',
@@ -110,7 +431,7 @@ const styles = StyleSheet.create({
         width: '100%',
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'space-around',
+        justifyContent: 'space-between',
         alignItems: 'center',
         marginTop: 10,
     },

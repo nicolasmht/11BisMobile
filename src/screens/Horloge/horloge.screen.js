@@ -23,7 +23,7 @@ export default class HorlogeScreen extends Component {
 
                         <View style={styles.container__alarme__list}>
                             <View style={styles.container__alarme__active}>
-                                <Text style={this.state.switchValueAlarme1 ? styles.container__alarme__heure : styles.container__alarme__heure__disable}>08:00</Text>
+                                <Text style={this.state.switchValueAlarme1 ? styles.container__alarme__heure : styles.container__alarme__heure__disable}>05:30</Text>
                                 <Switch
                                     trackColor={{ true: R.colors.blue, false: R.colors.dark_blue }}
                                     thumbColor={this.state.switchValueAlarme1 ? R.colors.saumon : R.colors.blue}
@@ -31,7 +31,7 @@ export default class HorlogeScreen extends Component {
                                     onValueChange={this.toggleSwitchAlarme1}
                                     value={this.state.switchValueAlarme1} />
                             </View>
-                            <Text style={this.state.switchValueAlarme1 ? styles.container__alarme__text : styles.container__alarme__text__disable} >Alarme</Text>
+                            <Text style={this.state.switchValueAlarme1 ? styles.container__alarme__text : styles.container__alarme__text__disable}>Train Bayonne</Text>
                             <View style={styles.container__alarme__border} />
                         </View>
 
@@ -45,13 +45,13 @@ export default class HorlogeScreen extends Component {
                                     onValueChange={this.toggleSwitchAlarme2}
                                     value={this.state.switchValueAlarme2} />
                             </View>
-                            <Text style={this.state.switchValueAlarme2 ? styles.container__alarme__text : styles.container__alarme__text__disable} >Alarme, chaque jour</Text>
+                            <Text style={this.state.switchValueAlarme2 ? styles.container__alarme__text : styles.container__alarme__text__disable}>Alarme, chaque jour</Text>
                             <View style={styles.container__alarme__border} />
                         </View>
 
                         <View style={styles.container__alarme__list}>
                             <View style={styles.container__alarme__active}>
-                                <Text style={this.state.switchValueAlarme3 ? styles.container__alarme__heure : styles.container__alarme__heure__disable}>09:00</Text>
+                                <Text style={this.state.switchValueAlarme3 ? styles.container__alarme__heure : styles.container__alarme__heure__disable}>05:45</Text>
                                 <Switch
                                     trackColor={{ true: R.colors.blue, false: R.colors.dark_blue }}
                                     thumbColor={this.state.switchValueAlarme3 ? R.colors.saumon : R.colors.blue}
@@ -59,8 +59,7 @@ export default class HorlogeScreen extends Component {
                                     onValueChange={this.toggleSwitchAlarme3}
                                     value={this.state.switchValueAlarme3} />
                             </View>
-                            <Text style={this.state.switchValueAlarme3 ? styles.container__alarme__text : styles.container__alarme__text__disable} >Alarme</Text>
-                            <View style={styles.container__alarme__border} />
+                            <Text style={this.state.switchValueAlarme3 ? styles.container__alarme__text : styles.container__alarme__text__disable}>Randoooo</Text>
                         </View>
                     </View>
                 </View>

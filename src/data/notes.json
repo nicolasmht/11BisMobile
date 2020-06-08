@@ -1,8 +1,276 @@
 [
     {
         "id": 0,
+        "title": "Poulet coco",
+        "date": "06/28/2020 17:43:00",
+        "content": {
+            "subtitle1": "Pour 4 personnes",
+            "ingredients": [
+                {"ingredient": "4 escalopes de poulet"},
+                {"ingredient": "1 gros oignon"},
+                {"ingredient": "1 tomate"},
+                {"ingredient": "2 cuillères à soupe de curry en poudre"},
+                {"ingredient": "1 cuillère à café de gingembre en poudre"},
+                {"ingredient": "1 pincée de piment de Cayenne"},
+                {"ingredient": "20 cl de lait de coco"},
+                {"ingredient": "2 cuillères à soupe d’huile d’olive"}
+            ],
+            "subtitle2": "Pour servir",
+            "servir": {
+                "etapes": [
+                    {"etape": "1 citron vert"},
+                    {"etape": "2 cuillères à soupe de noix de coco râpée"}
+                ]
+            },
+            "subtitle3": "Préparation",
+            "preparation": {
+                "etapes": [
+                    {"etape": "1. Pelez l’oignon et ciselez-le en petits dés."},
+                    {"etape": "2. Epluchez la tomate et coupez-la en cubes."},
+                    {"etape": "3. Détaillez le poulet en morceaux d’environ 2 à 3 cm de côté."},
+                    {"etape": "4. Versez l’huile d’olive dans une sauteuse."},
+                    {"etape": "5. Mettez-y ensuite les dés d’oignon et faites cuire 5 minutes environ en mélangeant régulièrement."},
+                    {"etape": "6. Ajoutez alors les morceaux de poulet, les épices et faites dorer 5 minutes supplémentaires."},
+                    {"etape": "7. Ajoutez les morceaux de tomates."},
+                    {"etape": "8. Cuisez encore 5 minutes (ajoutez 2 cuillères à soupe d’eau si besoin)."},
+                    {"etape": "9. Terminez enfin en versant le lait de coco."},
+                    {"etape": "10. Laissez mijoter encore 5/7 minutes, le temps que le lait de coco chauffe et c’est prêt !"}
+                ]
+            },
+            "info": "Au moment de servir saupoudrer de noix de coco râpée et de zestes de citron vert !"
+        }
+    },
+    {
+        "id": 1,
+        "title": "Blinis",
+        "date": "05/19/2020 11:22",
+        "content": {
+            "subtitle1": "Recette des « blinis » pour 9 gros blinis:",
+            "ingredients": [
+                {"ingredient": "2 oeufs"},
+                {"ingredient": "250g de farine"},
+                {"ingredient": "une bonne pincée de sucre"},
+                {"ingredient": "un paquet de levure de boulanger ( ou 10g de levure fraîche)"},
+                {"ingredient": "330ml de lait demi-écrémé"},
+                {"ingredient": "20g de beurre fondu (doux ou demi-sel)"},
+            ],
+            "subtitle2": "Préparation",
+            "preparation": {
+                "etapes": [
+                    {"etape": "1. Mettre la farine, la levure et le sucre dans un bol"},
+                    {"etape": "2. Verser le lait tiédi petit à petit pour bien tout incorporer"},
+                    {"etape": "3. Mélanger au fouet pour lisser la pâte au maximum. Laisser monter cette pâte une heure en la couvrant d’un torchon dans un endroit tiède (25°C)"},
+                    {"etape": "4. Séparer les jaunes des blancs des oeufs. Une fois la pâte levée, ajouter es jaunes des oeufs et le beurre fondu ainsi qu’une bonne pincée de sel"},
+                    {"etape": "5. Lisser de nouveau la pâte au fouet"},
+                    {"etape": "6. Puis laisser de nouveau la pâte lever entre 40 minutes et une heure maximum"},
+                    {"etape": "7. Monter les blancs en neige très ferme"},
+                    {"etape": "8. Les ajouter délicatement à la pâte en la soulevant pour ne pas faire retomber les blancs"},
+                    {"etape": "9. Faire chauffer une poêle à blini sur feu modéré et la graisser un peu avec un papier absorbant"},
+                    {"etape": "10. Verser deux cuillerées à soupe de pâte au centre et étaler au besoin avec le dos de la cuiller"},
+                    {"etape": "11. La pâte est très épaisse et gonera en plus en cuisant!"},
+                    {"etape": "12. Une fois que la pâte fait des bulles, retouner le blin(i) et laisser cuire un peu de l’autre côté"},
+                    {"etape": "13. Les servir immédiatement ou alors les mettre de côté sur une grille et les envelopper une fois refroidis dans du lm alimentaire"},
+                    {"etape": "14. Les réchauffer au grille pain"}
+                ]
+            }
+        }
+    },
+    {
+        "id": 2,
+        "title": "Gnocchis",
+        "date": "05/19/2020 11:57",
+        "content": {
+            "subtitle1": "Ingrédients",
+            "ingredients": [
+                {"ingredient": "1 kg de pommes de terre"},
+                {"ingredient": "250 g de farine de blé"},
+                {"ingredient": "2 jaunes d’œufs"},
+                {"ingredient": "1 c. à soupe de beurre"},
+                {"ingredient": "sel, poivre"}
+            ],
+            "subtitle2": "Préparation",
+            "preparation": {
+                "etapes": [
+                    {"etape": "1. Lavez les pommes de terre puis plongez-les dans une grande casserole remplie d’eau fraîche et salée."},
+                    {"etape": "2. Faites-les cuire pendant environ 30 min. En fin de cuisson, plantez la lame d’un couteau dans une pomme de terre."},
+                    {"etape": "3. Lorsque la chair est cuite, la lame s’enfonce sans résistance."},
+                    {"etape": "4. Égouttez les pommes de terre, épluchez-les et réduisez-les en purée à la fourchette ou à l’aide d’un presse-purée à manivelle."},
+                    {"etape": "5. Dans un saladier, mélangez la purée de pommes de terre, la farine tamisée et les jaunes d’œufs."},
+                    {"etape": "6. Assaisonnez à votre convenance avec le sel et le poivre."},
+                    {"etape": "7. Pétrissez ensuite à la main la préparation jusqu'à l'obtention d'une pâte homogène."},
+                    {"etape": "8. Farinez généreusement votre plan de travail."},
+                    {"etape": "9. Toujours à la main, formez de petites boules de pâtes régulières."},
+                    {"etape": "10. Roulez les gnocchi de pommes de terre sur le dos d’une fourchette."},
+                    {"etape": "11. Vous pouvez également réaliser les stries avec un couteau, pour démarquer les crans des gnocchi."},
+                    {"etape": "12. Dans une grande casserole, faites bouillir de l’eau salée."},
+                    {"etape": "13. Pochez-y les gnocchi jusqu’à ce qu’ils remontent à la surface."},
+                    {"etape": "14. Gouttez-les pour vérifier leur texture et leur cuisson. "},
+                    {"etape": "15. Égouttez-les dans une passoire."},
+                    {"etape": "16. Faites chauffer une poêle avec la cuillère à soupe de beurre."},
+                    {"etape": "17. Faites-y dorer les gnocchi quelques minutes, pour le côté croustillant."},
+                    {"etape": "18. Servez aussitôt avec un peu de parmesan râpé."}
+                ]
+            }
+        }
+    },
+    {
+        "id": 3,
+        "title": "Urgence Free",
+        "date": "05/21/2020 9:12",
+        "content": {
+            "list": [
+                {"list1": "LMS"},
+                {"list1": "ralentir et regards échanger"},
+                {"list1": "« tu crois quoi? » pause « que j’ai … »"},
+                {"list2": "Methode SdV"},
+                {"list2": "-mettre en place les corps & positions clefs"},
+                {"list2": "-animer entre les images clefs"},
+                {"list2": "-attention aux plan: dent/derrière"},
+                {"list2": "-travailler les visages  "},
+                {"list2": "-lip en dernier"},
+                {"list3": "TDF"},
+                {"list3": "ranger la dessinothèque"},
+                {"list3": "idées dessin"},
+                {"list3": "typo AGRAPHIE"},
+                {"list3": "Logos"},
+                {"list4": "Agraphie:"},
+                {"list4": "chasse arrière du A"},
+                {"list4": "A spéciaux en maj"},
+                {"list4": "eo ea"},
+                {"list5": "x Toulouse"},
+                {"list5": "int ext "},
+                {"list5": "diff ages"},
+                {"list5": "donner envie et dire qui on est"},
+                {"list5": "mettre les copyright a coté de graphiste"},
+                {"list6": "CHECK Marseille"}
+            ]
+        } 
+    },
+    {
+        "id": 4,
+        "title": "To do",
+        "date": "05/11/2020 15:23",
+        "content": {
+            "list": [
+                {"list1": "mail: proprio + M. Mongin"},
+                {"list1": "recup chemisier pressing"},
+                {"list1": "retourner chaussures + pull uniqlo"},
+                {"list1": "penser cadeau Ben et lancer cagnotte (saut en parachute?)"}
+            ]
+        }
+    },
+    {
+        "id": 5,
+        "title": "Petites pensées sur le confinement",
+        "date": "04/18/2020 18:03",
+        "content": {
+            "list": [
+                {"list1": "Le confinement est le temps du regard interieur, on se retrouve face à soi, chaqu’un retrancher dans son intimité, seul, à plusieurs, la vie se réorganise. L’ennui, la lassitude, un regard par la fenêtre, on rêve le dehors. Mieux qu’un feuilleton, la vie réele, la pelouse d’à côté bien plus verte, leur linge sale lavé sous vos yeux, leurs oignons. Le lendemain l’intrigue continue et vous vous attachez aux personnages, vos voisins, votre quartier. Prenez bribes de leur vie visible depuis votre domicile, ajoutez de la spéculation et relevez le tout avec votre imagination débordante."}
+            ]
+        }
+    },
+    {
+        "id": 6,
+        "title": "Luc",
+        "date": "04/03/2020 18:03",
+        "content": {
+            "list": [
+                {"list1": "Je mange des orecchietes et je pense à toi. Je pense à notre histoire terminée depuis presque deux années. Cette histoire que l'on disait compliquée malgré tout l'amour que l'on se portait. Elle avait un côté romanesque, avec ses rebondissement en tous genres, on passait des déclarations enflammées aux ruptures que l'on croyait pour toujours; puis on se retrouvait en se persuadant que cette fois-ci c'était la bonne. Tout le monde croyait cette histoire sans fin. Et puis un jours, il y a eu cette dispute de non retour. "},
+                {"list1": "Tu te rappelles la première fois que l'on s'est rencontrés? On était tous les deux un peu bourrés, on se regardait beaucoup et tu souriais bêtement. J'étais sûre que ce soir-là je t'embrasserais. Après çca, des années sont passées sans jamais vraiment te croiser et pouvoir retenter l'aventure d'un baiser. Lorrsque j'ai enfin eu la chance de te revoir. Je suis certaine que ce soir à tes côtés ne sera pas le dernier et surtout que je t'aimerai à la folie. Et j'avais raison. Seulement, tout n'était pas toujours simple entre nous. Tu semais parfois le doute en moi et au coeur de notre amour; je crois que c'est ça qui l'a tué à petit feu."},
+                {"list1": "Je crois aussi que j'aurais plus souvent dû te le dire pour que tu comprennes que ça me faisait mal. Mais comme rien n'était simple, je n'ai pas su. Toi et moi c'était comme ça. Je sais que cette histoire est finie et je suis en paix avec cette idée, mais ce soir je ne peux m'empêcher de penser à toi. D'ailleurs, cela fait bizarre d'imaginer ta vie sans moi. Est-ce que tu penses à moi parfois comme je le fais? Est-ce que tu aimes de nouveau? Je l'espère. Sache qu'une petite partie de moi sera toujours à toi."}
+            ]
+        }
+    },
+    {
+        "id": 7,
+        "title": "conf' typo",
+        "date": "04/02/2020 19:03",
+        "content": {
+            "list": [
+                {"list1": "Charley Harper (illustrateur)"},
+                {"list1": "application de géométrisation"},
+                {"list1": "inspiré de l’esthétique des années 50"},
+                {"list1": "bestiaires&insectes "},
+                {"list2": "Chermayeff & Geismar"},
+                {"list2": "logo NBC"},
+                {"list2": "travail sur le rapport texte//image: festival d’art de N-Y 1988"},
+                {"list2": "Brentano’s: un caractère= une typo"},
+                {"list2": "collage issu du surréalisme"},
+                {"list2": "the new york philarmonie"},
+                {"list2": "danger UXB "},
+                {"list2": "crime & punishment"},
+                {"list2": "sponsor par Mobil"},
+                {"list2": "Herman Miller: cabinet de design, vend la puissance des sources et ressources mises en oeuvre dans le design ds objets, les déchirures: good board, brainstorm"},
+                {"list2": "travail de la typo en 3D"},
+                {"list3": "Ben Shan (ill)"},
+                {"list3": "esthétique naïve d’art pop, au trait + typo en lettrage "},
+                {"list3": "influence de G.Gross"},
+                {"list3": "affiche de 1927: Sacco et Vanzetti, éloge du dessinateur envers des innocents "},
+                {"list4": "Hersel, Jules Vernes"},
+                {"list5": "Hachette: édition la plus prolifique en terme d’auteurs"},
+                {"list6": "Trucages photo"}
+            ]
+        }
+    },
+    {
+        "id": 8,
+        "title": "inspi",
+        "date": "03/26/2020 22:01",
+        "content": {
+            "list": [
+                {"list1": "témoignage"},
+                {"list1": "https: //www.youtube.com/watch?v=CH9KyNX6dNg"},
+                {"list1": "mon internet Pompidou"},
+                {"list1": "https: //www.youtube.com/watch?v=dpSyc5lI0DM"},
+                {"list1": "interview extraordinaire Brel"},
+                {"list2": "récit"},
+                {"list2": "https: //www.youtube.com/watch?v=7Rn6trL3-54"},
+                {"list2": "L’homme qui plantait des arbres"},
+                {"list2": "https: //vimeo.com/77882285"},
+                {"list2": "Darkside Tom Stoppard // récité philosophique et radiophonique"},
+                {"list3": "argumentation fondée"},
+                {"list3": "https: //www.youtube.com/watch?v=gkONHNXGfaM"},
+                {"list3": "Ben Shapiro "},
+                {"list4": "illustration"},
+                {"list4": "Mikkel Orsted Sauzet"},
+                {"list4": "Nicolas Presl"},
+                {"list4": "simon hanselmann"},
+                {"list5": "nostalgie"},
+                {"list5": "https: //www.youtube.com/watch?v=WefxVZLhm9U"},
+                {"list5": "Ridan Ulysse"},
+                {"list6": "surréalisme"},
+                {"list6": "www.dailymotion.com/video/x4vz2ng"},
+                {"list6": "chant en araméen"}
+            ]
+        }
+    },
+    {
+        "id": 9,
+        "title": "Passwords",
+        "date": "03/12/2020 10:14",
+        "content": {
+            "list": [
+                {"list1": "*123*11# internet Check"},
+                {"list1": "*123# balance calling"},
+                {"list1": "Caf 5779007547Z789"}
+            ]
+        }
+    },
+    {
+        "id": 10,
+        "title": "Barthes",
+        "date": "03/10/2020 01:30",
+        "content": {
+            "list": [
+                {"list1": "L'endroit le plus érotique d'un corps n'est-il pas là où le vêtement baille ? C'est l'intermittence qui est érotique : celle de la peau qui scintille entre deux pièces ; c'est le scintillement même qui séduit ou encore : la mise en scène d'une apparition /disparition de Roland Barthes"},
+                {"list1": "“Les secrets ne sont pas obligés de se cacher.” Stanislaw Jerzy LecDe Stanislaw Jerzy Lec"}
+            ]
+        }
+    },
+    {
+        "id": 11,
         "title": "Pain pita",
-        "date": "11/04/2020 19:32",
+        "date": "02/09/2020 16:32",
         "content": {
             "subtitle1": "Liste des ingrédients",
             "ingredients": [
@@ -36,14 +304,6 @@
                     {"etape": "13. Couper et remplir ou servir de plat d'accompagnement."}
                 ]
             }
-        }
-    },
-    {
-        "id": 1,
-        "title": "Lettre de motivation",
-        "date": "10/04/2020 15:23",
-        "content": {
-            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet nisl a metus accumsan tincidunt. Vivamus pharetra, diam sit amet venenatis viverra, ipsum risus dapibus velit, vitae mollis erat enim at nunc. Morbi et porta tellus, fermentum volutpat justo. Pellentesque ut rutrum ipsum, id pulvinar nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc euismod iaculis enim, quis tincidunt ipsum rhoncus sed. Fusce nec vehicula metus. Proin aliquet sapien ut felis hendrerit condimentum tempor vel metus. Integer ornare augue vestibulum metus semper, sit amet tristique metus accumsan. In hac habitasse platea dictumst. Proin volutpat nibh id lectus efficitur mollis."
         }
     }
 ]

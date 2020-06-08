@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
+import { StyleSheet, View, Text, TouchableOpacity, ScrollView } from 'react-native'
 import notesData from '../../data/notes.json';
 import moment from 'moment'
 import R from '../../res/R'
@@ -9,6 +9,7 @@ export default class NotesListScreen extends Component {
         const dataList = notesData
         return (
             <View style={styles.container}>
+            <ScrollView>
                 <View style={styles.container__noteslist}>
                     <Text style={styles.container__noteslist__title}>Notes</Text>
                     <View style={styles.container__noteslist__border} />
@@ -22,6 +23,7 @@ export default class NotesListScreen extends Component {
                         }
                     </View>
                 </View>
+            </ScrollView>
             </View>
         )
     }

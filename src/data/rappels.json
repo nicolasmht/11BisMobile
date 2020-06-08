@@ -1,0 +1,128 @@
+[
+    {
+        "id": 0,
+        "dossier": "Poulet coco",
+        "share": "Ben",
+        "border": true,
+        "lists": [
+            {"id": 0, "list": "1 poulet"},
+            {"id": 1, "list": "farine"},
+            {"id": 2, "list": "graines de chia+courges"},
+            {"id": 3, "list": "8 œufs"},
+            {"id": 4, "list": "1 plaquette de beurre"},
+            {"id": 5, "list": "bananes + kiwis"},
+            {"id": 6, "list": "purée d’amandes"}
+        ] 
+    },
+    {
+        "id": 1,
+        "dossier": "à voir",
+        "border": true,
+        "lists": [
+            {"list": "La Vie des Autres - Florian Henckel von Donnersmarck"},
+            {"list": "Fenêtre Sur Cour -  Alfred Hitchcock"},
+            {"list": "Mon Oncle - Jacques Tati"},
+            {"list": "Caché - Michael Haneke"},
+            {"list": "Dans la Maison - François Ozon"},
+            {"list": "Stalk, République, Wei or Die - Simon Buisson"}
+        ]
+    },
+    {
+        "id": 2,
+        "dossier": "idées cadeaux moms",
+        "share": "Anne",
+        "border": true,
+        "lists": [
+            {"list": "Imprimante Polaroid ZIP"},
+            {"list": "Casque Parrot zik 3Casque Parrot Zik rouge 3"},
+            {"list": " Vélo d'appart Kettler Axos"},
+            {"list": "Vélo d'appartement Crosstrainer Kettler Axos Cycle P"},
+            {"list": "Vélo hollandais"},
+            {"list": "Montre Whitings Activité pop rose"},
+            {"list": "Le Dompteur de lions, de Camilla Läckberg"},
+            {"list": "mémoire-de-fille-annie-ernaux"},
+            {"list": "Mémoire de fille, d'Annie Ernaux"},
+            {"list": "Purity, de Jonathan Franzen"},
+            {"list": "Take Me To The Alley, de Gregory Porter"},
+            {"list": "Palermo Hollywood, de Benjamin Biolay"},
+            {"list": "Mon oncle, de Jacques Tati"},
+            {"list": "Le Grand Partage, d’Alexandra Leclère"},
+            {"list": "Coffret Woody Allen"},
+            {"list": "Cafetière expresso Nespresso Krups Prodigio"}
+        ]  
+    },
+    {
+        "id": 3,
+        "dossier": "fonds de placards",
+        "share": "Ben",
+        "border": true,
+        "lists": [
+            {"list": "Lentilles"},
+            {"list": "Pois chiches"},
+            {"list": "Haricots"},
+            {"list": "Lentilles"},
+            {"list": "Amandes"},
+            {"list": "Cacahuète"},
+            {"list": "Oignon ail poireaux échalotes ciboulette"},
+            {"list": "Patate"},
+            {"list": "Baies congelées"},
+            {"list": "Graine de lin"},
+            {"list": "Légumes verts"},
+            {"list": "Épinard roquette"},
+            {"list": "Chocolat noir"},
+            {"list": "Thé vert"}
+        ]
+    },
+    {
+        "id": 4,
+        "dossier": "polars reco libraire du 15ter",
+        "border": true,
+        "lists": [
+            {"list": "Le Chuchoteur de Donato Carrisi"},
+            {"list": "L’assassin qui est en moi de Jim Thompso"},
+            {"list": "Millenium 1 – Les Hommes qui n’aimaient pas les Femmes de Stieg Larsson"},
+            {"list": "Pars vite et reviens tard de Fred Vargas"},
+            {"list": "La femme en vert d’Arnaldur Indriðason"},
+            {"list": "Ne le dis à personne d’Harlan Coben"},
+            {"list": "Le Poète de Michael Connelly"},
+            {"list": "J’étais Dora Suarez de Robin Cook"},
+            {"list": "Glacé de Bernard Minier"},
+            {"list": "Shutter Island de Dennis Lehane"},
+            {"list": "Les Rivières Pourpres de Jean-Christophe Grangé"},
+            {"list": "In Tenebris de Maxime Chattam"},
+            {"list": "La Fille du train de Paula Hawkins"},
+            {"list": "Le Bonhomme de Neige de Jo Nesbø"},
+            {"list": "Le Diable Tout le Temps de James Ray Pollock"},
+            {"list": "Le Tailleur de Pierre de Camilla Läckberg"},
+            {"list": "Sharko de Franck Thiliez"},
+            {"list": "La Mariée était en blanc de Mary Higgins Clark"},
+            {"list": "L’Homme aux cercles bleus de Fred Vargas"},
+            {"list": "L’Affaire Cendrillon de Mary Higgins Clark"}
+        ]
+    },
+    {
+        "id": 5,
+        "dossier": "livres",
+        "border": true,
+        "lists": [
+            {"list": "Le Secret Philippe Grimbert"},
+            {"list": "Le Voyeur d'Alain Robbe-Grillet"},
+            {"list": "Justine ou les bonheurs de la curiosité d'Anne Coudreuse"},
+            {"list": "Casanova : la curiosité en voyage de Jean M. Goulemot"},
+            {"list": "La Curiosité, une raison de vivre de Jean Pierre Martin"}
+        ]
+        
+    },
+    {
+        "id": 6,
+        "dossier": "Podcast à écouter",
+        "border": false,
+        "lists": [
+            {"list": "Transfert S01E01 : Jusqu'où peut-on aller pour devenir ami avec ses voisins?"},
+            {"list": "Transfert S01E07 : Mathieu avait rêvé Ian, il n'était pas celui qu'il croyait"},
+            {"list": "Transfert S01E24 : L'histoire d'un secret qui a attendu 10 ans de mariage pour sortir"},
+            {"list": "Transfert S02E55 : Une histoire derrière un nom"},
+            {"list": "Transfert S02E60 : La personne en face"}
+        ]
+    }
+]
