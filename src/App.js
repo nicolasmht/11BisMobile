@@ -20,6 +20,7 @@ import MeteoScreen from './screens/Meteo/meteo.screen'
 import SpotifyScreen from './screens/Spotify/spotify.screen'
 import NetflixScreen from './screens/Netflix/netflix.screen'
 import LydiaScreen from './screens/Lydia/lydia.screen'
+import CalendrierScreen from './screens/Calendrier/calendrier.screen'
 
 import GoogleHomeScreen from './screens/Google/google.home.screen'
 import GoogleMapsScreen from './screens/Google/google.maps.screen'
@@ -127,6 +128,29 @@ App = () => {
 						}}
 					/>
 
+					<Stack.Screen
+						name="Calendrier"
+						component={CalendrierScreen}
+						options={{
+							headerRight: () => (
+								<Button
+									onPress={() => navigate('Home')}
+									title="✕"
+									color={R.colors.dark_blue}
+								/>
+							),
+							headerLeft: '',
+							gestureEnabled: false,
+							headerTransparent: true,
+							headerTitle: '',
+							headerBackTitleVisible: true,
+							headerTintColor: R.colors.dark_blue,
+							headerTitle: '',
+							headerTransparent: false,
+							headerStyle: { backgroundColor: R.colors.saumon },
+							transitionSpec: { open: config, close: config }
+						}}
+					/>
 					<Stack.Screen
 						name="Rappels"
 						component={RappelsScreen}

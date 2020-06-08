@@ -25,7 +25,7 @@ export default class Home extends Component {
                             <Text style={styles.container__buttonApp__icon__text}>Horloge</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => onPress()}>
+                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => this.props.navigation.navigate('Calendrier')}>
                             <Image source={require('../main/assets/icons/app/calendar.png')} />
                             <Text style={styles.container__buttonApp__icon__text}>Calendrier</Text>
                         </TouchableOpacity>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { StyleSheet, View, Text, FlatList, ScrollView , TouchableOpacity} from 'react-native'
+import { StyleSheet, View, Text, ScrollView , TouchableOpacity} from 'react-native'
 import rappelsData from '../../data/rappels.json';
 import R from '../../res/R'
 
@@ -110,12 +110,10 @@ const styles = StyleSheet.create({
     },
 
     container__rappels__content__item: {
-        // height: 100,
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        // paddingTop: 10 
     },
 
     container__rappels__content__list: {
