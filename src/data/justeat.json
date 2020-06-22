@@ -28,7 +28,7 @@
         "livraison": "3,75",
         "total": "14,65",
         "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1591653903/11bis/justeat/Paradis_du_fruit.png",
-        "cover": "https://res.cloudinary.com/dn32la6ny/image/upload/v1591653903/11bis/justeat/COVER_Paradisdufruit.png"
+        "cover": "https://res.cloudinary.com/dn32la6ny/image/upload/v1592817837/11bis/justeat/COVER_Paradisdufruit.png"
     },
     {
         "id": 2,
@@ -60,7 +60,7 @@
         "livraison": "2,75",
         "total": "45,05",
         "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1591653903/11bis/justeat/Big_Mama.png",
-        "cover": "https://res.cloudinary.com/dn32la6ny/image/upload/v1591653903/11bis/justeat/COVER_BigMama.png"
+        "cover": "https://res.cloudinary.com/dn32la6ny/image/upload/v1592818074/11bis/justeat/COVER_BigMama.png"
     },
     {
         "id": 4,
@@ -78,6 +78,6 @@
         "livraison": "Gratuit",
         "total": "60,50",
         "photo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1591653904/11bis/justeat/ramen.png",
-        "cover": "https://res.cloudinary.com/dn32la6ny/image/upload/v1591653903/11bis/justeat/COVER_LePetitCambodge.png"
+        "cover": "https://res.cloudinary.com/dn32la6ny/image/upload/v1592817946/11bis/justeat/COVER_LePetitCambodge.png"
     }
 ]

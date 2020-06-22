@@ -1,14 +1,20 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, Text, ImageBackground, Image, TouchableOpacity, ScrollView } from 'react-native'
 import R from '../../res/R'
+import Sound from 'react-native-sound'
 
 export default class NetflixScreen extends Component {
     constructor() {
         super()
         this.state = {
-            text: <Text style={styles.container__netflix__text}>NETFLIX</Text>,
+            text: <Image style={styles.container__netflix__loader} source={require('../../main/assets/icons/netflix/Netflix_loader.gif')} />,
             isJade: false
         }
+    }
+
+    componentWillUnmount() {
+        this.clearTimer()
+        this.clearSound()
     }
 
     loaderText() {
@@ -22,6 +28,49 @@ export default class NetflixScreen extends Component {
                 text: null
             })
         }, 2000)
+        this.play()
+    }
+
+
+    play(id) {
+        this.whoosh = new Sound("https://res.cloudinary.com/dn32la6ny/video/upload/v1592834522/11bis/sound/Netflix_loader.mp3", null, (error) => {
+            if (!error) {
+                this.whoosh.play((success) => {
+                    if (success) {
+                        this.stop()
+                    }
+                })
+            }
+        })
+    }
+
+    stop() {
+        if (!this.whoosh) return
+        this.whoosh.stop()
+        this.whoosh.release()
+        this.whoosh = null
+        this.clearTimer()
+        this.setState({ isPlaying: false, isBusy: true })
+    }
+
+
+    clearTimer() {
+        if (this.timer) {
+            clearInterval(this.timer)
+            this.timer = null
+        }
+    }
+
+    clearSound() {
+        this.stop()
+        if (this.timer) {
+            clearInterval(this.timer)
+            this.timer = null
+        }
+        this.setState({
+            isPlaying: false,
+            soundId: 0,
+        })
     }
 
     isJade() {
@@ -137,13 +186,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
 
-    container__netflix__text: {
-        display: 'flex',
-        alignSelf: 'center',
-        color: R.colors.saumon,
-        fontSize: 40,
-        fontFamily: R.fonts.Agrandir_GrandHeavy,
-
+    container__netflix__loader: {
+        width: '100%',
+        height: '100%',
     },
 
     container__netflix__main: {

@@ -23,7 +23,7 @@ export default class JusteatListScreen extends Component {
             this.setState({
                 text: null
             })
-        }, 0)
+        }, 2000)
     }
 
     justeat() {

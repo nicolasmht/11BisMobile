@@ -46,7 +46,7 @@ export default class Home extends Component {
                             <Image source={require('../main/assets/icons/app/photo.png')} />
                             <Text style={styles.container__buttonApp__icon__text}>Photos</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => onPress()}>
+                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => this.props.navigation.navigate('Instagram')}>
                             <Image source={require('../main/assets/icons/app/instagram.png')} />
                             <Text style={styles.container__buttonApp__icon__text}>Instagram</Text>
                         </TouchableOpacity>

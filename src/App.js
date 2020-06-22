@@ -21,6 +21,7 @@ import SpotifyScreen from './screens/Spotify/spotify.screen'
 import NetflixScreen from './screens/Netflix/netflix.screen'
 import LydiaScreen from './screens/Lydia/lydia.screen'
 import CalendrierScreen from './screens/Calendrier/calendrier.screen'
+import InstagramScreen from './screens/Instagram/instagram.screen'
 
 import JusteatListScreen from './screens/Justeat/justeat.list.screen'
 import JusteatScreen from './screens/Justeat/justeat.screen'
@@ -132,6 +133,24 @@ App = () => {
 					/>
 
 					<Stack.Screen
+						name="Instagram"
+						component={InstagramScreen}
+						options={{
+							headerRight: () => (
+								<Button
+									onPress={() => navigate('Home')}
+									title="✕"
+									color={R.colors.dark_blue}
+								/>
+							),
+							headerLeft: '',
+							gestureEnabled: false,
+							headerBackTitleVisible: false,
+							headerTitle: '',
+							headerTransparent: true
+						}}
+					/>
+					<Stack.Screen
 						name="Justeat"
 						component={JusteatScreen}
 						options={{
@@ -171,6 +190,7 @@ App = () => {
 					/>
 					<Stack.Screen
 						name="Calendrier"
+						component={CalendrierScreen}
 						component={CalendrierScreen}
 						options={{
 							headerRight: () => (
