@@ -22,6 +22,9 @@ import NetflixScreen from './screens/Netflix/netflix.screen'
 import LydiaScreen from './screens/Lydia/lydia.screen'
 import CalendrierScreen from './screens/Calendrier/calendrier.screen'
 
+import JusteatListScreen from './screens/Justeat/justeat.list.screen'
+import JusteatScreen from './screens/Justeat/justeat.screen'
+
 import GoogleHomeScreen from './screens/Google/google.home.screen'
 import GoogleMapsScreen from './screens/Google/google.maps.screen'
 
@@ -128,6 +131,44 @@ App = () => {
 						}}
 					/>
 
+					<Stack.Screen
+						name="Justeat"
+						component={JusteatScreen}
+						options={{
+							headerRight: () => (
+								<Button
+									onPress={() => navigate('Home')}
+									title="✕"
+									color={R.colors.dark_blue}
+								/>
+							),
+							gestureEnabled: true,
+							headerBackTitleVisible: true,
+							headerTintColor: R.colors.dark_blue,
+							headerTitle: 'Détails',
+							headerTransparent: false,
+							headerStyle: { backgroundColor: R.colors.saumon },
+							headerBackTitleStyle: { fontSize: 12 }
+						}}
+					/>
+					<Stack.Screen
+						name="JusteatList"
+						component={JusteatListScreen}
+						options={{
+							headerRight: () => (
+								<Button
+									onPress={() => navigate('Home')}
+									title="✕"
+									color={R.colors.dark_blue}
+								/>
+							),
+							headerLeft: '',
+							gestureEnabled: false,
+							headerBackTitleVisible: false,
+							headerTitle: '',
+							headerTransparent: true
+						}}
+					/>
 					<Stack.Screen
 						name="Calendrier"
 						component={CalendrierScreen}

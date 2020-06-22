@@ -58,7 +58,7 @@ export default class Home extends Component {
                             <Image source={require('../main/assets/icons/app/home.png')} />
                             <Text style={styles.container__buttonApp__icon__text}>Google Home</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => onPress()}>
+                        <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => this.props.navigation.navigate('JusteatList')}>
                             <Image source={require('../main/assets/icons/app/justeat.png')} />
                             <Text style={styles.container__buttonApp__icon__text}>Just Eat</Text>
                         </TouchableOpacity>
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
 
     container__buttonApp: {
         width: '100%',
-        height: '50%',
+        height: '100%',
         padding: 24,
         display: 'flex',
         flexDirection: 'row',
@@ -119,7 +119,8 @@ const styles = StyleSheet.create({
 
     container__buttonAppFav: {
         width: '100%',
-        height: '50%',
+        height: '15%',
+        marginTop: '-25%',
         padding: 24,
         display: 'flex',
         flexDirection: 'row',
@@ -129,6 +130,7 @@ const styles = StyleSheet.create({
     container__buttonAppFav__background: {
         width: '114%',
         height: '35%',
+        marginTop: '-230%',
         marginLeft: -8,
         position: 'absolute',
         backgroundColor: R.colors.saumon,
