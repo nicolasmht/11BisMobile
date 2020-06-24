@@ -5,312 +5,284 @@
         "name": "Weekend Espelette",
         "messages": [
             {
-                "personne": "Caro",
-                "date": "02/03/2020 00:00:00",
+                "personne": "",
+                "date": "",
                 "text": "Caro a créé le groupe.",
                 "info": true,
-                "vocal": false
-            },
-            {
-                "personne": "Caro",
-                "date": "",
-                "text": "Caro vous a ajoutée au groupe.Caro a ajoutée ben au groupe.",
-                "info": true,
-                "vocal": false
-            },
-            {
-                "personne": "Caro",
-                "date": "03/10/2020 21:46:00",
-                "text": "Caro a nommé le groupe \"Espelette paques\"",
-                "info": true,
-                "vocal": false
-            },
-            {
-                "personne": "Caro",
-                "date": "",
-                "text": "Voici un début de groupe pour le fameux week end Espelette à Pâques ! Vous pouvez faire connaissance ;)",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Sam",
-                "date": "",
-                "text": "Salut ! Enchanté ! 😍",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Jade",
-                "date": "",
-                "text": "Mais non? Sam sur cette conv?! Ca fait un bail!",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Sam",
-                "date": "",
-                "text": "Mais siiiiii à l'ancienne",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Caro",
-                "date": "",
-                "text": "J'ajoute aussi les gens qui ont dit \"peut être\"",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Caro",
-                "date": "03/022020 22:23",
-                "text": "Caro a ajouté Timothée & Emma au groupe.",
-                "info": true,
-                "vocal": false
-            },
-            {
-                "personne": "Flo",
-                "date": "",
-                "text": "Je voulais les laisser prendre leur décision sans harcélement haha",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Sam",
-                "date": "05/02/2020 16:05",
-                "text": "Salut salut ravie de  \"peut être\" faire votre connaissance !",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Emma",
-                "date": "10/032020 19:22",
-                "text": "Hello hello ! Pas du tout sûre de venir mais ravie aussi de vous voir peut être bientôt !",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Tim",
-                "date": "",
-                "text": "Moi je suis tjs cho",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Jade",
-                "date": "",
-                "text": "En vrai je suis chauuuud j'en parle avec l'autre!",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Flo",
-                "date": "",
-                "text": "@Tim et @Emma vous pensez venir ?",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Emma",
-                "date": "",
-                "text": "Ah mais vous pensez venir en voiture!? Ça change tout!!",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Emma",
-                "date": "",
-                "text": "Moi je croyais qu'on dépendait des trains et ça me faisait peur pour le retour que le train soit annulé pour la reprise du taff le lendemain!",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Emma",
-                "date": "",
-                "text": "Zavez cb de places ?!",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Flo",
-                "date": "",
-                "text": "Salut les amis, Caro  a besoin de dire vite à ses parents si on leur emprunte ou non la voiture pour le we 🙂 Du coup on a besoin de savoir maintenant qui vient svp !",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Caro",
-                "date": "",
-                "text": "On est 7 : Jade & Ben, Tim, Emma et Sam, Flo & moi ?",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Ben",
-                "date": "11/03/2020 08:24",
-                "text": "Ok et dans ce tas, tlm est chaud pour partir vendredi soir en fin d'aprèm (max du maaax, d'expérience, pas fun d'arriver à 2h du mat) et à besoin d'être rentré à Paris lundi soir ?",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Emma",
-                "date": "",
-                "text": "Est ce que nos plans ne tombent pas à l'eau avec ce confinement qui se profile? 🤷🏼‍",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Caro",
-                "date": "",
-                "text": "Difficile à dire dès maintenant, mais ya moyen 😪😫",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Ben",
-                "date": "",
-                "text": "Oui c'est quasi sûr",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Flo",
-                "date": "15/03/2020 12:36",
-                "text": "Ah oue clairement 😥",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Jade",
-                "date": "",
-                "text": "Si c'est annulé on ira sans doute à Itxassou nous pour Pâques et les parents viennent de me dire que \"vos petits amis sont les bienvenus à Itxassou si vous allez pas à Espelette\"",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Emma",
-                "date": "",
-                "text": "Non mais c’est évident même les regroupements familiaux sont à proscrire les écoles sont fermées pour au moins 6 semaines",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Caro",
-                "date": "",
-                "text": "C’est sérieux en vrai",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Flo",
-                "date": "",
-                "text": "Écoles c'est 2 semaines",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Jade",
-                "date": "",
-                "text": "Sans doute 3 vu que y a les vac après",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Ben",
-                "date": "",
-                "text": "Non mais oui vous avez raison, y a des chances qu'on ai du mal a descendre en vrai...",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Tim",
-                "date": "",
-                "text": "Je pense que c'est mort, dans un mois ce sera le pic de l'épidémie ...",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Caro",
-                "date": "",
-                "text": "Petite larme en ce jour où on devait partir 😓",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Flo",
-                "date": "",
-                "text": "Allez allez, rdv 18h30 à la colloc pour le pays basque. Ne soyez pas en retard il y a du monde sur la route ! 😢",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Jade",
-                "date": "",
-                "text": "https://www.youtube.com/watch?v=fW85zvk5ciUDToUK5RrvU3e&index=6&t=0s",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Emma",
-                "date": "10/04/2020 20:40",
-                "text": "Je vais à l'avant!!!!!!!!!",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Sam",
-                "date": "12/04/2020 12:20",
-                "text": "C'est qui qui a enlevé ses chaussures? Ça pue des pieds dans le coffre 😆",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Ben",
-                "date": "",
-                "text": "Joyeuses Pâques à tutti !",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Flo",
-                "date": "",
-                "text": "joyeuses paques!!!!",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Jade",
-                "date": "12/04/2020 18:57",
-                "text": "Joyeuses Pâques 💋💋",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Caro",
-                "date": "",
-                "text": "Joyeuses Pâques 🐣",
-                "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "",
-                "date": "JOUR DE LA PREZ",
-                "text": "Caroline a nommé le groupe \"Espelette aout ?\"",
-                "info": false,
-                "vocal": false
+                "date": "",
+                "text": "Caro vous a ajoutée au groupe.Caro a ajoutée ben au groupe.",
+                "info": true,
+                "notif": false
+            },
+            {
+                "personne": "",
+                "date": "",
+                "text": "Caro a nommé le groupe \"Espelette paques\"",
+                "info": true,
+                "notif": false
             },
             {
                 "personne": "Caro",
-                "date": "",
-                "text": "Show must go on!",
+                "date": "02/03/2020 00:23",
+                "text": "Voici un début de groupe pour le fameux week end Espelette à Pâques ! Vous pouvez faire connaissance ;)",
                 "info": false,
-                "vocal": false
+                "notif": false
+            },
+            {
+                "personne": "Sam",
+                "date": "02/03/2020 08:17",
+                "text": "Salut ! Enchanté ! 😍",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Jade",
+                "date": "02/04/2020 08:31",
+                "text": "Mais non? Sam sur cette conv?! Ca fait un bail!",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Sam",
+                "date": "02/04/2020 08:34",
+                "text": "Mais siiiiii à l'ancienne",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Caro",
+                "date": "02/04/2020 10:24",
+                "text": "J'ajoute aussi les gens qui ont dit \"peut être\"",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "",
+                "date": "",
+                "text": "Caro a ajouté Timothée & Emma au groupe.",
+                "info": true,
+                "notif": false
+            },
+            {
+                "personne": "Flo",
+                "date": "02/04/2020 10:36",
+                "text": "Je voulais les laisser prendre leur décision sans harcélement haha",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Sam",
+                "date": "02/04/2020 10:39",
+                "text": "Salut salut ravie de \"peut être\" faire votre connaissance !",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Emma",
+                "date": "02/04/2020 10:44",
+                "text": "Hello hello ! Pas du tout sûre de venir mais ravie aussi de vous voir peut être bientôt !",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Tim",
+                "date": "02/04/2020 10:51",
+                "text": "Moi je suis tjs cho",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Jade",
+                "date": "02/04/2020 11:03",
+                "text": "En vrai je suis chauuuud j'en parle avec l'autre!",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Flo",
+                "date": "02/04/2020 11:12",
+                "text": "@Tim et @Emma vous pensez venir ?",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Emma",
+                "date": "02/04/2020 11:17",
+                "text": "Ah mais vous pensez venir en voiture!? Ça change tout!!",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Emma",
+                "date": "02/04/2020 11:17",
+                "text": "Moi je croyais qu'on dépendait des trains et ça me faisait peur pour le retour que le train soit annulé pour la reprise du taff le lendemain!",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Emma",
+                "date": "02/04/20200 11:18",
+                "text": "Zavez cb de places ?!",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Flo",
+                "date": "02/18/2020 19:22",
+                "text": "Salut les amis, Caro a besoin de dire vite à ses parents si on leur emprunte ou non la voiture pour le we 🙂 Du coup on a besoin de savoir maintenant qui vient svp !",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Caro",
+                "date": "02/18/2020 19:29",
+                "text": "On est 7 : Jade & Ben, Tim, Emma et Sam, Flo & moi ?",
+                "info": false,
+                "notif": false
             },
             {
                 "personne": "Ben",
-                "date": "12/04/2020 18:57",
-                "text": "Ca tomberait pas pendant les férias cette histoire? 😆 Dans tous les cas avec Jade on est o-pé-ra-tio-nels!!",
+                "date": "02/18/2020 21:11",
+                "text": "Ok et dans ce tas, tlm est chaud pour partir vendredi soir en fin d'aprèm (max du maaax, d'expérience, pas fun d'arriver à 2h du mat) et à besoin d'être rentré à Paris lundi soir ?",
                 "info": false,
-                "vocal": false
+                "notif": false
+            },
+            {
+                "personne": "Emma",
+                "date": "03/14/2020 22:01",
+                "text": "Est ce que nos plans ne tombent pas à l'eau avec ce confinement qui se profile? 🤷🏼‍",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Caro",
+                "date": "03/14/2020 22:27",
+                "text": "Difficile à dire dès maintenant, mais ya moyen 😪😫",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Ben",
+                "date": "03/14/2020 22:35",
+                "text": "Oui c'est quasi sûr",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Flo",
+                "date": "03/14/2020 22:42",
+                "text": "Ah oue clairement 😥",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Jade",
+                "date": "03/14/2020 22:56",
+                "text": "Si c'est annulé on ira sans doute à Itxassou nous pour Pâques et les parents viennent de me dire que \"vos petits amis sont les bienvenus à Itxassou si vous allez pas à Espelette\"",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Emma",
+                "date": "03/14/2020 23:07",
+                "text": "Non mais c’est évident même les regroupements familiaux sont à proscrire les écoles sont fermées pour au moins 6 semaines",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Caro",
+                "date": "03/14/2020 23:11",
+                "text": "C’est sérieux en vrai",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Flo",
+                "date": "03/14/2020 23:11",
+                "text": "Écoles c'est 2 semaines",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Jade",
+                "date": "03/14/2020 23:16",
+                "text": "Sans doute 3 vu que y a les vac après",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Ben",
+                "date": "03/14/2020 23:18",
+                "text": "Non mais oui vous avez raison, y a des chances qu'on ai du mal a descendre en vrai...",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Tim",
+                "date": "03/14/2020 23:24",
+                "text": "Je pense que c'est mort, dans un mois ce sera le pic de l'épidémie ...",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Caro",
+                "date": "04/22/2020 09:08",
+                "text": "Petite larme en ce jour où on devait partir 😓",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Flo",
+                "date": "04/22/2020 09:17",
+                "text": "Allez allez, rdv 18h30 à la colloc pour le pays basque. Ne soyez pas en retard il y a du monde sur la route ! 😢",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Jade",
+                "date": "04/22/2020 09:22",
+                "text": "https://www.youtube.com/watch?v=fW85zvk5ciUDToUK5RrvU3e&index=6&t=0s",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Emma",
+                "date": "04/22/2020 09:27",
+                "text": "Je vais à l'avant!!!!!!!!!",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Sam",
+                "date": "04/22/2020 10:32",
+                "text": "C'est qui qui a enlevé ses chaussures? Ça pue des pieds dans le coffre 😆",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Caro",
+                "date": "06/30/2020 19:37",
+                "text": "\"Caroline a nommé le groupe Espelette aout ?\"",
+                "info": false,
+                "notif": true
+            },
+            {
+                "personne": "Caro",
+                "date": "06/30/2020 19:38",
+                "text": "Show must go on!",
+                "info": false,
+                "notif": true
+            },
+            {
+                "personne": "Ben ❤️",
+                "date": "06/30/2020 21:46",
+                "text": "Ca tomberait pas pendant les férias cette histoire?  😆Dans tous les cas avec Jade on est o-pé-ra-tio-nels!!",
+                "info": false,
+                "notif": true
             }
         ]
     },
@@ -321,171 +293,171 @@
         "messages": [
             {
                 "personne": "Basile",
-                "date": "",
+                "date": "04/27/2020 9:44",
                 "text": "Quelqu’un au coworking aujourd’hui?",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "",
+                "date": "04/27/2020 9:47",
                 "text": "Nope j’avoue je fais la confinée modèle en ce moment je prefère limiter les sorties",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Maxime",
-                "date": "",
+                "date": "04/27/2020 9:49",
                 "text": "Same",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Anouk",
-                "date": "",
+                "date": "04/27/2020 9:51",
                 "text": "Avoues jade t’as attendu le confinement toute ta vie haha!",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "",
+                "date": "04/27/2020 10:11",
                 "text": "Allons allons que ces 5 dernières années!",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Anouk",
-                "date": "",
+                "date": "04/27/2020 10:13",
                 "text": "Haha t’es con!",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Maxime",
-                "date": "",
+                "date": "04/27/2020 10:13",
                 "text": "Petit call a 11h pour se motiver alors?",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Steph",
-                "date": "",
+                "date": "04/27/2020 10:28",
                 "text": "Ouais moi je suis au taff pourquoi?",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Basile",
-                "date": "",
+                "date": "04/27/2020 10:29",
                 "text": "J’ai besoin d’un doc, je t’en parle en mp",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Steph",
-                "date": "",
+                "date": "04/27/2020 10:30",
                 "text": "Okok",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "",
+                "date": "04/27/2020 10:48",
                 "text": "Chaude pour s’appeller a 11h ca devrait etre une routine!!",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Anouk",
-                "date": "",
+                "date": "04/27/2020 10:51",
                 "text": "Grave on peu se faire ce un jour sur deux meme",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Maxime",
-                "date": "",
+                "date": "04/27/2020 10:53",
                 "text": "De ouf, apres je suis toujours sur le site du client relou, et a tous les coups il va mettre ses calls à cette heure là!",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "11:00",
+                "date": "04/27/2020 11:00",
                 "text": "Tout le monnnnde sur le call!",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "",
                 "date": "",
                 "text": "Maxime a rejoint l’appel.",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "",
                 "date": "",
                 "text": "Vous avez rejoint l’appel.",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "",
                 "date": "",
                 "text": "Steph a rejoint l’appel.",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "",
                 "date": "",
                 "text": "Basile a rejoint l’appel.",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "",
+                "date": "04/27/2020 11:03",
                 "text": "Anoooooooouk",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Anouk",
-                "date": "",
+                "date": "04/27/2020 11:07",
                 "text": "J’arrive j’arrive les gars",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "",
+                "date": "04/27/2020 11:42",
                 "text": "Très cool de voir vos tronches depuis le temps! je viens d’avoir une mission pour le télérama, je suis en charge d’une petite rubrique, Anne ou sarah, vous etes chauds pour des petites illus? Si ca marche bien sur deux, trois issues ca devient un contrat fixe.",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Anouk",
-                "date": "",
+                "date": "04/27/2020 11:44",
                 "text": "Perso je suis bien bien prise la...",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Maxime",
-                "date": "",
+                "date": "04/27/2020 11:53",
                 "text": "Moi ca peut le faire, on s’appelle demain?",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "",
-                "text": "Yes nicquel!",
+                "date": "04/27/2020 11:57",
+                "text": "Yes niquel!",
                 "info": false,
-                "vocal": false
+                "notif": false
             }
         ]
     },
@@ -496,311 +468,311 @@
         "messages": [
             {
                 "personne": "Ninon",
-                "date": "",
+                "date": "06/13/2020 16:06",
                 "text": "Bah tous le monde a remplit le tableau",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Inès",
-                "date": "",
+                "date": "06/13/2020 16:13",
                 "text": "On a fait exprès de prendre la date ou y avait tous le monde",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Ninon",
-                "date": "",
+                "date": "06/13/2020 16:15",
                 "text": "Tout le monde la rempli Oui, mais elles ont pas dit j'ai posé mes congés 😛",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Inès",
-                "date": "",
+                "date": "06/13/2020 16:22",
                 "text": "Donc je pensais qu'on était que 4 a l'avoir fait",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Thomas",
-                "date": "",
+                "date": "06/13/2020 16:23",
                 "text": "Ah bah nan moi j’ai pas posé",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Inès",
-                "date": "",
+                "date": "06/13/2020 16:26",
                 "text": "Oui mais c'est bon?",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Thomas",
-                "date": "",
+                "date": "06/13/2020 16:27",
                 "text": "Bah j’en sais rien",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Inès",
-                "date": "",
+                "date": "06/13/2020 16:29",
                 "text": "Fin ils vont pas saouler ?",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Thomas",
-                "date": "",
+                "date": "06/13/2020 16:29",
                 "text": "Bah on verra je pense pas",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Inès",
-                "date": "",
+                "date": "06/13/2020 16:33",
                 "text": "D'accord, inch",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Thomas",
-                "date": "",
+                "date": "06/13/2020 16:37",
                 "text": "Bah me stress pas haha",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Romain",
-                "date": "",
+                "date": "06/13/2020 16:52",
                 "text": "Mais ça nous empêche pas de faire le choix dans les baraques en attendant",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Inès",
-                "date": "",
+                "date": "06/13/2020 16:55",
                 "text": "Quesce que j'ai dis pour te stresser haha ?",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Romain",
-                "date": "",
+                "date": "06/14/2020 11:12",
                 "text": "https://www.abritel.fr/location-vacances/p1867930?adultsCount=8&arrival=2020-08-08&departure=2020-08-18",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Romain",
-                "date": "",
+                "date": "06/14/2020 11:17",
                 "text": "la vie que celle ci on l'a on invite tout le quartier",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Mathis",
-                "date": "",
+                "date": "06/14/2020 11:54",
                 "text": "Je dors sur la terrasse",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Thomas",
-                "date": "",
+                "date": "06/14/2020 11:55",
                 "text": "on rentabilise la baraque en 2 jours",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Romain",
-                "date": "",
+                "date": "06/14/2020 11:58",
                 "text": "Sur le transat",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Mathis",
-                "date": "",
+                "date": "06/14/2020 12:10",
                 "text": "10 jours sur le Transat",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Inès",
-                "date": "",
+                "date": "06/14/2020 12:11",
                 "text": "Par contre y a pas d’avis 😛",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Ninon",
-                "date": "",
+                "date": "06/14/2020 12:13",
                 "text": "Pour Ines et Martin c'est buen normalement ❤",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Romain",
-                "date": "",
+                "date": "06/14/2020 12:13",
                 "text": "Niquel",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Ninon",
-                "date": "",
+                "date": "06/14/2020 23:18",
                 "text": "Pour les avis, je regarde demain, pas eu le temps aujourd'hui",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Romain",
-                "date": "",
+                "date": "06/14/2020 23:51",
                 "text": "\"mettez vos comm sur le técooo\" On dirait un message quand t’envoyais ton skyblog à tes potes au collège hahaha j’adore",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Mathis",
-                "date": "",
+                "date": "06/15/2020 09:09",
                 "text": "Checker les villas de pombos",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Thomas",
-                "date": "",
+                "date": "06/15/2020 09:11",
                 "text": "J'annonce, si y a une grande piscine, j'organise des JO entre nous 😉",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Thomas",
-                "date": "",
+                "date": "06/15/2020 09:11",
                 "text": "à base de jeu con et drôle",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Thomas",
-                "date": "",
+                "date": "06/15/2020 09:12",
                 "text": "et les sirènes ou avantagés dans l'eau auront des handicaps",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Romain",
-                "date": "",
+                "date": "06/15/2020 09:28",
                 "text": "les olympiades des pombos",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Ninon",
-                "date": "",
+                "date": "06/15/2020 09:44",
                 "text": "https://docs.google.com/spreadsheets/d/1FoJXEP7_42M2Ortzl_TjOKEKJYjjVw0ehTsOI7mkIl8/edit?fbclid=IwAR0fVLEfDDqke1yt8bwdWCSeeKzcFAwFfcvSqUXzZURhw0Io4RaLiX-d2gE#gid=295014609",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Thomas",
-                "date": "16:06",
+                "date": "06/15/2020 09:55",
                 "text": "bon bah y'en a deja qui sont plus dispo",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Ninon",
-                "date": "",
-                "text": "j'ia mis en orange les maisons qui n'ont pas avis / notations",
+                "date": "06/15/2020 09:56",
+                "text": "j'ai mis en orange les maisons qui n'ont pas avis / notations",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Romain",
-                "date": "",
+                "date": "06/15/2020 10:16",
                 "text": "ça réduit donc la liste",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Inès",
-                "date": "",
+                "date": "06/15/2020 10:17",
                 "text": "Okii",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Thomas",
-                "date": "",
+                "date": "06/15/2020 10:21",
                 "text": "je veux un nom et prénom du petit rigolo qui veux manger des souris",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Ninon",
-                "date": "",
+                "date": "15/06/2020 10:30",
                 "text": "bon, Airbnb a indiqué que les locations prises avant le 1 juin seraient donc remboursées intégralement. Pour les jours / mois suivant le 1er juin y a rien d'indiqué. Je pense donc qu'il faudra qu'on regarde souvent les communiqués de Airbnb pour voir comment ça se passe. Si on ne peux pas partir à cause du corona, ils semblent rembourser dans tout les cas .. Sinon globalement les maisons que @Charlotte à trouvé semble avoir un type d'annulation \"strictes\". Je m'explique : si l'ont réserve on à 48h à la suite de la réservation pour annulé gratuitement. Passez ce délai nous serons remboursés à 50% en enlevant les frais de service. Si on annule dans la semaine avant notre arrivé nous serons remboursés à 0% (uniquemennt les frais de ménages seront remboursés). Mais encore une fois.. Si Airbnb décide comme actuellement d'annuler toutes ses \"locations\" nous n'aurons pas de problème de remboursement intégral, Voili voulou 🙂",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Mathis",
-                "date": "",
+                "date": "15/06/2020 10:31",
                 "text": "J'ai aussi des amis qui vivent dans la zone de Bormes les mimosas, je peux leur demander si ils ne connaissent pas des gens qui loueraient des maisons de pombos a des prix défiant toutes pomburence (sans frais de service, de ménages : donc sans passer via Airbnb)",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Inès",
-                "date": "",
+                "date": "06/15/2020 10:39",
                 "text": "On peut checker hors airbnb aussi moi chaque année on loue via des agences",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Ninon",
-                "date": "",
+                "date": "06/15/2020 10:42",
                 "text": "C'était plus dans l'optique de choper la maison de la tante / maraine / voisine / très bonne connaissance ou autre d'un de mes amis, donc passer sans agence (qui peuvent nous prendre des frais si je ne me trompe pas)",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Mathis",
-                "date": "",
+                "date": "06/15/2020 11:01",
                 "text": "Ok",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Thomas",
-                "date": "",
+                "date": "06/15/2020 11:07",
                 "text": "Mais faut qu’ils aient une piscine haha",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Ninon",
-                "date": "",
+                "date": "06/15/2020 11:08",
                 "text": "Après ils peuvent plus facilement nous annuler aussi",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Romain",
-                "date": "",
+                "date": "06/15/2020 11:18",
                 "text": "Mais sinon oui, Airbnb c'est cool ça nous permet de ne pas gérer, bail de location, caution, assurance, etc, etc. Donc c'est bien d'un côté mais y a des frais, après les frais a 10 sont légers, c'est un parti prix.. A voir. Moi Airbnb ne me dérange pas, l'avantage c'est que si on est dans le cas d'annulation lié au Corona avec airbnb ça va être réglé très vite, annulation a 100%, via un particulier ça risque d'être peut être plus chiant avec la caution ou autre ...",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Thomas",
-                "date": "LUN 11:01",
+                "date": "06/15/2020 11:25",
                 "text": "Toute façon c’est la plus belle piscine qui l’emportera",
                 "info": false,
-                "vocal": false
+                "notif": false
             }
         ]
     },
@@ -811,227 +783,227 @@
         "messages": [
             {
                 "personne": "Jade",
-                "date": "",
+                "date": "04/10/2020 20:01",
                 "text": "Qui se chauffe pour un petit appel tous ensemble ? En attendant depouvoir  se prendre une bière 😎",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Lucas",
-                "date": "",
+                "date": "04/10/2020 20:03",
                 "text": "Mwaaaaaa",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Simon",
-                "date": "",
+                "date": "04/10/2020 20:03",
                 "text": "Allez moi aussi!",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "10/042020 20:03",
+                "date": "04/10/2020 20:03",
                 "text": "Samedi?",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Anne",
-                "date": "10/042020 21:09",
+                "date": "04/10/2020 21:09",
                 "text": "On s’appelle demain alors ? ❤",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Gab",
                 "date": "11/04/2020 00:06",
                 "text": "moi j'ai pas trop la connexion les amis.. 😕 je vous fais des bises de loin",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Lucas",
-                "date": "17/04/2020 16:31",
+                "date": "04/17/2020 16:31",
                 "text": "Pareil j’attends une carte SIM et j’espère l’avoir demain!! Internet, le nouvel or noir ;)",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "18/042020 00:03",
+                "date": "04/18/2020 00:03",
                 "text": "Chaud chaud chaud cacao",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Anne",
-                "date": "18/04/2020 10:02",
+                "date": "04/18/2020 10:02",
                 "text": "on fixe une heure?",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Simon",
-                "date": "18/04/2020 13:35",
+                "date": "04/18/2020 13:35",
                 "text": "19h ?",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "",
+                "date": "04/18/2020 16:19",
                 "text": "je suis chaud!",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "",
+                "date": "04/18/2020 16:22",
                 "text": "Qui d’autre se joint à nous?",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Julien",
-                "date": "18/04/2020 19:03",
+                "date": "04/18/2020 19:03",
                 "text": "Je vais essayer de me joindre à vous ! Je vous tiens au jus.",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Simon",
-                "date": "",
+                "date": "04/18/2020 19:19",
                 "text": "Go?",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Anne",
-                "date": "",
+                "date": "04/18/2020 19:27",
                 "text": "Je suis dispo perso",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "",
                 "date": "",
                 "text": "Anne a rejoint l’appel.Vous avez rejoint l’appel.Simon a rejoint l’appel.Lucas a rejoint l’appel.Simon a commencé à partager une vidéo.",
                 "info": true,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Julien",
-                "date": "",
+                "date": "04/18/2020 19:36",
                 "text": "Lucas t’es parti ?",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Julien",
-                "date": "",
+                "date": "04/18/2020 19:37",
                 "text": "J’ai pas eu le temps de te voir !!",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Lucas",
-                "date": "",
+                "date": "04/18/2020 19:42",
                 "text": "J’ai essayé de vous rejoindre mais wala ma connexion est petée vous étiez tout bloqués",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Lucas",
-                "date": "",
+                "date": "04/18/2020 19:42",
                 "text": "Des bisous du trou du cul du monde du coup",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "",
-                "text": "https://open.spotify.com/episode/7s3MzZI99PzCRVc50resML?si=N8l4zVt2SbOHvQKdh4Ewyw",
+                "date": "04/18/2020 19:57",
+                "text": "https://www.youtube.com/watch?v=j_-wPegz-0E&t=2s Podcast - Transfert S01E01 : Jusqu'où peut-on aller pour devenir ami avec ses voisins?",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "",
                 "date": "",
                 "text": "Anne a rejoint la discussion vidéo.",
                 "info": true,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "",
+                "date": "04/18/2020 21:17",
                 "text": "Alors ?",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Simon",
-                "date": "",
-                "text": "(picture de sushis)",
+                "date": "18/04/2020 21:19:00",
+                "text": "🍣🍣🍣🍣🍣🍣",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Anne",
-                "date": "",
+                "date": "04/18/2020 21:23",
                 "text": "WoW pas mal ma parole",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "",
+                "date": "04/18/2020 21:24",
                 "text": "T’as bien fais cuire le riz 5 fois ?",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Simon",
-                "date": "",
+                "date": "04/18/2020 21:27",
                 "text": "Ahah même je l'ai cuit comme un schlag",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Lucas",
-                "date": "",
+                "date": "04/18/2020 21:27",
                 "text": "Pas mal du tout !!!",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Simon",
-                "date": "",
+                "date": "04/18/2020 21:34",
                 "text": "J'ai le seum par contre j'ai pas de sauce sucré...",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "",
+                "date": "04/18/2020 22:04",
                 "text": "Ahah le prochaine fois ce sera parfait !! ❤",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Gab",
-                "date": "",
+                "date": "04/18/2020 22:42",
                 "text": "Dsl j'étais en boîte",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Lucas",
-                "date": "19/042020 07:42",
+                "date": "04/19/2020 07:42",
                 "text": "(Ça manque bien ces ptits souchis.. 🤤)",
                 "info": false,
-                "vocal": false
+                "notif": false
             }
         ]
     },
@@ -1041,242 +1013,179 @@
         "name": "Ben ❤️",
         "messages": [
             {
-                "personne": "Ben <3",
-                "date": "",
+                "personne": "Ben ❤️",
+                "date": "06/29/2020 17:16",
                 "text": "T'es pas épuisée?",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "",
+                "date": "06/29/2020 17:16",
                 "text": "De?",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
-                "personne": "Ben <3",
-                "date": "",
+                "personne": "Ben ❤️",
+                "date": "06/29/2020 17:17",
                 "text": "De troter dans ma tête tout le temps...",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
-                "personne": "Ben <3",
-                "date": "",
+                "personne": "Ben ❤️",
+                "date": "06/29/2020 17:18",
                 "text": "Rentre chez toi non?",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "17:26",
+                "date": "06/29/2020 17:19",
                 "text": "Reviens à la maison non?",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
-                "personne": "Ben <3",
-                "date": "",
+                "personne": "Ben ❤️",
+                "date": "06/29/2020 17:21",
                 "text": "Je suis a une attestation pret de quitter le taff plus tôt",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "",
+                "date": "06/29/2020 17:23",
                 "text": "Et moi je suis a un client prèt de faire un mois de folie!",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
-                "personne": "Ben <3",
-                "date": "",
+                "personne": "Ben ❤️",
+                "date": "06/29/2020 17:24",
                 "text": "...",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "",
+                "date": "06/29/2020 17:27",
                 "text": "C'était pas la réponse que t'attendais hein?",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
-                "personne": "Ben <3",
-                "date": "",
+                "personne": "Ben ❤️",
+                "date": "06/29/2020 17:31",
                 "text": "Et toi, tu m'attendais pas de si tôt.",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "",
+                "date": "06/29/2020 17:44",
                 "text": "Hahahaha t'as pas fait ca?",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
-                "personne": "Ben <3",
-                "date": "",
+                "personne": "Ben ❤️",
+                "date": "06/29/2020 17:45",
                 "text": "Prends ta plus belle attestation je t'emmène faire un tour à un mètre de distance",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "",
+                "date": "06/29/2020 17:53",
                 "text": "Je m'habille et j'arrive",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
-                "personne": "  Ben <3",
-                "date": "17:53",
+                "personne": "Ben ❤️",
+                "date": "06/29/2020 17:53",
                 "text": "17h53 et tjrs pas habillée, j'aurais du monter avant la ballade moi",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "",
+                "date": "06/29/2020 17:55",
                 "text": "Je trace",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
-                "personne": "Ben <3",
-                "date": "",
-                "text": " t’as quelque chose en tete pour ce soir?",
+                "personne": "Ben ❤️",
+                "date": "06/30/2020 18:13",
+                "text": "t’as quelque chose en tete pour ce soir?",
                 "info": false,
-                "vocal": false
+                "notif": true
             },
             {
-                "personne": "Jade",
-                "date": "",
-                "text": "Pour le diner?",
+                "personne": "Ben ❤️",
+                "date": "06/30/2020 18:13",
+                "text": "Un poulet coco du chef du chef ça te tente?",
                 "info": false,
-                "vocal": false
+                "notif": true
             },
             {
-                "personne": "Ben <3",
-                "date": "",
-                "text": " Ouaiiiiis, on teste les dumplings?",
+                "personne": "Ben ❤️",
+                "date": "06/30/2020 18:27",
+                "text": "Ma présentation s'est bien passée j'ai très envie de fêter ça avec toi ce soir!!",
                 "info": false,
-                "vocal": false
+                "notif": true
             },
             {
-                "personne": "Jade",
-                "date": "",
-                "text": "Allez, on a tout, prends juste de la farine sur le retour. Au fait, comment s’est passée ta réunion?",
+                "personne": "Ben ❤️",
+                "date": "06/30/2020 18:52",
+                "text": "ok, on minimise les sorties donc je vais pas chez monop’ que pour un poulet, même fermier ;) . Je commence une liste, forward moi ce dont on a besoin!",
                 "info": false,
-                "vocal": false
+                "notif": true
             },
             {
-                "personne": "Ben <3",
-                "date": "",
-                "text": "Je suis plutot serein en vrai si ils signent pas cette semaine ca peut se faire le mois prochain! ",
+                "personne": "Ben ❤️",
+                "date": "06/30/2020 18:54",
+                "text": "Tu réponds pas? Tu veux manger autre chose? t'en peux plus de mon poulet coco c'est ça? Je le savais :p",
                 "info": false,
-                "vocal": false
+                "notif": true
             },
             {
-                "personne": "Ben <3",
-                "date": "",
-                "text": "ok, on minimise les sorties donc je vais pas chez monop’ que pour de la farine. Je commence une liste, forward moi ce dont on a besoin!",
+                "personne": "Ben ❤️",
+                "date": "06/30/2020 19:06",
+                "text": "Haha en vrai répond Jade",
                 "info": false,
-                "vocal": false
+                "notif": true
             },
             {
-                "personne": "Jade",
-                "date": "",
-                "text": "nice, dans le fond je m’inquietais pas trop pour toi sur ce plan la ;) ",
+                "personne": "Ben ❤️",
+                "date": "06/30/2020 19:06",
+                "text": "Allez c'est pas drôle ^^",
                 "info": false,
-                "vocal": false
+                "notif": true
             },
             {
-                "personne": "Ben <3",
-                "date": "",
-                "text": "tu t’inqietes pour moi ?",
+                "personne": "Ben ❤️",
+                "date": "06/30/2020 19:22",
+                "text": "T'es une gamine, j'arrive...",
                 "info": false,
-                "vocal": false
+                "notif": true
             },
             {
-                "personne": "Jade",
-                "date": "",
-                "text": "Juste pour ta degaine avec ta chemise toute froisée de ce matin là... je retiens pour la liste je fais ca dans 1h!",
+                "personne": "Ben ❤️",
+                "date": "06/30/2020 20:02",
+                "text": "Bonjour cher voyeur, comment le tel de ma copine est arrivé entre tes mains? ",
                 "info": false,
-                "vocal": false
+                "notif": true
             },
             {
-                "personne": "Ben <3",
-                "date": "",
-                "text": "en vrai ca paaaaasssssait carrément!",
+                "personne": "Ben ❤️",
+                "date": "06/30/2020 23:16",
+                "text": "Répond connard arrête de lacher des vues, je vais porter plainte tu vas pas t'en sortir comme ça",
                 "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Jade",
-                "date": "",
-                "text": "On en revient à cette histoire de seuil de saleté, on a pas le meme",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Ben <3",
-                "date": "",
-                "text": "petit taquet c’est cadeau ",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Jade",
-                "date": "",
-                "text": "je fais le diner pour me rattraper",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Ben <3",
-                "date": "",
-                "text": " ca va pas sufire madame.....^^",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Jade",
-                "date": "",
-                "text": "liste de course: farine graines de chia+courges 8 œufs 1 plaquette de beurre bananes + kiwis purée d’amandes",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Ben <3",
-                "date": "",
-                "text": "Detournes pas la conversation je te vois! Tu comptes me nourrir de graines, et faire de moi le pire bobo?",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Jade",
-                "date": "",
-                "text": "j’ai l’honneur de t’annoncer qu’on fait un mois sans sucre!",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Ben <3",
-                "date": "",
-                "text": "Sans moi <3",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Jade ",
-                "date": "",
-                "text": "Haha vas te confiner ailleurs va!",
-                "info": false,
-                "vocal": false
+                "notif": true
             }
         ]
     },
@@ -1287,108 +1196,108 @@
         "messages": [
             {
                 "personne": "La Mama",
-                "date": "",
+                "date": "06/28/2020 21:57",
                 "text": "je vais me coucher, sauf si tu ne dors pas.... :)",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "",
+                "date": "06/28/2020 21:59",
                 "text": "je dors po",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "La Mama",
-                "date": "",
+                "date": "06/28/2020 21:05",
                 "text": "comment vas tu?",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "",
-                "text": "(emoji tel)?",
+                "date": "06/28/2020 22:05",
+                "text": "📞?",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "La Mama",
-                "date": "",
+                "date": "06/28/2020 22:06",
                 "text": "ok",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "",
-                "text": "sent pic",
-                "info": true,
-                "vocal": false
+                "date": "06/29/2020 20:07",
+                "picture": "https://res.cloudinary.com/dn32la6ny/image/upload/v1592995871/11bis/photos/Capture_d_e%CC%81cran_2020-06-24_a%CC%80_12.50.59.png",
+                "info": false,
+                "notif": false
             },
             {
                 "personne": "La Mama",
-                "date": "",
-                "text": "j’aime bien ton pull et le dessert à l’air bon! comment vas tu?",
+                "date": "06/29/2020 20:38",
+                "text": "Très bon choix! Ca doit égayer votre appartement!",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "",
+                "date": "06/29/2020 20:42",
                 "text": "au top! j’attends le corona de pied ferme et on a un peu de mal avec l’enfermement ;) ",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "La Mama",
-                "date": "",
+                "date": "06/29/2020 20:44",
                 "text": "je me réjouis. chez nous ce soir c’est pizza du camion (et oui il est ouvert!!)",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "",
+                "date": "06/29/2020 20:44",
                 "text": "nice!",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "La Mama",
-                "date": "",
+                "date": "06/29/2020 20:47",
                 "text": "“avec 19 corona c’est vrai qu’on voit des pangolins”, sms de mon chef! trop drôle!!",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "",
+                "date": "06/29/2020 20:47",
                 "text": "hahaha trop fort il a fait le lien ;)",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "La Mama",
-                "date": "",
+                "date": "06/29/2020 20:52",
                 "text": "le pangolien :D",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "",
+                "date": "06/29/2020 20:55",
                 "text": "maman....hahhaah",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "La Mama",
-                "date": "",
+                "date": "06/30/2020 19:37",
                 "text": "Ton père est de sortie, on s'appelle si tu veux!",
                 "info": false,
-                "vocal": false
+                "notif": false
             }
         ]
     },
@@ -1402,42 +1311,42 @@
                 "date": "",
                 "text": "très belle interview de XXX à 8h00 ce matin sur radio XXX. Bonne journée, et bonne semaine. j’éspère a bientôt!",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
                 "date": "",
                 "text": "il s’exprime vraiment bien oui! bonne journée pops :)",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Pop's",
                 "date": "",
                 "text": "Bonjours jade, je peux te passer un coup de fil pour prendre 2/3 nouvelles?",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
                 "date": "",
                 "text": "sure!",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Pop's",
                 "date": "",
                 "text": "Tu as vu mon mail sur la conférence de Boris Cyrulnik?",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
                 "date": "",
                 "text": "Hello Pop's c'est dans mes plans de ce soirs!",
                 "info": false,
-                "vocal": false
+                "notif": false
             }
         ]
     },
@@ -1447,46 +1356,74 @@
         "name": "Proprio",
         "messages": [
             {
-                "personne": "Pop's",
-                "date": "",
-                "text": "très belle interview de XXX à 8h00 ce matin sur radio XXX. Bonne journée, et bonne semaine. j’éspère a bientôt!",
+                "personne": "Proprio",
+                "date": "04/27/2020 11:00",
+                "text": "Bonjour Jade, j'ai mis votre quitance de loyer dans votre boîte aux lettres en passant dans le quartier ce matin",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "",
-                "text": "il s’exprime vraiment bien oui! bonne journée pops :)",
+                "date": "04/27/2020 11:09",
+                "text": "Entendu, merci monsieur. Je voulais vous faire part d'une petite fuite d'eau au niveau de la salle de bain, auriez vous des recommendations pour un bon plombier fiable?",
                 "info": false,
-                "vocal": false
+                "notif": false
             },
             {
-                "personne": "Pop's",
-                "date": "",
-                "text": "Bonjours jade, je peux te passer un coup de fil pour prendre 2/3 nouvelles?",
+                "personne": "Proprio",
+                "date": "04/27/2020 11:11",
+                "text": "Merci de m'en faire part, je demande à ma femme. vous avez le bon reflexe en tous cas, il s'agit de ne pas se faire arnaqué!",
                 "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Jade",
-                "date": "",
-                "text": "sure!",
-                "info": false,
-                "vocal": false
-            },
-            {
-                "personne": "Pop's",
-                "date": "",
-                "text": "Tu as vu mon mail sur la conférence de Boris Cyrulnik?",
-                "info": false,
-                "vocal": false
+                "notif": false
             },
             {
                 "personne": "Jade",
-                "date": "",
-                "text": "Hello Pop's c'est dans mes plans de ce soirs!",
+                "date": "04/27/2020 11:11",
+                "text": "Oui, Ben a deja été pris au piège...",
                 "info": false,
-                "vocal": false
+                "notif": false
+            },
+            {
+                "personne": "Proprio",
+                "date": "04/27/2020 11:14",
+                "text": "Malheureusement un grand classique... Sylvia vous conseille de vous tourner vers l'entreprise Laumonier, ce sont des professionnels fiables.",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Jade",
+                "date": "04/27/2020 11:32",
+                "text": "Entendu, merci beaucoup. Nous revenons vite vers vous avec des nouvelles.",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Proprio",
+                "date": "04/27/2020 11:37",
+                "text": "Envoyez nous le devis, si devis il y a!",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Jade",
+                "date": "04/27/2020 16:51",
+                "text": "Coup de chance, une petite manip' et tout est rentré dans l'ordre, c'était un détail qu'ils semblaient avoir oublié lors de leur dernier passage, nous n'avons donc rien eu a réglé. Merci pour le super contact!",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Proprio",
+                "date": "04/27/2020 17:24",
+                "text": "Très contents pour vous! Tenez nous au courant pour votre histoire de cuisine. Possible que Sylvia ai a poser beaucoup de jours auquel cas nous serions ravi de la rennover à vos côter! Un peu de travail manuel c'est toujours agréable...",
+                "info": false,
+                "notif": false
+            },
+            {
+                "personne": "Jade",
+                "date": "04/27/2020 17:28",
+                "text": "J'en parle a Ben, on comptait s'y mettre dans une dizaine de jours et vous invitez a diner dans cette nouvelle cuisine mais ce sera une joie de vous voir avant!",
+                "info": false,
+                "notif": false
             }
         ]
     }

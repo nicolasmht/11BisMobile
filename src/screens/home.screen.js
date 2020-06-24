@@ -12,34 +12,37 @@ export default class Home extends Component {
             isNotifications: false,
             isHome: true,
             isWidget: false,
+            isNotifInsta: true,
         }
     }
     Notifications() {
         return (
             <View style={styles.container__notifications__main}>
-                <ScrollView>
-                    <View style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '10%' }}>
-                        <Text style={{ fontFamily: R.fonts.Agrandir_GrandLight, fontSize: 80, color: R.colors.saumon }}>{moment().format('LT')}</Text>
-                        <Text style={{ marginTop: '-5%', fontFamily: R.fonts.Agrandir_Regular, fontSize: 20, color: R.colors.saumon }}>{moment().format('dddd LL')}</Text>
-                    </View>
-                    {
-                        Data_Notificaton.map(item => {
-                            return (
-                                <View style={styles.container__notifications__main__content}>
-                                    <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', padding: 10 }} >
-                                        <Image style={{ width: 20, height: 20, padding: 10 }} source={{ uri: item.logo }} />
-                                        <Text style={{ marginTop: 4, paddingLeft: 10, textTransform: 'uppercase', fontFamily: R.fonts.Agrandir_TextBold, fontSize: 13, color: R.colors.dark_blue }}>{item.app}</Text>
-                                        <Text style={{ width: '30%', marginTop: 4, marginLeft: '40%', textAlign: 'right', fontFamily: R.fonts.Agrandir_Regular, fontSize: 13, color: R.colors.dark_blue, opacity: 0.5 }}>{item.time}</Text>
+                <ImageBackground source={require('../main/assets/fond/Points.png')} style={styles.backgroundImage__notification}>
+                    <ScrollView>
+                        <View style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '20%' }}>
+                            <Text style={{ fontFamily: R.fonts.Agrandir_GrandLight, fontSize: 80, color: R.colors.saumon }}>{moment().format('LT')}</Text>
+                            <Text style={{ marginTop: '-5%', fontFamily: R.fonts.Agrandir_Regular, fontSize: 20, color: R.colors.saumon }}>{moment().format('dddd LL')}</Text>
+                        </View>
+                        {
+                            Data_Notificaton.map(item => {
+                                return (
+                                    <View style={styles.container__notifications__main__content}>
+                                        <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', padding: 10 }} >
+                                            <Image style={{ width: 20, height: 20, padding: 10 }} source={{ uri: item.logo }} />
+                                            <Text style={{ marginTop: 4, paddingLeft: 10, textTransform: 'uppercase', fontFamily: R.fonts.Agrandir_TextBold, fontSize: 13, color: R.colors.dark_blue }}>{item.app}</Text>
+                                            <Text style={{ width: '30%', marginTop: 4, marginLeft: '40%', textAlign: 'right', fontFamily: R.fonts.Agrandir_Regular, fontSize: 13, color: R.colors.dark_blue, opacity: 0.5 }}>{item.time}</Text>
+                                        </View>
+                                        <View style={{ display: 'flex', flexDirection: 'column', padding: 10 }}>
+                                            <Text style={{ fontFamily: R.fonts.Agrandir_TextBold, fontSize: 13, color: R.colors.dark_blue }}>{item.name}</Text>
+                                            <Text style={{ paddingTop: 8, marginBottom: 8, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13, color: R.colors.dark_blue }}>{item.text}</Text>
+                                        </View>
                                     </View>
-                                    <View style={{ display: 'flex', flexDirection: 'column', padding: 10 }}>
-                                        <Text style={{ fontFamily: R.fonts.Agrandir_TextBold, fontSize: 13, color: R.colors.dark_blue }}>{item.name}</Text>
-                                        <Text style={{ paddingTop: 8, marginBottom: 8, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13, color: R.colors.dark_blue }}>{item.text}</Text>
-                                    </View>
-                                </View>
-                            )
-                        })
-                    }
-                </ScrollView>
+                                )
+                            })
+                        }
+                    </ScrollView>
+                </ImageBackground>
             </View>
         )
     }
@@ -86,8 +89,12 @@ export default class Home extends Component {
                         <Image source={require('../main/assets/icons/app/photo.png')} />
                         <Text style={styles.container__buttonApp__icon__text}>Photos</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => this.props.navigation.navigate('Instagram')}>
-                        <Image source={require('../main/assets/icons/app/instagram.png')} />
+                    <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => { this.setState({isNotifInsta: false}), this.props.navigation.navigate('Instagram',)}}>
+                        {
+                            this.state.isNotifInsta
+                            ? <Image source={require('../main/assets/icons/app/notifs_instagram.png')} />
+                            : <Image source={require('../main/assets/icons/app/instagram.png')} />
+                        }
                         <Text style={styles.container__buttonApp__icon__text}>Instagram</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.container__buttonApp__icon} onPress={() => this.props.navigation.navigate('Netflix')}>
@@ -180,6 +187,9 @@ export default class Home extends Component {
                         </View>
                     </View>
                 </View>
+                
+                {/* TODO : SONNER AU .... */}
+
                 <View style={styles.container__button__bubbles}>
                     <TouchableOpacity style={[this.state.isWidget ? styles.container__button__bubble__selected : styles.container__button__bubble]} onPress={() => this.setState({ isHome: false, isWidget: true })} />
                     <TouchableOpacity style={[this.state.isHome ? styles.container__button__bubble__selected : styles.container__button__bubble]} onPress={() => this.setState({ isHome: true, isWidget: false })} />
@@ -204,8 +214,6 @@ export default class Home extends Component {
         )
     }
     render() {
-        console.log('home:', this.state.isHome)
-        console.log('widget:', this.state.isWidget)
         return (
             <View style={styles.container}>
                 <ImageBackground source={require('../main/assets/fond/Points.png')} style={styles.backgroundImage}>
@@ -254,10 +262,10 @@ const styles = StyleSheet.create({
     },
 
     container__notifications__main: {
+        backgroundColor: R.colors.blue,
         width: '100%',
-        height: '100%',
-        marginTop: '6%',
-        padding: 20,
+        height: '110%',
+        marginTop: '-5%',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -265,9 +273,11 @@ const styles = StyleSheet.create({
     },
 
     container__notifications__main__content: {
-        width: '100%',
+        width: '90%',
         height: 'auto',
         marginTop: '5%',
+        marginLeft: 22,
+        marginRight: 22,
         backgroundColor: R.colors.saumon,
         opacity: 0.7,
         borderRadius: 10,
@@ -373,6 +383,16 @@ const styles = StyleSheet.create({
     },
 
     backgroundImage: {
+        width: '100%',
+        height: '100%'
+    },
+
+    backgroundImage__notification: {
+        position: 'absolute',
+        top: 0,
+        bottom: 0,
+        padding: 0,
+        margin: 0,
         width: '100%',
         height: '100%'
     },

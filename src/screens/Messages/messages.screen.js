@@ -43,12 +43,17 @@ export default class MessagesScreen extends Component {
                             return (
                                 <View style={{paddingTop: 15}}>
                                     {
-                                        item.personne === "Jade" && !item.info
+                                        item.personne === "Jade" && !item.info && !item.picture
                                             ? <View style={styles.container__messages__right}>
-                                                <Text style={styles.container__messages__right__text}>
-                                                    {item.text}
-                                                </Text>
+                                                <Text style={styles.container__messages__right__text}>{item.text}</Text>
                                                 <Text style={styles.container__messages__right__date}>
+                                                    {moment(item.date).format('lll')}
+                                                </Text>
+                                            </View>
+                                            : item.picture
+                                            ? <View style={styles.container__messages__right__picture}>
+                                                <Image style={{ position: 'absolute', top: '-200%', width: '110%', height: '500%', resizeMode: 'contain', marginBottom: 10 }} source={{uri: item.picture}} />
+                                                <Text style={styles.container__messages__right__date__picture}>
                                                     {moment(item.date).format('lll')}
                                                 </Text>
                                             </View>
@@ -124,6 +129,19 @@ const styles = StyleSheet.create({
         backgroundColor: R.colors.blue,
     },
 
+    container__messages__right__picture: {
+        width: '70%',
+        height: 'auto',
+        marginLeft: '30%',
+        padding: 8,
+        borderColor: R.colors.dark_blue,
+        borderWidth: 1,
+        borderRightWidth: 1,
+        borderRadius: 10,
+        backgroundColor: R.colors.blue,
+        // marginBottom: '-30%'
+    },
+
     container__messages__right__text: {
         color: R.colors.saumon,
         fontFamily: R.fonts.Agrandir_Regular,
@@ -137,6 +155,15 @@ const styles = StyleSheet.create({
         fontSize: 11,
         paddingTop: 5,
         textAlign: 'right'
+    },
+    container__messages__right__date__picture: {
+        color: R.colors.saumon,
+        opacity: 0.5,
+        fontFamily: R.fonts.Agrandir_Regular,
+        fontSize: 11,
+        paddingTop: 5,
+        textAlign: 'right',
+        marginTop: '60%'
     },
 
     container__messages__left: {

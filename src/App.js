@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { StyleSheet, TouchableOpacity, View, Text, Button } from 'react-native'
+import { StyleSheet, TouchableOpacity, View, Text, Button, StatusBar } from 'react-native'
 
 import Auth from '@react-native-firebase/auth'
 
@@ -79,8 +79,11 @@ App = () => {
 	}
 
 	useEffect(() => {
+		//timer
+
+		
 		const subscriber = Auth().onAuthStateChanged(onAuthStateChanged)
-    	return subscriber // unsubscribe on unmount
+		return subscriber // unsubscribe on unmount
 	}, [])
 
 	if (initializing) return null
@@ -97,6 +100,7 @@ App = () => {
 		},
 	}
 	
+
 	if (alarm === true && alarmStop === false) {
 		return (
 			<View>
@@ -112,6 +116,11 @@ App = () => {
 		}, 10000000000);
 		return(
 			<NavigationContainer ref={navigationRef}>
+				<View style={styles.container}>
+					<View>
+						<StatusBar popStackEntry={() => console.log('ok')} />
+					</View>
+				</View>
 				<Stack.Navigator headerMode="screen" initialRouteName="HomeScreen">
 					{/* {
 						!user
