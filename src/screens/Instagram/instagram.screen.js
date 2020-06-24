@@ -179,11 +179,14 @@ export default class InstagramScreen extends Component {
                 </View>
 
                 <View style={{ display: "flex", flexDirection: "row", flexWrap: 'wrap', justifyContent: 'flex-start', marginTop: -5}} >
-                    {data_profil.publications.map(item => {
-                        return (
-                            <Image style={{ width: 133, height: 133, borderWidth: 1, borderColor: R.colors.dark_blue, margin: 2 }} source={{ uri: item.post }} />
-                        )
-                    })}
+                    {this.state.isSelectedGrid
+                        ? data_profil.publications.map(item => {
+                            return (
+                                <Image style={{ width: 133, height: 133, borderWidth: 1, borderColor: R.colors.dark_blue, margin: 2 }} source={{ uri: item.post }} />
+                            )
+                        })
+                        : <View/>
+                    }
                 </View>
             </View>
         )
