@@ -103,23 +103,18 @@ App = () => {
 
 	const myTimer = useInterval(() => {
 		if (minutes >= 0) {
-			console.log(minutes)
 			setMinutes(minutes + 1)
 		}
 		if (minutes === 59) {
 			setMinutes(0);
-			console.log('sec 0')
-
 			if (heures === 0 && minutes === 0) {
 				clearInterval(myTimer)
-				console.log('clear')
 			} else {
-				console.log('min')
 				setHeures(heures + 1);
 				setMinutes(0);
 			}
 		}
-	}, 60000)
+	}, 900)
 
 
 	useEffect(() => {
@@ -143,7 +138,7 @@ App = () => {
 
 	function timerCall() {
 		return (
-			<Text style={{ backgroundColor: 'transparent', fontFamily: R.fonts.Agrandir_Regular, color: R.colors.saumon, fontSize: 15 }}>
+			<Text style={{ backgroundColor: 'transparent', fontFamily: R.fonts.Agrandir_Regular, color: R.colors.dark_blue, fontSize: 15 }}>
 				{heures < 10 ? `0${heures}` : heures}: {minutes < 10 ? `0${minutes}` : minutes}
 			</Text>
 		)
@@ -161,15 +156,11 @@ App = () => {
 	return (
 		<NavigationContainer ref={navigationRef}>
 			<View style={{ position: 'absolute', zIndex: 10, top: 8, left: '45%' }}>
-				{/* <ImageBackground source={require('./main/assets/fond/Points.png')} style={{width: '100%'}}> */}
 				<StatusBar hidden={true} />
-				{/* <View style={{position:'absolute', top: 8, left: '45%', bottom: 0, right: 0}}> */}
 				{timerCall()}
-				{/* </View> */}
-				{/* </ImageBackground> */}
 			</View>
 			<View>
-				{!alarmStop && heures === 18 && minutes === 7
+				{!alarmStop && heures === 19 && minutes >= 7 && minutes <= 20
 					? <View>
 						{isAlarm()}
 						<TouchableOpacity style={styles.container__alarme__stop} onPress={() => { setAlarm(false), setAlarmStop(true) }}>
@@ -178,6 +169,13 @@ App = () => {
 					</View>
 					: null
 				}
+			{
+				heures >= 24
+				? <View style={{height: '100%', backgroundColor: R.colors.dark_blue, position: 'relative', top: 0, left: 0, Zindex: 1111}}>
+					<Text>ok</Text>
+				</View>
+				: null
+			}
 			</View>
 			<Stack.Navigator headerMode="screen" initialRouteName="HomeScreen">
 				{/* {
