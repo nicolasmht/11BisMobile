@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { StyleSheet, TouchableOpacity, View, Text, Button, StatusBar, ImageBackground } from 'react-native'
+import { StyleSheet, TouchableOpacity, View, Text, Button, StatusBar, Image, Modal } from 'react-native'
 
 import Auth from '@react-native-firebase/auth'
 
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import R from './res/R'
+import Sound from 'react-native-sound'
 
 // Screens
 // import CodeScreen from './screens/code.screen'
@@ -91,8 +92,9 @@ App = () => {
 	const [user, setUser] = useState()
 	const [alarm, setAlarm] = useState(false)
 	const [alarmStop, setAlarmStop] = useState(false)
-	const [minutes, setMinutes] = useState(6);
+	const [minutes, setMinutes] = useState(0);
 	const [heures, setHeures] = useState(18);
+	const [playing, setPlaying] = useState(false);
 
 	// Handle user state changes
 	function onAuthStateChanged(user) {
@@ -114,12 +116,53 @@ App = () => {
 				setMinutes(0);
 			}
 		}
-	}, 900)
+	}, 820)
 
+	function play() {
+		this.whoosh = new Sound("https://res.cloudinary.com/dn32la6ny/video/upload/v1590505833/11bis/sound/notification.mp3", null, (error) => {
+			if (!error) {
+				this.whoosh.play((success) => {
+					if (success) {
+						stop()
+					}
+				})
+			}
+		})
+	}
+
+	function stop() {
+		if (!this.whoosh) return
+		this.whoosh.stop()
+		this.whoosh.release()
+		this.whoosh = null
+		clearTimer()
+		setPlaying(false)
+	}
+
+
+	function clearTimer() {
+		if (this.timer) {
+			clearInterval(this.timer)
+			this.timer = null
+		}
+	}
+
+	function clearSound() {
+		stop()
+		if (this.timer) {
+			clearInterval(this.timer)
+			this.timer = null
+		}
+		setPlaying(false)
+	}
 
 	useEffect(() => {
 		const subscriber = Auth().onAuthStateChanged(onAuthStateChanged)
-		return subscriber // unsubscribe on unmount
+		return (
+			subscriber, // unsubscribe on unmount
+			clearSound(),
+			clearTimer()
+		)
 	}, [])
 
 	if (initializing) return null
@@ -153,6 +196,35 @@ App = () => {
 		)
 	}
 
+	function isNotifications(app, name, text ) {
+		return (
+			<Modal transparent={true} animationType={'fade'}>
+				{play()}
+				<View style={{ width: '90%', height: 'auto', marginTop: '5%', marginLeft: 22, marginRight: 22, backgroundColor: R.colors.saumon, borderRadius: 10, borderWidth: 1, borderColor: R.colors.dark_blue }} >
+					<View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', padding: 10 }} >
+						{
+							app === 'lydia'
+							? <Image style={{ width: 20, height: 20, padding: 10 }} source={require('./main/assets/icons/app/lydia.png')} />
+							: app === 'messagerie'
+							? <Image style={{ width: 20, height: 20, padding: 10 }} source={require('./main/assets/icons/app/messagerie.png')} />
+							: app === 'horloge'
+							? <Image style={{ width: 20, height: 20, padding: 10 }} source={require('./main/assets/icons/app/horloge.png')} />
+							: null
+						}
+						<Text style={{ marginTop: 4, paddingLeft: 10, textTransform: 'uppercase', fontFamily: R.fonts.Agrandir_TextBold, fontSize: 13, color: R.colors.dark_blue }}>{app}</Text>
+						<Text style={{ width: '30%', marginTop: 4, marginLeft: '40%', textAlign: 'right', fontFamily: R.fonts.Agrandir_Regular, fontSize: 13, color: R.colors.dark_blue, opacity: 0.5 }}>maintenant</Text>
+					</View>
+					<View style={{ display: 'flex', flexDirection: 'column', padding: 10 }}>
+						<Text style={{ fontFamily: R.fonts.Agrandir_TextBold, fontSize: 13, color: R.colors.dark_blue }}>{name}</Text>
+						<Text style={{ paddingTop: 8, marginBottom: 8, fontFamily: R.fonts.Agrandir_Regular, fontSize: 13, color: R.colors.dark_blue }}>{text}</Text>
+					</View>
+				</View>
+			</Modal>
+		)
+	}
+
+	console.disableYellowBox = true;
+
 	return (
 		<NavigationContainer ref={navigationRef}>
 			<View style={{ position: 'absolute', zIndex: 10, top: 8, left: '45%' }}>
@@ -160,7 +232,7 @@ App = () => {
 				{timerCall()}
 			</View>
 			<View>
-				{!alarmStop && heures === 19 && minutes >= 7 && minutes <= 20
+				{/* {!alarmStop && heures === 19 && minutes >= 30 && minutes <= 50
 					? <View>
 						{isAlarm()}
 						<TouchableOpacity style={styles.container__alarme__stop} onPress={() => { setAlarm(false), setAlarmStop(true) }}>
@@ -168,14 +240,44 @@ App = () => {
 						</TouchableOpacity>
 					</View>
 					: null
+				} */}
+				{heures === 18 && minutes === 7 
+					? <View>{isNotifications(app = 'lydia', name = 'Ben ❤️', text ='charges loc juin + 57,38€')}</View>
+					: heures === 18 && minutes === 13
+					? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text ='t’as quelque chose en tete pour ce soir?')}</View>
+					: heures === 18 && minutes === 14
+					? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text ='Un poulet coco du chef du chef ça te tente?')}</View>
+					: heures === 18 && minutes === 27
+					? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text ="Ma présentation s'est bien passée j'ai très envie de fêter ça avec toi ce soir!!")}</View>
+					: heures === 18 && minutes === 52
+					? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text ="ok, on minimise les sorties donc je vais pas chez monop’ que pour un poulet, même fermier 😉...")}</View>
+					: heures === 18 && minutes === 54
+					? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text ="Tu réponds pas? Tu veux manger autre chose? t'en peux plus de mon poulet coco c'est ça? Je le savais :p")}</View>
+					: heures === 19 && minutes === 6
+					? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text ="Haha en vrai répond Jade")}</View>
+					: heures === 19 && minutes === 7
+					? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text ="Allez c'est pas drôle ^^")}</View>
+					: heures === 19 && minutes === 22
+					? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text ="T'es une gamine, j'arrive...")}</View>
+					: heures === 19 && minutes === 37
+					? <View>{isNotifications(app = 'messagerie', name = 'Caro - Weekend Espelette', text ="Caroline a nommé le groupe \"Espelette aout ?\"")}</View>
+					: heures === 19 && minutes === 38
+					? <View>{isNotifications(app = 'messagerie', name = 'Caro - Weekend Espelette', text ="Show must go on!")}</View>
+					: heures === 20 && minutes === 2
+					? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text ="Bonjour cher voyeur, comment le tel de ma copine est arrivé entre tes mains?")}</View>
+					: heures === 21 && minutes === 46
+					? <View>{isNotifications(app = 'messagerie', name = 'Ben - Weekend Espelette', text ="Ca tomberait pas pendant les férias cette histoire? 😆 Dans tous les cas avec Jade on est o-pé-ra-tio-nels!!")}</View>
+					: heures === 23 && minutes === 16
+					? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text ="Répond connard arrête de lacher des vues, je vais porter plainte ")}</View>
+					: null
 				}
-			{
-				heures >= 24
-				? <View style={{height: '100%', backgroundColor: R.colors.dark_blue, position: 'relative', top: 0, left: 0, Zindex: 1111}}>
-					<Text>ok</Text>
-				</View>
-				: null
-			}
+				{
+					heures >= 24
+					? <View style={{height: '100%', backgroundColor: R.colors.dark_blue, position: 'relative', top: 0, left: 0, Zindex: 1111}}>
+						<Text>ok</Text>
+					</View>
+					: null
+				}
 			</View>
 			<Stack.Navigator headerMode="screen" initialRouteName="HomeScreen">
 				{/* {

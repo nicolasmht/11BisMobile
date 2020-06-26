@@ -8,7 +8,6 @@ import 'moment/locale/fr';
 export default class MessagesListScreen extends Component {
     render() {
         data = MessagesData
-        date = data[0].messages[43].date
         return (
             <View style={styles.container}>
                 <View style={styles.container__messages}>

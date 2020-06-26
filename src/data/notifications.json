@@ -1,29 +1,22 @@
-[
-    {
-        "id": 0,
+{
+    "base": [
+        {
+            "id": 0,
+            "logo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1592913163/11bis/notifications/instagram.png",
+            "app": "instagram",
+            "name": "[jade.dp]:",
+            "text": "Romain vient de faire une publication.",
+            "time": "il y a une heure"
+
+        },
+        {
+            "id": 1,
         "logo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1592913163/11bis/notifications/instagram.png",
-        "app": "instagram",
-        "name": "[jade.dp]:",
-        "text": "Romain vient de faire une publication.",
-        "time": "il y a une heure"
+            "app": "instagram",
+            "name": "[jade.dp]:",
+            "text": "Ines a ajouté une story.",
+            "time": "il y a une heure"
 
-    },
-    {
-        "id": 1,
-       "logo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1592913163/11bis/notifications/instagram.png",
-        "app": "instagram",
-        "name": "[jade.dp]:",
-        "text": "Ines a ajouté une story.",
-        "time": "il y a une heure"
-
-    },
-    {
-        "id": 2,
-        "logo": "https://res.cloudinary.com/dn32la6ny/image/upload/v1592913164/11bis/notifications/messagerie.png",
-        "app": "messages",
-        "name": "Ben ❤️",
-        "text": "❤️",
-        "time": "il y a 12 mn"
-
-    }
-]
+        }
+    ]
+}

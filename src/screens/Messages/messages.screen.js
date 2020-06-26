@@ -19,7 +19,7 @@ export default class MessagesScreen extends Component {
         const height_5 = 2540
         const height_6 = 690
         const height_7 = 0
-        const height_8 = 0
+        const height_8 = 690
         return (
             <View style={styles.container}>
                 <View style={styles.container__messages}>

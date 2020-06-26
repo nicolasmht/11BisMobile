@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import { StyleSheet, View, Text, Switch } from 'react-native'
+import { StyleSheet, View, Text, Switch, ScrollView } from 'react-native'
 import R from '../../res/R'
 
 export default class HorlogeScreen extends Component {
-    state = { switchValueAlarme1: false, switchValueAlarme2: true, switchValueAlarme3: false }
+    state = { switchValueAlarme1: false, switchValueAlarme2: false, switchValueAlarme3: true, switchValueAlarme4: true, switchValueAlarme5: true, switchValueAlarme6: true, switchValueAlarme7: true }
     toggleSwitchAlarme1 = (valueAlarme1 ) => {
         this.setState({ switchValueAlarme1: valueAlarme1 })
     }
@@ -13,55 +13,125 @@ export default class HorlogeScreen extends Component {
     toggleSwitchAlarme3 = ( valueAlarme3 ) => {
         this.setState({ switchValueAlarme3: valueAlarme3 })
     }
+    toggleSwitchAlarme4 = ( valueAlarme4 ) => {
+        this.setState({ switchValueAlarme4: valueAlarme4 })
+    }
+    toggleSwitchAlarme5 = ( valueAlarme5 ) => {
+        this.setState({ switchValueAlarme5: valueAlarme5 })
+    }
+    toggleSwitchAlarme6 = ( valueAlarme6 ) => {
+        this.setState({ switchValueAlarme6: valueAlarme6 })
+    }
+    toggleSwitchAlarme7 = ( valueAlarme7 ) => {
+        this.setState({ switchValueAlarme7: valueAlarme7 })
+    }
     
     render() {
             return (
                 <View style={styles.container}>
-                    <View style={styles.container__alarme}>
-                        <Text style={styles.container__alarme__title}>Alarme</Text>
-                        <View style={styles.container__alarme__border} />
-
-                        <View style={styles.container__alarme__list}>
-                            <View style={styles.container__alarme__active}>
-                                <Text style={this.state.switchValueAlarme1 ? styles.container__alarme__heure : styles.container__alarme__heure__disable}>05:30</Text>
-                                <Switch
-                                    trackColor={{ true: R.colors.blue, false: R.colors.dark_blue }}
-                                    thumbColor={this.state.switchValueAlarme1 ? R.colors.saumon : R.colors.blue}
-                                    style={{ marginTop: 30}}
-                                    onValueChange={this.toggleSwitchAlarme1}
-                                    value={this.state.switchValueAlarme1} />
-                            </View>
-                            <Text style={this.state.switchValueAlarme1 ? styles.container__alarme__text : styles.container__alarme__text__disable}>Train Bayonne</Text>
+                    <ScrollView>
+                        <View style={styles.container__alarme}>
+                            <Text style={styles.container__alarme__title}>Alarme</Text>
                             <View style={styles.container__alarme__border} />
-                        </View>
 
-                        <View style={styles.container__alarme__list}>
-                            <View style={styles.container__alarme__active}>
-                                <Text style={this.state.switchValueAlarme2 ? styles.container__alarme__heure : styles.container__alarme__heure__disable}>08:30</Text>
-                                <Switch
-                                    trackColor={{ true: R.colors.blue, false: R.colors.dark_blue }}
-                                    thumbColor={this.state.switchValueAlarme2 ? R.colors.saumon : R.colors.blue}
-                                    style={{ marginTop: 30}}
-                                    onValueChange={this.toggleSwitchAlarme2}
-                                    value={this.state.switchValueAlarme2} />
+                            <View style={styles.container__alarme__list}>
+                                <View style={styles.container__alarme__active}>
+                                    <Text style={this.state.switchValueAlarme1 ? styles.container__alarme__heure : styles.container__alarme__heure__disable}>05:30</Text>
+                                    <Switch
+                                        trackColor={{ true: R.colors.blue, false: R.colors.dark_blue }}
+                                        thumbColor={this.state.switchValueAlarme1 ? R.colors.saumon : R.colors.blue}
+                                        style={{ marginTop: 30}}
+                                        onValueChange={this.toggleSwitchAlarme1}
+                                        value={this.state.switchValueAlarme1} />
+                                </View>
+                                <Text style={this.state.switchValueAlarme1 ? styles.container__alarme__text : styles.container__alarme__text__disable}>Train Bayonne</Text>
+                                <View style={styles.container__alarme__border} />
                             </View>
-                            <Text style={this.state.switchValueAlarme2 ? styles.container__alarme__text : styles.container__alarme__text__disable}>Alarme, chaque jour</Text>
-                            <View style={styles.container__alarme__border} />
-                        </View>
 
-                        <View style={styles.container__alarme__list}>
-                            <View style={styles.container__alarme__active}>
-                                <Text style={this.state.switchValueAlarme3 ? styles.container__alarme__heure : styles.container__alarme__heure__disable}>05:45</Text>
-                                <Switch
-                                    trackColor={{ true: R.colors.blue, false: R.colors.dark_blue }}
-                                    thumbColor={this.state.switchValueAlarme3 ? R.colors.saumon : R.colors.blue}
-                                    style={{ marginTop: 30}}
-                                    onValueChange={this.toggleSwitchAlarme3}
-                                    value={this.state.switchValueAlarme3} />
+                            <View style={styles.container__alarme__list}>
+                                <View style={styles.container__alarme__active}>
+                                    <Text style={this.state.switchValueAlarme2 ? styles.container__alarme__heure : styles.container__alarme__heure__disable}>05:45</Text>
+                                    <Switch
+                                        trackColor={{ true: R.colors.blue, false: R.colors.dark_blue }}
+                                        thumbColor={this.state.switchValueAlarme2 ? R.colors.saumon : R.colors.blue}
+                                        style={{ marginTop: 30}}
+                                        onValueChange={this.toggleSwitchAlarme2}
+                                        value={this.state.switchValueAlarme2} />
+                                </View>
+                                <Text style={this.state.switchValueAlarme2 ? styles.container__alarme__text : styles.container__alarme__text__disable}>Randoooo</Text>
                             </View>
-                            <Text style={this.state.switchValueAlarme3 ? styles.container__alarme__text : styles.container__alarme__text__disable}>Randoooo</Text>
+
+                            <View style={styles.container__alarme__list}>
+                                <View style={styles.container__alarme__active}>
+                                    <Text style={this.state.switchValueAlarme3 ? styles.container__alarme__heure : styles.container__alarme__heure__disable}>08:30</Text>
+                                    <Switch
+                                        trackColor={{ true: R.colors.blue, false: R.colors.dark_blue }}
+                                        thumbColor={this.state.switchValueAlarme3 ? R.colors.saumon : R.colors.blue}
+                                        style={{ marginTop: 30 }}
+                                        onValueChange={this.toggleSwitchAlarme3}
+                                        value={this.state.switchValueAlarme3} />
+                                </View>
+                                <Text style={this.state.switchValueAlarme3 ? styles.container__alarme__text : styles.container__alarme__text__disable}>Alarme, chaque jour</Text>
+                                <View style={styles.container__alarme__border} />
+                            </View>
+
+                            <View style={styles.container__alarme__list}>
+                                <View style={styles.container__alarme__active}>
+                                    <Text style={this.state.switchValueAlarme4 ? styles.container__alarme__heure : styles.container__alarme__heure__disable}>08:35</Text>
+                                    <Switch
+                                        trackColor={{ true: R.colors.blue, false: R.colors.dark_blue }}
+                                        thumbColor={this.state.switchValueAlarme4 ? R.colors.saumon : R.colors.blue}
+                                        style={{ marginTop: 30 }}
+                                        onValueChange={this.toggleSwitchAlarme4}
+                                        value={this.state.switchValueAlarme4} />
+                                </View>
+                                <Text style={this.state.switchValueAlarme4 ? styles.container__alarme__text : styles.container__alarme__text__disable}>Alarme, chaque jour</Text>
+                                <View style={styles.container__alarme__border} />
+                            </View>
+
+                            <View style={styles.container__alarme__list}>
+                                <View style={styles.container__alarme__active}>
+                                    <Text style={this.state.switchValueAlarme5 ? styles.container__alarme__heure : styles.container__alarme__heure__disable}>08:40</Text>
+                                    <Switch
+                                        trackColor={{ true: R.colors.blue, false: R.colors.dark_blue }}
+                                        thumbColor={this.state.switchValueAlarme5 ? R.colors.saumon : R.colors.blue}
+                                        style={{ marginTop: 30 }}
+                                        onValueChange={this.toggleSwitchAlarme5}
+                                        value={this.state.switchValueAlarme5} />
+                                </View>
+                                <Text style={this.state.switchValueAlarme5 ? styles.container__alarme__text : styles.container__alarme__text__disable}>Alarme, chaque jour</Text>
+                                <View style={styles.container__alarme__border} />
+                            </View>
+
+                            <View style={styles.container__alarme__list}>
+                                <View style={styles.container__alarme__active}>
+                                    <Text style={this.state.switchValueAlarme6 ? styles.container__alarme__heure : styles.container__alarme__heure__disable}>08:45</Text>
+                                    <Switch
+                                        trackColor={{ true: R.colors.blue, false: R.colors.dark_blue }}
+                                        thumbColor={this.state.switchValueAlarme6 ? R.colors.saumon : R.colors.blue}
+                                        style={{ marginTop: 30 }}
+                                        onValueChange={this.toggleSwitchAlarme6}
+                                        value={this.state.switchValueAlarme6} />
+                                </View>
+                                <Text style={this.state.switchValueAlarme6 ? styles.container__alarme__text : styles.container__alarme__text__disable}>Alarme, chaque jour</Text>
+                                <View style={styles.container__alarme__border} />
+                            </View>
+
+                            <View style={styles.container__alarme__list}>
+                                <View style={styles.container__alarme__active}>
+                                    <Text style={this.state.switchValueAlarme7 ? styles.container__alarme__heure : styles.container__alarme__heure__disable}>08:50</Text>
+                                    <Switch
+                                        trackColor={{ true: R.colors.blue, false: R.colors.dark_blue }}
+                                        thumbColor={this.state.switchValueAlarme7 ? R.colors.saumon : R.colors.blue}
+                                        style={{ marginTop: 30 }}
+                                        onValueChange={this.toggleSwitchAlarme7}
+                                        value={this.state.switchValueAlarme7} />
+                                </View>
+                                <Text style={this.state.switchValueAlarme7 ? styles.container__alarme__text : styles.container__alarme__text__disable}>Alarme, chaque jour</Text>
+                                <View style={styles.container__alarme__border} />
+                            </View>
                         </View>
-                    </View>
+                    </ScrollView>
                 </View>
             )
         }
@@ -81,7 +151,6 @@ const styles = StyleSheet.create({
 
     container__alarme__list: {
         width: '100%',
-        height: '22%',
         paddingTop: '10%',
         display: 'flex',
         flexDirection: 'column',
