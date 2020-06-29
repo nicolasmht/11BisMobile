@@ -261,7 +261,7 @@ App = () => {
 									: heures === 18 && minutes === 14
 									? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text = 'Un poulet coco du chef du chef ça te tente?')}</View>
 									: heures === 18 && minutes === 27
-									? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text = "Ma présentation s'est bien passée j'ai très envie de fêter ça avec toi ce soir!!")}</View>
+									? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text = "Ma présentation s'est bien passée j'ai très envie de fêter ça avec toi ce soir!")}</View>
 									: heures === 18 && minutes === 52
 									? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text = "ok, on minimise les sorties donc je vais pas chez monop’ que pour un poulet, même fermier 😉...")}</View>
 									: heures === 18 && minutes === 54
