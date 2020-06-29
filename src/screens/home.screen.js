@@ -14,7 +14,7 @@ export default class Home extends Component {
             isHome: true,
             isWidget: false,
 
-            showNotifications: true,
+            showNotifications: false,
             isNotifInsta: true,
             isNotifLydia: false,
 
@@ -35,7 +35,7 @@ export default class Home extends Component {
             minutes: 0,
             heures: 18,
             code: 0,
-
+            
             currentApartment: 0,
         }
     }
@@ -164,23 +164,19 @@ export default class Home extends Component {
             <View style={styles.container__notifications__main}>
                 <ImageBackground source={require('../main/assets/fond/Points.png')} style={styles.backgroundImage__notification}>
                     <View style={{ width: '100%', height: '70%', position: 'absolute', bottom: 5, zIndex: 10000 }}>
-                        {
-                            this.state.currentApartment != 0
-                                ? <TouchableOpacity style={{ display: 'flex', justifyContent: 'flex-start', padding: 10, width: '80%', height: '11%', backgroundColor: R.colors.saumon, position: 'absolute', bottom: '25%', left: '10%', borderRadius: 10, borderColor: R.colors.dark_blue, borderWidth: 1 }}>
-                                    <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center' }}>
-                                        <Image source={require('../main/assets/icons/circle.png')} />
-                                        <View style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'flex-start', marginLeft: 15, marginTop: 5 }}>
-                                            <Text style={{ fontFamily: R.fonts.Agrandir_Regular, fontSize: 14, color: R.colors.blue }}>Sonner au</Text>
-                                            {
-                                                this.state.currentApartment === 1
-                                                    ? <Text style={{ fontFamily: R.fonts.Agrandir_GrandHeavy, fontSize: 18, color: R.colors.blue }}>{this.state.currentApartment}er appartement</Text>
-                                                    : <Text style={{ fontFamily: R.fonts.Agrandir_GrandHeavy, fontSize: 18, color: R.colors.blue, }}>{this.state.currentApartment}ème appartement</Text>
-                                            }
-                                        </View>
-                                    </View>
-                                </TouchableOpacity>
-                                : null
-                        }
+                       <TouchableOpacity style={{ display: 'flex', justifyContent: 'flex-start', padding: 10, width: '80%', height: '11%', backgroundColor: R.colors.saumon, position: 'absolute', bottom: '25%', left: '10%', borderRadius: 10, borderColor: R.colors.dark_blue, borderWidth: 1 }} onPress={() => this.props.navigation.navigate('Fin')}>
+                            <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center' }}>
+                                <Image source={require('../main/assets/icons/circle.png')} />
+                                <View style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'flex-start', marginLeft: 15, marginTop: 5 }}>
+                                    <Text style={{ fontFamily: R.fonts.Agrandir_Regular, fontSize: 14, color: R.colors.blue }}>Sonner au</Text>
+                                    {
+                                        this.state.currentApartment === 1
+                                            ? <Text style={{ fontFamily: R.fonts.Agrandir_GrandHeavy, fontSize: 18, color: R.colors.blue }}>{this.state.currentApartment}er appartement</Text>
+                                            : <Text style={{ fontFamily: R.fonts.Agrandir_GrandHeavy, fontSize: 18, color: R.colors.blue, }}>{this.state.currentApartment}ème appartement</Text>
+                                    }
+                                </View>
+                            </View>
+                        </TouchableOpacity>
                     </View>
                     <ScrollView>
                         <View style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '20%' }}>
@@ -346,6 +342,7 @@ export default class Home extends Component {
     isWidget() {
         return (
             <View style={{ width: '100%', height: '100.65%' }}>
+
                 <TouchableOpacity style={styles.container__button__notifications} onPress={() => this.setState({ showNotifications: !this.state.showNotifications })} />
                 <View style={styles.container__block__main}>
                     <View style={styles.container__block__main__content}>
@@ -475,7 +472,7 @@ const styles = StyleSheet.create({
         width: '15%',
         height: 6,
         top: 35,
-        left: '43%',
+        left: '44.5%',
         right: 0,
         bottom: 0,
         marginBottom: '3%',

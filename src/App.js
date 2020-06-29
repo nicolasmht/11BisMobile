@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { StyleSheet, TouchableOpacity, View, Text, Button, StatusBar, Image, Modal, AppState } from 'react-native'
+import { StyleSheet, ImageBackground, View, Text, Button, StatusBar, Image, Modal, AppState } from 'react-native'
 
 import Auth from '@react-native-firebase/auth'
 
@@ -23,6 +23,7 @@ import NetflixScreen from './screens/Netflix/netflix.screen'
 import LydiaScreen from './screens/Lydia/lydia.screen'
 import CalendrierScreen from './screens/Calendrier/calendrier.screen'
 import InstagramScreen from './screens/Instagram/instagram.screen'
+import FinScreen from './screens/Fin/fin.screen'
 
 import JusteatListScreen from './screens/Justeat/justeat.list.screen'
 import JusteatScreen from './screens/Justeat/justeat.screen'
@@ -127,8 +128,20 @@ App = () => {
 		}
 	}, 820)
 
-	function play() {
+	function playNotif() {
 		this.whoosh = new Sound("https://res.cloudinary.com/dn32la6ny/video/upload/v1590505833/11bis/sound/notification.mp3", null, (error) => {
+			if (!error) {
+				this.whoosh.play((success) => {
+					if (success) {
+						stop()
+					}
+				})
+			}
+		})
+	}
+
+	function playLowBattery() {
+		this.whoosh = new Sound("https://res.cloudinary.com/dn32la6ny/video/upload/v1590505830/11bis/sound/baterrie_faible.mp3", null, (error) => {
 			if (!error) {
 				this.whoosh.play((success) => {
 					if (success) {
@@ -190,7 +203,7 @@ App = () => {
 
 	function timerCall() {
 		return (
-			<Text style={{ backgroundColor: 'transparent', fontFamily: R.fonts.Agrandir_Regular, color: R.colors.dark_blue, fontSize: 15 }}>
+			<Text style={{ backgroundColor: 'transparent', fontFamily: R.fonts.Agrandir_TextBold, color: R.colors.dark_blue, fontSize: 15 }}>
 				{heures < 10 ? `0${heures}` : heures}: {minutes < 10 ? `0${minutes}` : minutes}
 			</Text>
 		)
@@ -208,7 +221,7 @@ App = () => {
 	function isNotifications(app, name, text ) {
 		return (
 			<Modal transparent={true} animationType={'fade'}>
-				{play()}
+				{playNotif()}
 				<View style={{ width: '90%', height: 'auto', marginTop: '5%', marginLeft: 22, marginRight: 22, backgroundColor: R.colors.saumon, borderRadius: 10, borderWidth: 1, borderColor: R.colors.dark_blue }} >
 					<View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', padding: 10 }} >
 						{
@@ -232,18 +245,63 @@ App = () => {
 		)
 	}
 
+	function isLowBattery() {
+		return (
+			<Modal transparent={true} animationType={'fade'}>
+				<View style={{ width: '60%', height: '12%', marginTop: '65%', marginLeft: '20%', marginRight: 22, backgroundColor: R.colors.saumon, borderRadius: 10, borderWidth: 1, borderColor: R.colors.dark_blue }} >
+					<View style={{ display: 'flex', flexDirection: 'column', padding: 10 }}>
+						<Text style={{ marginTop: 4, textAlign: 'center', textTransform: 'uppercase', fontFamily: R.fonts.Agrandir_TextBold, fontSize: 16, color: R.colors.blue }}>Batterie faible</Text>
+						<View style={{ marginTop: 4, borderBottomColor: R.colors.blue, borderBottomWidth: 1 }}/>
+						<Text style={{ marginTop: 13, textAlign: 'center', fontFamily: R.fonts.Agrandir_Regular, fontSize: 14, color: R.colors.dark_blue }}>Il vous reste 5% de batterie</Text>
+					</View>
+				</View>
+			</Modal>
+		)
+	}
+
 	console.disableYellowBox = true;
 
 	return (
 		<NavigationContainer ref={navigationRef}>
-			<View style={{ position: 'absolute', zIndex: 10, top: 8, left: '45%' }}>
+			<View style={{ position: 'absolute', zIndex: 1, top: 0}}>
 				<StatusBar hidden={true} />
-				<View>
-					{
-						user 
-						?  <View>
-							{timerCall()}
+				{
+					user 
+					?  <View>
+						<View style={{ width: '78%', marginLeft: 38, display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+							<View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'baseline' }}>
+								<Image source={require('./main/assets/icons/icon_reseau.png')}/>
+								<Text> Free 4G</Text>
+							</View>
+							<View style={{ marginTop: 5}}>
+								{timerCall()}
+							</View>
+							<View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center' }}>
+							{
+								heures >= 20 && heures <= 23
+								? <Text>5% </Text>
+								: heures >= 23 && minutes <= 20
+								? <Text>2% </Text>
+								: heures >= 23 && minutes >= 20
+								? <Text>1% </Text>
+								: <Text>9% </Text>
+							}
+								
+								<Image source={require('./main/assets/icons/icon_batterie.png')}/>
+							</View>
+
+						</View>
 							<View>
+								{
+									heures === 20  && minutes <= 2
+									? <View>{isLowBattery()}</View>
+									: null
+								}
+								{
+									heures === 20 && minutes === 0
+									? <View>{playLowBattery()}</View>
+									: null
+								}
 								{/* {!alarmStop && heures === 19 && minutes >= 30 && minutes <= 50
 								? <View>
 									{isAlarm()}
@@ -284,18 +342,30 @@ App = () => {
 									? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text = "Répond connard arrête de lacher des vues, je vais porter plainte ")}</View>
 									: null
 								}
+							</View>
+							<View>
 								{
 									heures >= 24
-									? <View style={{ height: '100%', backgroundColor: R.colors.dark_blue, position: 'relative', top: 0, left: 0, Zindex: 1111 }}>
-										<Text>ok</Text>
+									? <View style={{backgroundColor: R.colors.blue, position: 'relative', top: 0, left: 0, Zindex: 222222, width: '100%', height: '100%' }}>
+										<ImageBackground source={require('./main/assets/fond/Points.png')} style={styles.backgroundImage}>
+										{
+											heures === 24 && minutes >= 2
+											? <Image style={{marginTop: '6%', marginLeft: 1}} source={require('./main/assets/fond/fin_batterie.png')}/>
+											: null
+										}
+										{
+											heures === 24 && minutes <= 2
+											? <Image style={{marginTop: '68%', marginLeft: '23%'}} source={require('./main/assets/fond/batterie.png')}/>
+											: null
+										}
+										</ImageBackground>
 									</View>
 									: null
 								}
 							</View>
 						</View>
-						: null
-					}
-				</View>
+					: null
+				}
 			</View>
 			
 			<Stack.Navigator headerMode="screen" initialRouteName="HomeScreen">
@@ -334,6 +404,20 @@ App = () => {
 								initialParams={{ user: user }}
 							/>
 
+							<Stack.Screen
+								name="Fin"
+								component={FinScreen}
+								options={{
+									headerRight: '',
+									headerLeft: '',
+									headerBackTitleVisible: false,
+									headerTitle: '',
+									headerTransparent: true,
+									gestureEnabled: false,
+									transitionSpec: { open: config, close: config }
+								}}
+
+							/>
 							<Stack.Screen
 								name="Instagram"
 								component={InstagramScreen}
@@ -762,7 +846,7 @@ App = () => {
 										/>
 									),
 									headerLeft: '',
-									gestureEnabled: true,
+									gestureEnabled: false,
 									headerBackTitleVisible: true,
 									headerTitle: '',
 									headerTransparent: false,
@@ -1082,6 +1166,11 @@ const styles = StyleSheet.create({
 		textAlign: 'center',
 		padding: 15,
 		marginTop: 5,
+	},
+
+	backgroundImage: {
+		width: '100%',
+		height: '100%'
 	},
 })
 
