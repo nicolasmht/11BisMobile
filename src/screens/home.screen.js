@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
-import { StyleSheet, View, Text, TouchableOpacity, ImageBackground, Image, ScrollView } from 'react-native'
+import { StyleSheet, View, Text, TouchableOpacity, ImageBackground, Image, ScrollView, AsyncStorage } from 'react-native'
 import R from '../res/R'
 import Data_Notificaton from '../data/notifications.json'
 import moment from 'moment'
 import 'moment/locale/fr';
+
+import firestore from '@react-native-firebase/firestore';
 
 export default class Home extends Component {
     constructor() {
@@ -31,8 +33,11 @@ export default class Home extends Component {
 
             minutes: 0,
             heures: 18,
+            code: 0,
+            currentApartment: 0,
         }
     }
+
     componentDidMount() {
         this.myInterval = setInterval(() => {
             const { minutes, heures } = this.state
@@ -55,7 +60,34 @@ export default class Home extends Component {
                 }
             }
         }, 820)
+
+        this.retrieveData();
     }
+
+    retrieveData = async () => {
+        
+        try {
+          const value = await AsyncStorage.getItem('@code');
+          if (value !== null) {
+            // We have data!!
+            this.setState(({code}) => ({
+                code: value
+            }));
+
+            firestore().collection('sessions').doc(this.state.code).onSnapshot(data => {
+                this.setState(({currentApartment}) => ({
+                    currentApartment: data.data().apartment
+                }));
+                
+            }, error => console.log(error));
+
+          }
+        } catch (error) {
+          // Error retrieving data
+          console.log(error)
+        }
+    };
+
     componentWillUpdate() {
         if (this.state.heures === 18 && this.state.minutes === 7) {
             this.setState({ isNotifLydia: true })

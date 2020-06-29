@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { StyleSheet, TouchableOpacity, View, Text, Button, StatusBar, Image, Modal } from 'react-native'
+import { StyleSheet, TouchableOpacity, View, Text, Button, StatusBar, Image, Modal, AppState } from 'react-native'
 
 import Auth from '@react-native-firebase/auth'
 
@@ -9,7 +9,7 @@ import R from './res/R'
 import Sound from 'react-native-sound'
 
 // Screens
-// import CodeScreen from './screens/code.screen'
+import CodeScreen from './screens/code.screen'
 import HomeScreen from './screens/home.screen'
 import AlarmeScreen from './screens/Horloge/alarme.screen'
 
@@ -102,6 +102,13 @@ App = () => {
 		if (initializing) setInitializing(false)
 	}
 
+	useEffect(() => {
+		AppState.addEventListener("change", (status) => {
+			if (status == 'inactive') {
+				Auth().signOut();
+			}
+		});
+	}, []);
 
 	const myTimer = useInterval(() => {
 		if (minutes >= 0) {
@@ -288,738 +295,746 @@ App = () => {
 						<Stack.Screen name="Home" component={ HomeScreen } />
 					} */}
 
-				<Stack.Screen
-					name="Home"
-					component={HomeScreen}
-					options={{
-						headerBackTitleVisible: false,
-						headerTintColor: R.colors.dark_blue,
-						headerTitle: '',
-						headerTransparent: true
-					}}
-				/>
+					{
+						!user
+					?
+						<Stack.Screen name="Code" component={ CodeScreen } />
+					:
+						<>
+							<Stack.Screen
+								name="Home"
+								component={HomeScreen}
+								options={{
+									headerBackTitleVisible: false,
+									headerTintColor: R.colors.dark_blue,
+									headerTitle: '',
+									headerTransparent: true
+								}}
+							/>
 
-				<Stack.Screen
-					name="Instagram"
-					component={InstagramScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="Instagram"
+								component={InstagramScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									headerLeft: '',
+									gestureEnabled: false,
+									headerBackTitleVisible: false,
+									headerTitle: '',
+									headerTransparent: true
+								}}
 							/>
-						),
-						headerLeft: '',
-						gestureEnabled: false,
-						headerBackTitleVisible: false,
-						headerTitle: '',
-						headerTransparent: true
-					}}
-				/>
-				<Stack.Screen
-					name="Justeat"
-					component={JusteatScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="Justeat"
+								component={JusteatScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									gestureEnabled: true,
+									headerBackTitleVisible: true,
+									headerTintColor: R.colors.dark_blue,
+									headerTitle: 'Détails',
+									headerTransparent: false,
+									headerStyle: { backgroundColor: R.colors.saumon },
+									headerBackTitleStyle: { fontSize: 12 }
+								}}
 							/>
-						),
-						gestureEnabled: true,
-						headerBackTitleVisible: true,
-						headerTintColor: R.colors.dark_blue,
-						headerTitle: 'Détails',
-						headerTransparent: false,
-						headerStyle: { backgroundColor: R.colors.saumon },
-						headerBackTitleStyle: { fontSize: 12 }
-					}}
-				/>
-				<Stack.Screen
-					name="JusteatList"
-					component={JusteatListScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="JusteatList"
+								component={JusteatListScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									headerLeft: '',
+									gestureEnabled: false,
+									headerBackTitleVisible: false,
+									headerTitle: '',
+									headerTransparent: true
+								}}
 							/>
-						),
-						headerLeft: '',
-						gestureEnabled: false,
-						headerBackTitleVisible: false,
-						headerTitle: '',
-						headerTransparent: true
-					}}
-				/>
-				<Stack.Screen
-					name="Calendrier"
-					component={CalendrierScreen}
-					component={CalendrierScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="Calendrier"
+								component={CalendrierScreen}
+								component={CalendrierScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									headerLeft: '',
+									gestureEnabled: false,
+									headerTransparent: true,
+									headerTitle: '',
+									headerBackTitleVisible: true,
+									headerTintColor: R.colors.dark_blue,
+									headerTitle: '',
+									headerTransparent: false,
+									headerStyle: { backgroundColor: R.colors.saumon },
+									transitionSpec: { open: config, close: config }
+								}}
 							/>
-						),
-						headerLeft: '',
-						gestureEnabled: false,
-						headerTransparent: true,
-						headerTitle: '',
-						headerBackTitleVisible: true,
-						headerTintColor: R.colors.dark_blue,
-						headerTitle: '',
-						headerTransparent: false,
-						headerStyle: { backgroundColor: R.colors.saumon },
-						transitionSpec: { open: config, close: config }
-					}}
-				/>
-				<Stack.Screen
-					name="Rappels"
-					component={RappelsScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="Rappels"
+								component={RappelsScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									gestureEnabled: true,
+									headerBackTitleVisible: true,
+									headerTintColor: R.colors.dark_blue,
+									headerTitle: '',
+									headerTransparent: false,
+									headerStyle: { backgroundColor: R.colors.saumon },
+									headerBackTitleStyle: { fontSize: 12 }
+								}}
 							/>
-						),
-						gestureEnabled: true,
-						headerBackTitleVisible: true,
-						headerTintColor: R.colors.dark_blue,
-						headerTitle: '',
-						headerTransparent: false,
-						headerStyle: { backgroundColor: R.colors.saumon },
-						headerBackTitleStyle: { fontSize: 12 }
-					}}
-				/>
-				<Stack.Screen
-					name="RappelsList"
-					component={RappelsListScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="RappelsList"
+								component={RappelsListScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									headerLeft: '',
+									gestureEnabled: false,
+									headerBackTitleVisible: false,
+									headerTitle: '',
+									headerTransparent: true
+								}}
 							/>
-						),
-						headerLeft: '',
-						gestureEnabled: false,
-						headerBackTitleVisible: false,
-						headerTitle: '',
-						headerTransparent: true
-					}}
-				/>
-				<Stack.Screen
-					name="Lydia"
-					component={LydiaScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="Lydia"
+								component={LydiaScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									headerLeft: '',
+									gestureEnabled: false,
+									headerBackTitleVisible: false,
+									headerTitle: '',
+									headerTransparent: true
+								}}
 							/>
-						),
-						headerLeft: '',
-						gestureEnabled: false,
-						headerBackTitleVisible: false,
-						headerTitle: '',
-						headerTransparent: true
-					}}
-				/>
-				<Stack.Screen
-					name="Netflix"
-					component={NetflixScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="Netflix"
+								component={NetflixScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									headerLeft: '',
+									gestureEnabled: false,
+									headerBackTitleVisible: false,
+									headerTitle: '',
+									headerTransparent: true
+								}}
 							/>
-						),
-						headerLeft: '',
-						gestureEnabled: false,
-						headerBackTitleVisible: false,
-						headerTitle: '',
-						headerTransparent: true
-					}}
-				/>
-				<Stack.Screen
-					name="Alarme"
-					component={AlarmeScreen}
-					options={{
-						headerRight: '',
-						headerLeft: '',
-						gestureEnabled: false,
-						headerBackTitleVisible: false,
-						headerTitle: '',
-						headerTransparent: true
-					}}
+							<Stack.Screen
+								name="Alarme"
+								component={AlarmeScreen}
+								options={{
+									headerRight: '',
+									headerLeft: '',
+									gestureEnabled: false,
+									headerBackTitleVisible: false,
+									headerTitle: '',
+									headerTransparent: true
+								}}
 
-				/>
-				<Stack.Screen
-					name="Messages"
-					component={MessagesScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
 							/>
-						),
-						gestureEnabled: true,
-						headerBackTitleVisible: true,
-						headerTintColor: R.colors.dark_blue,
-						headerTitle: '',
-						headerTransparent: true,
-						headerStyle: { backgroundColor: R.colors.saumon },
-						headerBackTitleStyle: { fontSize: 12 }
-					}}
-				/>
-				<Stack.Screen
-					name="MessagesList"
-					component={MessagesListScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="Messages"
+								component={MessagesScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									gestureEnabled: true,
+									headerBackTitleVisible: true,
+									headerTintColor: R.colors.dark_blue,
+									headerTitle: '',
+									headerTransparent: true,
+									headerStyle: { backgroundColor: R.colors.saumon },
+									headerBackTitleStyle: { fontSize: 12 }
+								}}
 							/>
-						),
-						headerLeft: '',
-						gestureEnabled: false,
-						headerTransparent: true,
-						headerTitle: '',
-						headerBackTitleVisible: true,
-						headerTintColor: R.colors.dark_blue,
-						headerTitle: '',
-						headerTransparent: false,
-						headerStyle: { backgroundColor: R.colors.saumon },
-					}}
-				/>
-				<Stack.Screen
-					name="Spotify"
-					component={SpotifyScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="MessagesList"
+								component={MessagesListScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									headerLeft: '',
+									gestureEnabled: false,
+									headerTransparent: true,
+									headerTitle: '',
+									headerBackTitleVisible: true,
+									headerTintColor: R.colors.dark_blue,
+									headerTitle: '',
+									headerTransparent: false,
+									headerStyle: { backgroundColor: R.colors.saumon },
+								}}
 							/>
-						),
-						headerLeft: '',
-						gestureEnabled: false,
-						headerBackTitleVisible: false,
-						headerTitle: '',
-						headerTransparent: true
-					}}
-				/>
-				<Stack.Screen
-					name="PhotoMap"
-					component={PhotoMapScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="Spotify"
+								component={SpotifyScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									headerLeft: '',
+									gestureEnabled: false,
+									headerBackTitleVisible: false,
+									headerTitle: '',
+									headerTransparent: true
+								}}
 							/>
-						),
-						gestureEnabled: true,
-						headerBackTitleVisible: true,
-						headerTintColor: R.colors.dark_blue,
-						headerTitle: '',
-						headerTransparent: false,
-						headerStyle: { backgroundColor: R.colors.saumon },
-						headerBackTitleStyle: { fontSize: 12 },
-						transitionSpec: { open: config, close: config }
-					}}
-				/>
-				<Stack.Screen
-					name="PhotoVisuel"
-					component={PhotoVisuelScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="PhotoMap"
+								component={PhotoMapScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									gestureEnabled: true,
+									headerBackTitleVisible: true,
+									headerTintColor: R.colors.dark_blue,
+									headerTitle: '',
+									headerTransparent: false,
+									headerStyle: { backgroundColor: R.colors.saumon },
+									headerBackTitleStyle: { fontSize: 12 },
+									transitionSpec: { open: config, close: config }
+								}}
 							/>
-						),
-						gestureEnabled: true,
-						headerBackTitleVisible: true,
-						headerTintColor: R.colors.dark_blue,
-						headerTitle: '',
-						headerTransparent: false,
-						headerStyle: { backgroundColor: R.colors.saumon },
-						headerBackTitleStyle: { fontSize: 12 },
-						transitionSpec: { open: config, close: config }
-					}}
-				/>
-				<Stack.Screen
-					name="PhotosDeleted"
-					component={PhotosDeletedScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="PhotoVisuel"
+								component={PhotoVisuelScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									gestureEnabled: true,
+									headerBackTitleVisible: true,
+									headerTintColor: R.colors.dark_blue,
+									headerTitle: '',
+									headerTransparent: false,
+									headerStyle: { backgroundColor: R.colors.saumon },
+									headerBackTitleStyle: { fontSize: 12 },
+									transitionSpec: { open: config, close: config }
+								}}
 							/>
-						),
-						gestureEnabled: true,
-						headerBackTitleVisible: true,
-						headerTintColor: R.colors.dark_blue,
-						headerTitle: 'Suppr. récemment',
-						headerTransparent: false,
-						headerStyle: { backgroundColor: R.colors.saumon },
-						headerBackTitleStyle: { fontSize: 12 },
-						transitionSpec: { open: config, close: config }
-					}}
-				/>
-				<Stack.Screen
-					name="PhotosMasked"
-					component={PhotosMaskedScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="PhotosDeleted"
+								component={PhotosDeletedScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									gestureEnabled: true,
+									headerBackTitleVisible: true,
+									headerTintColor: R.colors.dark_blue,
+									headerTitle: 'Suppr. récemment',
+									headerTransparent: false,
+									headerStyle: { backgroundColor: R.colors.saumon },
+									headerBackTitleStyle: { fontSize: 12 },
+									transitionSpec: { open: config, close: config }
+								}}
 							/>
-						),
-						gestureEnabled: true,
-						headerBackTitleVisible: true,
-						headerTintColor: R.colors.dark_blue,
-						headerTitle: 'Masqués',
-						headerTransparent: false,
-						headerStyle: { backgroundColor: R.colors.saumon },
-						headerBackTitleStyle: { fontSize: 12 },
-						transitionSpec: { open: config, close: config }
-					}}
-				/>
-				<Stack.Screen
-					name="PhotosAlbum1"
-					component={PhotosAlbum1Screen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="PhotosMasked"
+								component={PhotosMaskedScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									gestureEnabled: true,
+									headerBackTitleVisible: true,
+									headerTintColor: R.colors.dark_blue,
+									headerTitle: 'Masqués',
+									headerTransparent: false,
+									headerStyle: { backgroundColor: R.colors.saumon },
+									headerBackTitleStyle: { fontSize: 12 },
+									transitionSpec: { open: config, close: config }
+								}}
 							/>
-						),
-						gestureEnabled: true,
-						headerBackTitleVisible: true,
-						headerTintColor: R.colors.dark_blue,
-						headerTitle: 'Plantes',
-						headerTransparent: false,
-						headerStyle: { backgroundColor: R.colors.saumon },
-						headerBackTitleStyle: { fontSize: 12 },
-						transitionSpec: { open: config, close: config }
-					}}
-				/>
-				<Stack.Screen
-					name="PhotosPersonnes"
-					component={PhotosPersonnesScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="PhotosAlbum1"
+								component={PhotosAlbum1Screen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									gestureEnabled: true,
+									headerBackTitleVisible: true,
+									headerTintColor: R.colors.dark_blue,
+									headerTitle: 'Plantes',
+									headerTransparent: false,
+									headerStyle: { backgroundColor: R.colors.saumon },
+									headerBackTitleStyle: { fontSize: 12 },
+									transitionSpec: { open: config, close: config }
+								}}
 							/>
-						),
-						gestureEnabled: true,
-						headerBackTitleVisible: true,
-						headerTintColor: R.colors.dark_blue,
-						headerTitle: 'Personnes',
-						headerTransparent: false,
-						headerStyle: { backgroundColor: R.colors.saumon },
-						headerBackTitleStyle: { fontSize: 12 },
-						transitionSpec: { open: config, close: config }
-					}}
-				/>
-				<Stack.Screen
-					name="PhotosScreenshot"
-					component={PhotosScreenshotScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="PhotosPersonnes"
+								component={PhotosPersonnesScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									gestureEnabled: true,
+									headerBackTitleVisible: true,
+									headerTintColor: R.colors.dark_blue,
+									headerTitle: 'Personnes',
+									headerTransparent: false,
+									headerStyle: { backgroundColor: R.colors.saumon },
+									headerBackTitleStyle: { fontSize: 12 },
+									transitionSpec: { open: config, close: config }
+								}}
 							/>
-						),
-						gestureEnabled: true,
-						headerBackTitleVisible: true,
-						headerTintColor: R.colors.dark_blue,
-						headerTitle: 'Screenshot',
-						headerTransparent: false,
-						headerStyle: { backgroundColor: R.colors.saumon },
-						headerBackTitleStyle: { fontSize: 12 },
-						transitionSpec: { open: config, close: config }
-					}}
-				/>
-				<Stack.Screen
-					name="PhotosFavoris"
-					component={PhotosFavorisScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="PhotosScreenshot"
+								component={PhotosScreenshotScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									gestureEnabled: true,
+									headerBackTitleVisible: true,
+									headerTintColor: R.colors.dark_blue,
+									headerTitle: 'Screenshot',
+									headerTransparent: false,
+									headerStyle: { backgroundColor: R.colors.saumon },
+									headerBackTitleStyle: { fontSize: 12 },
+									transitionSpec: { open: config, close: config }
+								}}
 							/>
-						),
-						gestureEnabled: true,
-						headerBackTitleVisible: true,
-						headerTintColor: R.colors.dark_blue,
-						headerTitle: 'Favoris',
-						headerTransparent: false,
-						headerStyle: { backgroundColor: R.colors.saumon },
-						headerBackTitleStyle: { fontSize: 12 },
-						transitionSpec: { open: config, close: config }
-					}}
-				/>
-				<Stack.Screen
-					name="PhotosRecents"
-					component={PhotosRecentsScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="PhotosFavoris"
+								component={PhotosFavorisScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									gestureEnabled: true,
+									headerBackTitleVisible: true,
+									headerTintColor: R.colors.dark_blue,
+									headerTitle: 'Favoris',
+									headerTransparent: false,
+									headerStyle: { backgroundColor: R.colors.saumon },
+									headerBackTitleStyle: { fontSize: 12 },
+									transitionSpec: { open: config, close: config }
+								}}
 							/>
-						),
-						gestureEnabled: true,
-						headerBackTitleVisible: true,
-						headerTintColor: R.colors.dark_blue,
-						headerTitle: 'Récents',
-						headerTransparent: false,
-						headerStyle: { backgroundColor: R.colors.saumon },
-						headerBackTitleStyle: { fontSize: 12 },
-						transitionSpec: { open: config, close: config }
-					}}
-				/>
-				<Stack.Screen
-					name="Photos"
-					component={PhotosScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="PhotosRecents"
+								component={PhotosRecentsScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									gestureEnabled: true,
+									headerBackTitleVisible: true,
+									headerTintColor: R.colors.dark_blue,
+									headerTitle: 'Récents',
+									headerTransparent: false,
+									headerStyle: { backgroundColor: R.colors.saumon },
+									headerBackTitleStyle: { fontSize: 12 },
+									transitionSpec: { open: config, close: config }
+								}}
 							/>
-						),
-						headerLeft: '',
-						gestureEnabled: true,
-						headerBackTitleVisible: true,
-						headerTitle: '',
-						headerTransparent: false,
-						headerTintColor: R.colors.dark_blue,
-						headerStyle: { backgroundColor: R.colors.saumon },
-					}}
-				/>
-				<Stack.Screen
-					name="Note"
-					component={NoteScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="Photos"
+								component={PhotosScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									headerLeft: '',
+									gestureEnabled: true,
+									headerBackTitleVisible: true,
+									headerTitle: '',
+									headerTransparent: false,
+									headerTintColor: R.colors.dark_blue,
+									headerStyle: { backgroundColor: R.colors.saumon },
+								}}
 							/>
-						),
-						gestureEnabled: true,
-						headerBackTitleVisible: true,
-						headerTintColor: R.colors.dark_blue,
-						headerTitle: '',
-						headerTransparent: false,
-						headerStyle: { backgroundColor: R.colors.saumon },
-						headerBackTitleStyle: { fontSize: 12 }
-					}}
-				/>
-				<Stack.Screen
-					name="NotesList"
-					component={NotesListScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="Note"
+								component={NoteScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									gestureEnabled: true,
+									headerBackTitleVisible: true,
+									headerTintColor: R.colors.dark_blue,
+									headerTitle: '',
+									headerTransparent: false,
+									headerStyle: { backgroundColor: R.colors.saumon },
+									headerBackTitleStyle: { fontSize: 12 }
+								}}
 							/>
-						),
-						headerLeft: '',
-						gestureEnabled: false,
-						headerBackTitleVisible: false,
-						headerTitle: '',
-						headerTransparent: true
-					}}
-				/>
-				<Stack.Screen
-					name="GoogleMaps"
-					component={GoogleMapsScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="NotesList"
+								component={NotesListScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									headerLeft: '',
+									gestureEnabled: false,
+									headerBackTitleVisible: false,
+									headerTitle: '',
+									headerTransparent: true
+								}}
 							/>
-						),
-						headerLeft: '',
-						gestureEnabled: false,
-						headerBackTitleVisible: false,
-						headerTitle: '',
-						headerTransparent: true
-					}}
-				/>
-				<Stack.Screen
-					name="GoogleHome"
-					component={GoogleHomeScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="GoogleMaps"
+								component={GoogleMapsScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									headerLeft: '',
+									gestureEnabled: false,
+									headerBackTitleVisible: false,
+									headerTitle: '',
+									headerTransparent: true
+								}}
 							/>
-						),
-						headerLeft: '',
-						gestureEnabled: false,
-						headerBackTitleVisible: false,
-						headerTitle: '',
-						headerTransparent: true
-					}}
-				/>
-				<Stack.Screen
-					name="Meteo"
-					component={MeteoScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="GoogleHome"
+								component={GoogleHomeScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									headerLeft: '',
+									gestureEnabled: false,
+									headerBackTitleVisible: false,
+									headerTitle: '',
+									headerTransparent: true
+								}}
 							/>
-						),
-						headerLeft: '',
-						gestureEnabled: false,
-						headerBackTitleVisible: false,
-						headerTitle: '',
-						headerTransparent: true
-					}}
-				/>
-				<Stack.Screen
-					name="Horloge"
-					component={HorlogeScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="Meteo"
+								component={MeteoScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									headerLeft: '',
+									gestureEnabled: false,
+									headerBackTitleVisible: false,
+									headerTitle: '',
+									headerTransparent: true
+								}}
 							/>
-						),
-						headerLeft: '',
-						gestureEnabled: false,
-						headerBackTitleVisible: false,
-						headerTitle: '',
-						headerTransparent: true
-					}}
-				/>
-				<Stack.Screen
-					name="Sante"
-					component={SanteScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="Horloge"
+								component={HorlogeScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									headerLeft: '',
+									gestureEnabled: false,
+									headerBackTitleVisible: false,
+									headerTitle: '',
+									headerTransparent: true
+								}}
 							/>
-						),
-						headerLeft: '',
-						gestureEnabled: false,
-						headerBackTitleVisible: false,
-						headerTitle: '',
-						headerTransparent: true
-					}}
-				/>
-				<Stack.Screen
-					name="Contacts"
-					component={ContactsScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="Sante"
+								component={SanteScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									headerLeft: '',
+									gestureEnabled: false,
+									headerBackTitleVisible: false,
+									headerTitle: '',
+									headerTransparent: true
+								}}
 							/>
-						),
-						headerLeft: '',
-						gestureEnabled: false,
-						headerTransparent: true,
-						headerTitle: '',
-						headerBackTitleVisible: true,
-						headerTintColor: R.colors.dark_blue,
-						headerTitle: '',
-						headerTransparent: false,
-						headerStyle: { backgroundColor: R.colors.saumon },
-					}}
-				/>
-				<Stack.Screen
-					name="FicheContact"
-					component={FicheContactScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="Contacts"
+								component={ContactsScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									headerLeft: '',
+									gestureEnabled: false,
+									headerTransparent: true,
+									headerTitle: '',
+									headerBackTitleVisible: true,
+									headerTintColor: R.colors.dark_blue,
+									headerTitle: '',
+									headerTransparent: false,
+									headerStyle: { backgroundColor: R.colors.saumon },
+								}}
 							/>
-						),
-						gestureEnabled: true,
-						headerBackTitleVisible: true,
-						headerTintColor: R.colors.dark_blue,
-						headerTitle: '',
-						headerTransparent: true,
-						headerBackTitleStyle: { fontSize: 12 }
-					}}
-				/>
-				<Stack.Screen
-					name="CallsFavoris"
-					component={CallsFavorisScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="FicheContact"
+								component={FicheContactScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									gestureEnabled: true,
+									headerBackTitleVisible: true,
+									headerTintColor: R.colors.dark_blue,
+									headerTitle: '',
+									headerTransparent: true,
+									headerBackTitleStyle: { fontSize: 12 }
+								}}
 							/>
-						),
-						headerLeft: '',
-						gestureEnabled: false,
-						headerTransparent: true,
-						headerTitle: '',
-						transitionSpec: { open: config, close: config }
-					}}
-				/>
-				<Stack.Screen
-					name="CallsRecents"
-					component={CallsRecentsScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="CallsFavoris"
+								component={CallsFavorisScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									headerLeft: '',
+									gestureEnabled: false,
+									headerTransparent: true,
+									headerTitle: '',
+									transitionSpec: { open: config, close: config }
+								}}
 							/>
-						),
-						headerLeft: '',
-						gestureEnabled: false,
-						headerTransparent: true,
-						headerTitle: '',
-						headerBackTitleVisible: true,
-						headerTintColor: R.colors.dark_blue,
-						headerTitle: '',
-						headerTransparent: false,
-						headerStyle: { backgroundColor: R.colors.saumon },
-					}}
-				/>
-				<Stack.Screen
-					name="CallsContacts"
-					component={CallsContactsScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="CallsRecents"
+								component={CallsRecentsScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									headerLeft: '',
+									gestureEnabled: false,
+									headerTransparent: true,
+									headerTitle: '',
+									headerBackTitleVisible: true,
+									headerTintColor: R.colors.dark_blue,
+									headerTitle: '',
+									headerTransparent: false,
+									headerStyle: { backgroundColor: R.colors.saumon },
+								}}
 							/>
-						),
-						headerLeft: '',
-						gestureEnabled: false,
-						headerTransparent: true,
-						headerTitle: '',
-						headerBackTitleVisible: true,
-						headerTintColor: R.colors.dark_blue,
-						headerTitle: '',
-						headerTransparent: false,
-						headerStyle: { backgroundColor: R.colors.saumon },
-						transitionSpec: { open: config, close: config }
-					}}
-				/>
-				<Stack.Screen
-					name="CallsClavier"
-					component={CallsClavierScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="CallsContacts"
+								component={CallsContactsScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									headerLeft: '',
+									gestureEnabled: false,
+									headerTransparent: true,
+									headerTitle: '',
+									headerBackTitleVisible: true,
+									headerTintColor: R.colors.dark_blue,
+									headerTitle: '',
+									headerTransparent: false,
+									headerStyle: { backgroundColor: R.colors.saumon },
+									transitionSpec: { open: config, close: config }
+								}}
 							/>
-						),
-						headerLeft: '',
-						gestureEnabled: false,
-						headerTransparent: true,
-						headerTitle: '',
-						animationEnabled: true,
-						animationTypeForReplace: 'pop'
-					}}
-				/>
-				<Stack.Screen
-					name="CallsMessagerie"
-					component={CallsMessagerieScreen}
-					options={{
-						headerRight: () => (
-							<Button
-								onPress={() => navigate('Home')}
-								title="✕"
-								color={R.colors.dark_blue}
+							<Stack.Screen
+								name="CallsClavier"
+								component={CallsClavierScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									headerLeft: '',
+									gestureEnabled: false,
+									headerTransparent: true,
+									headerTitle: '',
+									animationEnabled: true,
+									animationTypeForReplace: 'pop'
+								}}
 							/>
-						),
-						headerLeft: '',
-						gestureEnabled: false,
-						headerTransparent: true,
-						headerTitle: '',
-						transitionSpec: { open: config, close: config }
-					}}
-				/>
-				<Stack.Screen
-					name="Calling"
-					component={CallingScreen}
-					options={{
-						gestureEnabled: false,
-						headerShown: false
-					}}
-				/>
-				<Stack.Screen
-					name="IncomingCall"
-					component={IncomingCallScreen}
-					options={{
-						gestureEnabled: false,
-						headerShown: false
-					}}
-				/>
+							<Stack.Screen
+								name="CallsMessagerie"
+								component={CallsMessagerieScreen}
+								options={{
+									headerRight: () => (
+										<Button
+											onPress={() => navigate('Home')}
+											title="✕"
+											color={R.colors.dark_blue}
+										/>
+									),
+									headerLeft: '',
+									gestureEnabled: false,
+									headerTransparent: true,
+									headerTitle: '',
+									transitionSpec: { open: config, close: config }
+								}}
+							/>
+							<Stack.Screen
+								name="Calling"
+								component={CallingScreen}
+								options={{
+									gestureEnabled: false,
+									headerShown: false
+								}}
+							/>
+							<Stack.Screen
+								name="IncomingCall"
+								component={IncomingCallScreen}
+								options={{
+									gestureEnabled: false,
+									headerShown: false
+								}}
+							/>
+						</>
+					}
 			</Stack.Navigator>
 		</NavigationContainer>
 	)

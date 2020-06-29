@@ -1,23 +1,42 @@
 import React, { useState, useEffect } from 'react'
-import { SafeAreaView, StyleSheet, ScrollView, View, Text, StatusBar, TouchableWithoutFeedback } from 'react-native'
+import { SafeAreaView, StyleSheet, ScrollView, View, Text, StatusBar, TouchableWithoutFeedback, AsyncStorage } from 'react-native'
 
 import Auth from '@react-native-firebase/auth'
 import Firestore from '@react-native-firebase/firestore'
 
 const CodeScreen = ({ navigation }) => {
 
-    const [code, setCode] = useState('')
+	const [code, setCode] = useState('');
+	
+	const _storeCode = async (code) => {
+		try {
+		  await AsyncStorage.setItem(
+			'@code',
+			code
+		  );
+		} catch (error) {
+		  console.log(error);
+		}
+	  };
 
 	const connectToDesktop = async () => {
 
-		await Firestore()
+		try {
+			await Firestore()
 			.collection('sessions')
 			.doc(code)
 			.update({
 				connected: true
-            })
+			});
+			
+			await _storeCode(code);
 
-        await Auth().signInAnonymously()
+        	await Auth().signInAnonymously()
+		} catch(error) {
+			console.log(error);
+		}
+
+		
         
         // navigation.navigate('Home')
 	}
@@ -25,7 +44,7 @@ const CodeScreen = ({ navigation }) => {
 	const addNumber = (number) => {
 		
 		if (code.length < 4) {
-			setCode(code + number)
+			setCode(code + number);
 		}
 	}
 
@@ -33,7 +52,7 @@ const CodeScreen = ({ navigation }) => {
 
 		if (code.length < 4) { return }
 
-		connectToDesktop()
+		connectToDesktop();
 		
 	}, [code])
 
@@ -83,7 +102,7 @@ const CodeScreen = ({ navigation }) => {
 							<View style={styles.touch}><Text style={styles.textTouch}>3</Text></View>
 						</TouchableWithoutFeedback>
 
-						<TouchableWithoutFeedback onPress={() => addNumber(1)}>
+						<TouchableWithoutFeedback onPress={() => addNumber(0)}>
 							<View style={styles.touch}><Text style={styles.textTouch}>0</Text></View>
 						</TouchableWithoutFeedback>
 					</View>
