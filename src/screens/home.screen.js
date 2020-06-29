@@ -14,7 +14,7 @@ export default class Home extends Component {
             isHome: true,
             isWidget: false,
 
-            showNotifications: true,
+            showNotifications: false,
             isNotifInsta: true,
             isNotifLydia: false,
 
@@ -35,7 +35,7 @@ export default class Home extends Component {
             minutes: 0,
             heures: 18,
             code: 0,
-
+            
             currentApartment: 0,
         }
     }
@@ -357,6 +357,7 @@ export default class Home extends Component {
     isWidget() {
         return (
             <View style={{ width: '100%', height: '100.65%' }}>
+
                 <TouchableOpacity style={styles.container__button__notifications} onPress={() => this.setState({ showNotifications: !this.state.showNotifications })} />
                 <View style={styles.container__block__main}>
                     <View style={styles.container__block__main__content}>
@@ -486,7 +487,7 @@ const styles = StyleSheet.create({
         width: '15%',
         height: 6,
         top: 35,
-        left: '43%',
+        left: '44.5%',
         right: 0,
         bottom: 0,
         marginBottom: '3%',
