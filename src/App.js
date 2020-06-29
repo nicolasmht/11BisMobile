@@ -310,7 +310,16 @@ App = () => {
 					{
 						!user
 					?
-						<Stack.Screen name="Code" component={ CodeScreen } />
+						<Stack.Screen 
+							name="Code" 
+							component={ CodeScreen }
+							options={{
+								headerBackTitleVisible: false,
+								headerTintColor: R.colors.dark_blue,
+								headerTitle: '',
+								headerTransparent: true
+							}}
+						/>
 					:
 						<>
 							<Stack.Screen

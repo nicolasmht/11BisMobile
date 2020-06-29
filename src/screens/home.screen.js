@@ -35,6 +35,7 @@ export default class Home extends Component {
             minutes: 0,
             heures: 18,
             code: 0,
+
             currentApartment: 0,
         }
     }
@@ -159,6 +160,8 @@ export default class Home extends Component {
         }
     }
     Notifications() {
+
+        console.log(this.state.currentApartment)
         return (
             <View style={styles.container__notifications__main}>
                 <ImageBackground source={require('../main/assets/fond/Points.png')} style={styles.backgroundImage__notification}>
