@@ -93,6 +93,9 @@ export default class Home extends Component {
     };
 
     componentWillUpdate() {
+
+        console.log('test');
+
         if (this.state.heures === 18 && this.state.minutes === 7) {
             this.setState({ isNotifLydia: true })
         }
@@ -166,7 +169,15 @@ export default class Home extends Component {
                     <View style={{ width: '100%', height: '70%', position: 'absolute', bottom: 5, zIndex: 10000 }}>
                         {
                             this.state.currentApartment != 0
-                                ? <TouchableOpacity style={{ display: 'flex', justifyContent: 'flex-start', padding: 10, width: '80%', height: '11%', backgroundColor: R.colors.saumon, position: 'absolute', bottom: '25%', left: '10%', borderRadius: 10, borderColor: R.colors.dark_blue, borderWidth: 1 }}>
+                                ? <TouchableOpacity style={{ display: 'flex', justifyContent: 'flex-start', padding: 10, width: '80%', height: '11%', backgroundColor: R.colors.saumon, position: 'absolute', bottom: '25%', left: '10%', borderRadius: 10, borderColor: R.colors.dark_blue, borderWidth: 1 }} onPress={() => {
+                                    
+                                    if (this.state.currentApartment !== 5) return;
+
+                                    firestore().collection('sessions').doc(this.state.code).update({
+                                        finished: true
+                                    });
+                                    // HERE
+                                }}>
                                     <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center' }}>
                                         <Image source={require('../main/assets/icons/circle.png')} />
                                         <View style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'flex-start', marginLeft: 15, marginTop: 5 }}>
