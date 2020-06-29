@@ -17,6 +17,7 @@ export default class Home extends Component {
             showNotifications: false,
             isNotifInsta: true,
             isNotifLydia: false,
+
             isNotifMessage_1: false,
             isNotifMessage_2: false,
             isNotifMessage_3: false,
@@ -39,27 +40,29 @@ export default class Home extends Component {
     }
 
     componentDidMount() {
-        this.myInterval = setInterval(() => {
-            const { minutes, heures } = this.state
-            if (minutes >= 0) {
-                this.setState(({ minutes }) => ({
-                    minutes: minutes + 1
-                }))
-            }
-            if (minutes === 59) {
-                this.setState(({ minutes }) => ({
-                    minutes: 0
-                }))
-                if (heures === 0 && minutes === 0) {
-                    clearInterval(this.myTimer)
-                } else {
-                    this.setState(({ heures }) => ({
-                        heures: heures + 1,
-                        minutes: 0
+        if (this.props.route.params.user) {
+            this.myInterval = setInterval(() => {
+                const { minutes, heures } = this.state
+                if (minutes >= 0) {
+                    this.setState(({ minutes }) => ({
+                        minutes: minutes + 1
                     }))
                 }
-            }
-        }, 820)
+                if (minutes === 59) {
+                    this.setState(({ minutes }) => ({
+                        minutes: 0
+                    }))
+                    if (heures === 0 && minutes === 0) {
+                        clearInterval(this.myTimer)
+                    } else {
+                        this.setState(({ heures }) => ({
+                            heures: heures + 1,
+                            minutes: 0
+                        }))
+                    }
+                }
+            }, 820)
+        }
 
         this.retrieveData();
     }
@@ -287,33 +290,27 @@ export default class Home extends Component {
                     <TouchableOpacity style={styles.container__buttonApp__iconFav} onPress={() => this.props.navigation.navigate('CallsClavier')}>
                         <Image source={require('../main/assets/icons/app/call.png')} />
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.container__buttonApp__iconFav} onPress={() => this.props.navigation.navigate('MessagesList')}>
+                    <TouchableOpacity style={styles.container__buttonApp__iconFav} onPress={() => { this.setState({ isNotifMessage_1: false, isNotifMessage_2: false, isNotifMessage_3: false, isNotifMessage_4: false, isNotifMessage_5: false, isNotifMessage_6: false, isNotifMessage_7: false, isNotifMessage_8: false, isNotifMessage_9: false, isNotifMessage_10: false, isNotifMessage_11: false, isNotifMessage_12: false, isNotifMessage_13: false}), this.props.navigation.navigate('MessagesList')} }>
                         {
                             this.state.isNotifMessage_1 && this.state.isNotifMessage_2
-                                ? <Image source={require('../main/assets/icons/app/Notif_2_messages.png')} />
-                                : this.state.isNotifMessage_3
-                                ? <Image source={require('../main/assets/icons/app/Notif_3_messages.png')} />
-                                : this.state.isNotifMessage_4
-                                ? <Image source={require('../main/assets/icons/app/Notif_4_messages.png')} />
-                                : this.state.isNotifMessage_5
-                                ? <Image source={require('../main/assets/icons/app/Notif_5_messages.png')} />
-                                : this.state.isNotifMessage_6
-                                ? <Image source={require('../main/assets/icons/app/Notif_6_messages.png')} />
-                                : this.state.isNotifMessage_7
-                                ? <Image source={require('../main/assets/icons/app/Notif_7_messages.png')} />
-                                : this.state.isNotifMessage_8
-                                ? <Image source={require('../main/assets/icons/app/Notif_8_messages.png')} />
-                                : this.state.isNotifMessage_9
-                                ? <Image source={require('../main/assets/icons/app/Notif_9_messages.png')} />
-                                : this.state.isNotifMessage_10
-                                ? <Image source={require('../main/assets/icons/app/Notif_10_messages.png')} />
-                                : this.state.isNotifMessage_11
-                                ? <Image source={require('../main/assets/icons/app/Notif_11_messages.png')} />
-                                : this.state.isNotifMessage_12
-                                ? <Image source={require('../main/assets/icons/app/Notif_12_messages.png')} />
-                                : this.state.isNotifMessage_13
-                                ? <Image source={require('../main/assets/icons/app/Notif_13_messages.png')} />
-                                : <Image source={require('../main/assets/icons/app/messagerie.png')} />
+                            ? <Image source={require('../main/assets/icons/app/Notif_2_messages.png')} />
+                            : this.state.isNotifMessage_3
+                            ? <Image source={require('../main/assets/icons/app/Notif_3_messages.png')} />
+                            : this.state.isNotifMessage_4 &&  this.state.isNotifMessage_5
+                            ? <Image source={require('../main/assets/icons/app/Notif_5_messages.png')} />
+                            : this.state.isNotifMessage_6 && this.state.isNotifMessage_7
+                            ? <Image source={require('../main/assets/icons/app/Notif_7_messages.png')} />
+                            : this.state.isNotifMessage_8
+                            ? <Image source={require('../main/assets/icons/app/Notif_8_messages.png')} />
+                            : this.state.isNotifMessage_9 && this.state.isNotifMessage_10
+                            ? <Image source={require('../main/assets/icons/app/Notif_10_messages.png')} />
+                            : this.state.isNotifMessage_11
+                            ? <Image source={require('../main/assets/icons/app/Notif_11_messages.png')} />
+                            : this.state.isNotifMessage_12
+                            ? <Image source={require('../main/assets/icons/app/Notif_12_messages.png')} />
+                            : this.state.isNotifMessage_13
+                            ? <Image source={require('../main/assets/icons/app/Notif_13_messages.png')} />
+                            : <Image source={require('../main/assets/icons/app/messagerie.png')} />
                         }
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.container__buttonApp__iconFav} onPress={() => this.props.navigation.navigate('NotesList')}>
@@ -385,13 +382,33 @@ export default class Home extends Component {
                     <TouchableOpacity style={[this.state.isHome ? styles.container__button__bubble__selected : styles.container__button__bubble]} onPress={() => this.setState({ isHome: true, isWidget: false })} />
                 </View>
                 {/* icon fav */}
-                <View style={styles.container__buttonAppFav}>
+               <View style={styles.container__buttonAppFav}>
                     <View style={styles.container__buttonAppFav__background}></View>
                     <TouchableOpacity style={styles.container__buttonApp__iconFav} onPress={() => this.props.navigation.navigate('CallsClavier')}>
                         <Image source={require('../main/assets/icons/app/call.png')} />
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.container__buttonApp__iconFav} onPress={() => this.props.navigation.navigate('MessagesList')}>
-                        <Image source={require('../main/assets/icons/app/messagerie.png')} />
+                    <TouchableOpacity style={styles.container__buttonApp__iconFav} onPress={() => { this.setState({ isNotifMessage_1: false, isNotifMessage_2: false, isNotifMessage_3: false, isNotifMessage_4: false, isNotifMessage_5: false, isNotifMessage_6: false, isNotifMessage_7: false, isNotifMessage_8: false, isNotifMessage_9: false, isNotifMessage_10: false, isNotifMessage_11: false, isNotifMessage_12: false, isNotifMessage_13: false}), this.props.navigation.navigate('MessagesList')} }>
+                        {
+                            this.state.isNotifMessage_1 && this.state.isNotifMessage_2
+                                ? <Image source={require('../main/assets/icons/app/Notif_2_messages.png')} />
+                                : this.state.isNotifMessage_3
+                                ? <Image source={require('../main/assets/icons/app/Notif_3_messages.png')} />
+                                : this.state.isNotifMessage_4 && this.state.isNotifMessage_5
+                                ? <Image source={require('../main/assets/icons/app/Notif_5_messages.png')} />
+                                : this.state.isNotifMessage_6 && this.state.isNotifMessage_7
+                                ? <Image source={require('../main/assets/icons/app/Notif_7_messages.png')} />
+                                : this.state.isNotifMessage_8
+                                ? <Image source={require('../main/assets/icons/app/Notif_8_messages.png')} />
+                                : this.state.isNotifMessage_9 && this.state.isNotifMessage_10
+                                ? <Image source={require('../main/assets/icons/app/Notif_10_messages.png')} />
+                                : this.state.isNotifMessage_11
+                                ? <Image source={require('../main/assets/icons/app/Notif_11_messages.png')} />
+                                : this.state.isNotifMessage_12
+                                ? <Image source={require('../main/assets/icons/app/Notif_12_messages.png')} />
+                                : this.state.isNotifMessage_13
+                                ? <Image source={require('../main/assets/icons/app/Notif_13_messages.png')} />
+                                : <Image source={require('../main/assets/icons/app/messagerie.png')} />
+                        }
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.container__buttonApp__iconFav} onPress={() => this.props.navigation.navigate('NotesList')}>
                         <Image source={require('../main/assets/icons/app/notes.png')} />

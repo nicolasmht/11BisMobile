@@ -57,7 +57,7 @@ export default class MessagesScreen extends Component {
                                                     {moment(item.date).format('lll')}
                                                 </Text>
                                             </View>
-                                            : item.personne != "Jade" && !item.info
+                                            : item.personne != "Jade" && !item.info && !item.notif
                                             ? <View style={styles.container__messages__left}>
                                                 <Text style={styles.container__messages__left__name}>
                                                     {item.personne}

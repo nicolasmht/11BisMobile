@@ -111,16 +111,18 @@ App = () => {
 	}, []);
 
 	const myTimer = useInterval(() => {
-		if (minutes >= 0) {
-			setMinutes(minutes + 1)
-		}
-		if (minutes === 59) {
-			setMinutes(0);
-			if (heures === 0 && minutes === 0) {
-				clearInterval(myTimer)
-			} else {
-				setHeures(heures + 1);
+		if(user) {
+			if (minutes >= 0) {
+				setMinutes(minutes + 1)
+			}
+			if (minutes === 59) {
 				setMinutes(0);
+				if (heures === 0 && minutes === 0) {
+					clearInterval(myTimer)
+				} else {
+					setHeures(heures + 1);
+					setMinutes(0);
+				}
 			}
 		}
 	}, 820)
@@ -236,56 +238,66 @@ App = () => {
 		<NavigationContainer ref={navigationRef}>
 			<View style={{ position: 'absolute', zIndex: 10, top: 8, left: '45%' }}>
 				<StatusBar hidden={true} />
-				{timerCall()}
+				<View>
+					{
+						user 
+						?  <View>
+							{timerCall()}
+							<View>
+								{/* {!alarmStop && heures === 19 && minutes >= 30 && minutes <= 50
+								? <View>
+									{isAlarm()}
+									<TouchableOpacity style={styles.container__alarme__stop} onPress={() => { setAlarm(false), setAlarmStop(true) }}>
+										<Text style={styles.container__alarme__stop__text}>Arrêter</Text>
+									</TouchableOpacity>
+								</View>
+								: null
+								} */}
+								{
+									heures === 18 && minutes === 7
+									? <View>{isNotifications(app = 'lydia', name = 'Ben ❤️', text = 'charges loc juin + 57,38€')}</View>
+									: heures === 18 && minutes === 13
+									? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text = 't’as quelque chose en tete pour ce soir?')}</View>
+									: heures === 18 && minutes === 14
+									? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text = 'Un poulet coco du chef du chef ça te tente?')}</View>
+									: heures === 18 && minutes === 27
+									? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text = "Ma présentation s'est bien passée j'ai très envie de fêter ça avec toi ce soir!!")}</View>
+									: heures === 18 && minutes === 52
+									? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text = "ok, on minimise les sorties donc je vais pas chez monop’ que pour un poulet, même fermier 😉...")}</View>
+									: heures === 18 && minutes === 54
+									? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text = "Tu réponds pas? Tu veux manger autre chose? t'en peux plus de mon poulet coco c'est ça? Je le savais :p")}</View>
+									: heures === 19 && minutes === 6
+									? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text = "Haha en vrai répond Jade")}</View>
+									: heures === 19 && minutes === 7
+									? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text = "Allez c'est pas drôle ^^")}</View>
+									: heures === 19 && minutes === 22
+									? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text = "T'es une gamine, j'arrive...")}</View>
+									: heures === 19 && minutes === 37
+									? <View>{isNotifications(app = 'messagerie', name = 'Caro - Weekend Espelette', text = "Caroline a nommé le groupe \"Espelette aout ?\"")}</View>
+									: heures === 19 && minutes === 38
+									? <View>{isNotifications(app = 'messagerie', name = 'Caro - Weekend Espelette', text = "Show must go on!")}</View>
+									: heures === 20 && minutes === 2
+									? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text = "Bonjour cher voyeur, comment le tel de ma copine est arrivé entre tes mains?")}</View>
+									: heures === 21 && minutes === 46
+									? <View>{isNotifications(app = 'messagerie', name = 'Ben - Weekend Espelette', text = "Ca tomberait pas pendant les férias cette histoire? 😆 Dans tous les cas avec Jade on est o-pé-ra-tio-nels!!")}</View>
+									: heures === 23 && minutes === 16
+									? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text = "Répond connard arrête de lacher des vues, je vais porter plainte ")}</View>
+									: null
+								}
+								{
+									heures >= 24
+									? <View style={{ height: '100%', backgroundColor: R.colors.dark_blue, position: 'relative', top: 0, left: 0, Zindex: 1111 }}>
+										<Text>ok</Text>
+									</View>
+									: null
+								}
+							</View>
+						</View>
+						: null
+					}
+				</View>
 			</View>
-			<View>
-				{/* {!alarmStop && heures === 19 && minutes >= 30 && minutes <= 50
-					? <View>
-						{isAlarm()}
-						<TouchableOpacity style={styles.container__alarme__stop} onPress={() => { setAlarm(false), setAlarmStop(true) }}>
-							<Text style={styles.container__alarme__stop__text}>Arrêter</Text>
-						</TouchableOpacity>
-					</View>
-					: null
-				} */}
-				{heures === 18 && minutes === 7 
-					? <View>{isNotifications(app = 'lydia', name = 'Ben ❤️', text ='charges loc juin + 57,38€')}</View>
-					: heures === 18 && minutes === 13
-					? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text ='t’as quelque chose en tete pour ce soir?')}</View>
-					: heures === 18 && minutes === 14
-					? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text ='Un poulet coco du chef du chef ça te tente?')}</View>
-					: heures === 18 && minutes === 27
-					? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text ="Ma présentation s'est bien passée j'ai très envie de fêter ça avec toi ce soir!!")}</View>
-					: heures === 18 && minutes === 52
-					? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text ="ok, on minimise les sorties donc je vais pas chez monop’ que pour un poulet, même fermier 😉...")}</View>
-					: heures === 18 && minutes === 54
-					? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text ="Tu réponds pas? Tu veux manger autre chose? t'en peux plus de mon poulet coco c'est ça? Je le savais :p")}</View>
-					: heures === 19 && minutes === 6
-					? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text ="Haha en vrai répond Jade")}</View>
-					: heures === 19 && minutes === 7
-					? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text ="Allez c'est pas drôle ^^")}</View>
-					: heures === 19 && minutes === 22
-					? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text ="T'es une gamine, j'arrive...")}</View>
-					: heures === 19 && minutes === 37
-					? <View>{isNotifications(app = 'messagerie', name = 'Caro - Weekend Espelette', text ="Caroline a nommé le groupe \"Espelette aout ?\"")}</View>
-					: heures === 19 && minutes === 38
-					? <View>{isNotifications(app = 'messagerie', name = 'Caro - Weekend Espelette', text ="Show must go on!")}</View>
-					: heures === 20 && minutes === 2
-					? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text ="Bonjour cher voyeur, comment le tel de ma copine est arrivé entre tes mains?")}</View>
-					: heures === 21 && minutes === 46
-					? <View>{isNotifications(app = 'messagerie', name = 'Ben - Weekend Espelette', text ="Ca tomberait pas pendant les férias cette histoire? 😆 Dans tous les cas avec Jade on est o-pé-ra-tio-nels!!")}</View>
-					: heures === 23 && minutes === 16
-					? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text ="Répond connard arrête de lacher des vues, je vais porter plainte ")}</View>
-					: null
-				}
-				{
-					heures >= 24
-					? <View style={{height: '100%', backgroundColor: R.colors.dark_blue, position: 'relative', top: 0, left: 0, Zindex: 1111}}>
-						<Text>ok</Text>
-					</View>
-					: null
-				}
-			</View>
+			
 			<Stack.Navigator headerMode="screen" initialRouteName="HomeScreen">
 				{/* {
 						!user
@@ -310,6 +322,7 @@ App = () => {
 									headerTitle: '',
 									headerTransparent: true
 								}}
+								initialParams={{ user: user }}
 							/>
 
 							<Stack.Screen
