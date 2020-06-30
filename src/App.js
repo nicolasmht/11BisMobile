@@ -281,10 +281,12 @@ App = () => {
 							<View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center' }}>
 							{
 								heures === 19 && minutes >= 0
-								? <Text>7% </Text>
+								? <Text>6% </Text>
 								: heures === 20 && minutes >= 0
 								? <Text>5% </Text>
-								: heures === 22 && minutes >= 0
+								: heures === 21 && minutes >= 0
+								? <Text>4% </Text>
+								: heures === 23 && minutes >= 0
 								? <Text>3% </Text>
 								: heures === 23 && minutes >= 0
 								? <Text>2% </Text>
@@ -292,7 +294,7 @@ App = () => {
 								? <Text>1% </Text>
 								: heures === 24 && minutes >= 0
 								? <Text>0% </Text>
-								: <Text>9% </Text>
+								: <Text>7% </Text>
 							}
 								
 								<Image source={require('./main/assets/icons/icon_batterie.png')}/>
