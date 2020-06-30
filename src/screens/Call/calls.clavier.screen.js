@@ -73,7 +73,6 @@ export default class CallsClavierScreen extends Component {
 
     render() {
         const numbers = this.state.numbers
-        console.log(numbers.find(element => element === '*'))
         return (
             <View style={styles.container}>
                 <View style={styles.container__calls}>

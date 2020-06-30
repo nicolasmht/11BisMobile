@@ -93,9 +93,6 @@ export default class Home extends Component {
     };
 
     componentWillUpdate() {
-
-        console.log('test');
-
         if (this.state.heures === 18 && this.state.minutes === 7) {
             this.setState({ isNotifLydia: true })
         }
@@ -134,7 +131,7 @@ export default class Home extends Component {
                 isNotifMessage_8: true 
             })
         }
-        if (this.state.heures === 19 && this.state.minutes === 37) {
+        if (this.state.heures === 19 && this.state.minutes === 38) {
             this.setState({ 
                 isNotifMessage_8: false,
                 isNotifMessage_9: true, 
@@ -172,10 +169,10 @@ export default class Home extends Component {
                                 ? <TouchableOpacity style={{ display: 'flex', justifyContent: 'flex-start', padding: 10, width: '80%', height: '11%', backgroundColor: R.colors.saumon, position: 'absolute', bottom: '25%', left: '10%', borderRadius: 10, borderColor: R.colors.dark_blue, borderWidth: 1 }} onPress={() => {
                                     
                                     if (this.state.currentApartment !== 5) return;
-
                                     firestore().collection('sessions').doc(this.state.code).update({
                                         finished: true
                                     });
+                                    this.props.navigation.navigate('Fin')
                                     // HERE
                                 }}>
                                     <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center' }}>

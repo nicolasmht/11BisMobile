@@ -18,7 +18,6 @@ export default class RappelsScreen extends Component {
         this.rappels.lists.map((item, index) => {
             this.state.isChecked.push(false)
         })
-        console.log(this.state.isChecked)
     }
 
     

@@ -229,6 +229,8 @@ App = () => {
 							? <Image style={{ width: 20, height: 20, padding: 10 }} source={require('./main/assets/icons/app/lydia.png')} />
 							: app === 'messagerie'
 							? <Image style={{ width: 20, height: 20, padding: 10 }} source={require('./main/assets/icons/app/messagerie.png')} />
+							: app === 'calendar'
+							? <Image style={{ width: 20, height: 20, padding: 10 }} source={require('./main/assets/icons/app/calendar.png')} />
 							: app === 'horloge'
 							? <Image style={{ width: 20, height: 20, padding: 10 }} source={require('./main/assets/icons/app/horloge.png')} />
 							: null
@@ -278,12 +280,18 @@ App = () => {
 							</View>
 							<View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center' }}>
 							{
-								heures >= 20 && heures <= 23
+								heures === 19 && minutes >= 0
+								? <Text>7% </Text>
+								: heures === 20 && minutes >= 0
 								? <Text>5% </Text>
-								: heures >= 23 && minutes <= 20
+								: heures === 22 && minutes >= 0
+								? <Text>3% </Text>
+								: heures === 23 && minutes >= 0
 								? <Text>2% </Text>
-								: heures >= 23 && minutes >= 20
+								: heures === 23 && minutes >= 20
 								? <Text>1% </Text>
+								: heures === 24 && minutes >= 0
+								? <Text>0% </Text>
 								: <Text>9% </Text>
 							}
 								
@@ -332,18 +340,24 @@ App = () => {
 									? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text = "T'es une gamine, j'arrive...")}</View>
 									: heures === 19 && minutes === 37
 									? <View>{isNotifications(app = 'messagerie', name = 'Caro - Weekend Espelette', text = "Caroline a nommé le groupe \"Espelette aout ?\"")}</View>
-									: heures === 19 && minutes === 38
+									: heures === 19 && minutes === 39
 									? <View>{isNotifications(app = 'messagerie', name = 'Caro - Weekend Espelette', text = "Show must go on!")}</View>
 									: heures === 20 && minutes === 2
 									? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text = "Bonjour cher voyeur, comment le tel de ma copine est arrivé entre tes mains?")}</View>
+									: heures === 20 && minutes === 30
+									? <View>{isNotifications(app = 'calendar', name = '🗓 11h30 demain', text = "Meeting avec cleint relou")}</View>
 									: heures === 21 && minutes === 46
 									? <View>{isNotifications(app = 'messagerie', name = 'Ben - Weekend Espelette', text = "Ca tomberait pas pendant les férias cette histoire? 😆 Dans tous les cas avec Jade on est o-pé-ra-tio-nels!!")}</View>
-									: heures === 23 && minutes === 16
+									: heures === 22 && minutes === 30
+									? <View>{isNotifications(app = 'calendar', name = '🗓 19h30 demain', text = "Apéro à moins de 10")}</View>
+									: heures === 23 && minutes === 0
+									? <View>{isNotifications(app = 'horloge', name = '⏰ debout la dedans', text = "Demain 8h30")}</View>
+									: heures === 23 && minutes === 5
 									? <View>{isNotifications(app = 'messagerie', name = 'Ben ❤️', text = "Répond connard arrête de lacher des vues, je vais porter plainte ")}</View>
 									: null
 								}
 							</View>
-							<View>
+							{/* <View>
 								{
 									heures >= 24
 									? <View style={{backgroundColor: R.colors.blue, position: 'relative', top: 0, left: 0, Zindex: 222222, width: '100%', height: '100%' }}>
@@ -362,7 +376,7 @@ App = () => {
 									</View>
 									: null
 								}
-							</View>
+							</View> */}
 						</View>
 					: null
 				}

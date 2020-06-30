@@ -71,7 +71,7 @@ export default class HorlogeScreen extends Component {
                                         onValueChange={this.toggleSwitchAlarme3}
                                         value={this.state.switchValueAlarme3} />
                                 </View>
-                                <Text style={this.state.switchValueAlarme3 ? styles.container__alarme__text : styles.container__alarme__text__disable}>Alarme, chaque jour</Text>
+                                <Text style={this.state.switchValueAlarme3 ? styles.container__alarme__text : styles.container__alarme__text__disable}>Debout la dedans</Text>
                                 <View style={styles.container__alarme__border} />
                             </View>
 
@@ -85,7 +85,7 @@ export default class HorlogeScreen extends Component {
                                         onValueChange={this.toggleSwitchAlarme4}
                                         value={this.state.switchValueAlarme4} />
                                 </View>
-                                <Text style={this.state.switchValueAlarme4 ? styles.container__alarme__text : styles.container__alarme__text__disable}>Alarme, chaque jour</Text>
+                                <Text style={this.state.switchValueAlarme4 ? styles.container__alarme__text : styles.container__alarme__text__disable}>Debout la dedans</Text>
                                 <View style={styles.container__alarme__border} />
                             </View>
 
@@ -99,7 +99,7 @@ export default class HorlogeScreen extends Component {
                                         onValueChange={this.toggleSwitchAlarme5}
                                         value={this.state.switchValueAlarme5} />
                                 </View>
-                                <Text style={this.state.switchValueAlarme5 ? styles.container__alarme__text : styles.container__alarme__text__disable}>Alarme, chaque jour</Text>
+                                <Text style={this.state.switchValueAlarme5 ? styles.container__alarme__text : styles.container__alarme__text__disable}>Debout la dedans</Text>
                                 <View style={styles.container__alarme__border} />
                             </View>
 
@@ -113,7 +113,7 @@ export default class HorlogeScreen extends Component {
                                         onValueChange={this.toggleSwitchAlarme6}
                                         value={this.state.switchValueAlarme6} />
                                 </View>
-                                <Text style={this.state.switchValueAlarme6 ? styles.container__alarme__text : styles.container__alarme__text__disable}>Alarme, chaque jour</Text>
+                                <Text style={this.state.switchValueAlarme6 ? styles.container__alarme__text : styles.container__alarme__text__disable}>Debout la dedans</Text>
                                 <View style={styles.container__alarme__border} />
                             </View>
 
@@ -127,7 +127,7 @@ export default class HorlogeScreen extends Component {
                                         onValueChange={this.toggleSwitchAlarme7}
                                         value={this.state.switchValueAlarme7} />
                                 </View>
-                                <Text style={this.state.switchValueAlarme7 ? styles.container__alarme__text : styles.container__alarme__text__disable}>Alarme, chaque jour</Text>
+                                <Text style={this.state.switchValueAlarme7 ? styles.container__alarme__text : styles.container__alarme__text__disable}>Debout la dedans</Text>
                                 <View style={styles.container__alarme__border} />
                             </View>
                         </View>
